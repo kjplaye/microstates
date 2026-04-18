@@ -49,8 +49,8 @@ We argue that the answer is quantum measurement. Each act of information acquisi
 
 Modeling the spacetime response to such localized energy–momentum transfer events using Aichelburg--Sexl (AS) pp-wave geometries follows the gravitational shockwave framework of Dray, 't Hooft \cite{dray1985gravitational}, and others. Their construction uses AS solutions sourced by infalling classical 
 particles to define horizon scattering amplitudes; the key 
-difference here is that the source is a quantum entangled pair 
-emitted from a common ancestor $\mathcal{P}$, and the 
+difference here is that we use a quantum entangled pair 
+emitted from a common ancestor, and the 
 information acquisition framing connects the geometric shift 
 directly to a classical bit acquired by an observer.
 
@@ -80,7 +80,7 @@ appears to be new.
 
 \subsection{Conceptual Roadmap}
 
-This stands in sharp contrast to the Diósi--Penrose objective collapse programme~\cite{penrose1996gravity, diosi1987universal}, which postulates that gravity induces an objective, observer-independent collapse of the quantum state. In that framework, gravitational self-interaction is taken to define a physical timescale for wavefunction reduction, leading to a dynamical modification of standard quantum mechanics. The present work does not adopt objective collapse or any modification of unitary evolution. Instead, we treat quantum measurement as a physical interaction mediated by energy--momentum transfer, and interpret any apparent reduction of the state as an effective description arising from such processes. The contrast between the two approaches is illustrated in Figure~\ref{fig:diagram}.
+This stands in sharp contrast to the Diósi--Penrose objective collapse programme~\cite{penrose1996gravity, diosi1987universal}, which postulates that gravity induces an objective, observer-independent collapse of the quantum state. In that framework, gravitational self-interaction is taken to define a physical timescale for wavefunction reduction, leading to a dynamical modification of standard quantum mechanics. We treat quantum measurement as a physical interaction mediated by energy--momentum transfer, and interpret any apparent reduction of the state as an effective description arising from such processes. The contrast between the two approaches is illustrated in Figure~\ref{fig:diagram}. The three solid arrows represent the perspectival grounding relations described above; the single dashed arrow represents the Di\'osi--Penrose causal postulate. It is the only relation in the diagram claimed to be objective and observer-independent, and it is the only one we do not adopt.
 
 
 \begin{figure}[h]
@@ -96,7 +96,7 @@ This stands in sharp contrast to the Diósi--Penrose objective collapse programm
 \label{fig:diagram}
 \end{figure}
 
-To make this concrete, we build on the microstate construction of~\cite{player2025driving}, which realises individual terms of the Unruh thermal ensemble via bilocal driving sources. The present paper applies and extends that construction. Entangled pairs emitted from a localized source propagate into left and right Rindler wedges; polarization measurement events are associated with discrete energy–momentum transfer and yield correlated classical outcomes. Each such microstate carries a calculable gravitational imprint, modelled by an AS pp-wave solution, and coarse-graining over the ensemble reproduces standard horizon thermodynamics. This construction also provides an operational realization of entanglement-induced spatial separation at the level of individual microstates: entanglement is mapped into geometric correlations via the associated gravitational backreaction, and each measurement event contributes a discrete, calculable increment to horizon entropy through its associated energy–momentum transfer and gravitational backreaction.
+To make this concrete, we build on the microstate construction of~\cite{player2025driving}, which realises individual terms of the Unruh thermal ensemble via bilocal driving sources. The present paper applies and extends that construction. Entangled pairs emitted from a localized past source propagate into left and right Rindler wedges; polarization measurement events are associated with discrete energy–momentum transfer and yield correlated classical outcomes. Each such microstate carries a calculable gravitational imprint, modelled by an AS pp-wave solution, and coarse-graining over the ensemble reproduces standard horizon thermodynamics. This construction also provides an operational realization of entanglement-induced spatial separation at the level of individual microstates: entanglement is mapped into geometric correlations via the associated gravitational backreaction, and each measurement event contributes a discrete, calculable increment to horizon entropy through its associated energy–momentum transfer and gravitational backreaction.
 
 
 % 🔴 TODO 7A — Information current formulation
@@ -105,36 +105,16 @@ To make this concrete, we build on the microstate construction of~\cite{player20
 % Section 2
 \section{Motivating Heuristics}
 \label{sec:heuristics}
-
-Landauer's principle associates a minimal energy cost with the acquisition of information \cite{landauer1961irreversibility}. For an accelerated observer, the relevant temperature is the Unruh temperature \cite{unruh1976notes}. Substituting one into the other eliminates temperature entirely, yielding a relation between information acquisition, energy transfer, and acceleration (a version of the BHT first law, equation (\ref{eq:UL})). This is not merely an algebraic convenience: it is a concrete dictionary between the thermal description natural to a Rindler observer and the non-thermal global Minkowski description, with the apparent thermality of the vacuum emerging as a consequence of the observer's acceleration rather than as a fundamental property of the state. In this way we derive a sequence of standard results in black hole thermodynamics as a consequence of Newton's laws.
+Landauer's principle \cite{landauer1961irreversibility} is conventionally formulated for information erasure. Here we use the same energetic bound in the time-reversed operational sense: the physical registration of a measurement outcome in a detector is treated as the conjugate process to erasure, with an identical energetic gain. For an accelerated observer, the relevant temperature is the Unruh temperature \cite{unruh1976notes}. Substituting one into the other eliminates temperature entirely, yielding a relation between information acquisition, energy transfer, and acceleration (a version of the black hole thermodynamics first law; equation (\ref{eq:UL}) upcoming).
+This creates a heuristic dictionary between the thermal description natural to a Rindler observer and the non-thermal global Minkowski description, with the apparent thermality of the vacuum emerging as a consequence of the observer's acceleration rather than as a fundamental property of the state. In this way we will derive a sequence of standard results in black hole thermodynamics as a consequence of Newton's laws.
 
 \subsection{The Unruh-Landauer Relation}
 
-% NOTE on notation: We are going to use S for action so use H for entropy with units of bits.
-
-Landauer's principle suggests that the acquisition of $\Delta H$ bits of information by a physical observer requires a minimum energy transfer
+Landauer's principle suggests that the acquisition of $\Delta H$ nats of information\footnote{We are going to use $S$ for action later so use $H$ here for entropy with units of nats to avoid carrying around a $\ln(2)$.} by a physical observer requires a minimum energy transfer
 \begin{equation}
   \Delta E \geq k_B T \, \Delta H.
 \end{equation}
-We note that Landauer's principle is conventionally stated for information erasure rather than acquisition. Here we apply it to acquisition, which is the physically relevant process for an observer registering a measurement outcome. The bound has the same form in both cases; we apply it to acquisition on the grounds that registering a measurement outcome is physically equivalent to a bit being written into the detector's state, which is the process Landauer's principle governs.
-
-% TODO 1B: Put in the missing ln(2) as a footnote or more. We could say we are measuring in nats, but then we would have the usual horizon area in nats, does this track? Also, we say bits a lot in the rest of the paper, especially stating that h_bar coorosponds to a bit carried by a photon. This should be at least noted if not dealt with.
-%
-%  it's not a units footnote, it's a foundational consistency condition for the paper's central claim. Let me state the issue precisely:
-% The paper claims a photon simultaneously carries:
-% 
-% One quantum of action ℏ, deposited as energy ℏω\hbar\omega
-% ℏω
-% One bit of polarization (helicity outcome)
-% 
-% And that these are exactly associated. For this to be consistent with the Unruh-Landauer bound in bits, the Landauer cost of one bit at the Unruh temperature must equal exactly ℏω\hbar\omega
-% ℏω:
-% 
-% ℏω=kBTln⁡2=ℏaln⁡22πc\hbar\omega = k_B T \ln 2 = \frac{\hbar a \ln 2}{2\pi c}ℏω=kB​Tln2=2πcℏaln2​
-% which requires:
-% ω=aln⁡22πc\omega = \frac{a \ln 2}{2\pi c}ω=2πcaln2​
-% This is a non-trivial constraint on the photon frequency relative to the detector acceleration. It is not automatic — it selects a specific mode from the Unruh spectrum. This is actually a stronger and more interesting claim than what the paper currently makes, because it says the bilocal construction naturally selects the mode that saturates the Landauer bound at exactly one bit per quantum of action.
-% The question for you is: does your bilocal construction naturally produce photons at this frequency, or is this an additional condition that needs to be imposed? That answer determines whether the ln(2) is a consistency check or a constraint on the construction.
+The bound has the same form in both cases; we apply it to acquisition on the grounds that registering a measurement outcome is physically equivalent to information being written into the detector's state, which is the reverse process Landauer's principle governs.
 
 For an observer undergoing proper acceleration $a$, the Unruh effect associates a temperature
 \begin{equation}
@@ -145,36 +125,41 @@ with the local vacuum. Substituting into Landauer's bound eliminates $k_B T$, yi
 \boxed{\Delta E \geq \frac{\hbar a}{2\pi c} \, \Delta H.}
 \label{eq:UL}
 \end{equation}
-Temperature has dropped out entirely: equation~\eqref{eq:UL} is a temperature-independent relation between energy, acceleration, and information, suitable for the Minkowski vacuum. Acceleration sets the energy scale of information. 
+Temperature has dropped out entirely: equation~\eqref{eq:UL} is a temperature-independent relation between energy, acceleration, and information, suitable for the Minkowski vacuum; acceleration sets the energy scale of information. 
 
-The Unruh--Landauer bound is saturated at one bit when the 
+This Unruh--Landauer bound is saturated at one bit when the 
 photon wavelength equals the horizon distance up to a factor 
 of $2\pi/\ln 2$:
 \begin{equation}
-\lambda_{\text{sat}} = \frac{2\pi}{\ln 2}\cdot\frac{c^2}{a} 
-= \frac{2\pi}{\ln 2}\cdot d_{\mathcal{H}},
+\lambda_{\text{sat}} = \frac{2\pi}{\ln 2}\cdot\frac{c^2}{a} \sim d_{\mathcal{H}},
 \end{equation}
 where $d_{\mathcal{H}} = c^2/a$ is the proper distance to the 
-Rindler horizon. The saturation photon therefore fits within 
-the causal diamond of the measurement event: its wavelength 
-is commensurate with the horizon scale, too short to be 
-super-horizon and too long to deposit more than one bit. 
+Rindler horizon. The saturating photon is the ground state mode of the 
+causal cavity defined by the observer and the horizon, 
+with wavelength commensurate with the horizon distance 
+$d_\mathcal{H}$, too short to be 
+super-horizon and too long to deposit more than one bit.
 This identifies the horizon distance as the natural 
 length scale of a single-bit measurement event, and 
 the Rindler horizon as the surface at which the Landauer 
 bound is geometrically realized.
 
+For realistic accelerations the saturation wavelength is 
+enormous, at Earth surface gravity $a = 9.8\ 
+\text{m\,s}^{-2}$, $\lambda_{\text{sat}} \approx 8\ 
+\text{light years}$, so the single-bit bound is 
+practically always satisfied for terrestrial observers, 
+and is only approached near astrophysical or Planck-scale 
+accelerations.
+
 
 \subsection{Momentum Transfer and Acceleration}
-In what follows, standard results emerge as consequences of this single relation and Newton's laws. The energy transfer $\Delta E$ implied by equation~\eqref{eq:UL} is carried by a physical quantum — matter or radiation — mediating the measurement interaction. We refer to this as the \emph{thrust quantum} of effective mass $m_t$. (This will actually be a pure energy carrier in our later microstate example.)
-For a relativistic carrier, the associated momentum transfer is
+In what follows, standard results emerge as consequences of the Unurh-Landauer relation and Newton's laws. The energy transfer $\Delta E$ implied by the relation is carried by a physical quantum, matter or radiation,  mediating the measurement interaction a \emph{thrust quantum}. For a relativistic carrier, the associated momentum transfer is
 \begin{equation}
 \Delta p = \frac{\Delta E}{c}.
 \end{equation}
-
 A measurement event localized to a spatial scale $r$ is bounded 
-by a causal diamond: the intersection of the future light cone of 
-its initiation and the past light cone of its completion. The 
+by a causal diamond. The 
 temporal extent of this diamond is $\Delta t = 2r/c$, fixed entirely 
 by the causal geometry of the event rather than by any dynamical 
 assumption. We identify the interaction time with this natural causal 
@@ -187,11 +172,21 @@ a = \frac{\Delta p}{m_d \Delta t} = \frac{\Delta E}{2 m_d r}.
 This perspective is closely related in spirit to Erik Verlinde’s entropic gravity \cite{entropic}, where forces arise from entropy gradients, but differs in that the present construction grounds each entropy increment in a discrete measurement event with an associated energy-momentum transfer, rather than in a coarse-grained thermodynamic gradient.
 
 \subsection{The Schwarzschild Radius}
-We match the acceleration inferred from the measurement-induced impulse to the Newtonian gravitational field in order to identify the characteristic length scale associated with the detector. The thrust quantum carries energy $\Delta E$ and produces an acceleration $a$ on the detector. Identifying this with the Newtonian gravitational acceleration due to the mass $m_t$ at distance $r$.
+
+We match the acceleration inferred from the 
+measurement-induced impulse to the Newtonian gravitational 
+field. For this identification we treat the thrust quantum 
+as a massive ultra-relativistic particle with rest energy 
+$\Delta E = m_t c^2$, so that $\Delta p = \Delta E/c$ 
+holds in the limit $v \to c$, and the Newtonian 
+gravitational field of $m_t$ at distance $r$ is 
+well-defined. Identifying the acceleration $a$ with the 
+Newtonian field gives:
 \begin{equation}
 a = \frac{G m_t}{r^2},
 \end{equation}
-and substituting equation ~\eqref{eq:accel} with $\Delta E=m_t c^2$, we obtain
+and substituting equation~\eqref{eq:accel} with 
+$\Delta E=m_t c^2$, we obtain
 \begin{equation}
 \frac{m_t c^2}{2 m_d r} = \frac{G m_t}{r^2}.
 \end{equation}
@@ -238,7 +233,7 @@ Let $\hbar$ = $c$ = 1.
 
 The heuristic arguments of Section~\ref{sec:heuristics} establish a relationship between information acquisition, acceleration, and gravitational effects, but leave open the question of what a single microstate looks like concretely. In standard treatments, the Unruh effect is derived by coupling a detector to a pre-existing acceleration and reading off a thermal response from the vacuum. Following~\cite{player2025driving}, we invert this logic: we place an interaction in the past, where a source injects non-thermal entangled excitations into the field, and show that the observer's accelerated response can be driven by these source-induced excitations. The thermal ensemble then emerges as a coarse-grained aggregate of such microstates, rather than being a primitive property of the vacuum.
 
-Each microstate, equation \eqref{eq:microstate_vec} upcomming, is individually 
+Each microstate, equation \eqref{eq:microstate_vec} upcoming, is individually 
 non-thermal: it carries a definite helicity pair and a definite 
 Rindler frequency $\Omega$, neither of which is fixed by the 
 Unruh temperature. Thermality is not a property of any single 
