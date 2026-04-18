@@ -33,46 +33,35 @@
 \begin{document}
 
 
-\title{Quantum Measurement Events as Gravitational Microstates}
+\title{Measurement Events as Gravitational Microstates}
 \author[ ]{Kevin Player\footnote{\textit{kjplaye@gmail.com}} \,\orcidlink{0009-0000-7180-7985}}
 
 \maketitle
 
-\abstract{Thermodynamic approaches to gravity, from Jacobson to Verlinde, operate at the level of bulk averages and leave open what physical process underlies each entropy increment. We propose that the answer is quantum measurement: each act of information acquisition constitutes a gravitational microstate, a discrete energy-momentum transfer that imprints a calculable Aichelburg-Sexl pp-wave onto the local horizon geometry. Using a bilocal electromagnetic source construction, we show that the gravitational boundary action on the Rindler horizon equals the total matter action accumulated sample by sample across all measurement events. Standard horizon thermodynamics follows as a coarse-grained consequence. This provides an operational microstate realization of ER=EPR at the level of individual measurement events.}
+\abstract{Thermodynamic approaches to gravity, from Jacobson to Verlinde, relate spacetime dynamics to horizon entropy but do not specify the microscopic carriers of entropy increments. We take as primitive that quantum measurement necessarily involves a physical interaction with energy–momentum transfer between system and detector. Within this setting, we model such interactions as localized Aichelburg--Sexl (AS) pp-wave perturbations of spacetime geometry. Each measurement event then induces a discrete shift in null horizon coordinates, contributing additively to horizon area, and coarse-graining over the resulting ensemble reproduces the Bekenstein--Hawking area law. A bilocal realization using entangled photon pairs yields correlated AS shifts on opposite Rindler horizons, providing an operational realization of entanglement as spatial connectivity in the spirit of ER=EPR. Within this construction, the gravitational boundary term on the horizon is identified with the accumulated energy transfer associated with measurement events, linking matter dynamics and horizon entropy at the level of individual microstates.}
 
 % Section 1
 \section{Introduction}
 
-Two landmark results establish that gravity and Unurh thermodynamics are deeply intertwined. Jacobson showed that the Einstein equations can be derived from thermodynamic identities applied to local Rindler horizons, with horizon entropy playing the role of the fundamental quantity from which spacetime dynamics emerge~\cite{jacobson1995thermodynamics}. Verlinde extended this perspective, arguing that gravitational forces arise from entropy gradients on holographic screens, recasting gravity as an entropic rather than a fundamental interaction~\cite{entropic}. Both frameworks, however, operate at the level of bulk thermodynamics and leave open a prior question: what physical process underlies each individual entropy increment?
+Two landmark results establish that gravity and Unruh thermodynamics are deeply intertwined. Jacobson showed that the Einstein equations can be derived from thermodynamic identities applied to local Rindler horizons, with horizon entropy playing the role of the fundamental quantity from which spacetime dynamics emerge~\cite{jacobson1995thermodynamics}. Verlinde extended this perspective, arguing that gravitational forces arise from entropy gradients on holographic screens, recasting gravity as an entropic rather than a fundamental interaction~\cite{entropic}. Both frameworks, however, operate at the level of bulk thermodynamics and leave open a prior question: what physical process underlies each individual entropy increment?
 
-We argue that the answer is quantum measurement. Each act of information acquisition by a physical observer constitutes a discrete microstate event, and the collective backreaction of such events, together with the causal correlations they induce, gives rise to gravitational effects. The argument proceeds in three steps. First, any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. Second, by the equivalence principle, this impulse is locally indistinguishable in that from the effect of a gravitational field: no local measurement can distinguish the recoil associated with a quantum measurement event from acceleration in a gravitational potential. Third, when such impulses are modelled geometrically, via Aichelburg--Sexl (AS) pp-wave solutions, as we explore, they imprint energy and information directly onto horizon geometry, and coarse-graining over the resulting ensemble recovers standard horizon thermodynamics. 
+We propose that the relevant microscopic degrees of freedom may be associated with quantum measurement events. Each act of information acquisition corresponds to a discrete physical interaction involving energy–momentum exchange, which we identify as a candidate gravitational microstate. The cumulative backreaction of these localized impulses produces spacetime curvature when coarse-grained. The argument proceeds in three steps. First, any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. By the equivalence principle, such an impulse can be locally re-expressed in a freely falling frame as an inertial effect, making it indistinguishable from gravitational response in any local experiment. When such impulses are modelled geometrically, via Aichelburg--Sexl (AS) pp-wave solutions, as we explore, they imprint energy and information directly onto horizon geometry perturbations, and coarse-graining over the resulting ensemble recovers standard horizon thermodynamics. 
 
-The geometric modelling of measurement-induced impulses as 
-Aichelburg--Sexl pp-waves places this construction within the 
-gravitational shockwave programme of Dray and 
-'t~Hooft~\cite{dray1985gravitational} and 't~Hooft's S-matrix 
-approach to black hole scattering~\cite{thooft1996}. Their 
-construction uses AS solutions sourced by infalling classical 
+We model the spacetime response to such localized energy–momentum transfer events using Aichelburg--Sexl (AS) pp-wave geometries, following the gravitational shockwave framework of Dray, 't Hooft \cite{dray1985gravitational}, and others. Their construction uses AS solutions sourced by infalling classical 
 particles to define horizon scattering amplitudes; the key 
 difference here is that the source is a quantum entangled pair 
 emitted from a common ancestor $\mathcal{P}$, and the 
 information acquisition framing connects the geometric shift 
 directly to a classical bit acquired by an observer.
 
-
-What distinguishes the present construction from all of these 
-approaches is the combination of three features that do not appear 
-together elsewhere in the literature: a non-thermal bilocal source 
+The present construction combines three elements that do not typically appear together in the literature:
+a non-thermal bilocal source 
 that selects individual microstates from the Unruh ensemble rather 
 than assuming thermality as a primitive; the identification of each 
 microstate with a specific quantum measurement event carrying a 
 calculable energy-momentum transfer; and an operational realization 
 of entanglement-induced spatial separation at the single-microstate level with a concrete geometric 
-imprint. Each of these features appears in isolation in various 
-forms across the literature, but their combination, and in 
-particular the grounding of horizon geometry in individual 
-measurement events rather than bulk thermodynamic averages,
-appears to be new.
+imprint. 
 
 % 🔴 TODO 4A — Mapping impulses → Einstein equations
 % Make explicit how:
@@ -85,7 +74,6 @@ appears to be new.
 % TODO 6A [Section map paragraph todo]
 
 \subsection{Conceptual Roadmap}
-
 
 This stands in sharp contrast to the Di\'osi--Penrose objective collapse programme~\cite{penrose1996gravity, diosi1987universal}, which postulates that gravity \emph{causes} quantum state reduction as an objective, observer-independent physical process. The ratio $\alpha = E_\hbar / E_G$, where $E_\hbar = mc^2$ is 
 the Compton energy and $E_G = Gm^2/\Delta s$ is the 
@@ -100,10 +88,9 @@ The present framework uses the same ratio but inverts its
 causal role: $\alpha$ appears in Section~\ref{sec:eft} as 
 a dimensionless measure of a system's position relative to 
 the horizon scale, reinterpreted thermodynamically as the 
-Carnot efficiency parameter, with no objective collapse 
-postulated. The same mathematical object carries opposite 
-physical meaning in the two programmes, and the contrast 
-is precisely the one encoded in Figure~\ref{fig:diagram}.
+Carnot efficiency parameter,
+without introducing objective collapse as a fundamental dynamical postulate.
+The same mathematical ratio appears in both programmes, but is interpreted differently, as shown in Figure~\ref{fig:diagram}.
 
 
 Figure~\ref{fig:diagram} summarises this contrast. The three solid arrows represent perspectival grounding relations described above; the single dashed arrow represents the Di\'osi--Penrose causal postulate. It is the only relation in the diagram claimed to be objective and observer-independent, and it is the only one we do not adopt.
@@ -121,9 +108,8 @@ Figure~\ref{fig:diagram} summarises this contrast. The three solid arrows repres
 \label{fig:diagram}
 \end{figure}
 
-To make this concrete, we build on the microstate construction of~\cite{player2025driving}, in which bilocal driving sources generate entangled Rindler excitations that realize individual terms of the Unruh thermal ensemble. The present paper applies and extends that construction. Entangled pairs emitted from a localized source propagate into left and right Rindler wedges; polarization measurement events produce discrete energy-momentum impulses and correlated classical bits. We show that each such microstate carries a calculable gravitational imprint, modelled by an AS pp-wave solution, and that coarse-graining over the ensemble recovers standard horizon thermodynamics. This construction also provides an operational realization of entanglement-induced spatial separation at the level of individual microstates: entanglement is converted into geometric information, and each measurement event contributes a discrete, calculable increment to horizon entropy.
+To make this concrete, we build on the microstate construction of~\cite{player2025driving}, which realises individual terms of the Unruh thermal ensemble via bilocal driving sources. The present paper applies and extends that construction. Entangled pairs emitted from a localized source propagate into left and right Rindler wedges; polarization measurement events are associated with discrete energy–momentum transfer and yield correlated classical outcomes. Each such microstate carries a calculable gravitational imprint, modelled by an AS pp-wave solution, and coarse-graining over the ensemble reproduces standard horizon thermodynamics. This construction also provides an operational realization of entanglement-induced spatial separation at the level of individual microstates: entanglement is mapped into geometric correlations via the associated gravitational backreaction, and each measurement event contributes a discrete, calculable increment to horizon entropy through its associated energy–momentum transfer and gravitational backreaction.
 
-%This approach both complements and sharpens the thermodynamic gravity programme of Jacobson and Verlinde. Jacobson's derivation of the Einstein equations from horizon thermodynamics and Verlinde's entropic force framework both operate at the level of bulk averages, leaving open the question of what physical process underlies each entropy increment. The present construction supplies that microstate realization: each entropy increment corresponds to a physically mediated measurement event with a calculable energy-momentum transfer. Thermality is emergent rather than intrinsic, arising from coarse-graining over an ensemble of source-driven microstates, each of which admits a definite, non-thermal description in the global Minkowski frame. The thermodynamic results of both programmes are recovered as a consequence of this coarse-graining, rather than assumed as a starting point.
 
 % 🔴 TODO 7A — Information current formulation
 % Define a covariant information current $J^\mu_{\mathrm{info}}$ whose flux across local horizons reproduces entropy change, and show via Landauer's principle at the Unruh temperature that its associated energy-momentum yields the effective $T_{\mu\nu}}$ entering the Einstein equations.
