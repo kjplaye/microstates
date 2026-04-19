@@ -100,17 +100,14 @@ with the local vacuum. Substituting into Landauer's bound eliminates $k_B T$, yi
 \end{equation}
 Temperature has dropped out entirely: equation~\eqref{eq:UL} is a temperature-independent relation between energy, acceleration, and information, suitable for the Minkowski vacuum; acceleration sets the energy scale of information. 
 
-This Unruh--Landauer bound is saturated at one bit when the 
-photon wavelength equals the horizon distance up to a factor 
+This Unruh--Landauer bound is saturated for a photon at one bit
+when the wavelength equals the horizon distance up to a factor 
 of $2\pi/\ln 2$:
 \begin{equation}
 \lambda_{\text{sat}} = \frac{2\pi}{\ln 2}\cdot\frac{c^2}{a} \sim d_{\mathcal{H}},
 \end{equation}
 where $d_{\mathcal{H}} = c^2/a$ is the proper distance to the 
-Rindler horizon. The saturating photon is the ground state mode of the 
-causal cavity defined by the observer and the horizon, 
-with wavelength commensurate with the horizon distance 
-$d_\mathcal{H}$, too short to be 
+Rindler horizon. The saturating photon is the fundamental mode of the causal diamond defined by the observer and the horizon, with wavelength commensurate with the horizon distance $d_\mathcal{H}$, too short to be 
 super-horizon and too long to deposit more than one bit.
 This identifies the horizon distance as the natural 
 length scale of a single-bit measurement event, and 
@@ -147,7 +144,7 @@ This perspective is closely related in spirit to Erik Verlinde’s entropic grav
 \subsection{The Schwarzschild Radius}
 
 We match the acceleration inferred from the 
-measurement-induced impulse to the Newtonian gravitational 
+measurement-induced impulse to a Newtonian gravitational 
 field. For this identification we treat the thrust quantum 
 as a massive ultra-relativistic particle with rest energy 
 $\Delta E = m_t c^2$, so that $\Delta p = \Delta E/c$ 
@@ -194,7 +191,7 @@ This derivation parallels Jacob Bekenstein’s original argument \cite{bekenstei
 The two bounds are saturated simultaneously when $a = c^2/R$ — which is exactly the condition for being {\it at a horizon}. The horizon is therefore not just where thermodynamics happens to work out, it is the unique locus where the minimum cost of information acquisition equals the maximum information content of the region.
 
 \subsection{Summary}
-Beginning from the single relation~\eqref{eq:UL}, and using only Newton's laws and the equivalence principle, we have recovered the Schwarzschild radius, the surface gravity, and the Bekenstein-Hawking area law as consequences of the observation $\rightarrow$ acceleration identification. These are standard results, but their derivation here from the physical cost of information acquisition rather than from thermodynamic postulates is the point.
+Beginning from the single relation~\eqref{eq:UL}, and using only Newton's laws and the equivalence principle, we have recovered the Schwarzschild radius, the surface gravity, and the Bekenstein-Hawking area law as consequences of the observation $\rightarrow$ acceleration identification. These are standard results, but their derivation here from the physical accounting of information acquisition rather than from thermodynamic postulates is the point.
 
 The thrust quantum introduced in this section, the physical carrier of the measurement-induced impulse, will be given a explicit microstate realization in the sections that follow. It is identified with one of a pair of entangled photons modeled as Aichelburg-Sexl pp-waves crossing past Rindler horizons in the Unruh picture. In this case the back reaction of a single force carrier in one wedge is correlated with an equal and opposite reaction in the other from a common source.
 
@@ -202,37 +199,48 @@ The thrust quantum introduced in this section, the physical carrier of the measu
 \section{Bilocal Microstate Construction}
 \label{sec:microstates}
 
-Let $\hbar$ = $c$ = 1.
+From now on we use natural units $\hbar = c = 1$ unless 
+otherwise specified; factors of $\hbar$ and $c$ are restored 
+where they aid physical interpretation.
 
-The heuristic arguments of Section~\ref{sec:heuristics} establish a relationship between information acquisition, acceleration, and gravitational effects, but leave open the question of what a single microstate looks like concretely. In standard treatments, the Unruh effect is derived by coupling a detector to a pre-existing acceleration and reading off a thermal response from the vacuum. Following~\cite{player2025driving}, we invert this logic: we place an interaction in the past, where a source injects non-thermal entangled excitations into the field, and show that the observer's accelerated response can be driven by these source-induced excitations. The thermal ensemble then emerges as a coarse-grained aggregate of such microstates, rather than being a primitive property of the vacuum.
+The arguments of Section~\ref{sec:heuristics} establish a heuristic relationship between information acquisition, acceleration, and gravitational effects, but leave open the question of what a single microstate looks like concretely. In standard treatments, the Unruh effect is derived by coupling a detector to a pre-existing acceleration and reading off a thermal response from the vacuum. Following~\cite{player2025driving}, we invert this logic: we place an interaction in the past, where a source injects non-thermal entangled excitations into the field, and show that the observer's accelerated response can be driven by these source-induced excitations. The thermal ensemble then emerges as a coarse-grained aggregate of such microstates, rather than being a primitive property of the vacuum.
 
-Each microstate, equation \eqref{eq:microstate_vec} upcoming, is individually 
-non-thermal: it carries a definite helicity pair and a definite 
-Rindler frequency $\Omega$, neither of which is fixed by the 
-Unruh temperature. Thermality is not a property of any single 
-microstate but of the ensemble; it emerges when one asks only 
-which wedge a detection occurred in, discarding the specific 
-microstate identity, and is a consequence of coarse-graining 
-rather than a premise of the construction.
+Each microstate, equation \eqref{eq:microstate_vec} upcoming,
+is individually non-thermal in the sense that it carries a definite Rindler frequency 
+$\omega$, the frequency natural to $\mathcal{R}$ and 
+$\mathcal{L}$, which differs from the Minkowski frequency seen 
+by $\mathcal{P}$ due to the position-dependent redshift of the 
+Rindler geometry. Thermality is 
+not a property of any single microstate but of the ensemble; it 
+emerges when one asks only which wedge a detection occurred in, 
+discarding the specific microstate identity, and is a consequence 
+of coarse-graining rather than a premise of the construction.
 
-We now upgrade this construction from a spin-0 scalar field in the original source~\cite{player2025driving} to the spin-1 electromagnetic
-field. This is not merely a technical generalisation. As we show, the photon carries a unit
-of action $\hbar$ per cycle alongside its energy $E = \hbar\omega$, which closes the
-Landauer gap left open in Section~\ref{sec:heuristics}: in each wedge, the minimum actionable event in the
-construction is precisely a single photon, and its polarization state constitutes the
-classical bit acquired by each observer from detection. The anticorrelated helicities of the entangled pair
-are the natural completion of the $\mathbb{Z}_2$ swap symmetry between wedges, and as we
-discuss in Section~\ref{sec:ppwave}, they imprint a definite geometric signature onto the
-horizon.
+We now upgrade this construction from a spin-0 scalar field in 
+the original source~\cite{player2025driving} to the spin-1 
+electromagnetic field with a superposition of helicity pairs in 
+a Bell state, introducing one unknown binary degree of freedom,
+the helicity outcome, undetermined until measured, which 
+is the single bit responsible for the remaining thermality in 
+the ensemble. The photon carries one quantum of action $\hbar$ 
+and energy $E = \hbar\omega$, identifying the thrust quantum of 
+Section~\ref{sec:heuristics} with a single photon whose 
+polarization outcome, upon detection, is the classical bit 
+acquired by each observer. The Bell state is the natural 
+completion of the CPT\footnote{PCT in Bisognano--Wichmann.} symmetry between wedges, which by the 
+Bisognano--Wichmann theorem~\cite{bisognano1975duality} is 
+implemented by the modular conjugation operator $J$ mapping 
+the right wedge algebra to the left wedge algebra,
+and as we discuss in Section~\ref{sec:ppwave}, the photons
+imprint a definite geometric signature onto the horizon.
 
 %------------------------------------------------------
-\subsection{A Source and Three Observers}
+\subsection{A Source and Two Observers}
 %------------------------------------------------------
 
-Three observers are placed at spacetime
+Three massive bodies are placed at spacetime
 positions $(t,z) = (0,1)$, $(0,-1)$, and $(-1,0)$, named \emph{$\mathcal{R}$} - {\it Right}, \emph{$\mathcal{L}$} - {\it Left}, and \emph{$\mathcal{P}$} - {\it Past} respectively. $\mathcal{P}$ serves as the
-common causal ancestor of $\mathcal{R}$ and $\mathcal{L}$ (see Figure~\ref{paz}).
-
+common causal ancestor of the accelerations of $\mathcal{R}$ and $\mathcal{L}$ (see Figure~\ref{paz}).
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.75]{paz.png}
@@ -254,32 +262,36 @@ microstate-level realization of interior reconstruction.
 \subsection{Double-Null Gauge}
 %------------------------------------------------------
 
-The emission event naturally defines two null directions: the right-moving photon has
-wave-vector $k^\mu_R$ and the left-moving photon has wave-vector $k^\mu_L = -k^\mu_R$. These
-two null directions are precisely the $z^+$ and $z^-$ axes of double-null coordinates
+The emission event naturally defines two null directions:
+the right-moving photon has wave-vector $k^\mu_R = (\omega, 0, 0, k)$ 
+and the left-moving photon has wave-vector $k^\mu_L = (\omega, 0, 0, -k)$, 
+with equal and opposite spatial momenta.
+These two null directions are precisely the $z^+$ and $z^-$ axes of double-null coordinates
 \begin{equation}
     z^\pm = \frac{1}{\sqrt{2}}(t \pm z),
 \end{equation}
-with transverse coordinates $\mathbf{z}_\perp = (z^1, z^2)$. Working in this frame we impose
+with transverse coordinates $\mathbf{z}_\perp = (x, y)$. Working in this frame we impose
 the symmetric double-null gauge condition
 \begin{equation}
     A_+(z) = 0, \qquad A_-(z) = 0,
 \label{eq:doublenull}
 \end{equation}
-so that the gauge field is supported entirely on the transverse components $\mathbf{A}_\perp = (A^1, A^2)$. This gauge respects the $\mathbb{Z}_2$ symmetry that swaps the two wedges $(z^+ \leftrightarrow z^-)$ simultaneously with $(R \leftrightarrow L)$, and therefore treats both observers symmetrically by construction. The residual gauge freedom is fixed by requiring $\partial_i A^i = 0$ in the transverse plane, leaving precisely the two physical helicity degrees of freedom $\epsilon^i_{(\lambda)}$ with $\lambda = \pm 1$; consistency with 
+so that the gauge field is supported entirely on the transverse components $\mathbf{A}_\perp = (A^x, A^y)$. This gauge respects the CPT symmetry that swaps the two wedges $(z^+ \leftrightarrow z^-)$ simultaneously with $(R \leftrightarrow L)$, and therefore treats both observers symmetrically by construction. The residual gauge freedom is fixed by requiring $\partial_i A^i = 0$ in the transverse plane, leaving precisely the two physical helicity degrees of freedom $\epsilon^i_{(\lambda)}$ with $\lambda = \pm 1$; consistency with 
 Maxwell's equations and the absence of over-determination are 
 verified in Appendix~\ref{gauge_consistency}.
 
 The lack of manifest four-dimensional covariance in equation \eqref{eq:doublenull} is a consequence of aligning the gauge with the pair of physical null directions selected by the source, rather than an arbitrary choice. The full Lorentz group is broken to the little group preserving the pair $\{k^\mu_R, k^\mu_L\}$, which is the two-dimensional Euclidean group $ISO(2)$ acting on the transverse plane. This is precisely the little group of massless particles, and the two helicity eigenstates $\lambda = \pm 1$ are its irreducible representations. All physical results are independent of the gauge choice.
+
 
 %------------------------------------------------------
 \subsection{The Bilocal Source}
 %------------------------------------------------------
 
 In double-null gauge the electromagnetic field is characterised by its transverse components
-alone. The bilocal driving source generalises the scalar construction to
+alone. The bilocal driving source is symmetrized over both helicity assignments,
 \begin{equation}
-    J^{ij}(x,y) = \lambda\; \epsilon^{i*}_{(-1)}\, \epsilon^{j}_{(+1)}\; f_L(x)\, f_R(y),
+    J^{ij}(x,y) = \lambda\left( \epsilon^{i*}_{(-1)}\, \epsilon^{j}_{(+1)} 
+    + \epsilon^{i*}_{(+1)}\, \epsilon^{j}_{(-1)}\right) f_L(x)\, f_R(y),
 \label{eq:bilocal_vec}
 \end{equation}
 where $\lambda$ is a coupling constant, $f_L$ and $f_R$ are normalised mode profiles supported
@@ -289,11 +301,13 @@ polarization vectors
     \epsilon^i_{(+1)} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\i\end{pmatrix}, \qquad
     \epsilon^i_{(-1)} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix}.
 \end{equation}
-The index structure of~\eqref{eq:bilocal_vec} assigns helicity $+1$ to the right-moving mode
-and helicity $-1$ to the left-moving mode: the pair is \emph{anticorrelated} in helicity. This
-is the unique assignment consistent with angular momentum conservation at the emission vertex
-and with the $\mathbb{Z}_2$ wedge-swap symmetry, under which $\epsilon^i_{(+1)} \leftrightarrow
-\epsilon^i_{(-1)}$.
+The two terms in~\eqref{eq:bilocal_vec} are related by the CPT transformation 
+in the sense of Bisognano--Wichmann~\cite{bisognano1975duality}, which maps the 
+right wedge algebra to the left wedge algebra and simultaneously flips 
+$\lambda \to -\lambda$. The symmetrization is therefore not an ad hoc choice 
+but the unique assignment consistent with CPT symmetry and angular momentum 
+conservation at the emission vertex; the total angular momentum vanishes in 
+both terms.
 
 The sourced Lagrangian reads
 \begin{equation}
@@ -308,27 +322,42 @@ The sourced Lagrangian reads
         \Bigl(
           a^{L\dagger}_{-k,(-1)}\, a^{R\dagger}_{k,(+1)}
           \;+\;
-          a^{L}_{-k,(-1)}\, a^{R}_{k,(+1)}
+          a^{L\dagger}_{-k,(+1)}\, a^{R\dagger}_{k,(-1)}
+          \;+\;
+          \text{h.c.}
         \Bigr),
 \end{aligned}
 \label{eq:bilocal_lag}
 \end{equation}
-where $a^{L\dagger}_{-k,(-1)}$ and $a^{R\dagger}_{k,(+1)}$ are creation operators for left-wedge helicity $-1$ and right-wedge helicity $+1$ modes respectively. The interaction term in~\eqref{eq:bilocal_lag} is a two-mode squeezing interaction at frequency $\omega$, now resolved by helicity: it is the direct vector-field analogue of the scalar squeezing interaction~\cite{gerry2023introductory}, with the anticorrelated polarization structure made explicit. The photon pair carries total angular momentum zero, consistent with emission from a scalar source at $\mathcal{P}$.
+where the two creation operator pairs correspond to the two CPT-related helicity 
+assignments. The interaction term in~\eqref{eq:bilocal_lag} is a two-mode squeezing 
+interaction at frequency $\omega$, now resolved by helicity and symmetrized over 
+both assignments: it is the direct vector-field analogue of the scalar squeezing 
+interaction~\cite{gerry2023introductory}, with the CPT symmetry between wedges 
+made explicit. The photon pair carries total angular momentum zero in each term, 
+consistent with emission from a scalar source at $\mathcal{P}$.
 
-Each photon carries energy $E = \hbar\omega$ and, as a mode of the electromagnetic field, constitutes precisely one quantum of action $\hbar$ per oscillation cycle. The thrust quantum of Section~\ref{sec:heuristics} is thereby identified with a single photon: the minimum actionable event is the emission and detection of one such quantum.
+Each photon carries energy $E = \hbar\omega$ and one quantum of action $\hbar$, 
+identifying the thrust quantum of Section~\ref{sec:heuristics} with a concrete 
+physical object: the minimum actionable event is precisely a single photon. Its 
+polarization, undetermined until measured, is the quantum bit whose outcome 
+constitutes the classical record acquired by each observer upon detection.
 
 The Unruh--Landauer bound is saturated not at the level of an individual 
 photon but at the level of the source rate. The acceleration $a$ does not 
 fix the frequency $\omega$ of each emitted quantum; rather, it determines 
 the rate $\dot{N}$ at which the bilocal source must produce entangled pairs 
-in order to fully\footnote{The bilocal source may be only part of the acceleration, so $\dot{N}$ is actually a lower bound.} implement that acceleration, with the total power 
-$\dot{N}\hbar\omega$ matching the Unruh thermal flux. Each individual photon 
-carries exactly one quantum of action $\hbar$ and one binary helicity 
-outcome, one bit in the sense of one binary alternative, carrying 
-$\ln 2$ nats, and these are paired by the construction independently 
-of $a$. The Landauer bound then operates as a consistency condition on 
-the ensemble: the minimum energy cost per bit acquired, summed over the 
-rate of acquisition, equals the power required to sustain the acceleration.
+in order to fully\footnote{The bilocal source may be only part of the 
+acceleration, so $\dot{N}$ is actually a lower bound.} implement that 
+acceleration, with the total power $\dot{N}\hbar\omega$ matching the Unruh 
+thermal flux. Each individual photon carries exactly one quantum of action 
+$\hbar$ and one binary helicity outcome --- one bit in the sense of one 
+binary alternative, carrying $\ln 2$ nats --- and these are paired by the 
+construction independently of $a$. The Landauer bound then operates as a 
+consistency condition on the ensemble: the minimum energy cost per bit 
+acquired, summed over the rate of acquisition, equals the power required 
+to sustain the acceleration.
+
 
 %------------------------------------------------------
 \subsection{Polarization Bogoliubov Transformation}
@@ -342,61 +371,67 @@ In the transverse plane, the electromagnetic field in double-null gauge decompos
 two independent scalar-like sectors labelled by helicity $\lambda = \pm 1$. For each sector,
 the right-wedge field expands as
 \begin{equation}
-    A^i_\lambda(z) = \int_0^\infty \frac{d\Omega}{2\pi}\,
-        \frac{1}{\sqrt{2\Omega}}\,\epsilon^i_{(\lambda)}
+    A^i_\lambda(z) = \int_0^\infty \frac{d\omega}{2\pi}\,
+        \frac{1}{\sqrt{2\omega}}\,\epsilon^i_{(\lambda)}
         \left[
-            b^R_{\Omega,\lambda}\, u^R_\Omega(z)
-            + b^{R\dagger}_{\Omega,\lambda}\, u^{R*}_\Omega(z)
+            b^R_{\omega,\lambda}\, u^R_\omega(z)
+            + b^{R\dagger}_{\omega,\lambda}\, u^{R*}_\omega(z)
         \right],
 \end{equation}
-where $u^R_\Omega(z)$ are the right-wedge Rindler modes at Rindler frequency $\Omega$, and
-$b^R_{\Omega,\lambda}$, $b^{R\dagger}_{\Omega,\lambda}$ are the corresponding annihilation
+where $u^R_\omega(z)$ are the right-wedge Rindler modes at Rindler frequency $\omega$, and
+$b^R_{\omega,\lambda}$, $b^{R\dagger}_{\omega,\lambda}$ are the corresponding annihilation
 and creation operators satisfying
 \begin{equation}
-    \left[b^R_{\Omega,\lambda},\, b^{R\dagger}_{\Omega',\lambda'}\right]
-    = \delta(\Omega - \Omega')\,\delta_{\lambda\lambda'}.
+    \left[b^R_{\omega,\lambda},\, b^{R\dagger}_{\omega',\lambda'}\right]
+    = \delta(\omega - \omega')\,\delta_{\lambda\lambda'}.
 \end{equation}
 An identical expansion holds in the left wedge with $R \to L$ and $\lambda \to -\lambda$,
 reflecting the anticorrelated helicity assignment. Because each helicity sector is
 independently a scalar-like sector, the Bogoliubov transformation relating Minkowski and
 Rindler modes takes the same form in each sector. For helicity $\lambda$ at Rindler
-frequency $\Omega$, the Unruh modes are
+frequency $\omega$, the Unruh modes are
 \begin{equation}
-    c_{\Omega,\lambda} = \cosh\theta_\Omega\; b^R_{\Omega,\lambda}
-                       - \sinh\theta_\Omega\; b^{L\dagger}_{\Omega,-\lambda},
+    c_{\omega,\lambda} = \cosh\theta_\omega\; b^R_{\omega,\lambda}
+                       - \sinh\theta_\omega\; b^{L\dagger}_{\omega,-\lambda},
 \label{eq:bogoliubov}
 \end{equation}
-where $\tanh\theta_\Omega = e^{-\pi\Omega c/a}$ encodes the Unruh distribution at acceleration $a$, and $-\lambda$ on the left-wedge operator reflects the anticorrelation. The transformation~\eqref{eq:bogoliubov} is the standard Bogoliubov relation for a massless field~\cite{unruh1976notes, birrell1984quantum}, now carrying a helicity label throughout. The Minkowski vacuum in the Rindler basis reads, for each helicity sector,
+where $\tanh\theta_\omega = e^{-\pi\omega c/a}$ encodes the Unruh distribution at acceleration $a$, and the CPT symmetry between wedges is reflected in the 
+superposition over both helicity assignments in the Bell state. The transformation~\eqref{eq:bogoliubov} is the standard Bogoliubov relation for a massless field~\cite{unruh1976notes, birrell1984quantum}, now carrying a helicity label throughout. The Minkowski vacuum thermofield double state, in the Rindler basis reads, for each helicity sector,
 \begin{equation}
     |0\rangle_M^{(\lambda)}
-    = \frac{1}{\cosh\theta_\Omega}
-      \sum_{n=0}^\infty \tanh^n\theta_\Omega\;
-      |n_{\Omega,\lambda}\rangle_R\,
-      |n_{\Omega,-\lambda}\rangle_L,
+    = \frac{1}{\cosh\theta_\omega}
+      \sum_{n=0}^\infty \tanh^n\theta_\omega\;
+      |n_{\omega,\lambda}\rangle_R\,
+      |n_{\omega,-\lambda}\rangle_L,
 \label{eq:vacuum_vec}
 \end{equation}
-and the full vacuum is the product over all $\Omega$ and both helicities:
+and the full vacuum is the product over all $\omega$ and both helicities:
 \begin{equation}
-    |0\rangle_M = \prod_{\Omega,\lambda} |0\rangle_M^{(\lambda)}.
+    |0\rangle_M = \prod_{\omega,\lambda} |0\rangle_M^{(\lambda)}.
 \end{equation}
 
 Equation~\eqref{eq:vacuum_vec} makes explicit that the Minkowski vacuum is a sum over
 entangled helicity-anticorrelated pairs at each Rindler frequency. The bilocal source
-selects a single term from this sum at fixed $\Omega$ and fixed helicity pair
+selects a single term from this sum at fixed $\omega$ and fixed helicity pair
 $(\lambda, -\lambda) = (+1,-1)$, yielding the single-microstate
 \begin{equation}
-    |\Psi_{\Omega}\rangle_M
-    = |1_{\Omega,+1}\rangle_R\,|1_{\Omega,-1}\rangle_L
+    |\Psi_{\omega}\rangle_M
+    = \frac{1}{\sqrt{2}}\left(
+        |1_{\omega,+1}\rangle_R\,|1_{\omega,-1}\rangle_L 
+        + |1_{\omega,-1}\rangle_R\,|1_{\omega,+1}\rangle_L
+      \right)
       + \mathcal{O}(\text{higher order}).
 \label{eq:microstate_vec}
 \end{equation}
-$\mathcal{R}$'s detection of helicity $+1$ and $\mathcal{L}$'s detection of helicity $-1$ are therefore
-perfectly anticorrelated: each measurement event yields one classical bit, and the two bits
-are the complement of one another.
+$\mathcal{R}$'s and $\mathcal{L}$'s helicity outcomes are 
+undetermined until measurement, at which point they are 
+perfectly anticorrelated by the Bell state structure: each 
+observer acquires one classical bit, and the two bits are 
+complements of one another.
 
 The key structural result is that the helicity label $\lambda$ is conserved under the
 Bogoliubov transformation: it enters equation~\eqref{eq:bogoliubov} as a spectator index and
-exits unchanged on the Unruh operators $c_{\Omega,\lambda}$. Thermality, when it arises from
+exits unchanged on the Unruh operators $c_{\omega,\lambda}$. Thermality, when it arises from
 coarse-graining over the ensemble of microstates~\eqref{eq:microstate_vec}, is therefore
 helicity-resolved: each helicity sector thermalises independently, and the anticorrelation
 between wedges is preserved at every level of the construction.
@@ -405,17 +440,24 @@ between wedges is preserved at every level of the construction.
 \subsection{Summary}
 %------------------------------------------------------
 
+
 The passage from the scalar to the vector field construction introduces three structural
 improvements. First, the photon carrying $E = \hbar\omega$ and one quantum of action per
 cycle identifies the thrust quantum of Section~\ref{sec:heuristics} with a concrete physical
 object, closing the Landauer acquisition gap. Second, the double-null gauge condition,
 motivated by the pair of null directions defined by the emission event, treats both Rindler
-wedges symmetrically and exposes the $\mathbb{Z}_2$ swap symmetry as the organising principle
-of the construction. Third, the anticorrelated helicity structure, conserved through the
-Bogoliubov transformation, provides each observer with one classical bit whose values are
-perfectly complementary: the two bits together constitute the correlated classical record
-that, in the AS pp-wave picture of Section~\ref{sec:ppwave}, is imprinted as geometric
-information onto the horizon.
+wedges symmetrically and exposes the CPT swap symmetry as the organising principle
+of the construction.
+
+Third, the Bell state structure, conserved through the 
+Bogoliubov transformation, leaves the helicity outcome 
+undetermined until measurement, at which point each observer 
+acquires one classical bit whose values are perfectly 
+complementary by CPT symmetry: the two bits together 
+constitute the correlated classical record that, in the AS 
+pp-wave picture of Section~\ref{sec:ppwave}, leaves a 
+geometric trace on the horizon as information passes through it.
+
 
 % Section 4
 \section{Matter as Substrate}
@@ -544,7 +586,7 @@ sample at the Bremermann rate $mc^2/h$ and that each sample is a quantum of acti
 accumulated in the path integral phase $e^{iS/\hbar}$. But it left open a prior question:
 \emph{why} does matter sample at all? The zig-zag\footnote{Penrose calls these particle {\it zig-zag} particles, we are tempted to call them {\it tick-tock} particles, but only in a footnote.} construction of Penrose and Dirac supplies
 a concrete physical answer, and in doing so reveals that the bilocal microstate construction
-of Section~\ref{sec:microstates} is not merely analogous to the origin of mass, it is
+of Section~\ref{sec:microstates} is
 structurally identical to it at the level of individual events.
 
 \subsubsection{The Dirac 4-Spinor as a Bilocal System}
@@ -848,13 +890,12 @@ in natural units, consistent with one Planck-area patch per
 detection event.
 
 The longitudinal shift $\Delta v \propto -\ln r^2$ produced by each 
-AS pp-wave at the Rindler horizon is not merely a coordinate 
-displacement: it is a supertranslation in the sense of 
+AS pp-wave at the Rindler horizon is a supertranslation in the sense of 
 Bondi--Metzner--Sachs (BMS) symmetry. Hawking, Perry, and 
 Strominger~\cite{hawking2016soft} showed explicitly that a black 
 hole is supertranslated by the passage of an asymmetric shockwave, 
 and the AS longitudinal shift is precisely the linearised 
-supertranslation field on the horizon. Carlip~\cite{carlip2018bms} 
+supertranslation field on the horizon. Carlip~\cite{carlip2018black} 
 demonstrated that the near-horizon diffeomorphisms of a generic 
 black hole are enhanced to a $\mathrm{BMS}_3$ algebra whose central 
 charge determines the Bekenstein--Hawking entropy, but his programme 
@@ -862,8 +903,7 @@ identifies the symmetry without specifying the physical process that
 excites individual modes. The bilocal construction supplies that 
 process: each measurement event produces one AS pp-wave, which 
 deposits one supertranslation at the Rindler horizon, exciting one 
-mode of the $\mathrm{BMS}_3$ algebra. The entropy count is therefore 
-not merely consistent with Carlip's result, the microstates being 
+mode of the $\mathrm{BMS}_3$ algebra. The entropy count is consistent with Carlip's result, the microstates being 
 counted are the measurement events themselves.
 
 \subsection{Action and the Gravitational Boundary}
@@ -963,7 +1003,7 @@ the two bits, and the correlated pair of samples written into the matter on each
 horizon. The spatial bit is precisely the polarization bit 
 now read as a location rather than a spin state: the same bit that records \emph{what} was
 observed also records \emph{where}, because in this construction the two wedges carry
-opposite helicities by design. This double duty is not merely convenient but forced: the 
+opposite helicities by design. This double duty is forced: the 
 anticorrelated helicity assignment of the bilocal source makes 
 the two wedges distinguishable by construction, so the spatial 
 bit is already latent in the source geometry before any 
@@ -982,19 +1022,19 @@ and right Rindler wedges~\cite{maldacena2013cool}:
 equation~\eqref{eq:vacuum_vec} is precisely this state, with 
 the helicity label $\lambda$ carried through. This places the 
 present construction squarely within the ER=EPR setting of 
-Maldacena and Susskind rather than merely analogous to it --- 
+Maldacena and Susskind, 
 the ER=EPR correspondence is the ambient mathematical structure 
 within which the bilocal construction operates.
 
 The bilocal source selects one term from the thermofield double 
-sum at fixed $\Omega$ and fixed helicity pair, yielding the 
+sum at fixed $\omega$ and fixed helicity pair, yielding the 
 single microstate~\eqref{eq:microstate_vec}. The EPR side is 
 the entangled photon pair emitted by $\mathcal{P}$, whose 
 quantum correlations are consumed by the two measurement events. 
 The ER side is the pair of correlated AS longitudinal shifts in 
 opposite null directions: the geometric imprint of one term in 
 the thermofield double sum, calculable and explicit. The spatial 
-bit --- the answer to ``who observed $H_+$?'' --- is the classical 
+bit, the answer to ``who observed $H_+$?'', is the classical 
 record of which side of the bridge each measurement occurred on. 
 The bridge is not a stand-in for the entanglement but its 
 physical instantiation, built from correlated matter samples, 
@@ -1151,7 +1191,7 @@ Coulomb condition $\partial^i A_i = 0$:
           for a purely transverse source.
 \end{enumerate}
 The gauge is therefore internally consistent and does not over-constrain the physical 
-degrees of freedom. The $\mathbb{Z}_2$ wedge-swap symmetry is preserved throughout: 
+degrees of freedom. The CPT wedge-swap symmetry is preserved throughout: 
 conditions on $A_+$ and $A_-$ are imposed symmetrically, and neither null direction 
 is privileged over the other.
 
@@ -1162,11 +1202,7 @@ is privileged over the other.
 % Section 9
 \section{Acknowledgements}
 
-I am also grateful to Claude for helpful discussions, 
-noting with some irony that each such exchange constitutes, 
-in the framework of this paper, a sequence of measurement 
-events whose Landauer cost was paid by the data centers 
-hosting them.
+I am grateful to Claude for helpful discussions.
 
 \bibliographystyle{ieeetr}
 \bibliography{bibliography}
