@@ -25,7 +25,7 @@
 
 \maketitle
 
-\abstract{Thermodynamic approaches to gravity, from Jacobson to Verlinde, relate spacetime dynamics to horizon entropy but do not specify the microscopic carriers of the entropy increments. We take as primitive that quantum measurement necessarily involves a physical interaction with energy–momentum transfer between system and detector. Within this setting, we model such interactions as localized Aichelburg--Sexl (AS) pp-wave perturbations of spacetime geometry. Each measurement event then induces a discrete shift in null horizon coordinates, contributing additively to horizon area, and coarse-graining over the resulting ensemble reproduces the Bekenstein--Hawking area law. A bilocal realization from our previous work using entangled photon pairs yields correlated AS shifts on opposite Rindler horizons, providing an operational realization of entanglement as spatial connectivity in the spirit of ER=EPR. Within this construction, the gravitational boundary term on the horizon is identified with the accumulated energy transfer associated with measurement events, linking matter dynamics and horizon entropy at the level of individual microstates. The horizon acts as a channel through which information passes, but it is the matter of the detectors, via accumulated quanta of action, that stores it.}
+\abstract{Thermodynamic approaches to gravity, from Jacobson to Verlinde, relate spacetime dynamics to horizon entropy but do not specify the microscopic carriers of the entropy increments. We take as primitive that quantum measurement necessarily involves a physical interaction with energy–momentum transfer between system and detector. Within this setting, we model such interactions as localized Aichelburg--Sexl (AS) pp-wave perturbations of spacetime geometry. Each measurement event then induces a discrete shift in null horizon coordinates, contributing additively to horizon area, and coarse-graining over the resulting ensemble reproduces the Bekenstein--Hawking area law. A bilocal realization from our previous work using entangled photon pairs yields correlated AS shifts on opposite Rindler horizons, providing an operational realization of entanglement as spatial connectivity in the spirit of ER=EPR. Within this construction, the gravitational boundary term on the horizon is identified with the accumulated energy transfer associated with measurement events, linking matter dynamics and horizon entropy at the level of individual microstates. Throughout, matter is the timelike channel and the horizon is the spacelike channel; information passes through the horizon but is stored in the matter on each side.}
 
 % Section 1
 \section{Introduction}
@@ -463,19 +463,63 @@ geometric trace on the horizon as information passes through it.
 \section{Matter as Substrate}
 \label{sec:substrate}
 
-The Unruh–Landauer relation of Section~\ref{sec:heuristics} constrains the minimal energy required to register information, but does not specify where that information resides physically. The present section addresses this gap by identifying matter itself as the substrate in which such information is stored, with each act of acquisition corresponding to the deposition of a discrete quantum of action into the detector’s degrees of freedom. We show how information is encoded in matter and energy and is reflected in the horizon geometry. This requires a physical account of what it means for matter to \emph{carry} information.
+A prior question motivates the approach taken here: {\it how can 
+we quantize gravity without quantizing spacetime or its 
+curvature degrees of freedom directly?} A common approach 
+posits Planck-scale cells~\cite{wheeler1955geons} or a sprinkling of discrete 
+spacetime events~\cite{bombelli1987space}, but Lorentz 
+invariance is recovered only statistically in such 
+constructions rather than at the level of individual 
+configurations, and the discreteness of spacetime
+remains an assumption rather than a derived 
+result~\cite{brown_mathpages_unruh}. We instead take the 
+viewpoint that space and time are properties of matter itself and 
+they are defined only up to the resolution set by that
+matter realizing them.
+This resolution is carried by the action $S/\hbar$, 
+which is Lorentz invariant by construction, and 
+discreteness emerges rather 
+than being imposed on the geometry. 
 
-A massive particle accumulates phase along its worldline at a rate set by its rest energy. The Compton frequency relation $f = E/h$ assigns a natural frequency to any mass $m$, and Bremermann's computational limit~\cite{bremermann1962optimization} independently recovers the same rate $f = mc^2/h$ as the maximum clock rate, or Nyquist rate, of any physical system with that energy $E$. These two results agree because they are both expressions of the same underlying fact: a quantum of action $\hbar$ is the minimal unit of physical evolution, and $mc^2/h$ is the rate at which a mass $m$ consumes such quanta.
+The Unruh–Landauer relation constrains the minimal energy 
+required to register information but does not specify where 
+that information resides physically. We identify matter 
+itself as the substrate, with each act of acquisition 
+corresponding to the deposition of a discrete quantum of 
+action into the detector's degrees of freedom. 
 
-Each such quantum corresponds to one sample\footnote{We use \emph{sample} throughout to denote a single zero crossing of the phase $e^{iS/\hbar}$; readers may equivalently read this as \emph{event} or \emph{tick}. It is only defined upto the Heisenberg resolution.} of the phase $e^{iS/\hbar}$ in the path integral, and classical trajectories emerge from the constructive interference of these samples across paths. Paths separated by less than one sample of action, less than $\hbar$, do 
+
+A massive particle carries phase along its worldline 
+at a rate set by its rest energy. The Compton frequency 
+relation $f = mc^2/h$ assigns a natural frequency to any 
+mass $m$, and reflects the Bohr--Sommerfeld quantization 
+condition $\oint p\, dq = nh$: action is quantized in 
+units of $h$, and the Compton frequency is the rate at 
+which a mass $m$ consumes such units. Bremermann's 
+computational limit~\cite{bremermann1962optimization} 
+independently recovers the same rate as the maximum 
+clock rate, or Nyquist rate, of any physical system 
+with that energy $E$. These results agree because they are expressions of the same underlying fact: a quantum of action $\hbar$ is the minimal unit of physical evolution, and $mc^2/h$ is the rate at which a mass $m$ consumes such quanta.
+
+Each quantum corresponds to one sample\footnote{We use the information theoretic term \emph{sample} throughout to denote a single zero crossing of the phase $e^{iS/\hbar}$; readers may equivalently read this as \emph{event} or \emph{tick}. It is only defined upto the Heisenberg resolution.} of the phase $e^{iS/\hbar}$ in the path integral, and classical trajectories emerge from the constructive interference of these samples across paths. Paths separated by less than one sample of action, less than $\hbar$, do 
 not produce resolvable interference fringes: the phase difference is 
 insufficient to complete a full cycle of constructive and destructive 
 interference, so the trajectory cannot be distinguished at sub-sample 
 resolution. The trajectory is resolved only down to the scale set by 
 $\hbar/E$, which is precisely the Heisenberg uncertainty at energy $E$.
-This corresponds to a natural ultraviolet cutoff given by the energy $E$ of the system itself. Higher energies only come into play when external systems interact with the energy $E$ system. 
+This corresponds to a natural ultraviolet cutoff at 
+the energy $E$ of the system itself, in the spirit 
+of effective field theory, with higher energies 
+entering only through external interactions.
 
-This gives matter a precise sense in which it is a \emph{substrate for information}: it accumulates samples, and each sample is a discrete unit of action, Lorentz-invariant and recorded in the particle's proper time. Matter is persistent memory in the operational sense that its history of samples is physically encoded in its state and cannot be erased without an energy cost governed by Landauer's principle. The maximum rate of this memory is bounded by Bremermann.
+\subsection{What is Being Sampled}
+This gives matter a natural sense in which it is a 
+\emph{substrate for information}: each quantum of action 
+deposited is a discrete, Lorentz-invariant unit of physical 
+evolution recorded in the particle's proper time. Matter is 
+memory in the operational sense that it 
+maintains persistant information. This has a precise 
+information-theoretic content:
 
 \begin{quote}
 \textit{The signal being sampled at the Bremermann rate is the 
@@ -483,8 +527,8 @@ internal quantum state of the particle, its spin, helicity, and
 other quantum numbers, and the dynamic range is $\log_2$ of the 
 dimension of the internal Hilbert space.}
 \end{quote}
-
-It is worth pointing out that these concepts are additive. The union 
+Crucially, both the processing rate and the dynamic range are 
+additive under composition. The union 
 of two systems with masses $m_1$ and $m_2$ and internal Hilbert spaces 
 of dimensions $d_1$ and $d_2$ has a sampling rate of
 \begin{equation}
@@ -502,10 +546,13 @@ Both the sampling rate and the information capacity are therefore
 extensive quantities, consistent with their interpretation as 
 properties of matter that compose naturally under union.
 
-The distinction between massless and massive degrees of freedom is therefore operational: massless quanta transmit information, while massive systems retain it, accumulating the action quanta that constitute physical memory. A massless particle, the photon, has no rest frame, no proper time, and accumulates no action between emission and absorption. It does not sample. It therefore carries no persistent
-memory and cannot serve as a substrate. Its role in the present construction is precisely
-that of a pure information carrier. A single photon carries exactly two internal irreducible constituents, distinct in kind:
+\subsection{Types of Particles}
 
+The distinction between massless and massive degrees of freedom is therefore operational: massless quanta transmit information, while massive systems retain it, carrying the action quanta that constitute physical memory. A massless particle, the photon, has no rest frame, no proper time, and carries a single quantum of action between emission and absorption. It does not sample. It therefore carries no persistent memory and cannot serve as a substrate. Its role in the present construction is precisely
+that of a pure information carrier. 
+
+A single photon is the minimal carrier because it 
+contributes exactly one of each:
 \begin{itemize}
 
 \item \textbf{One quantum of action $\hbar$}: the physical transfer, 
@@ -514,69 +561,61 @@ Bremermann sample rate by $\Delta f = \hbar\omega/h$ for as long as the
 energy remains in the mass. This increment is the physical trace of the 
 interaction in the detector's matter-memory.
 \item \textbf{One bit of polarization}: the informational outcome, the 
-classical record of which helicity, $\lambda = +1$ or $\lambda = -1$ 
---- was absorbed. This bit persists in the detector's state for as long 
+classical record of which helicity, $\lambda = +1$ or $\lambda = -1$, was absorbed. This bit persists in the detector's state for as long 
 as the detector retains the record. Erasure of this bit carries a minimum 
 energy cost governed by Landauer's principle, regardless of how the 
 record was originally established.
 \end{itemize}
+These two constituents are not independent: the action 
+quantum $\hbar$ and the helicity $\lambda = \pm 1$ are 
+two aspects of the same object, the energy $\hbar\omega$ 
+and the angular momentum $\pm\hbar$ of a single photon.
 
-\subsection{Types of sample}
+\subsection{Types of Interactions}
 
-
-From a given observer’s perspective, some samples appear to carry information while others do not. One can describe three types of samples in terms of how the observer registers or retains their outcomes.
+From a given observer's perspective, interactions can be 
+classified into three types, each defined relative to that 
+observer.
 
 \begin{itemize}
-\item {\bf Absorption samples} are measurement events: a photon is 
-detected, one quantum of action $\hbar$ is deposited persistently into the 
-detector's matter-memory, and one helicity outcome is written as a classical 
-bit. The Landauer cost $\Delta E \geq k_B T \ln 2$ is paid immediately and 
-in full on acquisition. This is the sample category that drives the bilocal 
-construction: $\mathcal{R}$ and $\mathcal{L}$ each undergo exactly one absorption sample per 
-emitted pair, and it is these samples whose gravitational imprint is modelled 
-by the AS pp-wave in Section~\ref{sec:ppwave}.
+\item \textbf{Information-bearing} Absorption produces a persistent classical 
+record in the observer's matter-memory: one quantum of action 
+$\hbar$ is deposited and one bit is written, with a Landauer 
+cost paid on acquisition. Emission is the reverse: a stored 
+bit is released and the record is lost, with the Landauer 
+cost paid on erasure. Reflection is absorption followed by 
+emission; a moving mirror receives a photon, transiently 
+stores the helicity bit, and re-emits it, paying the erasure 
+cost at emission. If the bit is fully erased before becoming 
+correlated with other degrees of freedom, no persistent 
+record remains and the photon can interfere with its partner 
+at a future $\mathcal{P}$. Whether reflection constitutes 
+an information-bearing interaction therefore depends entirely 
+on whether a persistent record survives.
 
-\item {\bf Free samples} are pure phase accumulation events: a massive particle 
-propagates along its worldline, incrementing its sample count at the Bremermann 
-rate $mc^2/h$, without writing any bit into any detector's state. No Landauer 
-cost is incurred, no classical record is produced, and no observer acquires 
-information. These are the samples that constitute mass and proper time in the 
-background sense, the substrate on which absorption and emission events act.
+\item \textbf{External interactions} occur entirely outside the 
+observer and are not information bearing for that observer, 
+though they may be information bearing for another. This 
+classification is explicitly subjective: the same physical 
+process may be external for one observer and information 
+bearing for another, depending on their epistemic access 
+to the outcome.
 
-\item {\bf Emission samples} are the time-reverse of absorption: a bit stored in 
-matter-memory is released, the corresponding quantum of action is re-emitted 
-as radiation, and the Landauer cost is paid on the way \emph{out} rather than 
-on the way in. This is the category Landauer's principle most directly 
-governs in its original erasure formulation.
+\item \textbf{Internal interactions} occur entirely within the 
+observer and are likewise not information bearing in the 
+sense of producing a new record --- the observer is the 
+system. The canonical example, the zig-zag Higgs 
+interaction, is developed in the next subsection.
 \end{itemize}
-
-A moving mirror realizes absorption and emission as reflection: it
-receives a photon, stores the helicity bit transiently in its 
-matter degrees of freedom during a period of free sample accumulation, and 
-re-emits the photon, paying the erasure cost at emission. An ensemble of 
-such mirrors, say two silvered mirrors  back to back, can cycle through absorption, free accumulation, and 
-emission without ever producing a permanent classical record.
-
-It is worth noting that the absorption/free/emission classification 
-is observer-relative in the same sense as quantum state reduction 
-itself. What constitutes an irreversible absorption sample for one 
-observer may be a free sample for an external observer. If $\mathcal{R}$ truly forgets the helicity 
-outcome, in the sense that his matter-memory becomes disentangled 
-from the bit, the photon can interfere with its partner at a 
-future $\mathcal{P}$. The classification is not a property of the interaction 
-itself but of the observer's epistemic access to the outcome. True 
-irreversibility is approached asymptotically as the bit becomes 
-correlated with an increasing number of environmental degrees of 
-freedom, which is the standard decoherence picture now applied to 
-the sample classification.
-
-The $\hbar$ is what makes the sample physical; the bit is what 
-makes it meaningful to an observer. These are distinct: the action 
-quantum is deposited regardless of whether a persistent record is 
-produced, while the bit exists only relative to an observer for 
-whom the outcome is accessible. That a single photon carries one 
-of each in the minimal case is the reason it is the natural unit 
-of the construction.
+The three categories are observer-relative in the same 
+sense as quantum state reduction itself, and what is 
+internal at one scale becomes external at a finer scale. 
+The $\hbar$ is what makes each interaction physical; the 
+bit is what makes it meaningful to an observer. These are 
+distinct: the action quantum is deposited regardless of 
+whether a persistent record is produced, while the bit 
+exists only relative to an observer for whom the outcome 
+is accessible.
 
 \subsection{Penrose's Zig-Zag Mechanism}
 \label{sec:zigzag}
@@ -602,7 +641,7 @@ algebra into two Weyl 2-spinors of opposite helicity $\lambda = \pm\frac{1}{2}$ 
 equal and opposite momenta. Penrose~\cite{penrose2006road} proposes a physical interpretation
 of this decomposition: the two 2-spinors are real physical objects, each moving
 instantaneously at the speed of light in opposite directions, interacting at regular
-intervals via the Higgs field at the De Broglie frequency.
+intervals via the Higgs field at the Compton frequency.
 
 The structural parallel with the bilocal construction is very close:
 
@@ -627,22 +666,31 @@ is therefore not a coincidence or a heuristic, it is the Higgs interaction rate,
 the rate at which the zig-zag mechanism deposits quanta of action into the particle's
 proper time.
 
-\subsubsection{Mass as Accumulated Measurement History}
+\subsubsection{Mass as Physical Memory}
 
-Between Higgs interactions, the two 2-spinors are massless and moving at $c$ in opposite
-null directions. Each spinor therefore has a local Rindler structure relative to the other:
-from the perspective of the right-moving spinor, the left-moving spinor is behind a causal
-horizon, and vice versa. The Higgs interaction is the event that collapses this local
-horizon and produces one sample, one unit of proper time, exactly as the photon
-absorption by $\mathcal{R}$ collapses the Rindler horizon and produces one sample in the bilocal
-construction.
+Between Higgs interactions, the two 2-spinors are massless 
+and moving at $c$ in opposite null directions. Each spinor 
+therefore has a local Rindler structure relative to the 
+other: from the perspective of the right-moving spinor, 
+the left-moving spinor is behind a causal horizon, and 
+vice versa. The Higgs interaction is the event that 
+resolves this local horizon and produces one sample, one 
+unit of proper time, exactly as the photon absorption by 
+$\mathcal{R}$ resolves the Rindler horizon and produces 
+one sample in the bilocal construction.
 
-This gives a precise sense in which mass is an accumulated measurement history. Each Higgs
-interaction is a measurement event: it deposits
-one quantum of action $\hbar$ into the particle's matter-memory, persistently incrementing
-its sample rate by $\Delta f = \Delta E/h$. The particle's mass is the total accumulated
-record of all such interactions since its formation. Matter is not just the substrate for information; its mass encodes the accumulated history of its Higgs interaction events.
-
+This gives a precise sense in which mass is physical 
+memory. Each Higgs interaction deposits one quantum of 
+action $\hbar$ into the particle's matter-memory and 
+maintains the spin state of the particle --- for an 
+electron, exactly one bit, the spin-$\frac{1}{2}$ 
+degree of freedom, is carried persistently between 
+interactions. The particle's mass determines the rate 
+at which these interactions occur via $E = \hbar\omega$, 
+and the spin is what is being maintained: matter does 
+not accumulate a ledger of past events but carries 
+its current state forward, one quantum of action 
+at a time.
 
 \subsubsection{Proper Time as a Foliation of Micro-Horizons}
 
@@ -677,7 +725,7 @@ logical structure is identical.
 \label{zigzag}
 \end{figure}
 
-\subsection{Matter as a Physical Channel}
+\subsection{Matter as a Timelike Channel}
 \label{sec:channel}
 
 The sampling rate and dynamic range of matter can be combined into 
@@ -698,87 +746,70 @@ $C$ is the \emph{channel capacity} of the matter substrate: the
 maximum rate at which physical interactions can write information 
 into its degrees of freedom.
 
-The three sample types of Section~\ref{sec:substrate} correspond 
-to three distinct regimes of the data processing inequality 
-$H(\text{out}) \leq H(\text{in})$, which states that information 
-cannot be created by physical processes, only preserved or lost:
 
-\begin{equation}
-\text{Free:} \quad H(\text{out}) = H(\text{in}), 
-\end{equation}
-\begin{equation}
-\text{Absorption:} \quad H(\text{field, out}) < H(\text{field, in}),
-\end{equation}
-\begin{equation}
-\text{Emission:} \quad H(\text{detector, out}) < H(\text{detector, in}).
-\end{equation}
+\subsection{The Horizon as a Spacelike Channel}
 
-Free samples saturate the inequality: no information is lost or 
-gained, the channel runs at capacity without transmitting anything. 
-Absorption samples strictly decrease the field's information content 
-as it flows into the detector: the channel is being \emph{used}, 
-information is being written into matter-memory at a rate bounded 
-by $C$. Emission samples strictly decrease the detector's information 
-content as the stored bit is released back into the field: the 
-channel runs in reverse, and the Landauer cost is the energy 
-price of that reversal.
-
-The data processing inequality is therefore the information-theoretic 
-statement of the thermodynamic arrow of time in this framework: 
-absorption and emission are the two directions of persistent 
-information flow, and free samples are the reversible background 
-against which both are measured. The full quantum channel structure 
-of the Bogoliubov transformation, its classical capacity in the 
-Holevo--Schumacher--Westmoreland, we leave for future work.
-
-The three fundamental constants $c$, $\hbar$, and $G$ play 
-precisely the roles of propagation speed, sampling rate, and 
-dynamic range in the channel capacity picture. The speed of 
-light $c$ sets the causal propagation speed of signals, 
-identifying space with time at the rate $\text{m/s}$. The 
-reduced Planck constant $\hbar$ sets the sampling rate via 
-the Compton frequency $mc^2/\hbar$, the temporal bandwidth 
-of the matter channel. The gravitational constant $G$, 
-through the Schwarzschild radius $r_s = 2Gm/c^2$, sets the 
-dynamic range: the maximum energy storable in a spatial 
-region without gravitational collapse, bounding the 
-information capacity per sample. Their combination 
+The three fundamental constants $c$, $\hbar$, and $G$ 
+play precise roles in the matter channel picture. The 
+speed of light $c$ sets the causal propagation speed 
+of signals, identifying space with time at the rate 
+$\text{m/s}$. The reduced Planck constant $\hbar$ sets 
+the resolution of the channel via the Compton frequency 
+$mc^2/\hbar$: this is the rate at which a mass $m$ 
+processes quanta of action, and it is the same rate 
+that the Bohr--Sommerfeld condition and Bremermann's 
+bound independently identify as the maximum clock rate 
+of any physical system with energy $E$. The gravitational 
+constant $G$, through the Schwarzschild radius 
+$r_s = 2Gm/c^2$, sets the maximum energy storable in 
+a spatial region without gravitational collapse, bounding 
+the information capacity per sample. Their combination 
 $\ell_P^2 = \hbar G/c^3$ is the Planck area, the minimal 
-spatial pixel per independent action tick, and counting 
-such pixels on a surface reproduces the Bekenstein bound. 
-The three constants are therefore not independent inputs to 
-the channel capacity but its three defining parameters: 
-propagation, resolution, and dynamic range.
+spatial region per independent quantum of action.
 
-The Bekenstein and Bremermann bounds are therefore the same 
-constraint viewed from orthogonal directions: Bekenstein counts 
-information capacity spatially, as area in Planck units, while 
-Bremermann counts it temporally, as samples per second. 
-Integrating the channel capacity over the natural causal 
-timescale $\tau \sim Gm/c^3$ gives
-\begin{equation}
-    C \cdot \tau = \frac{mc^2}{h} \cdot \frac{Gm}{c^3} 
-    = \frac{Gm^2}{hc} \sim H_{\mathrm{Bekenstein}},
-\end{equation}
-up to numerical factors and the dynamic range $\log_2(d)$. 
-The spacelike and timelike information bounds are 
-therefore consistent faces of the same underlying constraint.
+The Bekenstein and Bremermann bounds are the same 
+constraint viewed from orthogonal directions: Bremermann 
+counts information capacity temporally, as quanta of 
+action per second, while Bekenstein counts it spatially, 
+as area in Planck units. That they agree is not a 
+coincidence but a consequence of the Unruh--Landauer 
+relation derived in Section~\ref{sec:heuristics}, which 
+connects the temporal resolution $\hbar/E$ to the 
+spatial scale $r_s$ through the equivalence principle. 
+Counting Planck-area pixels on a surface and counting 
+action quanta in proper time are two descriptions of 
+the same underlying constraint on physical information.
 
+The horizon enters this picture not as a storage medium 
+but as the surface at which this constraint becomes 
+geometric. It marks the boundary at which the 
+matter-memory on one side is causally disconnected from 
+the matter-memory on the other. Horizon entropy is 
+therefore not a property of the horizon surface itself 
+but a count of the quanta of action that have been 
+written into the matter on each side, bounded by 
+Bremermann from above and by Landauer from below. The 
+holographic appearance of this count, proportional to 
+area rather than volume, follows from the 
+Unruh--Landauer and Bekenstein relations of 
+Section~\ref{sec:heuristics} and does not require 
+holography as an independent postulate.
 
-\subsection{Horizon Separation}
-
-The horizon enters this picture not as a storage medium but as a boundary condition. It marks
-the surface at which the matter-memory on one side is causally disconnected from the
-matter-memory on the other. Horizon entropy, in this account, is not a property of the
-horizon surface itself but a count of the samples that have been written into the matter on
-each side, bounded by Bremermann from above and by Landauer from below. The holographic
-appearance of this count, proportional to area rather than volume, is a consequence of the
-Unruh--Landauer and Bekenstein relations derived in Section~\ref{sec:heuristics} for a spherically symmetric mass distribution and does not require holography as an independent postulate.
-
-This reframing has a direct consequence for the emergent spatial separation developed in
-Section \ref{sec:erepr} below. The correlated measurement outcomes of $\mathcal{R}$ and $\mathcal{L}$ are not encoded in the horizon geometry in the first instance, they are encoded in the matter of their
-respective detectors, each of which has absorbed one photon and increased its Bremermann 
-sampling rate by $\Delta f = \hbar\omega/h$. The geometric correlations between the two wedges, realized as correlated AS pp-wave imprints in Section~\ref{sec:ppwave}, are downstream of this matter-level encoding. The bridge, if it exists, is built from correlated samples, not from the horizon itself.
+Two notions of channel appear in this construction and 
+it is worth distinguishing them. Matter is a timelike 
+channel: it carries information forward in proper time, 
+one quantum of action at a time, at the Bremermann rate. 
+The horizon is a spacelike channel: information passes 
+through it from one causally separated region to the 
+other, carried by the photon. These two channels are 
+orthogonal in the geometric sense --- one runs along 
+the worldline, the other across the causal boundary --- 
+and the measurement event is precisely where they meet. 
+The photon passes through the horizon channel and 
+deposits into the matter channel on the other side; 
+the AS pp-wave of Section~\ref{sec:ppwave} is the 
+geometric trace of that handoff, and the GHY boundary 
+term is its action.
 
 
 % Section 5
