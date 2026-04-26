@@ -73,7 +73,10 @@ Our approach stands in sharp contrast to the Diósi--Penrose objective collapse 
 \label{fig:diagram}
 \end{figure}
 
-In Section \ref{sec:heuristics} we explore a heuristic argument where we eliminate temperature from the discussion using a combination of Landauer's principle with the Unruh effect and derive standard BHT area and information laws from Newton's laws. We then dive into a spin-1 version of the concrete microstate construction from our previous work~\cite{player2025driving} which we present in Section \ref{sec:microstates}; this realizes individual terms of the Unruh thermal ensemble via Minkowski bilocal driving sources. In Section \ref{sec:substrate} we develop a language for discussing emergent spacetime as a property of information bearing matter. This sets the stage for Section \ref{sec:ppwave} where we discuss how Gibbons–Hawking–York horizon boundary terms can ``count'' matter's information as action and model our entangled photons as AS pp-waves that ``create'' space at the wedge horizons. Section \ref{sec:erepr} then identifies the newly emergent space with the measurement of a classical bit. We finish up by circling back to use temperature again with a Carnot cycle in Section \ref{sec:carnot}, doing work on the accelerating bodies, and connecting the discussion to moving mirrors. The efficiency of the cycle is connected to the ratios of system energy to observed informational energy which is always non-negative due to the heuristic bound from Section \ref{sec:heuristics} and is zero at the horizon. We finish up in Section \ref{gauge_consistency} with a technical discussion of a ``double-null'' gauge used in Section \ref{sec:microstates}.
+In Section \ref{sec:heuristics} we explore a heuristic argument where we eliminate temperature from the discussion using a combination of Landauer's principle with the Unruh effect and derive standard BHT area and information laws from Newton's laws. We then dive into a spin-1 version of the concrete microstate construction from our previous work~\cite{player2025driving} which we present in Section \ref{sec:microstates}; this realizes individual terms of the Unruh thermal ensemble via Minkowski bilocal driving sources. In Section \ref{sec:substrate} we develop a language for discussing emergent spacetime as a property of information bearing matter. This sets the stage for Section \ref{sec:ppwave} where we discuss how Gibbons–Hawking–York horizon boundary terms can ``count'' matter's information as action and model our entangled photons as AS pp-waves that ``create'' space at the wedge horizons. Section \ref{sec:erepr} then identifies the newly emergent space with the measurement of a classical bit.
+
+
+We finish up by circling back to use temperature again with a Carnot cycle in Section \ref{sec:carnot}, doing work on the accelerating bodies, and connecting the discussion to moving mirrors. The efficiency of the cycle is connected to the ratios of system energy to observed informational energy which is always non-negative due to the heuristic bound from Section \ref{sec:heuristics} and is zero at the horizon. We finish up in Section \ref{gauge_consistency} with a technical discussion of a ``double-null'' gauge used in Section \ref{sec:microstates}.
 
 % Section 2
 \section{Motivating Heuristics}
@@ -574,14 +577,14 @@ and the angular momentum $\pm\hbar$ of a single photon.
 \subsection{Types of Interactions}
 
 From a given observer's perspective, interactions can be 
-classified into three types, each defined relative to that 
+classified into several types, each defined relative to that 
 observer. 
 
 \begin{itemize}
 \item \textbf{Information-bearing}
   \begin{itemize}
   \item \textbf{Absorption} produces a persistent classical 
-record in the observer's matter-memory: one quantum of action 
+record in the observer's matter-memory: a quantum of action 
 is deposited and information is written, with a Landauer 
 cost paid on acquisition.
   \item \textbf{Emission} is the reverse: stored 
@@ -806,9 +809,8 @@ one quantum of action at a time, at the Bremermann rate.
 The horizon is a spacelike channel: information passes 
 through it from one causally separated region to the 
 other, carried by the photon. These two channels are 
-orthogonal in the geometric sense --- one runs along 
-the worldline, the other across the causal boundary --- 
-and the measurement event is precisely where they meet. 
+orthogonal in the geometric sense, one runs along 
+the worldline, the other across the causal boundary.
 The photon passes through the horizon channel and 
 deposits into the matter channel on the other side; 
 the AS pp-wave of Section~\ref{sec:ppwave} is the 
@@ -1008,7 +1010,7 @@ S_{GHY}\big|_{\mathcal{H}}
 = S_{\text{matter}}.
 \label{eq:GHY_micro}
 \end{equation}
-%
+
 The matter action and the gravitational boundary action are 
 therefore equal, event by event, on the stationary Rindler 
 horizon. This is not a bulk result: the bulk Einstein--Hilbert 
@@ -1017,6 +1019,30 @@ carries the physical content. The microstate construction
 identifies what that boundary content is: each contribution to 
 $S_{GHY}$ corresponds to one quantum of action deposited into 
 matter-memory by one measurement event.
+
+
+The equality $S_{GHY}\big|_{\mathcal{H}} = S_{\text{matter}}$ 
+invites a stronger reading. The bulk Einstein--Hilbert action 
+vanishes on-shell, so it is the boundary term alone that 
+carries the gravitational degrees of freedom. If the boundary 
+term counts matter action quanta event by event, as 
+equation~\eqref{eq:GHY_micro} shows, then the geometry at 
+the horizon is not an independent quantity that happens to 
+equal the matter action: it \emph{is} the matter action, 
+expressed in geometric language. The Planck area $\ell_P^2 = 
+\hbar G/c^3$ is the conversion factor between the two 
+descriptions, relating one quantum of action $\hbar$ to one 
+Planck-area patch on the horizon. In this reading the metric 
+near the horizon is not a smooth field that matter happens to 
+perturb; it is a coarse-grained count of the action quanta 
+that have passed through the horizon surface, with the 
+Bekenstein--Hawking area law as the statement that these two 
+counts agree. Whether this identification extends from the 
+boundary into the bulk, that is, whether the Ricci scalar 
+$R$ can be understood as an action-quanta density with 
+$\ell_P^2$ as the conversion factor, is a question the 
+present construction motivates but does not settle, and we 
+leave it for future work.
 
 This result is consistent with and extends programmes of 
 Jacobson~\cite{jacobson1995thermodynamics} and 
@@ -1072,8 +1098,7 @@ measurement occurs.
 The information is carried by the matter of the detectors, not by the horizon. As
 established in Section~\ref{sec:substrate}, the horizon is a boundary that makes the
 left/right distinction sharp; it is the matter on each side that accumulates the samples and
-holds the classical record. $\mathcal{R}$'s detector has absorbed one photon, increased its sampling rate, and registered polarization $H_+/H_-$. $\mathcal{L}$'s detector has absorbed one photon, increased its sampling rate, and registered polarization $H_-/H_+$. The two records are perfectly complementary by the anticorrelated structure of the bilocal source, and their complementarity is encoded in matter before it
-is reflected in geometry.
+holds the classical record. $\mathcal{R}$'s detector has absorbed one photon, increased its sampling rate, and registered polarization $H_+/H_-$. $\mathcal{L}$'s detector has absorbed one photon, increased its sampling rate, and registered polarization $H_-/H_+$. The two records are perfectly complementary by the anticorrelated structure of the bilocal source, and their complementarity is encoded in matter and is reflected in geometry.
 
 \subsection{ER = EPR}
 
@@ -1118,7 +1143,23 @@ This completes the microstate programme. Each entropy increment in the Bekenstei
 \section{Carnot Cycle from Unruh--Landauer}
 \label{sec:carnot}
 
-We consider in this section the case where $\mathcal{L}$ and $\mathcal{R}$ are moving mirrors being accelerated with an outward thrust from our past bilocal source $\mathcal{P}$ emission, see Figure \ref{carnot}. We complete our bilocal microstate absorption example by reflecting and emitting the photons off of the mirrors. This reflects the energy back to the origin in the future $\mathcal{F}$, $(t,z) = (1,0)$, in a reversible way. The mirrors are ideal, in the sense that they do not retain a persistent copy of the information that they temporarily store; they forget and emit. It is this reversibility that allows us to construct a example of a Carnot cycle at the level of microstates. The working system is the photon–mirror interaction degree of freedom; the Rindler wedge defines the thermal reservoirs, and the mirror trajectory defines the work parameter.
+We consider in this section the case where $\mathcal{L}$ and $\mathcal{R}$ are moving mirrors being accelerated with an outward thrust from our past bilocal source $\mathcal{P}$ emission, see Figure \ref{carnot}. We complete our bilocal microstate absorption example by reflecting and emitting the photons off of the mirrors.
+
+
+This reflects the energy back to the future sink 
+$\mathcal{F}$, located at $(t,z) = (1,0)$, which is 
+the CPT image of $\mathcal{P}$ under the combined 
+time-reversal and parity operation that swaps past 
+and future wedges. $\mathcal{F}$ plays the role of 
+a final absorber, receiving the reflected photons 
+and resetting the field state; its existence is 
+required by the reversibility of the ideal mirror 
+cycle and by the CPT symmetry of the bilocal 
+construction. The reflection is reversible in the 
+sense that the mirrors do not retain a persistent 
+copy of the information that they temporarily store.
+
+The mirrors are ideal, in the sense that they do not retain a persistent copy of the information that they temporarily store; they forget and emit. It is this reversibility that allows us to construct a example of a Carnot cycle at the level of microstates. The working system is the photon–mirror interaction degree of freedom; the Rindler wedge defines the thermal reservoirs, and the mirror trajectory defines the work parameter.
 
 \begin{figure}[h]
 \centering
@@ -1385,6 +1426,170 @@ is privileged over the other.
 
 % Section 9
 \section{Conclusion}
+\label{sec:conclusion}
+
+We have constructed a framework in which quantum 
+measurement is identified with a gravitational 
+microstate, and have shown that this identification 
+is consistent across thermodynamic, geometric, 
+information-theoretic, and field-theoretic 
+descriptions of the Rindler horizon. We summarise 
+the logical chain and its main consequences.
+
+\paragraph{The central identification.}
+We took as primitive that every measurement event 
+involves a physical energy--momentum transfer between 
+system and detector. Combining this with the Unruh 
+effect via Landauer's principle yields the 
+Unruh--Landauer relation~\eqref{eq:UL}, a 
+temperature-independent bound relating energy, 
+acceleration, and information acquisition. From this 
+single relation, and using only Newton's laws and the 
+equivalence principle, we recovered the Schwarzschild 
+radius, the surface gravity, and the Bekenstein--Hawking 
+area law as consequences of the physical accounting of 
+information acquisition, rather than as thermodynamic 
+postulates. The horizon is the unique locus at which 
+the minimum cost of information acquisition equals the 
+maximum information content of the region.
+
+\paragraph{The microstate construction.}
+The heuristic argument was given a concrete realization 
+in Section~\ref{sec:microstates}. A bilocal source 
+$\mathcal{P}$ in the causal past emits entangled photon 
+pairs with anticorrelated helicity, selecting individual 
+terms from the Unruh thermal ensemble rather than assuming 
+thermality as a primitive. Each microstate carries a 
+definite Rindler frequency and a helicity Bell state; 
+thermality emerges from coarse-graining over the ensemble, 
+not from the structure of any individual term. The helicity 
+label is conserved under the Bogoliubov transformation, 
+so the anticorrelation between wedges is preserved at 
+every level of the construction. The thrust quantum 
+of the heuristic argument is identified with a single 
+photon: one quantum of action $\hbar$ deposited into 
+the detector's matter-memory, and one classical bit of 
+helicity outcome constituting the record of the event.
+
+\paragraph{Matter as substrate.}
+Section~\ref{sec:substrate} established that matter 
+is not merely the stage on which measurements occur 
+but the physical substrate in which their records 
+persist. Massive particles sample at the Bremermann 
+rate $mc^2/h$, accumulating quanta of action in their 
+path integral phase; massless quanta transmit 
+information between samples without retaining it. 
+The horizon is not a storage medium but the surface 
+at which matter-memory on one side is causally 
+disconnected from matter-memory on the other; horizon 
+entropy counts the quanta of action written into matter 
+on each side, bounded by Bremermann above and Landauer 
+below. The zig-zag mechanism of 
+Section~\ref{sec:substrate} confirms that this 
+architecture is not imposed on matter from outside: 
+the Higgs interaction event is itself a measurement 
+event in the sense of the bilocal construction, 
+depositing one quantum of action and maintaining the 
+spin state of the particle, so that proper time 
+emerges from the same microstate structure at the 
+level of individual particles as at the macroscopic 
+level of $\mathcal{R}$ and $\mathcal{L}$.
+
+\paragraph{Geometry from measurement.}
+In Section~\ref{sec:ppwave} the entangled photons 
+were modelled as Aichelburg--Sexl pp-waves. Each 
+AS wave produces two effects at the Rindler horizon: 
+a transverse focusing that increments horizon area 
+by $\Delta A = 8\pi G\hbar\omega$, and a longitudinal 
+shift that displaces the wedge geometry outward in 
+the null direction, creating new space in the sense 
+that the future light cone of every test particle 
+in the wedge is displaced away from the horizon. 
+The longitudinal shift is a supertranslation in the 
+BMS sense; the bilocal construction identifies the 
+physical process that excites each supertranslation 
+mode, supplying what the Carlip programme leaves open.
+
+The central geometric result is the equality
+\begin{equation}
+S_{GHY}\big|_{\mathcal{H}} = S_{\text{matter}},
+\end{equation}
+established event by event in 
+equation~\eqref{eq:GHY_micro}. The gravitational 
+boundary action and the matter action are the same 
+quantity counted in two languages: geometric area 
+and quanta of action. The Planck area $\ell_P^2$ is 
+the conversion factor between them. This suggests 
+that the horizon geometry is not an independent 
+field that matter perturbs but a coarse-grained 
+count of the action quanta that have passed through 
+the horizon surface; the metric near the boundary 
+is, in this reading, the matter action expressed 
+geometrically, and the Bekenstein--Hawking area law 
+is the statement that these two counts agree.
+
+\paragraph{Entanglement as spatial information.}
+Section~\ref{sec:erepr} identified the spatial bit: 
+the answer to ``who observed $H_+$?'' is a binary 
+choice between left and right wedge, encoded in 
+the same classical record that encodes the helicity 
+outcome. The same bit records what was observed and 
+where, because the anticorrelated helicity assignment 
+of the bilocal source makes the two wedges 
+distinguishable by construction. The ER=EPR 
+correspondence is the ambient mathematical structure 
+of the construction: the EPR side is the entangled 
+photon pair, and the ER side is the pair of 
+correlated AS longitudinal shifts in opposite null 
+directions, calculable and explicit at the single-microstate 
+level. The wormhole bridge is not a stand-in for the 
+entanglement but its physical instantiation, built 
+from correlated matter samples one quantum of action 
+at a time. Whether the anticorrelated helicity 
+structure gives the bridge a topological invariant,
+an orientation in the transverse geometry absent 
+in the scalar case, is an open question we leave 
+for future work.
+
+\paragraph{The Carnot equivalence.}
+Section~\ref{sec:carnot} closed the construction 
+by completing the bilocal absorption example with 
+ideal moving mirrors reflecting the photons to the 
+future sink $\mathcal{F}$, the CPT image of 
+$\mathcal{P}$. The resulting cycle is a Carnot 
+engine at the microstate level, with the Rindler 
+horizon as the hot reservoir at the Unruh temperature 
+and the mirror's local environment as the cold 
+reservoir at the Landauer erasure temperature. The 
+central result of that section is the equivalence
+\begin{equation}
+W \leq \frac{\hbar a}{2\pi c}\Delta H 
+\iff \Delta E \geq \frac{\hbar a}{2\pi c}\Delta H,
+\end{equation}
+showing that the Carnot efficiency bound and the 
+Unruh--Landauer bound are the same inequality viewed 
+from opposite directions. The Rindler horizon is a 
+Carnot engine operating at the Unruh temperature, 
+with quantum measurement as the working substance 
+and the classical bit as the thermodynamic output.
+
+\paragraph{Open questions.}
+Several directions remain open. First, whether the 
+metric in the bulk interior can be understood as a 
+density of action quanta, with $\ell_P^2$ as the 
+conversion factor, extending the boundary result of 
+Section~\ref{sec:ppwave} into the bulk. Second, 
+whether the anticorrelated helicity structure of the 
+ER bridge constitutes a topological invariant of the 
+transverse geometry, giving a geometric distinction 
+between the scalar and vector cases at the 
+single-microstate level. Third, whether the bilocal 
+construction admits a falsifiable consequence: a 
+prediction, however small, that distinguishes the 
+measurement-as-microstate picture from standard 
+thermodynamic treatments at the level of observable 
+correlations. We regard these as the natural next 
+steps in the programme.
 
 
 % Section 10
