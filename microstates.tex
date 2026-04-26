@@ -39,7 +39,7 @@ particles to define horizon scattering amplitudes; the key
 difference here is that we use a quantum entangled pair 
 emitted from a common ancestor, and the 
 information acquisition framing connects the geometric shift 
-directly to a classical bit acquired by an observer.
+directly to a classical bit acquired by the observers.
 
 What distinguishes the present construction from all of these 
 approaches is the combination of three features that do not appear 
@@ -57,7 +57,7 @@ appears to be new.
 
 \subsection{Conceptual Roadmap}
 
-Our approach stands in sharp contrast to the Diósi--Penrose objective collapse programme~\cite{penrose1996gravity, diosi1987universal}, which postulates that gravity induces an objective, observer-independent collapse of the quantum state. In that framework, gravitational self-interaction is taken to define a physical timescale for wavefunction reduction, leading to a dynamical modification of standard quantum mechanics. We treat quantum measurement as a physical interaction mediated by energy--momentum transfer, and interpret any apparent reduction of the state as an effective description arising from such processes. The contrast between the two approaches is illustrated in Figure~\ref{fig:diagram}. The three solid arrows represent the perspectival grounding relations described above; the single dashed arrow represents the Di\'osi--Penrose causal postulate. It is the only relation in the diagram claimed to be objective and observer-independent, and it is the only one we do not adopt.
+Our approach stands in sharp contrast to the Diósi--Penrose objective collapse programme~\cite{penrose1996gravity, diosi1987universal}, which postulates that gravity induces an objective, observer-independent collapse of the quantum state. In that framework, gravitational self-interaction is taken to define a physical timescale for wavefunction reduction, leading to a dynamical modification of standard quantum mechanics. We instead treat quantum measurement as a subjective process mediated by energy--momentum transfer, and interpret the reduction of the state as physical. The contrast between the two approaches is illustrated in Figure~\ref{fig:diagram}. The three solid arrows represent ``grounding relations''; the single dashed arrow represents the Di\'osi--Penrose causal postulate. It is the only relation in the diagram claimed to be objective and observer-independent, and it is the only one we do not adopt.
 
 
 \begin{figure}[h]
@@ -73,7 +73,7 @@ Our approach stands in sharp contrast to the Diósi--Penrose objective collapse 
 \label{fig:diagram}
 \end{figure}
 
-To make this concrete, we build on the microstate construction of~\cite{player2025driving}, which realises individual terms of the Unruh thermal ensemble via bilocal driving sources. The present paper applies and extends that construction. Entangled pairs emitted from a localized past source propagate into left and right Rindler wedges; polarization measurement events are associated with discrete energy–momentum transfer and yield correlated classical outcomes. Each such microstate carries a calculable gravitational imprint, modelled by an AS pp-wave solution, and coarse-graining over the ensemble reproduces standard horizon thermodynamics. Our construction also provides an operational realization of entanglement-induced spatial separation at the level of individual microstates: entanglement is mapped into geometric correlations via the associated gravitational backreaction, and each measurement event contributes a discrete, calculable increment to horizon entropy through its associated energy–momentum transfer and gravitational backreaction.
+In Section \ref{sec:heuristics} we explore a heuristic argument where we eliminate temperature from the discussion using a combination of Landauer's principle with the Unruh effect and derive standard BHT area and information laws from Newton's laws. We then dive into a spin-1 version of the concrete microstate construction from our previous work~\cite{player2025driving} which we present in Section \ref{sec:microstates}; this realizes individual terms of the Unruh thermal ensemble via Minkowski bilocal driving sources. In Section \ref{sec:substrate} we develop a language for discussing emergent spacetime as a property of information bearing matter. This sets the stage for Section \ref{sec:ppwave} where we discuss how Gibbons–Hawking–York horizon boundary terms can ``count'' matter's information as action and model our entangled photons as AS pp-waves that ``create'' space at the wedge horizons. Section \ref{sec:erepr} then identifies the newly emergent space with the measurement of a classical bit. We finish up by circling back to use temperature again with a Carnot cycle in Section \ref{sec:carnot}, doing work on the accelerating bodies, and connecting the discussion to moving mirrors. The efficiency of the cycle is connected to the ratios of system energy to observed informational energy which is always non-negative due to the heuristic bound from Section \ref{sec:heuristics} and is zero at the horizon. We finish up in Section \ref{gauge_consistency} with a technical discussion of a ``double-null'' gauge used in Section \ref{sec:microstates}.
 
 % Section 2
 \section{Motivating Heuristics}
@@ -124,7 +124,7 @@ accelerations.
 
 
 \subsection{Momentum Transfer and Acceleration}
-In what follows, standard results emerge as consequences of the Unurh-Landauer relation and Newton's laws. The energy transfer $\Delta E$ implied by the relation is carried by a physical quantum, matter or radiation,  mediating the measurement interaction a \emph{thrust quantum}. For a relativistic carrier, the associated momentum transfer is
+In what follows, standard results emerge as consequences of the Unruh-Landauer relation and Newton's laws. The energy transfer $\Delta E$ implied by the relation is carried by a physical quantum, matter or radiation,  mediating the measurement interaction a \emph{thrust quantum}. For a relativistic carrier, the associated momentum transfer is
 \begin{equation}
 \Delta p = \frac{\Delta E}{c}.
 \end{equation}
@@ -518,7 +518,7 @@ This gives matter a natural sense in which it is a
 deposited is a discrete, Lorentz-invariant unit of physical 
 evolution recorded in the particle's proper time. Matter is 
 memory in the operational sense that it 
-maintains persistant information. This has a precise 
+maintains persistent information. This has a precise 
 information-theoretic content:
 
 \begin{quote}
@@ -838,7 +838,7 @@ term is its action.
 %    point if it stays.
 
 % Section 5
-\section{pp-Wave Geometry}
+\section{pp-Wave Geometry and Gibbons--Hawking--York Boundary}
 \label{sec:ppwave}
 WLOG we introduce coordinates for the photon traveling from $\mathcal{P}$ $(-1,0)$ to $\mathcal{R}$ $(0,1)$. Let $u = t - z + 1$ and $v = t + z + 1$, where the photon propagates along the null plane $u = 0$, $z$ is the longitudinal direction, and $(x,y)$ are transverse coordinates. Then $(u,v)$ = $(0,0)$ is $\mathcal{P}$'s location, $(u,v)$ = $(0,2)$ is $\mathcal{R}$'s location, and $(u,v)$ = $(0,1)$ is the intersection of the photon with the past right Rinder horizon. The situtation is reversed for the left moving photon, we swap $u$ and $v$ to describe photon moving from $\mathcal{P}$ to $\mathcal{L}$.
 
@@ -1111,6 +1111,134 @@ future work.
 This completes the microstate programme. Each entropy increment in the Bekenstein--Hawking area law corresponds to a single AS pp-wave interaction. Each pp-wave interaction corresponds to a single measurement event in the bilocal construction. Each measurement event both encodes a spatial bit and generates the spatial separation that bit refers to. The gravitational, thermodynamic, information-theoretic, and geometric descriptions of the horizon are unified at the level of individual microstates, and thermality, entropy, and space itself emerge together from the coarse-grained aggregate of these events.
 
 % Section 7
+\section{Carnot Cycle from Unruh--Landauer}
+\label{sec:carnot}
+
+We consider in this section the case where $\mathcal{L}$ and $\mathcal{R}$ are moving mirrors being accelerated with an outward thrust from our past bilocal source $\mathcal{P}$ emission, see Figure \ref{carnot}. We complete our bilocal microstate absorption example by reflecting and emitting the photons off of the mirrors. This reflects the energy back to the origin in the future $\mathcal{F}$, $(t,z) = (1,0)$, in a reversible way. The mirrors are ideal, in the sense that they do not retain a persistent copy of the information that they temporarily store; they forget and emit. It is this reversibility that allows us to construct a example of a Carnot cycle at the level of microstates. The working system is the photon–mirror interaction degree of freedom; the Rindler wedge defines the thermal reservoirs, and the mirror trajectory defines the work parameter.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.75]{carnot.png}
+\captionsetup{width=0.7\textwidth}
+\caption{Carnot Cycle: Past ($\mathcal{P}$) bilocal source emits entangled pair with one leg hitting a moving mirror in the right wedge ($\mathcal{R}$). Reflection focuses to a future sink ($\mathcal{F}$). A similar balancing situation exists in the left wedge.}
+\label{carnot}
+\end{figure}
+
+Consider the point of view of the right Rindler observer $\mathcal{R}$ who sees the event horizon as a thermal object.
+The Rindler horizon plays the role of the hot reservoir at 
+the Unruh temperature $T_H = \hbar a/2\pi k_B c$, consistent 
+with the standard identification of the horizon as a thermal 
+object. The Rindler wedge interior, where the mirror operates, 
+is taken as the cold reservoir at temperature $T_C$. The 
+identification of $T_C$ with the Landauer erasure temperature 
+of the mirror is an ansatz of the present construction; its 
+precise value determines the Carnot efficiency $\eta = 1 - T_C/T_H$.
+
+
+\begin{itemize} 
+\item {\bf Isothermal Expansion:} The bilocal source prepares an entangled photon pair in the basis that $\mathcal{R}$ measures in ($H_+/H_-$ see section \ref{sec:erepr}). In this basis, the Shannon entropy of the Rindler outcome distribution increases from 0 to 1 bit, reflecting the transition from a deterministic prior state to a maximally uncertain Bell state induced by the bilocal entanglement structure, notionally ``drawing some heat from the environment $\mathcal{P}$''.
+\item {\bf Adiabatic Expansion:} This corresponds to the crossing over the past Rindler horizon from hot to cold, the absorption of the photon by the mirror.
+\item {\bf Isothermal Compression:} This corresponds to controlled erasure of the detector’s stored bit during the re-emission of the photon by the mirror. An energy on the order of $k_B T_C$ is absorbed by the cold reservoir. 
+\item {\bf Adiabatic Compression:} This corresponds to the crossing over the future Rindler horizon from cold to hot, the absorption of the future sink $\mathcal{F}$ and reseting of the state to an eigenstate of $H_+$ or $H_-$, zero bits of Shannon entropy. 
+\end{itemize}
+
+
+\subsection{Shannon Entropy}
+
+The entropy variation in the isothermal legs should be understood as Shannon entropy associated with measurement outcomes in a fixed operational basis, rather than the von Neumann entropy of the global quantum state, which remains pure throughout. From an information-theoretic perspective, aligned with Copenhagen interpretation and QBism, the quantum state encodes an observer’s knowledge rather than an objective microstate, and thermodynamic entropy should therefore be identified with the classical uncertainty in measurement outcomes. In this sense, Shannon entropy provides the operationally relevant notion entering Landauer's principle, resolving the apparent tension between unitary evolution (which preserves von Neumann entropy) and thermodynamic irreversibility (which is manifest at the level of classical information processing).
+
+No decoherence assumption is required; Shannon entropy here is defined over the classical outcome distribution induced by a fixed measurement basis (the Rindler detector algebra), independent of the unitary evolution of the global state.
+
+\subsection{Work and Efficiency}
+
+The thermodynamic state space of the cycle is parameterised 
+by temperature $T$ and Shannon entropy $H$. The two 
+isothermal legs operate at $T_H$ and $T_C$ respectively, 
+and the entropy change per cycle is exactly one bit:
+%
+\begin{equation}
+\Delta H = \ln 2 \quad \text{(one binary helicity outcome)},
+\end{equation}
+%
+so the work extracted per cycle is the area of the rectangle 
+in $T$-$H$ space:
+%
+\begin{equation}
+W = (T_H - T_C)\,\Delta H = (T_H - T_C)\ln 2.
+\label{eq:carnot_work}
+\end{equation}
+%
+The work done on the mirror by absorbing one photon of energy 
+$\hbar\omega$ is the radiation pressure impulse $\Delta p = 
+\hbar\omega/c$, which is responsible for the mirror's 
+acceleration into the Rindler wedge. This identifies the hot 
+reservoir temperature via
+%
+\begin{equation}
+k_BT_H = \hbar\omega,
+\label{eq:TH}
+\end{equation}
+%
+the energy of one photon sets the Unruh temperature of the 
+horizon. The Carnot efficiency bound $W \leq T_H\Delta H$ 
+then gives
+%
+\begin{equation}
+W \leq \hbar\omega\ln 2 = \frac{\hbar a \ln 2}{2\pi c},
+\label{eq:carnot_bound}
+\end{equation}
+%
+where in the last step we used $k_BT_H = \hbar a/2\pi k_Bc$ 
+from the Unruh temperature. This is precisely the 
+Unruh--Landauer bound~\eqref{eq:UL} at $\Delta H = \ln 2$:
+%
+\begin{equation}
+\boxed{W \leq \frac{\hbar a}{2\pi c}\Delta H 
+\iff \Delta E \geq \frac{\hbar a}{2\pi c}\Delta H.}
+\label{eq:carnot_UL}
+\end{equation}
+%
+The Carnot efficiency bound for this cycle and the 
+Unruh--Landauer bound are therefore the same inequality, 
+approached from opposite directions: the Carnot bound is a 
+statement about the maximum work extractable from the thermal 
+gradient between the horizon and the wedge interior, while 
+the Unruh--Landauer bound is a statement about the minimum 
+energy cost of acquiring one bit at that horizon. Their 
+equivalence identifies the Rindler horizon as a Carnot engine 
+operating at the Unruh temperature, with quantum measurement 
+as the working substance and the classical bit as the 
+thermodynamic output.
+
+
+The cold reservoir temperature $T_C$ is the Landauer 
+temperature associated with isolating the mirror from 
+its local re-emission environment, while $T_H$ is the 
+Landauer temperature associated with isolating the entire 
+Rindler wedge from the global Minkowski vacuum. The two 
+temperatures correspond to two levels of coarse-graining: 
+$T_H$ traces out the opposite wedge at the Rindler horizon, 
+while $T_C$ traces out only the mirror's local photon field 
+at the scale of the mirror interaction. The temperature 
+gradient $T_H > T_C$ is therefore a gradient between 
+two scales of isolation, and the Carnot efficiency 
+$\eta = 1 - T_C/T_H$ measures how much of the global 
+thermal gradient is captured by the local mirror 
+interaction. In the limit $T_C \to 0$ the mirror's 
+local environment is fully decoupled and the cycle 
+extracts maximum work; in the limit $T_C \to T_H$ 
+the two scales of isolation coincide and the cycle 
+is in hydrostatic equilibrium with no net work extracted.
+
+
+The efficiency $\eta = 1 - T_C/T_H$ is 
+maximised in the limit $T_C \to 0$, which corresponds to 
+perfect erasure at zero thermodynamic cost --- the ideal 
+mirror limit. Any residual $T_C > 0$ reflects irreversibility 
+in the mirror's erasure process, consistent with Landauer's 
+principle applied to the re-emission step.
+
+% Section 8
 \section{Appendix: Consistency of the Double-Null Gauge Condition}
 \label{gauge_consistency}
 % Verification that double-null gauge does not over-constrain physical degrees of freedom
@@ -1251,11 +1379,11 @@ degrees of freedom. The CPT wedge-swap symmetry is preserved throughout:
 conditions on $A_+$ and $A_-$ are imposed symmetrically, and neither null direction 
 is privileged over the other.
 
-% Section 8
+% Section 9
 \section{Conclusion}
 
 
-% Section 9
+% Section 10
 \section{Acknowledgements}
 
 I am grateful to Claude for helpful discussions.
