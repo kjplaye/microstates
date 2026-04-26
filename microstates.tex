@@ -1591,6 +1591,163 @@ thermodynamic treatments at the level of observable
 correlations. We regard these as the natural next 
 steps in the programme.
 
+\subsection{Towards Experimental Tests}
+\label{sec:experiment}
+
+The Unruh--Landauer relation~\eqref{eq:UL} is, in 
+principle, an experimentally accessible statement: 
+it bounds the energy cost of acquiring one bit of 
+information by a detector undergoing proper 
+acceleration $a$, with a specific coefficient 
+$\hbar/2\pi c$ that is not a free parameter. 
+However, at laboratory accelerations the correction 
+to the standard Landauer erasure floor is of order 
+$10^{-44}$ J per nat, far below the thermal noise 
+floor of current experiments. Direct measurement 
+of the UL correction in a table-top setting is not 
+currently feasible. We outline four directions in 
+which the framework makes contact with experiment 
+at a level closer to reach, ranging from near-term 
+precision measurement to longer-horizon analogue 
+gravity.
+
+\paragraph{Optomechanical back-action scaling.}
+High-$Q$ optomechanical oscillators already operate 
+near the standard quantum limit, where radiation 
+pressure constitutes the dominant back-action on the 
+mirror. The UL relation predicts an additional 
+contribution to the back-action energy per bit 
+extracted, linear in the effective mirror acceleration 
+$a_{\text{eff}}$ induced by the radiation field:
+%
+\begin{equation}
+    \Delta E_{\text{back-action}} \geq 
+    \Delta E_{\text{SQL}} + 
+    \frac{\hbar a_{\text{eff}}}{2\pi c}\,\Delta H.
+\end{equation}
+%
+The effective acceleration is controllable via the 
+intracavity photon number, and the prediction is 
+that the back-action floor has a component with 
+the specific linear scaling and coefficient above, 
+distinguishable from the standard quantum limit by 
+its dependence on $a_{\text{eff}}$. This is not a 
+measurement of a small absolute energy but of a 
+scaling law with a controllable parameter, which 
+is a more accessible experimental target. 
+Next-generation optomechanical experiments 
+approaching the Heisenberg limit~\cite{aspelmeyer2014cavity} 
+may be sensitive to corrections of this form.
+
+\paragraph{Saturation wavelength in high-intensity 
+laser--atom interactions.}
+The saturation condition
+%
+\begin{equation}
+    \lambda_{\text{sat}} = 
+    \frac{2\pi}{\ln 2}\cdot\frac{c^2}{a}
+\end{equation}
+%
+identifies a preferred photon wavelength for 
+single-bit measurement at acceleration $a$. For 
+electrons in high-intensity laser fields, where 
+effective accelerations can reach $a \sim 10^{25}$ 
+m s$^{-2}$, the saturation wavelength falls in the 
+nanometre (X-ray) range, which is directly 
+accessible. More structurally, when $a \sim mc^3/\hbar$ 
+(the Compton-scale acceleration), $\lambda_{\text{sat}} 
+\sim \lambda_C / \ln 2$, where $\lambda_C = \hbar/mc$ 
+is the Compton wavelength. The saturation condition 
+is thus approached precisely in the regime where the 
+single-particle approximation breaks down and pair 
+production becomes significant. Whether this 
+coincidence reflects a deeper connection between 
+the UL bound and the onset of quantum field-theoretic 
+effects is an open question, but it suggests that 
+strong-field laser--atom experiments~\cite{di2012extremely} 
+are a natural arena in which to probe the saturation 
+condition.
+
+\paragraph{Weak measurement and irreducible back-action.}
+The framework takes as primitive that every 
+measurement event involves a nonzero energy--momentum 
+transfer. This is a stronger claim than the Heisenberg 
+uncertainty principle in a specific operational sense: 
+weak measurement schemes can in principle extract 
+information with arbitrarily small \emph{recorded} 
+disturbance by displacing the back-action into 
+unmeasured degrees of freedom. The UL framework 
+predicts that this displacement does not eliminate 
+the physical energy transfer; the energy is deposited 
+into the detector's matter-memory regardless of 
+whether it is captured in the measurement record. 
+This distinguishes the present framework from 
+interpretations in which measurement has no special 
+physical content, and from purely relational 
+approaches in which back-action is epistemic rather 
+than physical. The experimental target is not the 
+UL coefficient itself but the \emph{location} of the 
+deposited energy: does a weak measurement that 
+minimises recorded back-action still deposit energy 
+into unmeasured degrees of freedom at the level 
+predicted by the UL relation?
+Experiments that directly measure the back-action of 
+individual variable-strength quantum measurements, 
+such as~\cite{hatridge2013quantum}, provide a natural 
+platform for testing whether the deposited energy 
+scales with the UL coefficient, independently of 
+the measurement record.
+
+
+
+\paragraph{Analogue gravity: sonic horizons in 
+Bose--Einstein condensates.}
+Analogue Hawking radiation has been observed in 
+BEC sonic horizon experiments~\cite{steinhauer2016observation}, 
+where the role of the speed of light is played by 
+the speed of sound $c_s$ and the effective Unruh 
+temperature is $T_U = \hbar a_{\text{eff}} / 2\pi 
+k_B c_s$, with $a_{\text{eff}}$ the velocity 
+gradient at the sonic horizon. The UL relation in 
+this analogue setting reads
+%
+\begin{equation}
+    \Delta E \geq 
+    \frac{\hbar a_{\text{eff}}}{2\pi c_s}\,\Delta H,
+\end{equation}
+%
+with $a_{\text{eff}}$ controllable by the condensate 
+parameters. The analogue acceleration can be made 
+large enough that the right-hand side is no longer 
+negligible compared to the energy scales of the 
+system. A detector realised as a localised impurity 
+or probe field near the sonic horizon would, 
+according to the present framework, exhibit an 
+information acquisition cost with this scaling. 
+Identifying the appropriate operational notion of 
+measurement and detector in the condensate setting 
+requires further theoretical development, but the 
+analogue framework is the most promising near-term 
+route to reaching the relevant acceleration regime 
+experimentally.
+
+\paragraph{Summary.}
+None of these four directions constitutes a 
+definitive test of the framework in its current 
+form; each requires either further theoretical 
+development to sharpen the prediction or 
+experimental capabilities not yet available. What 
+they share is a common structure: they test not the 
+absolute magnitude of the UL correction, which is 
+inaccessibly small at laboratory scales, but the 
+\emph{functional form} of the dependence on 
+acceleration, wavelength, or back-action location. 
+A measurement of the correct scaling with the 
+predicted coefficient, even in an analogue system, 
+would provide strong evidence for the central 
+identification of this paper: that measurement 
+events are gravitational microstates with a 
+calculable geometric imprint.
 
 % Section 10
 \section{Acknowledgements}
