@@ -1172,6 +1172,8 @@ mirror limit. Any residual $T_C > 0$ reflects irreversibility
 in the mirror's erasure process, consistent with Landauer's 
 principle applied to the re-emission step.
 
+% Section 8
+
 \section{Effective Field Theory Structure}
 \label{sec:eft}
 
@@ -1447,8 +1449,182 @@ which is not a failure of the framework but
 its natural boundary condition.
 \end{prop}
 
+% Section 9
 
-% Section 8
+\section{Towards Experimental Tests}
+\label{sec:experiment}
+
+The Unruh--Landauer relation~\eqref{eq:UL} is, in 
+principle, an experimentally accessible statement: 
+it bounds the energy cost of acquiring one bit of 
+information by a detector undergoing proper 
+acceleration $a$, with a specific coefficient 
+$\hbar/2\pi c$ that is not a free parameter. 
+However, at laboratory accelerations the correction 
+to the standard Landauer erasure floor is of order 
+$10^{-44}$ J per nat, far below the thermal noise 
+floor of current experiments. Direct measurement 
+of the UL correction in a table-top setting is not 
+currently feasible. We outline four directions in 
+which the framework makes contact with experiment 
+at a level closer to reach, ranging from near-term 
+precision measurement to longer-horizon analogue 
+gravity.
+
+\paragraph{Optomechanical back-action scaling.}
+High-$Q$ optomechanical oscillators already operate 
+near the standard quantum limit, where radiation 
+pressure constitutes the dominant back-action on the 
+mirror. The UL relation predicts an additional 
+contribution to the back-action energy per bit 
+extracted, linear in the effective mirror acceleration 
+$a_{\text{eff}}$ induced by the radiation field:
+%
+\begin{equation}
+    \Delta E_{\text{back-action}} \geq 
+    \Delta E_{\text{SQL}} + 
+    \frac{\hbar a_{\text{eff}}}{2\pi c}\,\Delta H.
+\end{equation}
+%
+The effective acceleration is controllable via the 
+intracavity photon number, and the prediction is 
+that the back-action floor has a component with 
+the specific linear scaling and coefficient above, 
+distinguishable from the standard quantum limit by 
+its dependence on $a_{\text{eff}}$. This is not a 
+measurement of a small absolute energy but of a 
+scaling law with a controllable parameter, which 
+is a more accessible experimental target. 
+Next-generation optomechanical experiments 
+approaching the Heisenberg limit~\cite{aspelmeyer2014cavity} 
+may be sensitive to corrections of this form.
+
+\paragraph{Saturation wavelength in high-intensity 
+laser--atom interactions.}
+The saturation condition
+%
+\begin{equation}
+    \lambda_{\text{sat}} = 
+    \frac{2\pi}{\ln 2}\cdot\frac{c^2}{a}
+\end{equation}
+%
+identifies a preferred photon wavelength for 
+single-bit measurement at acceleration $a$. For 
+electrons in high-intensity laser fields, where 
+effective accelerations can reach $a \sim 10^{25}$ 
+m s$^{-2}$, the saturation wavelength falls in the 
+nanometre (X-ray) range, which is directly 
+accessible. More structurally, when $a \sim mc^3/\hbar$ 
+(the Compton-scale acceleration), $\lambda_{\text{sat}} 
+\sim \lambda_C / \ln 2$, where $\lambda_C = \hbar/mc$ 
+is the Compton wavelength. The saturation condition 
+is thus approached precisely in the regime where the 
+single-particle approximation breaks down and pair 
+production becomes significant. Whether this 
+coincidence reflects a deeper connection between 
+the UL bound and the onset of quantum field-theoretic 
+effects is an open question, but it suggests that 
+strong-field laser--atom experiments~\cite{di2012extremely} 
+are a natural arena in which to probe the saturation 
+condition.
+
+\paragraph{Weak measurement and irreducible back-action.}
+The framework takes as primitive that every 
+measurement event involves a nonzero energy--momentum 
+transfer. This is a stronger claim than the Heisenberg 
+uncertainty principle in a specific operational sense: 
+weak measurement schemes can in principle extract 
+information with arbitrarily small \emph{recorded} 
+disturbance by displacing the back-action into 
+unmeasured degrees of freedom. The UL framework 
+predicts that this displacement does not eliminate 
+the physical energy transfer; the energy is deposited 
+into the detector's matter-memory regardless of 
+whether it is captured in the measurement record. 
+This distinguishes the present framework from 
+interpretations in which measurement has no special 
+physical content, and from purely relational 
+approaches in which back-action is epistemic rather 
+than physical. The experimental target is not the 
+UL coefficient itself but the \emph{location} of the 
+deposited energy: does a weak measurement that 
+minimises recorded back-action still deposit energy 
+into unmeasured degrees of freedom at the level 
+predicted by the UL relation?
+Experiments that directly measure the back-action of 
+individual variable-strength quantum measurements, 
+such as~\cite{hatridge2013quantum}, provide a natural 
+platform for testing whether the deposited energy 
+scales with the UL coefficient, independently of 
+the measurement record.
+
+\paragraph{Analogue gravity: sonic horizons in 
+Bose--Einstein condensates.}
+Analogue Hawking radiation has been observed in 
+BEC sonic horizon experiments~\cite{steinhauer2016observation}, 
+where the role of the speed of light is played by 
+the speed of sound $c_s$ and the effective Unruh 
+temperature is $T_U = \hbar a_{\text{eff}} / 2\pi 
+k_B c_s$, with $a_{\text{eff}}$ the velocity 
+gradient at the sonic horizon. The UL relation in 
+this analogue setting reads
+%
+\begin{equation}
+    \Delta E \geq 
+    \frac{\hbar a_{\text{eff}}}{2\pi c_s}\,\Delta H,
+\end{equation}
+%
+with $a_{\text{eff}}$ controllable by the condensate 
+parameters. The analogue acceleration can be made 
+large enough that the right-hand side is no longer 
+negligible compared to the energy scales of the 
+system. A detector realised as a localised impurity 
+or probe field near the sonic horizon would, 
+according to the present framework, exhibit an 
+information acquisition cost with this scaling. 
+Identifying the appropriate operational notion of 
+measurement and detector in the condensate setting 
+requires further theoretical development, but the 
+analogue framework is the most promising near-term 
+route to reaching the relevant acceleration regime 
+experimentally.
+
+% Section 10
+\section{Conclusion}
+\label{sec:conclusion}
+
+We have identified quantum measurement events as 
+gravitational microstates in the Rindler setting, 
+partially answering the question left open by Jacobson and 
+Verlinde of what physical process underlies each 
+individual entropy increment. The central result is 
+the event-by-event equality $S_{GHY}|_{\mathcal{H}} 
+= S_{\text{matter}}$: the gravitational boundary 
+action and the matter action are the same quantity 
+counted in two languages, with the Planck area 
+$\ell_P^2$ as the conversion factor. This follows 
+from a single temperature-free Unruh--Landauer bound, 
+from which standard black hole thermodynamics emerges 
+via Newton's laws alone, and is consistent across 
+thermodynamic, geometric, information-theoretic, and 
+effective field theory descriptions of the horizon --- 
+the Carnot efficiency bound and the Unruh--Landauer 
+bound being the same inequality viewed from opposite 
+directions. Matter and horizon are orthogonal 
+information channels: matter the timelike substrate 
+of emergent proper time, the horizon the spacelike 
+surface through which measurement events generate 
+emergent space, realizing ER=EPR at the 
+single-microstate level. Whether this identification 
+extends from the boundary into the bulk, whether the 
+helicity structure of the ER bridge constitutes a 
+topological invariant, and whether the framework 
+admits falsifiable consequences distinguishing it 
+from standard thermodynamic treatments, remain open 
+questions for future work.
+
+
+% Section 11
 \section{Appendix: Consistency of the Double-Null Gauge Condition}
 \label{gauge_consistency}
 % Verification that double-null gauge does not over-constrain physical degrees of freedom
@@ -1589,376 +1765,7 @@ degrees of freedom. The CPT wedge-swap symmetry is preserved throughout:
 conditions on $A_+$ and $A_-$ are imposed symmetrically, and neither null direction 
 is privileged over the other.
 
-
-% Section 9
-\section{Conclusion}
-\label{sec:conclusion}
-
-We have constructed a framework in which quantum 
-measurement is identified with a gravitational 
-microstate, and have shown that this identification 
-is consistent across thermodynamic, geometric, 
-information-theoretic, and field-theoretic 
-descriptions of the Rindler horizon. We summarise 
-the logical chain and its main consequences.
-
-\paragraph{The central identification.}
-We took as primitive that every measurement event 
-involves a physical energy--momentum transfer between 
-system and detector. Combining this with the Unruh 
-effect via Landauer's principle yields the 
-Unruh--Landauer relation~\eqref{eq:UL}, a 
-temperature-independent bound relating energy, 
-acceleration, and information acquisition. From this 
-single relation, and using only Newton's laws and the 
-equivalence principle, we recovered the Schwarzschild 
-radius, the surface gravity, and the Bekenstein--Hawking 
-area law as consequences of the physical accounting of 
-information acquisition, rather than as thermodynamic 
-postulates. The horizon is the unique locus at which 
-the minimum cost of information acquisition equals the 
-maximum information content of the region.
-
-\paragraph{The microstate construction.}
-The heuristic argument was given a concrete realization 
-in Section~\ref{sec:microstates}. A bilocal source 
-$\mathcal{P}$ in the causal past emits entangled photon 
-pairs with anticorrelated helicity, selecting individual 
-terms from the Unruh thermal ensemble rather than assuming 
-thermality as a primitive. Each microstate carries a 
-definite Rindler frequency and a helicity Bell state; 
-thermality emerges from coarse-graining over the ensemble, 
-not from the structure of any individual term. The helicity 
-label is conserved under the Bogoliubov transformation, 
-so the anticorrelation between wedges is preserved at 
-every level of the construction. The thrust quantum 
-of the heuristic argument is identified with a single 
-photon: one quantum of action $\hbar$ deposited into 
-the detector's matter-memory, and one classical bit of 
-helicity outcome constituting the record of the event.
-
-\paragraph{Matter as substrate.}
-Section~\ref{sec:substrate} established that matter 
-is not merely the stage on which measurements occur 
-but the physical substrate in which their records 
-persist. Massive particles sample at the Bremermann 
-rate $mc^2/h$, accumulating quanta of action in their 
-path integral phase; massless quanta transmit 
-information between samples without retaining it. 
-The horizon is not a storage medium but the surface 
-at which matter-memory on one side is causally 
-disconnected from matter-memory on the other; horizon 
-entropy counts the quanta of action written into matter 
-on each side, bounded by Bremermann above and Landauer 
-below. The zig-zag mechanism of 
-Section~\ref{sec:substrate} confirms that this 
-architecture is not imposed on matter from outside: 
-the Higgs interaction event is itself a measurement 
-event in the sense of the bilocal construction, 
-depositing one quantum of action and maintaining the 
-spin state of the particle, so that proper time 
-emerges from the same microstate structure at the 
-level of individual particles as at the macroscopic 
-level of $\mathcal{R}$ and $\mathcal{L}$.
-
-\paragraph{Geometry from measurement.}
-In Section~\ref{sec:ppwave} the entangled photons 
-were modelled as Aichelburg--Sexl pp-waves. Each 
-AS wave produces two effects at the Rindler horizon: 
-a transverse focusing that increments horizon area 
-by $\Delta A = 8\pi G\hbar\omega$, and a longitudinal 
-shift that displaces the wedge geometry outward in 
-the null direction, creating new space in the sense 
-that the future light cone of every test particle 
-in the wedge is displaced away from the horizon. 
-The longitudinal shift is a supertranslation in the 
-BMS sense; the bilocal construction identifies the 
-physical process that excites each supertranslation 
-mode, supplying what the Carlip programme leaves open.
-
-The central geometric result is the equality
-\begin{equation}
-S_{GHY}\big|_{\mathcal{H}} = S_{\text{matter}},
-\end{equation}
-established event by event in 
-equation~\eqref{eq:GHY_micro}. The gravitational 
-boundary action and the matter action are the same 
-quantity counted in two languages: geometric area 
-and quanta of action. The Planck area $\ell_P^2$ is 
-the conversion factor between them. This suggests 
-that the horizon geometry is not an independent 
-field that matter perturbs but a coarse-grained 
-count of the action quanta that have passed through 
-the horizon surface; the metric near the boundary 
-is, in this reading, the matter action expressed 
-geometrically, and the Bekenstein--Hawking area law 
-is the statement that these two counts agree.
-
-\paragraph{Entanglement as spatial information.}
-Section~\ref{sec:erepr} identified the spatial bit: 
-the answer to ``who observed $H_+$?'' is a binary 
-choice between left and right wedge, encoded in 
-the same classical record that encodes the helicity 
-outcome. The same bit records what was observed and 
-where, because the anticorrelated helicity assignment 
-of the bilocal source makes the two wedges 
-distinguishable by construction. The ER=EPR 
-correspondence is the ambient mathematical structure 
-of the construction: the EPR side is the entangled 
-photon pair, and the ER side is the pair of 
-correlated AS longitudinal shifts in opposite null 
-directions, calculable and explicit at the single-microstate 
-level. The wormhole bridge is not a stand-in for the 
-entanglement but its physical instantiation, built 
-from correlated matter samples one quantum of action 
-at a time. Whether the anticorrelated helicity 
-structure gives the bridge a topological invariant,
-an orientation in the transverse geometry absent 
-in the scalar case, is an open question we leave 
-for future work.
-
-\paragraph{The Carnot equivalence.}
-Section~\ref{sec:carnot} closed the construction 
-by completing the bilocal absorption example with 
-ideal moving mirrors reflecting the photons to the 
-future sink $\mathcal{F}$, the CPT image of 
-$\mathcal{P}$. The resulting cycle is a Carnot 
-engine at the microstate level, with the Rindler 
-horizon as the hot reservoir at the Unruh temperature 
-and the mirror's local environment as the cold 
-reservoir at the Landauer erasure temperature. The 
-central result of that section is the equivalence
-\begin{equation}
-W \leq \frac{\hbar a}{2\pi c}\Delta H 
-\iff \Delta E \geq \frac{\hbar a}{2\pi c}\Delta H,
-\end{equation}
-showing that the Carnot efficiency bound and the 
-Unruh--Landauer bound are the same inequality viewed 
-from opposite directions. The Rindler horizon is a 
-Carnot engine operating at the Unruh temperature, 
-with quantum measurement as the working substance 
-and the classical bit as the thermodynamic output.
-
-\paragraph{Effective field theory structure.}
-Section~\ref{sec:eft} placed the construction 
-within an explicit effective field theory framework. 
-The right wedge $\mathcal{R}$ is the system at 
-energy scale $E_{\text{sys}}$, the full Minkowski 
-space is the environment at $E_{\text{env}}$, and 
-the Rindler horizon is the EFT cutoff surface. 
-Integrating out the left wedge degrees of freedom 
-in the path integral at the classical level yields 
-the effective action
-%
-\begin{equation}
-S_{\text{eff}}[g_R, \phi_R] 
-= S_R[g_R, \phi_R] + S_{GHY}\big|_{\mathcal{H}},
-\end{equation}
-%
-confirming that the GHY boundary term is not 
-merely equal to the matter action by algebraic 
-coincidence but arises structurally as the 
-contribution of the integrated-out left wedge 
-to the right wedge dynamics. The bulk left wedge 
-action vanishes by Ricci-flatness of the AS 
-solution; the entire effect of the environment 
-on the system is encoded in the horizon boundary 
-term. The two natural scales of the construction 
---- the Compton wavelength $\lambda_C$ as UV 
-cutoff and the horizon distance $d_\mathcal{H}$ 
-as IR cutoff --- have geometric mean equal to 
-the Planck length, $\ell_P = \sqrt{\lambda_C 
-\cdot r_s}$, identifying the Planck scale as 
-the fixed point at which the EFT breaks down. 
-The Carnot efficiency $\eta = 1 - T_C/T_H$ 
-measures the scale separation, vanishing at 
-the Planck scale where UV and IR cutoffs 
-coincide. Proposition~\ref{prop:eft} collects 
-six equivalent conditions --- thermodynamic, 
-energetic, geometric, and EFT validity --- 
-that are simultaneously satisfied in the valid 
-regime of the construction and simultaneously 
-violated at the horizon, establishing the 
-horizon not as a failure of the framework but 
-as its natural boundary condition.
-
-\paragraph{Open questions.}
-Several directions remain open. First, whether the 
-metric in the bulk interior can be understood as a 
-density of action quanta, with $\ell_P^2$ as the 
-conversion factor, extending the boundary result of 
-Section~\ref{sec:ppwave} into the bulk. Second, 
-whether the anticorrelated helicity structure of the 
-ER bridge constitutes a topological invariant of the 
-transverse geometry, giving a geometric distinction 
-between the scalar and vector cases at the 
-single-microstate level. Third, whether the bilocal 
-construction admits a falsifiable consequence: a 
-prediction, however small, that distinguishes the 
-measurement-as-microstate picture from standard 
-thermodynamic treatments at the level of observable 
-correlations. We regard these as the natural next 
-steps in the programme.
-
-\subsection{Towards Experimental Tests}
-\label{sec:experiment}
-
-The Unruh--Landauer relation~\eqref{eq:UL} is, in 
-principle, an experimentally accessible statement: 
-it bounds the energy cost of acquiring one bit of 
-information by a detector undergoing proper 
-acceleration $a$, with a specific coefficient 
-$\hbar/2\pi c$ that is not a free parameter. 
-However, at laboratory accelerations the correction 
-to the standard Landauer erasure floor is of order 
-$10^{-44}$ J per nat, far below the thermal noise 
-floor of current experiments. Direct measurement 
-of the UL correction in a table-top setting is not 
-currently feasible. We outline four directions in 
-which the framework makes contact with experiment 
-at a level closer to reach, ranging from near-term 
-precision measurement to longer-horizon analogue 
-gravity.
-
-\paragraph{Optomechanical back-action scaling.}
-High-$Q$ optomechanical oscillators already operate 
-near the standard quantum limit, where radiation 
-pressure constitutes the dominant back-action on the 
-mirror. The UL relation predicts an additional 
-contribution to the back-action energy per bit 
-extracted, linear in the effective mirror acceleration 
-$a_{\text{eff}}$ induced by the radiation field:
-%
-\begin{equation}
-    \Delta E_{\text{back-action}} \geq 
-    \Delta E_{\text{SQL}} + 
-    \frac{\hbar a_{\text{eff}}}{2\pi c}\,\Delta H.
-\end{equation}
-%
-The effective acceleration is controllable via the 
-intracavity photon number, and the prediction is 
-that the back-action floor has a component with 
-the specific linear scaling and coefficient above, 
-distinguishable from the standard quantum limit by 
-its dependence on $a_{\text{eff}}$. This is not a 
-measurement of a small absolute energy but of a 
-scaling law with a controllable parameter, which 
-is a more accessible experimental target. 
-Next-generation optomechanical experiments 
-approaching the Heisenberg limit~\cite{aspelmeyer2014cavity} 
-may be sensitive to corrections of this form.
-
-\paragraph{Saturation wavelength in high-intensity 
-laser--atom interactions.}
-The saturation condition
-%
-\begin{equation}
-    \lambda_{\text{sat}} = 
-    \frac{2\pi}{\ln 2}\cdot\frac{c^2}{a}
-\end{equation}
-%
-identifies a preferred photon wavelength for 
-single-bit measurement at acceleration $a$. For 
-electrons in high-intensity laser fields, where 
-effective accelerations can reach $a \sim 10^{25}$ 
-m s$^{-2}$, the saturation wavelength falls in the 
-nanometre (X-ray) range, which is directly 
-accessible. More structurally, when $a \sim mc^3/\hbar$ 
-(the Compton-scale acceleration), $\lambda_{\text{sat}} 
-\sim \lambda_C / \ln 2$, where $\lambda_C = \hbar/mc$ 
-is the Compton wavelength. The saturation condition 
-is thus approached precisely in the regime where the 
-single-particle approximation breaks down and pair 
-production becomes significant. Whether this 
-coincidence reflects a deeper connection between 
-the UL bound and the onset of quantum field-theoretic 
-effects is an open question, but it suggests that 
-strong-field laser--atom experiments~\cite{di2012extremely} 
-are a natural arena in which to probe the saturation 
-condition.
-
-\paragraph{Weak measurement and irreducible back-action.}
-The framework takes as primitive that every 
-measurement event involves a nonzero energy--momentum 
-transfer. This is a stronger claim than the Heisenberg 
-uncertainty principle in a specific operational sense: 
-weak measurement schemes can in principle extract 
-information with arbitrarily small \emph{recorded} 
-disturbance by displacing the back-action into 
-unmeasured degrees of freedom. The UL framework 
-predicts that this displacement does not eliminate 
-the physical energy transfer; the energy is deposited 
-into the detector's matter-memory regardless of 
-whether it is captured in the measurement record. 
-This distinguishes the present framework from 
-interpretations in which measurement has no special 
-physical content, and from purely relational 
-approaches in which back-action is epistemic rather 
-than physical. The experimental target is not the 
-UL coefficient itself but the \emph{location} of the 
-deposited energy: does a weak measurement that 
-minimises recorded back-action still deposit energy 
-into unmeasured degrees of freedom at the level 
-predicted by the UL relation?
-Experiments that directly measure the back-action of 
-individual variable-strength quantum measurements, 
-such as~\cite{hatridge2013quantum}, provide a natural 
-platform for testing whether the deposited energy 
-scales with the UL coefficient, independently of 
-the measurement record.
-
-
-
-\paragraph{Analogue gravity: sonic horizons in 
-Bose--Einstein condensates.}
-Analogue Hawking radiation has been observed in 
-BEC sonic horizon experiments~\cite{steinhauer2016observation}, 
-where the role of the speed of light is played by 
-the speed of sound $c_s$ and the effective Unruh 
-temperature is $T_U = \hbar a_{\text{eff}} / 2\pi 
-k_B c_s$, with $a_{\text{eff}}$ the velocity 
-gradient at the sonic horizon. The UL relation in 
-this analogue setting reads
-%
-\begin{equation}
-    \Delta E \geq 
-    \frac{\hbar a_{\text{eff}}}{2\pi c_s}\,\Delta H,
-\end{equation}
-%
-with $a_{\text{eff}}$ controllable by the condensate 
-parameters. The analogue acceleration can be made 
-large enough that the right-hand side is no longer 
-negligible compared to the energy scales of the 
-system. A detector realised as a localised impurity 
-or probe field near the sonic horizon would, 
-according to the present framework, exhibit an 
-information acquisition cost with this scaling. 
-Identifying the appropriate operational notion of 
-measurement and detector in the condensate setting 
-requires further theoretical development, but the 
-analogue framework is the most promising near-term 
-route to reaching the relevant acceleration regime 
-experimentally.
-
-\paragraph{Summary.}
-None of these four directions constitutes a 
-definitive test of the framework in its current 
-form; each requires either further theoretical 
-development to sharpen the prediction or 
-experimental capabilities not yet available. What 
-they share is a common structure: they test not the 
-absolute magnitude of the UL correction, which is 
-inaccessibly small at laboratory scales, but the 
-\emph{functional form} of the dependence on 
-acceleration, wavelength, or back-action location. 
-A measurement of the correct scaling with the 
-predicted coefficient, even in an analogue system, 
-would provide strong evidence for the central 
-identification of this paper: that measurement 
-events are gravitational microstates with a 
-calculable geometric imprint.
-
-% Section 10
+% Section 12
 \section{Acknowledgements}
 
 I am grateful to Claude for helpful discussions.
