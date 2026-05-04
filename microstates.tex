@@ -1,3 +1,48 @@
+% TODO 1: The Landauer acquisition argument needs more careful framing.
+% Applying Landauer's principle to acquisition rather than erasure is the
+% operational cornerstone of the paper but is asserted rather than derived.
+% Engage with Bennett (1982) on the thermodynamics of measurement, or be
+% more explicit about the sense in which the bound is the time-reversed
+% version of erasure. The thermodynamic arrow of time is asymmetric and
+% time-reversal alone does not trivially recover a symmetric bound.
+
+% TODO 2: Remove or resolve the holdover TODO block between Sections 4 and 5
+% (beginning "Investigate whether the metric can be understood as counting
+% action quanta"). The questions it raises are partially answered in
+% Section 5.3. Either incorporate the resolved parts into the prose of 5.3
+% or move the open questions to the Conclusion as future work. It must not
+% appear in the submitted version.
+
+% TODO 3: The Schwarzschild radius derivation in Section 2.3 mixes frameworks
+% and needs an explicit caveat. The thrust quantum is treated simultaneously
+% as ultra-relativistic (Delta E = m_t c^2, Delta p = Delta E / c) and as a
+% Newtonian gravitational source, which is not self-consistent. Add a sentence
+% acknowledging this is a heuristic matching and that the correct emergence of
+% r_s invites explanation rather than constituting a derivation.
+
+% TODO 4: Cross-check and clarify the Delta A = 8 pi G hbar omega result
+% (Eq. for the area increment). The standard Raychaudhuri result for a photon
+% crossing a Killing horizon gives Delta A = 8 pi G E / kappa, which for a
+% Rindler horizon kappa = a/c differs from the stated result by a factor of
+% c/a unless a normalization convention absorbs it. Show explicitly how the
+% standard formula reduces to Eq. (5.5) in the Rindler case, or flag the
+% normalization choice clearly.
+
+% TODO 5: Scale back the ER=EPR claim in the abstract and conclusion.
+% "Realizing ER=EPR at the single-microstate level" sets an expectation the
+% body does not fully meet; Maldacena-Susskind was formulated in AdS/CFT and
+% the flat-space Rindler extension is itself an open question. Replace with
+% something like "providing a microstate-level realization of the geometric
+% structure underlying ER=EPR," which is accurate and defensible.
+
+% TODO 6: Fix the duplicate roadmap paragraphs in the Introduction. The second
+% "we finish up" paragraph (beginning "We finish up by circling back to use
+% temperature again...") repeats the first roadmap with less precision. Merge
+% or delete it.
+
+
+
+
 \documentclass[12pt,a4paper]{article}
 \usepackage[width=.75\textwidth]{caption}
 \usepackage{graphicx}
@@ -706,31 +751,6 @@ Verlinde~\cite{entropic}. This is illustrated in
 Figure~\ref{timeline}.
 
 
-% TODO: Investigate whether the metric can be understood 
-% as counting action quanta, making geometry a derived 
-% quantity with a precise microscopic origin. Specifically:
-%
-% 1. The bulk EH action counts curvature (geometry); the 
-%    boundary GHY term counts matter action (quanta passing 
-%    through the surface); on-shell these are equal. Does 
-%    this mean geometry literally is the count of action 
-%    quanta?
-%
-% 2. If so, the metric in the interior is built from 
-%    correlated action quanta on the two sides of the 
-%    horizon, making ER=EPR precise at the level of the 
-%    metric itself rather than just the boundary term.
-%
-% 3. Is there a sense in which the Ricci scalar R counts 
-%    action quanta per unit volume, with the Planck area 
-%    ell_P^2 as the conversion factor? This would make 
-%    the holographic bound a direct consequence of the 
-%    discreteness of action rather than an independent 
-%    postulate.
-%
-% 4. Does this belong in this paper or a follow-up?
-%    The GHY result in Section 5.3 is the natural anchor 
-%    point if it stays.
 
 % Section 5
 \section{pp-Wave Geometry and Action}
@@ -1766,9 +1786,12 @@ conditions on $A_+$ and $A_-$ are imposed symmetrically, and neither null direct
 is privileged over the other.
 
 % Section 12
-\section{Acknowledgements}
-
-I am grateful to Claude for helpful discussions.
+\section*{Acknowledgements}
+The author used Claude (Anthropic) as an AI assistant 
+for critical discussion, feedback on arguments, and 
+editorial suggestions during the preparation of this 
+manuscript. All scientific content, calculations, and 
+conclusions are the author's own.
 
 \bibliographystyle{ieeetr}
 \bibliography{bibliography}
