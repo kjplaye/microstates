@@ -1,11 +1,3 @@
-% TODO 1: The Landauer acquisition argument needs more careful framing.
-% Applying Landauer's principle to acquisition rather than erasure is the
-% operational cornerstone of the paper but is asserted rather than derived.
-% Engage with Bennett (1982) on the thermodynamics of measurement, or be
-% more explicit about the sense in which the bound is the time-reversed
-% version of erasure. The thermodynamic arrow of time is asymmetric and
-% time-reversal alone does not trivially recover a symmetric bound.
-
 % TODO 2: Remove or resolve the holdover TODO block between Sections 4 and 5
 % (beginning "Investigate whether the metric can be understood as counting
 % action quanta"). The questions it raises are partially answered in
@@ -145,7 +137,14 @@ We finish up by circling back to use temperature again with a Carnot cycle in Se
 % Section 2
 \section{Motivating Heuristics}
 \label{sec:heuristics}
-Landauer's principle \cite{landauer1961irreversibility} is conventionally formulated for information erasure. Here we use the same energetic bound in the time-reversed operational sense: the physical registration of a measurement outcome in a detector is treated as the conjugate process to erasure, with an identical energetic gain. For an accelerated observer, the relevant temperature is the Unruh temperature \cite{unruh1976notes}. Substituting one into the other eliminates temperature entirely, yielding a relation between information acquisition, energy transfer, and acceleration (a version of the black hole thermodynamics first law; equation (\ref{eq:UL}) upcoming).
+
+Landauer's principle \cite{landauer1961irreversibility} is conventionally 
+formulated for information erasure. Bennett~\cite{bennett1982thermodynamics} showed that 
+measurement itself can in principle be performed reversibly; it is the 
+erasure of the measurement record that necessarily costs energy. The bound 
+we derive here is a constraint on the energy of the physical carrier 
+required to imprint a classically distinguishable record under proper 
+acceleration $a$. For an accelerated observer, the relevant temperature is the Unruh temperature \cite{unruh1976notes}. Substituting one into the other eliminates temperature entirely, yielding a relation between information acquisition, energy transfer, and acceleration (a version of the black hole thermodynamics first law; equation (\ref{eq:UL}) upcoming).
 This creates a heuristic dictionary between the thermal description natural to a Rindler observer and the non-thermal global Minkowski description, with the apparent thermality of the vacuum emerging as a consequence of the observer's acceleration rather than as a fundamental property of the state. In this way we will derive a sequence of standard results in black hole thermodynamics as a consequence of Newton's laws.
 
 \subsection{The Unruh-Landauer Relation}
@@ -165,7 +164,12 @@ with the local vacuum. Substituting into Landauer's bound eliminates $k_B T$, yi
 \boxed{\Delta E \geq \frac{\hbar a}{2\pi c} \, \Delta H.}
 \label{eq:UL}
 \end{equation}
-Temperature has dropped out entirely: equation~\eqref{eq:UL} is a temperature-independent relation between energy, acceleration, and information, suitable for the Minkowski vacuum; acceleration sets the energy scale of information. 
+Temperature has dropped out entirely: equation~\eqref{eq:UL} is a 
+temperature-independent lower bound on the energy of the physical carrier 
+required to register one nat of information under proper acceleration $a$; 
+acceleration sets the minimum energy scale of the carrier. The full 
+thermodynamic accounting, where the Landauer erasure cost appears 
+correctly, is deferred to Section~\ref{sec:carnot}.
 
 This Unruh--Landauer bound is saturated for a photon at one bit
 when the wavelength equals the horizon distance up to a factor 
@@ -1092,7 +1096,11 @@ precise value determines the Carnot efficiency $\eta = 1 - T_C/T_H$.
 \begin{itemize} 
 \item {\bf Isothermal Expansion:} The bilocal source prepares an entangled photon pair in the basis that $\mathcal{R}$ measures in ($H_+/H_-$ see section \ref{sec:erepr}). In this basis, the Shannon entropy of the Rindler outcome distribution increases from 0 to 1 bit, reflecting the transition from a deterministic prior state to a maximally uncertain Bell state induced by the bilocal entanglement structure, notionally ``drawing some heat from the environment $\mathcal{P}$''.
 \item {\bf Adiabatic Expansion:} This corresponds to the crossing over the past Rindler horizon from hot to cold, the absorption of the photon by the mirror.
-\item {\bf Isothermal Compression:} This corresponds to controlled erasure of the detector’s stored bit during the re-emission of the photon by the mirror. An energy on the order of $k_B T_C$ is absorbed by the cold reservoir. 
+\item {\bf Isothermal Compression:} This corresponds to controlled 
+erasure of the detector's stored bit during the re-emission of the photon 
+by the mirror. This is where the Landauer cost is paid~\cite{bennett1982thermodynamics}: 
+an energy on the order of $k_B T_C \ln 2$ is dissipated into the cold 
+reservoir. 
 \item {\bf Adiabatic Compression:} This corresponds to the crossing over the future Rindler horizon from cold to hot, the absorption of the future sink $\mathcal{F}$ and reseting of the state to an eigenstate of $H_+$ or $H_-$, zero bits of Shannon entropy. 
 \end{itemize}
 
