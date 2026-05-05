@@ -5,13 +5,6 @@
 % or move the open questions to the Conclusion as future work. It must not
 % appear in the submitted version.
 
-% TODO 3: The Schwarzschild radius derivation in Section 2.3 mixes frameworks
-% and needs an explicit caveat. The thrust quantum is treated simultaneously
-% as ultra-relativistic (Delta E = m_t c^2, Delta p = Delta E / c) and as a
-% Newtonian gravitational source, which is not self-consistent. Add a sentence
-% acknowledging this is a heuristic matching and that the correct emergence of
-% r_s invites explanation rather than constituting a derivation.
-
 % TODO 4: Cross-check and clarify the Delta A = 8 pi G hbar omega result
 % (Eq. for the area increment). The standard Raychaudhuri result for a photon
 % crossing a Killing horizon gives Delta A = 8 pi G E / kappa, which for a
@@ -144,7 +137,9 @@ measurement itself can in principle be performed reversibly; it is the
 erasure of the measurement record that necessarily costs energy. The bound 
 we derive here is a constraint on the energy of the physical carrier 
 required to imprint a classically distinguishable record under proper 
-acceleration $a$. For an accelerated observer, the relevant temperature is the Unruh temperature \cite{unruh1976notes}. Substituting one into the other eliminates temperature entirely, yielding a relation between information acquisition, energy transfer, and acceleration (a version of the black hole thermodynamics first law; equation (\ref{eq:UL}) upcoming).
+acceleration $a$.
+
+For an accelerated observer, the relevant temperature is the Unruh temperature \cite{unruh1976notes}. Substituting one into the other eliminates temperature entirely, yielding a relation between information acquisition, energy transfer, and acceleration (a version of the black hole thermodynamics first law; equation (\ref{eq:UL}) upcoming).
 This creates a heuristic dictionary between the thermal description natural to a Rindler observer and the non-thermal global Minkowski description, with the apparent thermality of the vacuum emerging as a consequence of the observer's acceleration rather than as a fundamental property of the state. In this way we will derive a sequence of standard results in black hole thermodynamics as a consequence of Newton's laws.
 
 \subsection{The Unruh-Landauer Relation}
@@ -214,30 +209,40 @@ This perspective is closely related in spirit to Erik Verlinde’s entropic grav
 
 \subsection{The Schwarzschild Radius}
 
-We match the acceleration inferred from the 
-measurement-induced impulse to a Newtonian gravitational 
-field. For this identification we treat the thrust quantum 
-as a massive ultra-relativistic particle with rest energy 
-$\Delta E = m_t c^2$, so that $\Delta p = \Delta E/c$ 
-holds in the limit $v \to c$, and the Newtonian 
-gravitational field of $m_t$ at distance $r$ is 
-well-defined. Identifying the acceleration $a$ with the 
-Newtonian field gives:
+We match the kinematic acceleration of the detector to the 
+gravitational field of the thrust quantum using Newton's laws. 
+By $E = mc^2$, the energy quantum $\Delta E$ gravitates with 
+effective mass $\Delta E / c^2$, producing a Newtonian 
+gravitational acceleration
 \begin{equation}
-a = \frac{G m_t}{r^2},
+a = \frac{G \Delta E}{c^2 r^2}
 \end{equation}
-and substituting equation~\eqref{eq:accel} with 
-$\Delta E=m_t c^2$, we obtain
+at distance $r$ from the detector. Equating this with the 
+measurement-induced acceleration from equation~\eqref{eq:accel},
 \begin{equation}
-\frac{m_t c^2}{2 m_d r} = \frac{G m_t}{r^2}.
+\frac{\Delta E}{2 m_d r} = \frac{G \Delta E}{c^2 r^2}.
 \end{equation}
-Solving for $r$:
+The energy $\Delta E$ of the thrust quantum cancels entirely: 
+the Schwarzschild radius is independent of the energy of the 
+carrier. Solving for $r$:
 \begin{equation}
 r = \frac{2 G m_d}{c^2} \equiv r_s,
 \end{equation}
-which is precisely the Schwarzschild radius of the detector mass $m_d$.
+which is precisely the Schwarzschild radius of the detector 
+mass $m_d$. The cancellation of $\Delta E$ is the physical 
+content of the result: whatever energy the thrust quantum 
+carries, the self-consistent horizon scale is set by the 
+detector alone.
 
-It is notable that the resulting length scale is set by the detector mass $m_d$, rather than the source mass $m_t$. This reflects the fact that the construction is inherently observer-centred: the acceleration entering the argument is the response of the detector to the measurement-induced impulse, and the associated scale is therefore the horizon radius relevant to that observer. In this sense, the quantity $r_s$  should be interpreted not as the Schwarzschild radius of the source, but as the characteristic horizon scale associated with the detector as a physical system undergoing measurement. This is consistent with the observer-dependence of horizon structure in relativistic settings, as exemplified by the Unruh effect, where acceleration alone gives rise to a causal horizon.
+We note that the use of Newtonian gravity here is a 
+weak-field approximation, justified when $r \gg r_s$, and 
+that the self-consistency condition $r = r_s$ sits at its 
+boundary of validity. The fact that the exact GR result 
+agrees with this heuristic matching is a consequence shared 
+with Verlinde's entropic gravity~\cite{entropic} and 
+Bekenstein's original argument~\cite{bekenstein}, both of 
+which recover correct relativistic scales from Newtonian 
+reasoning applied at the horizon.
 
 \subsection{Surface Gravity}
 Evaluating the acceleration at $r = r_s$ gives the surface gravity of the detector:
