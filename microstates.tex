@@ -13,8 +13,7 @@
 % standard formula reduces to Eq. (5.5) in the Rindler case, or flag the
 % normalization choice clearly.
 
-
-
+% TODO A: Normalize British --> American spelling
 
 \documentclass[12pt,a4paper]{article}
 \usepackage[width=.75\textwidth]{caption}
@@ -47,25 +46,18 @@
 
 \maketitle
 
-\abstract{Thermodynamic approaches to gravity, from Jacobson to Verlinde, relate spacetime dynamics to horizon entropy but do not specify the microscopic carriers of the entropy increments. We show how quantum measurement can be identified with a microstate in the accelerated Unruh/Rindler setting, with the gravitational boundary term on the horizon counting measurement events directly. We derive a temperature-free Unruh–Landauer bound and reproduce standard black hole thermodynamics from Newton's laws, closing with a Carnot cycle and effective field theory structure that together organise and bound the construction. Matter is treated as a timelike information channel sampling at the Bremermann–Nyquist rate, providing emergent proper time; the horizon is the orthogonal spacelike channel through which entangled measurement events generate emergent space, recovering gravitational geometry event by event and providing an explicit microstate-level realization of the geometric structure underlying ER=EPR.}
+\abstract{Thermodynamic approaches to gravity, from Jacobson to Verlinde, relate spacetime dynamics to horizon entropy but do not specify the microscopic carriers of the entropy increments. We use a field theoretic source to show how quantum measurement can be identified with a microstate in the accelerated Unruh/Rindler setting, where the gravitational boundary term on the horizon corresponds to a space-like information channel. To explore this we produce a temperature-free Unruh–Landauer bound and reproduce standard black hole thermodynamics from Newton's laws. The detector is then treated as a timelike information channel sampling at the Bremermann–Nyquist rate, providing emergent proper time where quanta of action are accumulated as Gibbons--Hawking--York boundary terms. This provides an explicit microstate-level realization of geometric structure, explicitly reinterpreting ER=EPR as emergent space. We then close with a Carnot cycle and effective field theory structure that together organize and bound the construction.}
 
 % Section 1
 \section{Introduction}
 
 Two landmark results establish that gravity and Unruh thermodynamics are deeply intertwined. Jacobson showed that the Einstein equations can be derived from thermodynamic identities applied to local Rindler horizons, with horizon entropy playing the role of the fundamental quantity from which spacetime dynamics emerge~\cite{jacobson1995thermodynamics}. Verlinde extended this perspective, arguing that gravitational forces arise from entropy gradients on holographic screens, recasting gravity as an entropic rather than a fundamental interaction~\cite{entropic}. Both frameworks, however, operate at the level of bulk thermodynamics and leave open a prior question: what physical process underlies each individual entropy increment?
 
-We argue by example that the answer can be quantum measurement. Each act of information acquisition by a physical observer constitutes a discrete microstate event, and the collective backreaction of such events, together with the causal correlations they induce, gives rise to gravitational effects. The argument proceeds in three steps. First, any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. Second, through the equivalence principle, the impulse is locally indistinguishable from thrust in a gravitational field; no local measurement can distinguish the recoil associated with a quantum measurement event from acceleration in a gravitational potential. Third, when such impulses are modelled geometrically, via Aichelburg--Sexl (AS) pp-wave solutions, as we explore, they leave a geometric imprint on the horizon as photons carrying information pass through the horizon into the detector's matter degrees of freedom.
-
-Modeling the spacetime response to such localized energy–momentum transfer events using Aichelburg--Sexl (AS) pp-wave geometries follows the gravitational shockwave framework of Dray, 't Hooft \cite{dray1985gravitational}, and others. Their construction uses AS solutions sourced by infalling classical 
-particles to define horizon scattering amplitudes; the key 
-difference here is that we use a quantum entangled pair 
-emitted from a common ancestor, and the 
-information acquisition framing connects the geometric shift 
-directly to a classical bit acquired by the observers.
+We argue that the answer can be quantum measurement. Each act of information acquisition by a physical observer constitutes a discrete microstate event, and the collective backreaction of such events, together with the causal correlations they induce, give rise to gravitational effects. The argument proceeds in three steps. First, any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. Second, through the equivalence principle, the impulse is locally indistinguishable from thrust in a gravitational field; no local measurement can distinguish the recoil associated with a quantum measurement event from acceleration in a gravitational potential. Third, when such impulses are modelled geometrically, they leave an imprint on and through the horizon as photons carry information into the detector's degrees of freedom.
 
 \subsection{Conceptual Roadmap}
 
-Our approach stands in sharp contrast to the Diósi--Penrose objective collapse programme~\cite{penrose1996gravity, diosi1987universal}, which postulates that gravity induces an objective, observer-independent collapse of the quantum state. In that framework, gravitational self-interaction is taken to define a physical timescale for wavefunction reduction, leading to a dynamical modification of standard quantum mechanics. We instead treat quantum measurement as a subjective process mediated by energy--momentum transfer, and interpret the reduction of the state as physical. The contrast between the two approaches is illustrated in Figure~\ref{fig:diagram}. The three solid arrows represent ``grounding relations''; the single dashed arrow represents the Di\'osi--Penrose causal postulate. It is the only relation in the diagram claimed to be objective and observer-independent, and it is the only one we do not adopt.
+Our approach is a refactored version of the Diósi--Penrose objective collapse programme~\cite{penrose1996gravity, diosi1987universal}, which postulates that gravity induces an objective, observer-independent collapse of the quantum state. In that framework, gravitational self-interaction is taken to define a physical timescale for wavefunction reduction, leading to a dynamical modification of standard quantum mechanics. We instead treat quantum measurement as a subjective process mediated by energy--momentum transfer, and interpret the reduction of the state as physical. The contrast between the two approaches is illustrated in Figure~\ref{fig:diagram}. The three solid arrows represent ``grounding relations''; the single dashed arrow represents the Di\'osi--Penrose causal postulate. It is the only relation in the diagram claimed to be objective and observer-independent, and it is the only one we do not adopt in this paper.
 
 
 \begin{figure}[h]
@@ -77,23 +69,25 @@ Our approach stands in sharp contrast to the Diósi--Penrose objective collapse 
                     \arrow[r, "\scalebox{0.7}{\shortstack{energy--momentum\\transfer}}"']
     & \text{Observation} \arrow[u, "\scalebox{0.7}{\shortstack{Bayesian\\update}}"']
 \end{tikzcd}
-\caption{Solid arrows denote ``substrate'' relations: $A \to B$ means every instance of $B$ is physically realized by an instance of $A$, for a given observer. The dashed arrow denotes the Di\'osi--Penrose postulate, where the relation is claimed to hold objectively rather than observer-relatively.}
+\caption{Solid arrows denote subjective grounding relations: $A \to B$ means every instance of $B$ is physically realized by an instance of $A$, for a given observer. The dashed arrow denotes the Di\'osi--Penrose postulate, where the relation is claimed to hold objectively rather than observer-relatively.}
 \label{fig:diagram}
 \end{figure}
 
-In Section \ref{sec:heuristics} we explore a heuristic argument where we eliminate temperature from the discussion using a combination of Landauer's principle with the Unruh effect and derive standard BHT area and information laws from Newton's laws. We then dive into a spin-1 version of the concrete microstate construction from our previous work~\cite{player2025driving} which we present in Section \ref{sec:microstates}; this realizes individual terms of the Unruh thermal ensemble via Minkowski bilocal driving sources. In Section \ref{sec:substrate} we develop a language for discussing emergent spacetime as a property of information bearing matter.
+In Section \ref{sec:heuristics} we explore a heuristic argument where we eliminate temperature from the discussion using a combination of Landauer's principle with the Unruh effect and derive standard blackhole thermodynamics area and information laws from Newton's laws. We then dive into a spin-1 version of the concrete microstate construction from our previous work~\cite{player2025driving} which we present in Section \ref{sec:microstates}; this realizes individual terms of the Unruh thermal ensemble via a Minkowski bilocal driving source. In Section \ref{sec:substrate} we develop a language for discussing emergent spacetime as a property of information bearing matter.
 Section~\ref{sec:ppwave} develops how the 
-Gibbons--Hawking--York horizon boundary term 
+Gibbons--Hawking--York (GHY) horizon boundary term~\cite{gibbons1977action}
 counts matter's information as action and models 
 our entangled photons as AS pp-waves that create 
-space at the wedge horizons; the central result 
+space at the wedge horizons, following the gravitational shockwave framework of Dray, 't Hooft \cite{dray1985gravitational}, and others; the central result 
 is that the GHY boundary term equals the matter 
 action event by event, $S_{GHY}|_\mathcal{H} = 
-S_{\text{matter}}$. Section~\ref{sec:erepr} 
+S_{\text{matter}}$.
+
+
+Section~\ref{sec:erepr} 
 identifies the newly emergent space with the 
-measurement of a classical bit and realizes the 
-ER=EPR correspondence at the single-microstate 
-level, with the wormhole bridge built explicitly 
+measurement of a classical bit, a reinterpretation of the
+ER=EPR correspondence space built explicitly 
 from correlated matter samples one quantum of 
 action at a time. We circle back to temperature 
 in Section~\ref{sec:carnot} with a Carnot cycle 
@@ -953,7 +947,7 @@ Padmanabhan~\cite{padmanabhan2010thermodynamical}, which argue
 that the gravitational boundary term rather than the bulk 
 Einstein--Hilbert action is the fundamental gravitational degree 
 of freedom. Those programmes establish this at the level of 
-thermodynamic averages. The present construction realises the 
+thermodynamic averages. The present construction realizes the 
 same identification at the level of individual microstates, with 
 each boundary contribution sourced by a specific quantum 
 measurement event rather than a bulk average. The standard 
@@ -1003,23 +997,23 @@ established in Section~\ref{sec:substrate}, the horizon is a boundary that makes
 left/right distinction sharp; it is the matter on each side that accumulates the samples and
 holds the classical record. $\mathcal{R}$'s detector has absorbed one photon, increased its sampling rate, and registered polarization $H_+/H_-$. $\mathcal{L}$'s detector has absorbed one photon, increased its sampling rate, and registered polarization $H_-/H_+$. The two records are perfectly complementary by the anticorrelated structure of the bilocal source, and their complementarity is encoded in matter and is reflected in geometry.
 
-\subsection{ER = EPR}
+\subsection{ER = EPR and emergent space}
 
 The Unruh vacuum is the thermofield double state of the left 
 and right Rindler wedges~\cite{maldacena2013cool}: 
 equation~\eqref{eq:vacuum_vec} is precisely this state, with 
 the helicity label $\lambda$ carried through. This places the 
 present construction squarely within the ER=EPR setting of 
-Maldacena and Susskind, 
-the ER=EPR correspondence is the ambient mathematical structure 
-within which the bilocal construction operates.
+Maldacena and Susskind, but we opperate in flat Minkowski space
+and don't use the full Ads/CFT machinery. The ER=EPR correspondence is the
+ambient mathematical structure within which the bilocal construction operates. 
 
 The bilocal source selects one term from the thermofield double 
 sum at fixed $\omega$ and fixed helicity pair, yielding the 
 single microstate~\eqref{eq:microstate_vec}. The EPR side is 
 the entangled photon pair emitted by $\mathcal{P}$, whose 
 quantum correlations are consumed by the two measurement events. 
-The ER side is the pair of correlated AS longitudinal shifts in 
+The ER side is replaced with the pair of correlated AS longitudinal shifts in 
 opposite null directions: the geometric imprint of one term in 
 the thermofield double sum, calculable and explicit. The spatial 
 bit, the answer to ``who observed $H_+$?'', is the classical 
@@ -1037,10 +1031,6 @@ absent in the scalar case: the two sides carry opposite
 handedness, and whether this constitutes a topological invariant 
 of the transverse geometry is an open question we leave for 
 future work.
-
-
-
-This completes the microstate programme. Each entropy increment in the Bekenstein--Hawking area law corresponds to a single AS pp-wave interaction. Each pp-wave interaction corresponds to a single measurement event in the bilocal construction. Each measurement event both encodes a spatial bit and generates the spatial separation that bit refers to. The gravitational, thermodynamic, information-theoretic, and geometric descriptions of the horizon are unified at the level of individual microstates, and thermality, entropy, and space itself emerge together from the coarse-grained aggregate of these events.
 
 % Section 7
 \section{Carnot Cycle from Unruh--Landauer}
@@ -1596,7 +1586,7 @@ with $a_{\text{eff}}$ controllable by the condensate
 parameters. The analogue acceleration can be made 
 large enough that the right-hand side is no longer 
 negligible compared to the energy scales of the 
-system. A detector realised as a localised impurity 
+system. A detector realized as a localised impurity 
 or probe field near the sonic horizon would, 
 according to the present framework, exhibit an 
 information acquisition cost with this scaling. 
