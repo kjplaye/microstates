@@ -1,11 +1,18 @@
-% TODO 2: Remove or resolve the holdover TODO block between Sections 4 and 5
-% (beginning "Investigate whether the metric can be understood as counting
-% action quanta"). The questions it raises are partially answered in
-% Section 5.3. Either incorporate the resolved parts into the prose of 5.3
-% or move the open questions to the Conclusion as future work. It must not
-% appear in the submitted version.
+% TODO 1: Sharpen the equivalence principle argument in the Introduction.
+% The claim that measurement-induced recoil is locally indistinguishable
+% from gravitational acceleration is asserted across three bullet points
+% but not demonstrated. Either provide a brief calculation showing the
+% equivalence for the photon absorption case, or soften the language to
+% "locally analogous" and be explicit about what the analogy does and
+% does not carry.
 
-% TODO 4: Cross-check and clarify the Delta A = 8 pi G hbar omega result
+% TODO 2: Motivate the bilocal source configuration more rigorously.
+% The claim that the CPT-symmetrized helicity assignment is unique given
+% angular momentum conservation and CPT is stated but not derived. Add a
+% short argument ruling out other assignments, or replace "unique" with a
+% weaker claim.
+
+% TODO 2.5: Cross-check and clarify the Delta A = 8 pi G hbar omega result
 % (Eq. for the area increment). The standard Raychaudhuri result for a photon
 % crossing a Killing horizon gives Delta A = 8 pi G E / kappa, which for a
 % Rindler horizon kappa = a/c differs from the stated result by a factor of
@@ -13,7 +20,41 @@
 % standard formula reduces to Eq. (5.5) in the Rindler case, or flag the
 % normalization choice clearly.
 
-% TODO A: Normalize British --> American spelling
+% TODO 3: Distinguish numerical equality from ontological identity for
+% S_GHY = S_matter. The current prose slides from "these are equal" to
+% "geometry is matter action in geometric language." Either provide an
+% additional argument for the stronger claim or explicitly restrict the
+% conclusion to the equality and flag the stronger reading as an
+% interpretation.
+
+% TODO 4.5: Investigate whether the metric can be understood as counting
+% action quanta. The questions it raises are partially answered in
+% Section 5.3. Either incorporate the resolved parts into the prose of 5.3
+% or move the open questions to the Conclusion as future work. It must not
+% appear in the submitted version.
+
+% TODO 5: Sharpen the Diosi-Penrose contrast. The introduction distinguishes
+% "subjective but physically real" from "objective collapse" but the boundary
+% is blurry. Add one paragraph clarifying how a consequence can be physically
+% real for a given observer without being observer-independent, with a
+% concrete example drawn from the construction itself.
+
+% TODO 6: Fix the H/S notation inconsistency. H is introduced in nats to
+% avoid conflict with S for action, but \Delta S appears for entropy near
+% eq. (37) and possibly elsewhere. Do a pass and enforce the convention
+% throughout.
+
+% TODO 7: Sharpen Section 9 to a concrete observable. The BEC analogue
+% gravity paragraph is the most promising direction but stops short of a
+% prediction. Identify one specific measurable quantity---e.g., the scaling
+% of energy deposited into a probe impurity near a sonic horizon as a
+% function of a_eff---and state it as a falsifiable prediction.
+
+% TODO 8: Decide on the zig-zag section. It supports the channel picture
+% but adds no new result. Either give it a result (e.g., show the Compton
+% frequency emerges from the Higgs interaction rate in a way that tightens
+% the Bremermann connection) or cut it to a two-sentence remark and footnote
+% in Section 4.1.
 
 \documentclass[12pt,a4paper]{article}
 \usepackage[width=.75\textwidth]{caption}
@@ -46,7 +87,9 @@
 
 \maketitle
 
-\abstract{Thermodynamic approaches to gravity, from Jacobson to Verlinde, relate spacetime dynamics to horizon entropy but do not specify the microscopic carriers of the entropy increments. We use a field theoretic source to show how quantum measurement can be identified with a microstate in the accelerated Unruh/Rindler setting, where the gravitational boundary term on the horizon corresponds to a space-like information channel. To explore this we produce a temperature-free Unruh–Landauer bound and reproduce standard black hole thermodynamics from Newton's laws. The detector is then treated as a timelike information channel sampling at the Bremermann–Nyquist rate, providing emergent proper time where quanta of action are accumulated as Gibbons--Hawking--York boundary terms. This provides an explicit microstate-level realization of geometric structure, explicitly reinterpreting ER=EPR as emergent space. We then close with a Carnot cycle and effective field theory structure that together organize and bound the construction.}
+\abstract{Thermodynamic approaches to gravity, from Jacobson to Verlinde, relate spacetime dynamics to horizon entropy but do not specify the microscopic carriers of the entropy increments. We use a field theoretic source to show how quantum measurement can be identified with a microstate in the accelerated Unruh/Rindler setting, where the gravitational boundary term on the horizon corresponds to a space-like information channel. To explore this we produce a temperature-free Unruh–Landauer bound and reproduce standard black hole thermodynamics from Newton's laws. The detector is then treated as a timelike information channel sampling at the Bremermann–Nyquist rate, providing emergent proper time where quanta of action are accumulated as Gibbons--Hawking--York boundary terms. This provides an explicit microstate-level realization of emergent 
+space at the Rindler horizon via correlated Aichelburg--Sexl shifts 
+in opposite null directions.}
 
 % Section 1
 \section{Introduction}
@@ -83,11 +126,10 @@ is that the GHY boundary term equals the matter
 action event by event, $S_{GHY}|_\mathcal{H} = 
 S_{\text{matter}}$.
 
-
 Section~\ref{sec:erepr} 
 identifies the newly emergent space with the 
-measurement of a classical bit, a reinterpretation of the
-ER=EPR correspondence. We circle back to temperature 
+measurement of a classical bit, and discusses the structural 
+parallel with the ER=EPR correspondence.  We circle back to temperature 
 in Section~\ref{sec:carnot} with a Carnot cycle 
 at the microstate level, connecting the Carnot 
 efficiency bound to the Unruh--Landauer bound as 
@@ -995,39 +1037,23 @@ established in Section~\ref{sec:substrate}, the horizon is a boundary that makes
 left/right distinction sharp; it is the matter on each side that accumulates the samples and
 holds the classical record. $\mathcal{R}$'s detector has absorbed one photon, increased its sampling rate, and registered polarization $H_+/H_-$. $\mathcal{L}$'s detector has absorbed one photon, increased its sampling rate, and registered polarization $H_-/H_+$. The two records are perfectly complementary by the anticorrelated structure of the bilocal source, and their complementarity is encoded in matter and is reflected in geometry.
 
-\subsection{ER = EPR and emergent space}
 
+\subsection{Emergent Space and the Thermofield Double}
 The Unruh vacuum is the thermofield double state of the left 
 and right Rindler wedges~\cite{maldacena2013cool}: 
 equation~\eqref{eq:vacuum_vec} is precisely this state, with 
-the helicity label $\lambda$ carried through. This places the 
-present construction squarely within the ER=EPR setting of 
-Maldacena and Susskind, but we opperate in flat Minkowski space
-and don't use the full Ads/CFT machinery. The ER=EPR correspondence is the
-ambient mathematical structure within which the bilocal construction operates. 
-
-The bilocal source selects one term from the thermofield double 
-sum at fixed $\omega$ and fixed helicity pair, yielding the 
-single microstate~\eqref{eq:microstate_vec}. The EPR side is 
-the entangled photon pair emitted by $\mathcal{P}$, whose 
-quantum correlations are consumed by the two measurement events. 
-The ER side is replaced with the pair of correlated AS longitudinal shifts in 
-opposite null directions: the geometric imprint of one term in 
-the thermofield double sum, calculable and explicit. The spatial 
-bit, the answer to ``who observed $H_+$?'', is the classical 
-record of which side of the bridge each measurement occurred on. 
-The bridge is not a stand-in for the entanglement but its 
-physical instantiation, built from correlated matter samples, 
-one quantum of action at a time.
-
-What is new here is that both sides of the correspondence are 
-calculable at the single-microstate level, with a definite 
-energy-momentum source and a definite geometric output, rather 
-than established by a bulk thermodynamic argument. The 
-anticorrelated helicity structure gives the bridge an orientation 
-absent in the scalar case: the two sides carry opposite 
-handedness, and whether this constitutes a topological invariant 
-of the transverse geometry is an open question we leave for 
+the helicity label $\lambda$ carried through. The bilocal 
+source selects one term from this sum at fixed $\omega$ and 
+fixed helicity pair, yielding the single 
+microstate~\eqref{eq:microstate_vec}. The correlated AS 
+longitudinal shifts in opposite null directions are the 
+geometric output of this microstate: a linearized perturbation 
+of flat Minkowski space that displaces the two wedges away from 
+their respective horizons, creating new coordinate space between 
+them. This is structurally similar to the emergent spatial 
+separation in the ER=EPR correspondence but we do not claim 
+a connected geometry or topological bridge; whether the 
+construction makes contact with that programme is left for 
 future work.
 
 % Section 7
