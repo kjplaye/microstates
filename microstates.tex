@@ -1,60 +1,252 @@
-% TODO 1: Sharpen the equivalence principle argument in the Introduction.
-% The claim that measurement-induced recoil is locally indistinguishable
-% from gravitational acceleration is asserted across three bullet points
-% but not demonstrated. Either provide a brief calculation showing the
-% equivalence for the photon absorption case, or soften the language to
-% "locally analogous" and be explicit about what the analogy does and
-% does not carry.
+% ================================================================
+% REVISION TODO LIST — ordered by paper section
+% Existing TODOs retain their original numbers.
+% New TODOs are inserted with decimal numbers that place them
+% in paper order relative to the existing list.
+% ================================================================
 
-% TODO 2: Motivate the bilocal source configuration more rigorously.
-% The claim that the CPT-symmetrized helicity assignment is unique given
-% angular momentum conservation and CPT is stated but not derived. Add a
-% short argument ruling out other assignments, or replace "unique" with a
-% weaker claim.
+% ----------------------------------------------------------------
+% ABSTRACT
+% ----------------------------------------------------------------
 
-% TODO 2.5: Cross-check and clarify the Delta A = 8 pi G hbar omega result
-% (Eq. for the area increment). The standard Raychaudhuri result for a photon
-% crossing a Killing horizon gives Delta A = 8 pi G E / kappa, which for a
-% Rindler horizon kappa = a/c differs from the stated result by a factor of
-% c/a unless a normalization convention absorbs it. Show explicitly how the
-% standard formula reduces to Eq. (5.5) in the Rindler case, or flag the
-% normalization choice clearly.
+% TODO 0 [NEW]: Restructure and thin the abstract.
+% The abstract is too compressed. Three major conceptual steps
+% (Unruh–Landauer bound, bilocal microstate construction,
+% GHY = S_matter) are presented in a single dense paragraph.
+% Split into at most three sentences per claim, and separate
+% what is derived from what is assumed. In particular, the
+% sentence beginning "The detector is then treated as..." chains
+% four distinct claims. Rewrite the abstract as two paragraphs:
+% the first stating the central result and the physical picture;
+% the second summarising the chain of supporting results.
 
-% TODO 3: Distinguish numerical equality from ontological identity for
-% S_GHY = S_matter. The current prose slides from "these are equal" to
-% "geometry is matter action in geometric language." Either provide an
-% additional argument for the stronger claim or explicitly restrict the
-% conclusion to the equality and flag the stronger reading as an
-% interpretation.
+% ----------------------------------------------------------------
+% SECTION 1 — INTRODUCTION
+% ----------------------------------------------------------------
 
-% TODO 4.5: Investigate whether the metric can be understood as counting
-% action quanta. The questions it raises are partially answered in
-% Section 5.3. Either incorporate the resolved parts into the prose of 5.3
-% or move the open questions to the Conclusion as future work. It must not
-% appear in the submitted version.
+% TODO 1 [EXISTING]: Sharpen the equivalence principle argument
+% in the Introduction.
+% The claim that measurement-induced recoil is locally
+% indistinguishable from gravitational acceleration is asserted
+% across three bullet points but not demonstrated. Either provide
+% a brief calculation showing the equivalence for the photon
+% absorption case, or soften the language to "locally analogous"
+% and be explicit about what the analogy does and does not carry.
 
-% TODO 5: Sharpen the Diosi-Penrose contrast. The introduction distinguishes
-% "subjective but physically real" from "objective collapse" but the boundary
-% is blurry. Add one paragraph clarifying how a consequence can be physically
-% real for a given observer without being observer-independent, with a
+% TODO 5 [EXISTING]: Sharpen the Diosi–Penrose contrast.
+% The introduction distinguishes "subjective but physically real"
+% from "objective collapse" but the boundary is blurry. Add one
+% paragraph clarifying how a consequence can be physically real
+% for a given observer without being observer-independent, with a
 % concrete example drawn from the construction itself.
 
-% TODO 6: Fix the H/S notation inconsistency. H is introduced in nats to
-% avoid conflict with S for action, but \Delta S appears for entropy near
-% eq. (37) and possibly elsewhere. Do a pass and enforce the convention
+% ----------------------------------------------------------------
+% SECTION 2 — MOTIVATING HEURISTICS
+% ----------------------------------------------------------------
+
+% TODO 1.5 [NEW]: Justify the causal diamond time scale.
+% Equation (4) identifies the interaction time with
+% $\Delta t = 2r/c$, the light-crossing time of the localisation
+% region, and describes this as "fixed entirely by the causal
+% geometry rather than by any dynamical assumption." This is a
+% substantive physical assumption: the interaction time could
+% equally be the de Broglie time, the Compton time, or a
+% dynamical decoherence time. Add a sentence explaining why the
+% causal diamond duration is the correct choice for a measurement
+% event localised to scale $r$, or acknowledge that this is an
+% ansatz and assess the sensitivity of the Schwarzschild radius
+% derivation to it.
+
+% TODO 1.7 [NEW]: Sharpen the Landauer-for-acquisition argument.
+% Bennett's result is that measurement can in principle be
+% performed reversibly; it is erasure that necessarily costs
+% energy. Section 2 applies the Landauer bound to acquisition on
+% the grounds that "registering a measurement outcome is
+% physically equivalent to information being written into the
+% detector's state." This conflation is the most likely referee
+% objection in the paper. Either (a) provide a physical argument
+% specific to this setting for why acquisition is irreversible
+% here — e.g., that the photon is absorbed and the record
+% persists in a degree of freedom that cannot be coherently
+% reversed without a separate erasure step — or (b) explicitly
+% label Section 2 as a heuristic derivation, defer the rigorous
+% Landauer accounting entirely to Section 7, and add a forward
+% reference at the point of first use.
+
+% ----------------------------------------------------------------
+% SECTION 3 — BILOCAL MICROSTATE CONSTRUCTION
+% ----------------------------------------------------------------
+
+% TODO 2 [EXISTING]: Motivate the bilocal source configuration
+% more rigorously.
+% The claim that the CPT-symmetrized helicity assignment is unique
+% given angular momentum conservation and CPT is stated but not
+% derived. Add a short argument ruling out other assignments, or
+% replace "unique" with a weaker claim.
+
+% TODO 2.3 [NEW]: Clarify the thermality-from-coarse-graining
+% claim.
+% Section 3 states that thermality is "not a property of any
+% single microstate but of the ensemble," arising when one
+% discards the specific microstate identity. However, tracing out
+% one wedge from the bilocal state at fixed $\omega$ — a single
+% microstate — already yields a thermal density matrix, because
+% the thermality arises from the entanglement structure of the
+% state rather than from averaging over $\omega$. The
+% coarse-graining over helicity outcomes is a separate,
+% additional step. Distinguish these two sources of thermality
+% explicitly: the entanglement-induced thermality at fixed
+% $\omega$, and the Planck distribution over $\omega$ which is
+% genuinely an ensemble property. Restrict the claim to the
+% latter, or restate it to cover both.
+
+% ----------------------------------------------------------------
+% SECTION 4 — MATTER AS A SUBSTRATE
+% ----------------------------------------------------------------
+
+% TODO 8 [EXISTING]: Decide on the zig-zag section.
+% It supports the channel picture but adds no new result. Either
+% give it a result (e.g., show the Compton frequency emerges from
+% the Higgs interaction rate in a way that tightens the
+% Bremermann connection) or cut it to a two-sentence remark and
+% footnote in Section 4.1.
+
+% ----------------------------------------------------------------
+% SECTION 5 — PP-WAVE GEOMETRY AND ACTION
+% ----------------------------------------------------------------
+
+% TODO 2.5 [EXISTING]: Cross-check and clarify the
+% $\Delta A = 8\pi G\hbar\omega$ result (Eq. for the area
+% increment).
+% The standard Raychaudhuri result for a photon crossing a
+% Killing horizon gives $\Delta A = 8\pi G E / \kappa$, which
+% for a Rindler horizon $\kappa = a/c$ differs from the stated
+% result by a factor of $c/a$ unless a normalisation convention
+% absorbs it. Show explicitly how the standard formula reduces to
+% Eq. (5.5) in the Rindler case, or flag the normalisation choice
+% clearly.
+
+% TODO 3.5 [NEW]: Assess the independence of the
+% $S_{GHY} = S_{\text{matter}}$ result from its assumed inputs.
+% The Bekenstein–Hawking relation is explicitly introduced as an
+% "ansatz for the Rindler case" one paragraph before the entropy
+% increment calculation. Identify precisely which steps in the
+% derivation of $S_{GHY}\big|_{\mathcal{H}} = S_{\text{matter}}$
+% use this ansatz and which follow from the construction alone
+% (the Raychaudhuri equation, the AS pp-wave geometry, and the
+% GHY definition). If the ansatz is load-bearing, either derive
+% it from the construction or restrict the claim to "consistent
+% with the Bekenstein–Hawking ansatz" rather than presenting it
+% as an independent derivation.
+
+% TODO 3 [EXISTING]: Distinguish numerical equality from
+% ontological identity for $S_{GHY} = S_{\text{matter}}$.
+% The current prose slides from "these are equal" to "geometry is
+% matter action in geometric language." Either provide an
+% additional argument for the stronger claim or explicitly
+% restrict the conclusion to the equality and flag the stronger
+% reading as an interpretation.
+
+% TODO 4.5 [EXISTING]: Investigate whether the metric can be
+% understood as counting action quanta.
+% The questions it raises are partially answered in Section 5.3.
+% Either incorporate the resolved parts into the prose of 5.3 or
+% move the open questions to the Conclusion as future work. It
+% must not appear in the submitted version.
+
+% ----------------------------------------------------------------
+% SECTION 6 — ENTANGLEMENT AS SPATIAL INFORMATION
+% ----------------------------------------------------------------
+
+% TODO 4 [NEW]: Sharpen or compress the ER=EPR discussion.
+% Section 6 notes a structural parallel with the non-traversable
+% Einstein–Rosen bridge and immediately disclaims a full
+% topological identification, leaving the section without a new
+% result. Either derive a specific consequence of the parallel —
+% for example, show that the no-communication theorem on the EPR
+% side corresponds to a precise non-traversability statement for
+% the AS longitudinal shifts in opposite null directions — or
+% compress the ER=EPR material to two sentences in the Conclusion
+% under "future work" and remove Section 6.1 from the body.
+
+% ----------------------------------------------------------------
+% SECTION 7 — CARNOT CYCLE FROM UNRUH–LANDAUER
+% ----------------------------------------------------------------
+
+% TODO 6.5 [NEW]: Make the Carnot cycle mapping rigorous or
+% relabel it throughout.
+% A Carnot cycle requires that isothermal legs hold temperature
+% constant while entropy changes, and adiabatic legs hold entropy
+% constant. The "isothermal expansion" leg is currently described
+% as Shannon entropy increasing from 0 to 1 bit, but the text
+% does not specify what temperature is held constant or by what
+% mechanism. Define the thermodynamic state space explicitly:
+% identify the state variables, specify what is held fixed in
+% each leg and at what temperature, and verify that each leg
+% satisfies the correct thermodynamic constraint. If this cannot
+% be done rigorously, rename the structure a "Carnot-analogous
+% cycle" throughout and restrict all claims to the structural
+% parallel rather than the thermodynamic identity.
+
+% ----------------------------------------------------------------
+% SECTION 8 — EFFECTIVE FIELD THEORY STRUCTURE
+% ----------------------------------------------------------------
+
+% TODO 8.5 [NEW]: Fix the near-circular condition in the EFT
+% Validity Proposition.
+% Condition (5) in Proposition 1 reads "The EFT description of
+% $\mathcal{H}_R$ is valid," which is near-circular in a
+% proposition whose purpose is to characterise EFT validity.
+% Replace it with an operational condition, for example
+% $\ell_P / \lambda_C \ll 1$ (equivalently
+% $m_\mathcal{R} \gg m_P$), and verify that it is logically
+% equivalent to the other five listed conditions.
+
+% TODO 9 [NEW]: Supply the intermediate steps in the Carnot
+% efficiency calculation.
+% Equation (40) states
+% $\eta = 1 - \kappa/a = m_\mathcal{L}/(m_\mathcal{R}
+% + m_\mathcal{L})$ without derivation. The identification of
+% $\kappa$ (the surface gravity of the mirror) with
+% $m_\mathcal{L}$ and $a$ with $m_\mathcal{R} + m_\mathcal{L}$
+% is non-obvious and will stop readers. Add two or three lines of
+% algebra showing how $\kappa = Gm_\mathcal{L}/r_s^2$ and
+% $a = G(m_\mathcal{R}+m_\mathcal{L})/r_s^2$ reduce to the
+% stated mass ratio, or add a short footnote if the derivation is
+% standard.
+
+% ----------------------------------------------------------------
+% SECTION 9 — EXPERIMENTAL TESTS
+% ----------------------------------------------------------------
+
+% TODO 7 [EXISTING]: Sharpen Section 9 to a concrete observable.
+% The BEC analogue gravity paragraph is the most promising
+% direction but stops short of a prediction. Identify one
+% specific measurable quantity — e.g., the scaling of energy
+% deposited into a probe impurity near a sonic horizon as a
+% function of $a_{\text{eff}}$ — and state it as a falsifiable
+% prediction.
+
+% ----------------------------------------------------------------
+% GLOBAL
+% ----------------------------------------------------------------
+
+% TODO 6 [EXISTING]: Fix the $H$/$S$ notation inconsistency.
+% $H$ is introduced in nats to avoid conflict with $S$ for
+% action, but $\Delta S$ appears for entropy near eq. (37) and
+% possibly elsewhere. Do a pass and enforce the convention
 % throughout.
 
-% TODO 7: Sharpen Section 9 to a concrete observable. The BEC analogue
-% gravity paragraph is the most promising direction but stops short of a
-% prediction. Identify one specific measurable quantity---e.g., the scaling
-% of energy deposited into a probe impurity near a sonic horizon as a
-% function of a_eff---and state it as a falsifiable prediction.
-
-% TODO 8: Decide on the zig-zag section. It supports the channel picture
-% but adds no new result. Either give it a result (e.g., show the Compton
-% frequency emerges from the Higgs interaction rate in a way that tightens
-% the Bremermann connection) or cut it to a two-sentence remark and footnote
-% in Section 4.1.
+% TODO 10 [NEW]: Confirm that reference [player2025driving] is
+% publicly accessible before submission.
+% The present paper builds on the scalar-field construction of
+% that work in Sections 3, 4, and 5, and multiple claims are
+% stated to follow from it without being reproduced here.
+% Readers and referees cannot evaluate those claims if the
+% reference is unavailable. If it is not yet posted on arXiv,
+% either include the relevant scalar construction as a
+% self-contained appendix, or post both papers simultaneously
+% and cross-reference by arXiv identifier.
 
 \documentclass[12pt,a4paper]{article}
 \usepackage[width=.75\textwidth]{caption}
@@ -87,7 +279,13 @@
 
 \maketitle
 
-\abstract{Thermodynamic approaches to gravity, from Jacobson to Verlinde, relate spacetime dynamics to horizon entropy but do not specify the microscopic carriers of the entropy increments. We use a field theoretic source to show how quantum measurement can be identified with a microstate in the accelerated Unruh/Rindler setting, where the gravitational boundary term on the horizon corresponds to a space-like information channel. To explore this we produce a temperature-free Unruh–Landauer bound and reproduce standard black hole thermodynamics from Newton's laws. The detector is then treated as a timelike information channel sampling at the Bremermann–Nyquist rate, providing emergent proper time where quanta of action are accumulated as Gibbons--Hawking--York boundary terms. This provides an explicit microstate-level realization of emergent 
+\abstract{Thermodynamic approaches to gravity, from Jacobson to Verlinde, relate spacetime dynamics to horizon entropy but do not specify the microscopic carriers of the entropy increments. We use a field theoretic source to show how quantum measurement can be identified with a microstate in the accelerated Unruh/Rindler setting, where the gravitational boundary term on the horizon corresponds to a space-like information channel.
+To explore this we produce a temperature-eliminated Unruh–Landauer 
+bound, where the elimination is both algebraic and conceptual, 
+reflecting that temperature is a property of the coarse-grained 
+Rindler description absent from the underlying Minkowski 
+microstates, and reproduce standard black hole thermodynamics 
+from Newton's laws. The detector is then treated as a timelike information channel sampling at the Bremermann–Nyquist rate, providing emergent proper time where quanta of action are accumulated as Gibbons--Hawking--York boundary terms. This provides an explicit microstate-level realization of emergent 
 space at the Rindler horizon via correlated Aichelburg--Sexl shifts 
 in opposite null directions.}
 
@@ -97,6 +295,22 @@ in opposite null directions.}
 Two landmark results establish that gravity and Unruh thermodynamics are deeply intertwined. Jacobson showed that the Einstein equations can be derived from thermodynamic identities applied to local Rindler horizons, with horizon entropy playing the role of the fundamental quantity from which spacetime dynamics emerge~\cite{jacobson1995thermodynamics}. Verlinde extended this perspective, arguing that gravitational forces arise from entropy gradients on holographic screens, recasting gravity as an entropic rather than a fundamental interaction~\cite{entropic}. Both frameworks, however, operate at the level of bulk thermodynamics and leave open a prior question: what physical process underlies each individual entropy increment?
 
 We argue that the answer can be quantum measurement. Each act of information acquisition by a physical observer constitutes a discrete microstate event, and the collective backreaction of such events, together with the causal correlations they induce, give rise to gravitational effects. The argument proceeds in three steps. First, any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. Second, through the equivalence principle, the impulse is locally indistinguishable from thrust in a gravitational field; no local measurement can distinguish the recoil associated with a quantum measurement event from acceleration in a gravitational potential. Third, when such impulses are modelled geometrically, they leave an imprint on and through the horizon as photons carry information into the detector's degrees of freedom.
+
+A structuring choice runs throughout the paper: we work in the 
+non-thermal global Minkowski description rather than the thermal 
+Rindler description. The Rindler observer's thermal bath arises 
+from restricting to one wedge and tracing out the 
+other~\cite{fulling1973nonuniqueness,unruh1976notes,bisognano1975duality}; the 
+Minkowski vacuum is pure, and the individual microstates constructed 
+here are non-thermal. Temperature is not suppressed but relocated: 
+it is a derived quantity in the Rindler frame and absent as a 
+primitive in the Minkowski microstate picture. This vantage point 
+is maintained through Section~\ref{sec:erepr}; temperature 
+re-enters in Section~\ref{sec:carnot} not as a retreat to the 
+thermal description but as a demonstration that the non-thermal 
+microstate construction is rich enough to support a fully 
+reversible Carnot cycle at the individual microstate level, 
+with thermodynamic identities emerging as consequences.
 
 \subsection{Conceptual Roadmap}
 
@@ -158,8 +372,18 @@ we derive here is a constraint on the energy of the physical carrier
 required to imprint a classically distinguishable record under proper 
 acceleration $a$.
 
-For an accelerated observer, the relevant temperature is the Unruh temperature \cite{unruh1976notes}. Substituting one into the other eliminates temperature entirely, yielding a relation between information acquisition, energy transfer, and acceleration (a version of the black hole thermodynamics first law; equation (\ref{eq:UL}) upcoming).
-This creates a heuristic dictionary between the thermal description natural to a Rindler observer and the non-thermal global Minkowski description, with the apparent thermality of the vacuum emerging as a consequence of the observer's acceleration rather than as a fundamental property of the state. In this way we will derive a sequence of standard results in black hole thermodynamics as a consequence of Newton's laws.
+For an accelerated observer, the relevant temperature is the Unruh temperature \cite{unruh1976notes}. Substituting one into the other eliminates temperature entirely, yielding a relation between information acquisition, energy transfer, and acceleration (a version of the black hole thermodynamics first law; equation (\ref{eq:UL}) upcoming). This creates a dictionary between the thermal description natural 
+to a Rindler observer and the non-thermal global Minkowski 
+description~\cite{fulling1973nonuniqueness,bisognano1975duality}: the Minkowski 
+vacuum is pure and non-thermal; restriction to one Rindler wedge 
+produces a mixed thermal state by tracing out the complementary 
+wedge, making thermality a consequence of restricted causal access 
+rather than a fundamental property of the state. The present paper 
+operates in the non-thermal Minkowski description throughout; the 
+thermal Rindler picture is a derived coarse-graining. In this way 
+we will derive a sequence of standard results in black hole 
+thermodynamics as a consequence of Newton's laws.
+
 
 \subsection{The Unruh-Landauer Relation}
 
@@ -1063,6 +1287,19 @@ in a flat-space limit is left for future work.
 \section{Carnot Cycle from Unruh--Landauer}
 \label{sec:carnot}
 
+The Carnot cycle developed here is formulated at the level of 
+individual non-thermal microstates, and this is the point. 
+Reversibility is a feature of the microstate description: in a 
+coarse-grained thermal treatment individual microstates are 
+inaccessible and the cycle could not be run explicitly. Temperature 
+appears in this section not as a primitive imported from the Rindler 
+description but as a derived label on each leg of the cycle, 
+consistent with the non-thermal Minkowski vantage point maintained 
+throughout. The Carnot efficiency bound and the Unruh--Landauer 
+bound will emerge as the same inequality viewed from opposite sides 
+of this microstate-level construction, closing the loop opened in 
+Section~\ref{sec:heuristics}.
+
 We consider in this section the case where $\mathcal{L}$ and $\mathcal{R}$ are moving mirrors being accelerated with an outward thrust from our past bilocal source $\mathcal{P}$ emission, see Figure \ref{carnot}. We complete our bilocal microstate absorption example by reflecting and emitting the photons off of the mirrors.
 
 
@@ -1637,22 +1874,23 @@ the event-by-event equality $S_{GHY}|_{\mathcal{H}}
 = S_{\text{matter}}$: the gravitational boundary 
 action and the matter action are the same quantity 
 counted in two languages, with the Planck area 
-$\ell_P^2$ as the conversion factor. This follows 
-from a single temperature-free Unruh--Landauer bound, 
+$\ell_P^2$ as the conversion factor.
+This follows from a single temperature-eliminated Unruh--Landauer 
+bound, 
 from which standard black hole thermodynamics emerges 
-via Newton's laws alone, and is consistent across 
+via Newton's laws, and is consistent across 
 thermodynamic, geometric, information-theoretic, and 
-effective field theory descriptions of the horizon --- 
+effective field theory descriptions of the horizon, 
 the Carnot efficiency bound and the Unruh--Landauer 
 bound being the same inequality viewed from opposite 
 directions. Matter and horizon are orthogonal 
 information channels: matter the timelike substrate 
 of emergent proper time, the horizon the spacelike 
 surface through which measurement events generate 
-emergent space, realizing ER=EPR at the 
+emergent space, evocative of ER=EPR at the 
 single-microstate level. Whether this identification 
 extends from the boundary into the bulk, whether the 
-helicity structure of the ER bridge constitutes a 
+helicity structure of the emergent space constitutes a 
 topological invariant, and whether the framework 
 admits falsifiable consequences distinguishing it 
 from standard thermodynamic treatments, remain open 
