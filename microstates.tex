@@ -57,21 +57,6 @@
 % ansatz and assess the sensitivity of the Schwarzschild radius
 % derivation to it.
 
-% TODO 1.7 [NEW]: Sharpen the Landauer-for-acquisition argument.
-% Bennett's result is that measurement can in principle be
-% performed reversibly; it is erasure that necessarily costs
-% energy. Section 2 applies the Landauer bound to acquisition on
-% the grounds that "registering a measurement outcome is
-% physically equivalent to information being written into the
-% detector's state." This conflation is the most likely referee
-% objection in the paper. Either (a) provide a physical argument
-% specific to this setting for why acquisition is irreversible
-% here — e.g., that the photon is absorbed and the record
-% persists in a degree of freedom that cannot be coherently
-% reversed without a separate erasure step — or (b) explicitly
-% label Section 2 as a heuristic derivation, defer the rigorous
-% Landauer accounting entirely to Section 7, and add a forward
-% reference at the point of first use.
 
 % ----------------------------------------------------------------
 % SECTION 3 — BILOCAL MICROSTATE CONSTRUCTION
@@ -265,10 +250,7 @@
 
 \abstract{Thermodynamic approaches to gravity, from Jacobson to Verlinde, relate spacetime dynamics to horizon entropy but do not specify the microscopic carriers of the entropy increments. We use a field theoretic source to show how quantum measurement can be identified with a microstate in the accelerated Unruh/Rindler setting, where the gravitational boundary term on the horizon corresponds to a space-like information channel.
 To explore this we produce a temperature-eliminated Unruh–Landauer 
-bound, where the elimination is both algebraic and conceptual, 
-reflecting that temperature is a property of the coarse-grained 
-Rindler description absent from the underlying Minkowski 
-microstates, and reproduce standard black hole thermodynamics 
+bound and reproduce standard black hole thermodynamics 
 from Newton's laws. The detector is then treated as a timelike information channel sampling at the Bremermann–Nyquist rate, providing emergent proper time where quanta of action are accumulated as Gibbons--Hawking--York boundary terms. This provides an explicit microstate-level realization of emergent 
 space at the Rindler horizon via correlated Aichelburg--Sexl shifts 
 in opposite null directions.}
@@ -371,11 +353,38 @@ thermodynamics as a consequence of Newton's laws.
 
 \subsection{The Unruh-Landauer Relation}
 
-Landauer's principle suggests that the acquisition of $\Delta H$ nats of information\footnote{We are going to use $S$ for action later so use $H$ here for entropy with units of nats to avoid carrying around a $\ln(2)$.} by a physical observer requires a minimum energy transfer
+
+Landauer's principle bounds the minimum energy of any physical 
+carrier representing $\Delta H$ nats of information\footnote{We 
+are going to use $S$ for action later so use $H$ here for entropy 
+with units of nats to avoid carrying around a $\ln(2)$.} as 
+distinguishable degrees of freedom in a thermal environment at 
+temperature $T$:
+
 \begin{equation}
   \Delta E \geq k_B T \, \Delta H.
 \end{equation}
-The bound has the same form in both cases; we apply it to acquisition on the grounds that registering a measurement outcome is physically equivalent to information being written into the detector's state, which is the reverse process Landauer's principle governs.
+
+The factor $k_BT$ is the thermal energy scale of one 
+distinguishable degree of freedom at temperature $T$---the 
+equipartition energy of one bit.
+This is Landauer's own 
+introductory framing: a degree of freedom carries $kT$ of 
+thermal energy, and any physical signal must have at least 
+this energy to be distinguishable from thermal 
+noise~\cite{landauer1961irreversibility}.
+This bound applies to any 
+physical process engaging such a degree of freedom in the 
+thermal environment; the direction of information flow, whether 
+acquisition, erasure, or transmission, does not change the 
+minimum energy required for the carrier to be physically 
+distinguishable. We apply it here as a constraint on the carrier 
+energy: to physically represent $\Delta H$ nats in the Rindler 
+vacuum, the carrier must engage at least $\Delta H$ nats of 
+thermally distinguishable degrees of freedom. The full 
+thermodynamic accounting of the measurement cycle, where the 
+Landauer erasure cost appears at re-emission, is given in 
+Section~\ref{sec:carnot}.
 
 For an observer undergoing proper acceleration $a$, the Unruh effect associates a temperature
 \begin{equation}
