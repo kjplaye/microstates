@@ -24,15 +24,6 @@
 % SECTION 1 — INTRODUCTION
 % ----------------------------------------------------------------
 
-% TODO 1 [EXISTING]: Sharpen the equivalence principle argument
-% in the Introduction.
-% The claim that measurement-induced recoil is locally
-% indistinguishable from gravitational acceleration is asserted
-% across three bullet points but not demonstrated. Either provide
-% a brief calculation showing the equivalence for the photon
-% absorption case, or soften the language to "locally analogous"
-% and be explicit about what the analogy does and does not carry.
-
 % TODO 5 [EXISTING]: Sharpen the Diosi–Penrose contrast.
 % The introduction distinguishes "subjective but physically real"
 % from "objective collapse" but the boundary is blurry. Add one
@@ -260,7 +251,13 @@ in opposite null directions.}
 
 Two landmark results establish that gravity and Unruh thermodynamics are deeply intertwined. Jacobson showed that the Einstein equations can be derived from thermodynamic identities applied to local Rindler horizons, with horizon entropy playing the role of the fundamental quantity from which spacetime dynamics emerge~\cite{jacobson1995thermodynamics}. Verlinde extended this perspective, arguing that gravitational forces arise from entropy gradients on holographic screens, recasting gravity as an entropic rather than a fundamental interaction~\cite{entropic}. Both frameworks, however, operate at the level of bulk thermodynamics and leave open a prior question: what physical process underlies each individual entropy increment?
 
-We argue that the answer can be quantum measurement. Each act of information acquisition by a physical observer constitutes a discrete microstate event, and the collective backreaction of such events, together with the causal correlations they induce, give rise to gravitational effects. The argument proceeds in three steps. First, any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. Second, through the equivalence principle, the impulse is locally indistinguishable from thrust in a gravitational field; no local measurement can distinguish the recoil associated with a quantum measurement event from acceleration in a gravitational potential. Third, when such impulses are modelled geometrically, they leave an imprint on and through the horizon as photons carry information into the detector's degrees of freedom.
+We argue that the answer can be quantum measurement. Each act of information acquisition by a physical observer constitutes a discrete microstate event, and the collective backreaction of such events, together with the causal correlations they induce, give rise to gravitational effects:  Any observation is mediated by a physical interaction, information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. Then the equivalence principle makes this gravitational: the 
+local quantum field theory near a black hole horizon is identical 
+to that of a uniformly accelerated observer in flat spacetime, so 
+the Unruh effect and the Hawking effect are the same computation 
+in different coordinates~\cite{unruh1976notes, hawking1975particle}, 
+and these impulses leave a geometric imprint at the horizon as 
+photons carry information across it.
 
 A structuring choice runs throughout the paper: we work in the 
 non-thermal global Minkowski description rather than the thermal 
@@ -488,7 +485,15 @@ Evaluating the acceleration at $r = r_s$ gives the surface gravity of the detect
 in agreement with the standard Schwarzschild result. This is the acceleration that appears in the Unruh temperature associated with the detector's horizon, $T = \hbar \kappa / 2\pi k_B c$, providing an internal consistency check on the framework.
 
 \subsection{Bekenstein-Hawking Entropy}
-Returning to the Unruh-Landauer relation~\eqref{eq:UL} and substituting the surface gravity $\kappa$ for $a$, the entropy increment associated with an energy increment $\Delta E = c^2 \Delta m_d$ is
+
+Returning to the Unruh-Landauer relation~\eqref{eq:UL} and 
+substituting the surface gravity $\kappa$ for $a$---justified 
+by the equivalence principle: the local quantum field theory at 
+the black hole horizon is the same as in the Rindler 
+frame~\cite{unruh1976notes, hawking1975particle}---the entropy 
+increment associated with an energy increment 
+$\Delta E = c^2 \Delta m_d$ is
+
 \begin{equation}
 \Delta H \leq \frac{2\pi c}{\hbar \kappa} \Delta E = \frac{8\pi G m_d}{\hbar c^3} \cdot c^2 \Delta m_d.
 \end{equation}
