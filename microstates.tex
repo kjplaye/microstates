@@ -59,6 +59,7 @@
 % given angular momentum conservation and CPT is stated but not
 % derived. Add a short argument ruling out other assignments, or
 % replace "unique" with a weaker claim.
+%TODO 2.3 [NEW — Section 3]: Specify the order of the remainder in equation (16).The microstate vector ∣Ψω⟩M|\Psi_\omega\rangle_M∣Ψω​⟩M​ is written with + O(higher order)+\,\mathcal{O}(\text{higher order})+O(higher order) but the expansion parameter is not named. Higher order in the coupling λ\lambdaλ? In the squeezing parameter tanh⁡θω\tanh\theta_\omega tanhθω​? In the source amplitude? State explicitly, since the validity of treating this as a single-microstate depends on the suppression of multi-pair terms, and a referee will ask.
 
 % ----------------------------------------------------------------
 % SECTION 4 — MATTER AS A SUBSTRATE
@@ -85,6 +86,7 @@
 % absorbs it. Show explicitly how the standard formula reduces to
 % Eq. (5.5) in the Rindler case, or flag the normalisation choice
 % clearly.
+%TODO 3.1 [NEW — Section 5.3]: Fix the dimensional error in the entropy increment line.The expression ΔS=2π ΔEℏω/ℏ\Delta S = \frac{2\pi\,\Delta E}{\hbar\omega/\hbar}ΔS=ℏω/ℏ2πΔE​ has units of energy in the denominator (ℏω/ℏ=ω\hbar\omega/\hbar = \omega ℏω/ℏ=ω, a frequency). The intended cancellation is ΔE/ℏω=1\Delta E / \hbar\omega = 1 ΔE/ℏω=1, leaving ΔS=2π\Delta S = 2\pi ΔS=2π, but the intermediate step as typeset is wrong. Rewrite as ΔS=(2π/ℏω)⋅ℏω=2π\Delta S = (2\pi/\hbar\omega)\cdot\hbar\omega = 2\pi ΔS=(2π/ℏω)⋅ℏω=2π or simply state the substitution ΔE=ℏω\Delta E = \hbar\omega ΔE=ℏω explicitly before the line.
 
 % TODO 3.5 [NEW]: Assess the independence of the
 % $S_{GHY} = S_{\text{matter}}$ result from its assumed inputs.
@@ -132,6 +134,7 @@
 % ----------------------------------------------------------------
 % SECTION 7 — CARNOT CYCLE FROM UNRUH–LANDAUER
 % ----------------------------------------------------------------
+%TODO 6.2 [NEW — Section 7]: Justify the identification kBTH=ℏωk_B T_H = \hbar\omegakB​TH​=ℏω.Equation (47) identifies the hot reservoir temperature with the energy of a single photon via radiation pressure, but this step is not derived — it is essentially the Planck relation applied to one mode. The difficulty is that the paper operates in the non-thermal Minkowski description where the photon has a definite frequency ω\omegaω and is not thermal. A referee will ask why this single-frequency photon sets the Unruh temperature of the horizon rather than being one mode in a thermal distribution. Either derive this from the Bogoliubov transformation (the Rindler temperature is related to ω\omega ω and aaa via tanh⁡θω\tanh\theta_\omegatanhθω​, not directly to ℏω\hbar\omegaℏω) or explicitly flag this as an ansatz with the same status as the Bekenstein–Hawking ansatz in Section 5.3.
 
 % TODO 6.5 [NEW]: Make the Carnot cycle mapping rigorous or
 % relabel it throughout.
@@ -151,16 +154,6 @@
 % ----------------------------------------------------------------
 % SECTION 8 — EFFECTIVE FIELD THEORY STRUCTURE
 % ----------------------------------------------------------------
-
-% TODO 8.5 [NEW]: Fix the near-circular condition in the EFT
-% Validity Proposition.
-% Condition (5) in Proposition 1 reads "The EFT description of
-% $\mathcal{H}_R$ is valid," which is near-circular in a
-% proposition whose purpose is to characterise EFT validity.
-% Replace it with an operational condition, for example
-% $\ell_P / \lambda_C \ll 1$ (equivalently
-% $m_\mathcal{R} \gg m_P$), and verify that it is logically
-% equivalent to the other five listed conditions.
 
 % TODO 9 [NEW]: Supply the intermediate steps in the Carnot
 % efficiency calculation.
@@ -186,27 +179,6 @@
 % deposited into a probe impurity near a sonic horizon as a
 % function of $a_{\text{eff}}$ — and state it as a falsifiable
 % prediction.
-
-% ----------------------------------------------------------------
-% GLOBAL
-% ----------------------------------------------------------------
-
-% TODO 6 [EXISTING]: Fix the $H$/$S$ notation inconsistency.
-% $H$ is introduced in nats to avoid conflict with $S$ for
-% action, but $\Delta S$ appears for entropy near eq. (37) and
-% possibly elsewhere. Do a pass and enforce the convention
-% throughout.
-
-% TODO 10 [NEW]: Confirm that reference [player2025driving] is
-% publicly accessible before submission.
-% The present paper builds on the scalar-field construction of
-% that work in Sections 3, 4, and 5, and multiple claims are
-% stated to follow from it without being reproduced here.
-% Readers and referees cannot evaluate those claims if the
-% reference is unavailable. If it is not yet posted on arXiv,
-% either include the relevant scalar construction as a
-% self-contained appendix, or post both papers simultaneously
-% and cross-reference by arXiv identifier.
 
 \documentclass[12pt,a4paper]{article}
 \usepackage[width=.75\textwidth]{caption}
@@ -345,7 +317,12 @@ rather than a fundamental property of the state. The present paper
 operates in the non-thermal Minkowski description throughout; the 
 thermal Rindler picture is a derived coarse-graining. In this way 
 we will derive a sequence of standard results in black hole 
-thermodynamics as a consequence of Newton's laws.
+thermodynamics as a consequence of Newton's laws, running 
+Verlinde's entropic programme~\cite{entropic} in reverse: 
+where Verlinde recovers Newton's laws from entropy gradients 
+on holographic screens, the present argument recovers black 
+hole thermodynamics from Newton's law of gravitation and the 
+Unruh--Landauer relation.
 
 
 \subsection{The Unruh-Landauer Relation}
@@ -627,7 +604,7 @@ The lack of manifest four-dimensional covariance in equation \eqref{eq:doublenul
 In double-null gauge the electromagnetic field is characterised by its transverse components
 alone. The bilocal driving source is symmetrized over both helicity assignments,
 \begin{equation}
-    J^{ij}(x,y) = \lambda\left( \epsilon^{i*}_{(-1)}\, \epsilon^{j}_{(+1)} 
+    J^{ij}(x,y) = g\left( \epsilon^{i*}_{(-1)}\, \epsilon^{j}_{(+1)} 
     + \epsilon^{i*}_{(+1)}\, \epsilon^{j}_{(-1)}\right) f_L(x)\, f_R(y),
 \label{eq:bilocal_vec}
 \end{equation}
@@ -651,11 +628,11 @@ The sourced Lagrangian reads
 \begin{aligned}
     \mathscr{L}_{\text{sourced}}
     &= \mathscr{L}_{\text{free}}
-      + \tfrac{1}{2}\lambda \int
+      + \tfrac{1}{2}g \int
           J^{ij}(x,y)\; A^+_i(x)\, A^+_j(y)\; d^4x\, d^4y
       \;+\; \text{h.c.} \\
     &= \mathscr{L}_{\text{free}}
-      + \tfrac{1}{2}\lambda
+      + \tfrac{1}{2}g
         \Bigl(
           a^{L\dagger}_{-k,(-1)}\, a^{R\dagger}_{k,(+1)}
           \;+\;
@@ -1123,13 +1100,12 @@ The horizon area grows by one discrete, calculable increment
 per photon absorbed, microstate by microstate, without 
 reference to bulk thermodynamic averages.
 
-
 Applying the Bekenstein--Hawking relation as a heuristic, valid for Schwarzschild but taken here as an ansatz 
-for the Rindler case, yields a corresponding entropy 
+for the Rindler case, and substituting $\Delta E = \hbar\omega$, yields a corresponding entropy 
 increment
 \begin{equation}
-\Delta S = \frac{\Delta A}{4\ell_P^2} 
-         = \frac{2\pi\,\Delta E}{\hbar\omega/\hbar}
+\Delta H = \frac{\Delta A}{4\ell_P^2} 
+         = \frac{2\pi\,\Delta E}{\hbar\omega}
          = 2\pi,
 \end{equation}
 in natural units, consistent with one Planck-area patch per 
@@ -1729,8 +1705,9 @@ construction:
     (Carnot cycle extracts positive work)
     \item $\lambda_C < d_\mathcal{H}$ \quad 
     (Compton scale inside horizon distance)
-    \item The EFT description of $\mathcal{H}_R$ 
-    is valid.
+    \item $\ell_P / \lambda_C \ll 1$ \quad
+    (equivalently $m_\mathcal{R} \gg m_P$, 
+    the detector mass is super-Planckian)
     \item $\mathcal{R}$ is a proper subsystem of 
     its environment.
 \end{enumerate}
