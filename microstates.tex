@@ -180,6 +180,13 @@
 % function of $a_{\text{eff}}$ — and state it as a falsifiable
 % prediction.
 
+% AI deslop
+%  * british -> english s->z
+%  * em-dash
+% rather
+% orthogonal
+% is not just
+
 \documentclass[12pt,a4paper]{article}
 \usepackage[width=.75\textwidth]{caption}
 \usepackage{graphicx}
@@ -231,7 +238,7 @@ internal degrees of freedom at the Bremermann--Nyquist rate
 $mc^2/h$, massless quanta are pure carriers between such channels, 
 and horizons are the spacelike surfaces at which handoff events 
 occur, with proper time emerging as accumulated quanta of action 
-along the worldline. This provides a substrate-level framework 
+along the worldline. This provides a framework 
 consistent with Wheeler's it-from-bit, in which the physical 
 record of each binary measurement outcome is written into matter, 
 and spacetime geometry is a derived property of matter's 
@@ -247,6 +254,34 @@ local quantum field theory near a black hole horizon is identical
 to that of a uniformly accelerated observer in flat spacetime, so 
 the Unruh effect and the Hawking effect are the same computation 
 in different coordinates~\cite{unruh1976notes, hawking1975particle}.
+
+We proceed in two complementary way. First, 
+we construct explicit microstates: individual terms of the 
+Unruh thermal ensemble, realized as helicity-anticorrelated 
+Bell states of photons sourced by a bilocal driving term, each 
+corresponding to a single quantum measurement event with a 
+definite energy-momentum transfer. Second, and more 
+fundamentally, we develop an information-theoretic framework 
+that makes this identification natural: 
+massive matter as a timelike channel sampling internal degrees 
+of freedom at the Bremermann--Nyquist rate $mc^2/h$, massless 
+quanta as pure carriers between such channels, and horizons as 
+the spacelike surfaces at which channel handoffs occur.
+
+
+The microstate construction 
+is the concrete quantum-mechanical realization of the channel 
+picture, and the channel picture is what makes each microstate 
+inevitable: a measurement event is a handoff between channels, 
+and a handoff has exactly the properties a gravitational 
+microstate must have. The central technical result, 
+$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$, sits precisely 
+at their intersection: it is simultaneously the statement that 
+horizon geometry counts measurement events microstate by 
+microstate, and that the Bekenstein spatial count of Planck-area 
+patches equals the Bremermann temporal count of action quanta, 
+with the Unruh--Landauer relation as the bridge connecting the 
+two directions of counting.
 
 A structuring choice runs throughout the paper: we work in the 
 non-thermal global Minkowski description rather than the thermal 
@@ -767,31 +802,49 @@ coarse-graining over the ensemble of microstates~\eqref{eq:microstate_vec}, is t
 helicity-resolved: each helicity sector thermalises independently, and the anticorrelation
 between wedges is preserved at every level of the construction.
 
-
 % Section 4
 \section{Matter as a Substrate}
 \label{sec:substrate}
 
-Matter and horizon play complementary and orthogonal roles 
-as information channels. Matter is a timelike channel: it 
-carries information forward in proper time, sample by sample, 
-at the Bremermann--Nyquist rate. The Rindler horizon is a 
-spacelike channel: information passes through it from one 
-causally separated region to the other, carried by the photon. 
-The photon crossing the horizon is the handoff between these 
-two channels; the Aichelburg--Sexl pp-wave of 
-Section~\ref{sec:ppwave} is the geometric trace of that 
-handoff, and the GHY boundary term is its action. The 
-remainder of this section develops the substrate picture 
-that makes this precise.
+Quantum mechanics already endows every massive particle with 
+a natural channel structure. A particle of mass $m$ 
+accumulates phase at the Compton frequency $f_C = mc^2/h$; 
+the Bohr--Sommerfeld condition $\oint p\,dq = nh$ expresses 
+this as the accrual of phase in integer units of $h$, so 
+that physical evolution is discrete at the scale set by the 
+action. Bremermann's computational 
+limit~\cite{bremermann1962optimization} recovers the same 
+rate $mc^2/h$ as the maximum number of distinguishable 
+operations per second for any system of energy $mc^2$, and 
+Lloyd~\cite{lloyd2000ultimate} shows this bound is saturated 
+by quantum systems. The Compton frequency is therefore 
+simultaneously a clock rate, a sampling rate, and a 
+computational limit---three facets of the single fact that 
+matter's state space has a resolution set by $\hbar$. Proper 
+time is accumulated action along a worldline, an emergent 
+quantity in the sense of Page and 
+Wootters~\cite{page1983evolution,giovannetti2015quantum}: 
+time arises from physical correlations between systems 
+rather than from a background parameter, with the 
+Bremermann rate setting the resolution at which those 
+correlations are sampled. This section develops the 
+channel picture and derives three results that 
+Section~\ref{sec:ppwave} realises geometrically: the 
+proportionality of the Bremermann and Bekenstein bounds 
+(Section~\ref{sec:horizon_channel}), a formal definition 
+of the handoff event through which space is generated at 
+horizons (Section~\ref{sec:handoff}), and the saturation 
+of channel capacity precisely at the Rindler horizon 
+(Section~\ref{sec:saturation}).
 
 This viewpoint sidesteps a prior question about quantum 
 gravity: how can one quantize gravity without directly 
 quantizing spacetime or its curvature degrees of freedom? 
-Common approaches posit Planck-scale cells~\cite{wheeler1955geons} 
-or discrete spacetime events~\cite{bombelli1987space}, but 
-Lorentz invariance is recovered only statistically in such 
-constructions rather than at the level of individual 
+Common approaches posit Planck-scale 
+cells~\cite{wheeler1955geons} or discrete spacetime 
+events~\cite{bombelli1987space}, but Lorentz invariance 
+is recovered only statistically in such constructions 
+rather than at the level of individual 
 configurations~\cite{brown_mathpages_unruh}. We instead 
 derive discreteness from matter: space and time are 
 properties of matter itself, defined only up to the 
@@ -802,7 +855,6 @@ invariant by construction.
 \subsection{Matter as a Timelike Channel}
 \label{sec:channel}
 %------------------------------------------------------
-
 
 A massive particle carries phase along its worldline 
 at a rate set by its rest energy. The Compton frequency 
@@ -827,13 +879,14 @@ evolution at that scale.
 Each quantum corresponds to one 
 sample\footnote{We use the information theoretic term 
 \emph{sample} throughout to denote a single zero crossing 
-of the phase $e^{iS/\hbar}$; readers may equivalently 
-read this as \emph{event} or \emph{tick}. It is only 
-defined up to the Heisenberg resolution.} of the phase 
-$e^{iS/\hbar}$ in the path integral. The matter substrate 
-gives rise to a channel capacity in the Shannon sense: 
-for a system of mass $m$ with internal Hilbert space 
-dimension $d$, the maximum rate of information flow is
+of the phase $e^{iS/\hbar}$ in the path integral. The 
+term \emph{event} or \emph{tick} may be substituted 
+throughout. It is defined only up to the Heisenberg 
+resolution.} of the phase $e^{iS/\hbar}$ in the path 
+integral. The matter substrate gives rise to a channel 
+capacity in the Shannon sense: for a system of mass $m$ 
+with internal Hilbert space dimension $d$, the maximum 
+rate of information flow is
 \begin{equation}
     C = \underbrace{\frac{mc^2}{h}}_{\text{bandwidth}} 
         \times 
@@ -855,14 +908,18 @@ Both quantities are extensive under composition:
     = \log_2(d_1) + \log_2(d_2),
 \end{equation}
 consistent with their interpretation as properties of 
-matter that compose naturally under union.
-
-The signal being sampled at the Bremermann rate is the 
-internal quantum state of the particle --- its spin, 
-helicity, and other quantum numbers --- and the dynamic 
-range is $\log_2$ of the dimension of the internal 
-Hilbert space.
-
+matter that compose naturally under union. The signal 
+being sampled at the Bremermann rate is the internal 
+quantum state of the particle --- its spin, helicity, 
+and other quantum numbers --- and the dynamic range is 
+$\log_2$ of the dimension of the internal Hilbert space. 
+The channel capacity~\eqref{eq:channel_capacity} sets 
+the rate at which matter can accumulate and process 
+information; Section~\ref{sec:saturation} shows that 
+this rate saturates at the Rindler horizon, making the 
+horizon the natural IR boundary of the matter channel 
+and anticipating the EFT breakdown of 
+Section~\ref{sec:eft}.
 
 %------------------------------------------------------
 \subsection{The Horizon as a Spacelike Channel}
@@ -882,41 +939,195 @@ $\ell_P^2 = \hbar G/c^3$ is the Planck area, the
 minimal spatial region per independent quantum of 
 action.
 
-The Bekenstein and Bremermann bounds are the same 
-constraint viewed from orthogonal directions: 
-Bremermann counts information capacity temporally, 
-as quanta of action per second, while Bekenstein 
-counts it spatially, as area in Planck units. 
-Counting Planck-area pixels on a surface and counting 
-action quanta in proper time are two descriptions of 
-the same underlying constraint on physical information, 
-connected by the Unruh--Landauer relation of 
-Section~\ref{sec:heuristics}.
+The horizon enters the channel picture as the surface 
+at which the matter-memory on one side becomes causally 
+disconnected from the matter-memory on the other. 
+The photon passes through the horizon channel and 
+deposits into the matter channel on the other side; 
+the handoff is the central event of the construction.
 
-The horizon enters this picture as the surface at 
-which this constraint becomes geometric: it marks 
-the boundary at which the matter-memory on one side 
-is causally disconnected from the matter-memory on 
-the other. The photon passes through the horizon 
-channel and deposits into the matter channel on the 
-other side; the handoff is the central event of the 
-construction, and everything else follows from it.
+The Bekenstein and Bremermann bounds are not merely 
+analogous: they count the same physical event from 
+orthogonal directions, related by the Unruh--Landauer 
+relation of Section~\ref{sec:heuristics}. To see this 
+explicitly, work in natural units $\hbar = c = 1$ and 
+express frequencies in units of the Rindler acceleration 
+$a$, so that $\Omega \equiv \omega/a$ is dimensionless. 
+For a single photon of dimensionless Rindler frequency 
+$\Omega$ crossing the horizon, the Bremermann count 
+is the number of new resolution elements added to the 
+receiving timelike channel per Rindler period 
+$\tau = 2\pi/a$:
+%
+\begin{equation}
+    \Delta f \cdot \tau 
+    = \frac{\omega}{2\pi} \cdot \frac{2\pi}{a} 
+    = \Omega.
+    \label{eq:bremermann_count}
+\end{equation}
+%
+The Bekenstein count of the same event is the spatial 
+entropy increment. By the Raychaudhuri calculation of 
+Section~\ref{sec:ppwave}, the horizon area increments 
+by $\Delta A = 8\pi G\omega = 8\pi G a\Omega$, giving
+%
+\begin{equation}
+    \Delta H_{\mathrm{Bek}} 
+    = \frac{\Delta A}{4\ell_P^2}
+    = \frac{8\pi G a\Omega}{4G}
+    = 2\pi\Omega.
+    \label{eq:bekenstein_count}
+\end{equation}
+%
+The two counts satisfy
+%
+\begin{equation}
+    \boxed{\Delta H_{\mathrm{Bek}} 
+    = 2\pi \cdot (\Delta f \cdot \tau),}
+    \label{eq:brem_bek_equiv}
+\end{equation}
+%
+with the factor $2\pi$ being the Rindler normalisation---the 
+same factor appearing in the Unruh temperature 
+$T = \hbar a / 2\pi k_B c$ and tracing to the 
+analytic continuation between Minkowski and Rindler 
+coordinates. At the fundamental Rindler mode $\Omega = 1$ 
+(one cycle per Rindler period), the Bremermann count 
+gives one new resolution element and the Bekenstein 
+count gives $\Delta H = 2\pi$ nats, consistent with 
+the direct calculation of Section~\ref{sec:ppwave}. 
+The equality $S_{GHY}|_{\mathcal{H}} = 
+S_{\mathrm{matter}}$ of Section~\ref{sec:ppwave} is 
+the geometric proof of~\eqref{eq:brem_bek_equiv}: 
+counting Planck-area patches spatially and counting 
+action quanta temporally give the same result up to 
+the universal Rindler factor $2\pi$.
+
+%------------------------------------------------------
+\subsection{The Handoff Event}
+\label{sec:handoff}
+%------------------------------------------------------
+
+The photon crossing the horizon is the handoff between 
+the timelike matter channel and the spacelike horizon 
+channel. We now define this object precisely, so that 
+Section~\ref{sec:ppwave} can identify it with a 
+specific geometric structure rather than deriving a 
+coincidental equality.
+
+\begin{quote}
+\textbf{Definition (Handoff Event).}\ 
+A \emph{handoff event} at a horizon surface 
+$\mathcal{H}$ consists of: 
+\begin{enumerate}%[(i)]
+\item a massless quantum of Rindler frequency 
+  $\omega$ and helicity $\lambda = \pm 1$ 
+  transferring one quantum of action $\hbar$ 
+  across $\mathcal{H}$;
+\item the receiving timelike channel 
+  incrementing its Bremermann sampling rate 
+  by $\Delta f = \omega / 2\pi$;
+\item the helicity outcome $\lambda$ recorded 
+  as one classical bit in the receiving channel's 
+  matter-memory; and
+\item the horizon area incrementing by 
+  $\Delta A = 8\pi G \hbar\omega$.
+\end{enumerate}
+Property~(iv) follows from the Raychaudhuri equation 
+applied to the null congruence at $\mathcal{H}$ and 
+is derived in Section~\ref{sec:ppwave}; it is listed 
+here to make the geometric content of the handoff 
+explicit.
+\end{quote}
+Each handoff event has exactly two irreducible 
+constituents: one quantum of action $\hbar$ written 
+into matter-memory, incrementing the Bremermann 
+sampling rate, and one bit of classical information, 
+the helicity outcome. These are not independent: the 
+action quantum $\hbar$ and the helicity $\lambda = 
+\pm 1$ are two aspects of the same physical object, 
+the energy $\hbar\omega$ and angular momentum 
+$\pm\hbar$ of a single photon. With this definition 
+in hand, the equality $S_{GHY}|_{\mathcal{H}} = 
+S_{\mathrm{matter}}$ of Section~\ref{sec:ppwave} 
+becomes a counting statement: the GHY boundary term 
+sums $\hbar\omega$ over handoff events because that 
+is what the term geometrically records, one 
+contribution per event.
+
+%------------------------------------------------------
+\subsection{Channel Capacity Saturation at the Horizon}
+\label{sec:saturation}
+%------------------------------------------------------
+
+The saturation wavelength $\lambda_{\mathrm{sat}} = 
+(2\pi/\ln 2)(c^2/a)$ of Section~\ref{sec:heuristics} 
+acquires a precise meaning in the channel picture. 
+A photon of frequency $\omega$ absorbed by a detector 
+increments its Bremermann sampling rate by 
+$\Delta f = \omega / 2\pi$. Over one Rindler period 
+$\tau = 2\pi c/a$, the number of new resolution 
+elements added to the timelike channel is
+%
+\begin{equation}
+    \Delta f \cdot \tau 
+    = \frac{\omega}{2\pi} \cdot \frac{2\pi c}{a} 
+    = \frac{\omega c}{a}.
+    \label{eq:channel_increment}
+\end{equation}
+%
+The Landauer saturation frequency follows from 
+$\lambda_{\mathrm{sat}} = 2\pi c / \omega_{\mathrm{sat}}$:
+%
+\begin{equation}
+    \omega_{\mathrm{sat}} = \frac{a \ln 2}{c}.
+\end{equation}
+%
+Substituting into~\eqref{eq:channel_increment}:
+%
+\begin{equation}
+    \left.\Delta f \cdot \tau\right|_{\omega = 
+    \omega_{\mathrm{sat}}} 
+    = \frac{\omega_{\mathrm{sat}} c}{a} 
+    = \ln 2.
+    \label{eq:saturation_result}
+\end{equation}
+%
+The Landauer-saturating photon adds exactly $\ln 2$ 
+nats --- one bit --- of Bremermann channel capacity 
+per Rindler period. A photon below saturation 
+($\omega < \omega_{\mathrm{sat}}$) adds less than one 
+bit per period and cannot constitute a complete 
+measurement record; a photon above saturation adds 
+more than one bit and deposits more than the minimum 
+cost of a handoff event. The horizon is therefore the 
+surface at which the minimum energy cost of 
+information acquisition (Landauer) and the minimum 
+time cost of processing it (Bremermann) coincide in 
+a single-bit handoff. This saturation condition is 
+also the natural boundary of EFT validity: the six 
+equivalent conditions of Proposition~\ref{prop:eft} 
+all reduce to $\omega = \omega_{\mathrm{sat}}$ at the 
+horizon, so the EFT breaks down exactly where the 
+channel saturates.
 
 %------------------------------------------------------
 \subsection{Types of Particles and Interactions}
 \label{sec:types}
 %------------------------------------------------------
 
-The distinction between massless and massive degrees of 
-freedom is operational: massless quanta transmit 
-information between matter substrates, while massive 
-systems retain it. A massless particle has no rest frame, 
-no proper time, and carries a single quantum of action 
-between emission and absorption; it does not sample and 
-therefore carries no persistent memory. Its role in the 
-present construction is precisely that of a pure 
-information carrier between the timelike channel of 
-one massive body and that of another.
+The distinction between massless and massive degrees 
+of freedom is operational in the channel picture: 
+massless quanta transmit information between matter 
+substrates as handoff carriers, while massive systems 
+retain it as matter-memory. A massless particle has 
+no rest frame, no proper time, and carries a single 
+quantum of action between emission and absorption; 
+it does not sample and therefore carries no persistent 
+memory. Its role is precisely that of a pure 
+information carrier effecting a handoff between the 
+timelike channel of one massive body and that of 
+another.
 
 A single photon is the minimal carrier because it 
 contributes exactly one of each:
@@ -939,27 +1150,31 @@ and angular momentum $\pm\hbar$ of a single photon.
 From a given observer's perspective, interactions 
 fall into three classes. \textbf{Absorption} produces 
 a persistent classical record: a quantum of action is 
-deposited and information is written, with a Landauer 
-cost paid on acquisition. \textbf{Emission} is the 
-reverse: stored information is released and the record 
-is lost. \textbf{Reflection} is absorption followed 
-by emission; whether it constitutes an 
-information-bearing interaction depends entirely on 
-whether a persistent record survives. These categories 
-are observer-relative in the same sense as quantum 
-state reduction: the same physical process may be 
+deposited and information is written. 
+\textbf{Emission} is the reverse: stored information 
+is released and the record is lost. 
+\textbf{Reflection} is absorption followed by 
+emission; whether it constitutes an 
+information-bearing interaction depends on whether 
+a persistent record survives. These categories are 
+observer-relative in the same sense as quantum state 
+reduction: the same physical process may be 
 information-bearing for one observer and external 
 for another.
 
 %------------------------------------------------------
-\subsection{The Zig-Zag Mechanism as a Consistency Check}
+\subsection{The Zig-Zag Mechanism as Proof of Concept}
 \label{sec:zigzag}
 %------------------------------------------------------
 
 The channel picture is not an ad hoc construction: 
-it is realized concretely in Penrose's zig-zag 
-interpretation of the Dirac equation~\cite{penrose2006road}. 
-The Lorentz algebra decomposes as
+the handoff event of Section~\ref{sec:handoff} is 
+already realised concretely in Penrose's zig-zag 
+interpretation of the Dirac 
+equation~\cite{penrose2006road}, confirming that 
+the Bremermann rate $mc^2/h$ is the Higgs interaction 
+rate rather than a heuristic. The Lorentz algebra 
+decomposes as
 \begin{equation}
     \mathfrak{so}(3,1) \cong 
     \mathfrak{su}(2) \times \mathfrak{su}(2),
@@ -974,52 +1189,37 @@ at the Compton frequency.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.7]{zig_zag_color.png}
-\caption{These figures were adapted from 
-\cite{penrose2006road}. They show his interpretation 
-of the Dirac equation and the Higgs mechanism for 
-an electron.}
+\caption{Adapted from~\cite{penrose2006road}. 
+Penrose's interpretation of the Dirac equation and 
+the Higgs mechanism for an electron.}
 \label{zigzag}
 \end{figure}
 
 The structural parallel with the bilocal construction 
-is precise, as illustrated in Figure~\ref{zigzag}: 
-the two Weyl spinors correspond to the two photons 
-emitted by $\mathcal{P}$; the Higgs interaction 
-corresponds to the absorption events at $\mathcal{R}$ 
-and $\mathcal{L}$; between interactions each spinor 
-is massless and moves at $c$, a pure information 
-carrier. Each Higgs interaction deposits one quantum 
-of action $\hbar$, produces one sample of proper 
-time, and maintains the spin state of the particle 
---- exactly as photon absorption by $\mathcal{R}$ 
-produces one sample in the bilocal construction. 
-
-The zig-zag mechanism therefore provides an 
-independent grounding for the channel picture at 
-the level of individual particles, confirming that 
-the Bremermann rate $mc^2/h$ is the Higgs 
-interaction rate rather than a heuristic. Mass 
-emerges from the regularity of these interactions: 
-a particle is massive because it undergoes repeated 
-Higgs interactions at the De Broglie frequency, and 
-its mass is proportional to that frequency via 
-$E = \hbar\omega$. In this precise sense mass is 
-physical memory: each Higgs interaction deposits 
-one quantum of action $\hbar$ into the particle's 
-matter-memory and maintains the spin state forward, 
-one quantum at a time.
-
-Proper time along a particle worldline is then a 
-one-dimensional foliation by discrete horizon 
-events, each separating the causal past from the 
-causal future of that interaction --- the 
-one-dimensional analogue of the Rindler horizon 
-separating left and right wedges, and matching 
+and the handoff definition is exact: the two Weyl 
+spinors correspond to the two photons emitted by 
+$\mathcal{P}$; the Higgs interaction corresponds to 
+the absorption events at $\mathcal{R}$ and 
+$\mathcal{L}$; between interactions each spinor is 
+massless and moves at $c$, a pure carrier. Each 
+Higgs interaction is a handoff event in the sense 
+of Section~\ref{sec:handoff}: it deposits one 
+quantum of action $\hbar$, produces one sample of 
+proper time, records one helicity outcome, and 
+increments the matter-memory of the particle by 
+one Bremermann sample. Mass emerges from the 
+regularity of these interactions: a particle is 
+massive because it undergoes repeated Higgs 
+interactions at the Compton frequency, and its 
+mass is proportional to that frequency via 
+$E = \hbar\omega$. Proper time along a worldline 
+is then a foliation by discrete handoff events, 
+each separating the causal past from the causal 
+future of that interaction---the one-dimensional 
+analogue of the Rindler horizon, and matching 
 the holographic screen picture of 
 Verlinde~\cite{entropic}. This is illustrated in 
 Figure~\ref{timeline}.
-
-
 
 % Section 5
 \section{pp-Wave Geometry and Action}
