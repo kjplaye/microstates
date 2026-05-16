@@ -38,14 +38,6 @@
 % SECTION 3 — BILOCAL MICROSTATE CONSTRUCTION
 % ----------------------------------------------------------------
 
-% TODO 2 [EXISTING]: Motivate the bilocal source configuration
-% more rigorously.
-% The claim that the CPT-symmetrized helicity assignment is unique
-% given angular momentum conservation and CPT is stated but not
-% derived. Add a short argument ruling out other assignments, or
-% replace "unique" with a weaker claim.
-%TODO 2.3 [NEW — Section 3]: Specify the order of the remainder in equation (16).The microstate vector ∣Ψω⟩M|\Psi_\omega\rangle_M∣Ψω​⟩M​ is written with + O(higher order)+\,\mathcal{O}(\text{higher order})+O(higher order) but the expansion parameter is not named. Higher order in the coupling λ\lambdaλ? In the squeezing parameter tanh⁡θω\tanh\theta_\omega tanhθω​? In the source amplitude? State explicitly, since the validity of treating this as a single-microstate depends on the suppression of multi-pair terms, and a referee will ask.
-
 % ----------------------------------------------------------------
 % SECTION 4 — MATTER AS A SUBSTRATE
 % ----------------------------------------------------------------
@@ -64,20 +56,11 @@
 % absorbs it. Show explicitly how the standard formula reduces to
 % Eq. (5.5) in the Rindler case, or flag the normalisation choice
 % clearly.
-%TODO 3.1 [NEW — Section 5.3]: Fix the dimensional error in the entropy increment line.The expression ΔS=2π ΔEℏω/ℏ\Delta S = \frac{2\pi\,\Delta E}{\hbar\omega/\hbar}ΔS=ℏω/ℏ2πΔE​ has units of energy in the denominator (ℏω/ℏ=ω\hbar\omega/\hbar = \omega ℏω/ℏ=ω, a frequency). The intended cancellation is ΔE/ℏω=1\Delta E / \hbar\omega = 1 ΔE/ℏω=1, leaving ΔS=2π\Delta S = 2\pi ΔS=2π, but the intermediate step as typeset is wrong. Rewrite as ΔS=(2π/ℏω)⋅ℏω=2π\Delta S = (2\pi/\hbar\omega)\cdot\hbar\omega = 2\pi ΔS=(2π/ℏω)⋅ℏω=2π or simply state the substitution ΔE=ℏω\Delta E = \hbar\omega ΔE=ℏω explicitly before the line.
+% 'm fairly confident in this analysis given the conventions from the prior paper, but the one thing I can't verify without seeing the explicit mode normalisation is whether ∫Tuu du d2x⊥=ℏω\int T_{uu}\,du\,d^2x_\perp = \hbar\omega
+% ∫Tuu​dud2x⊥​=ℏω exactly for a photon with Rindler frequency ω\omega
+% ω, or whether there's a residual factor of aa
+% a hiding in the mode normalisation. That's the calculation worth checking on paper before adding the note.
 
-% TODO 3.5 [NEW]: Assess the independence of the
-% $S_{GHY} = S_{\text{matter}}$ result from its assumed inputs.
-% The Bekenstein–Hawking relation is explicitly introduced as an
-% "ansatz for the Rindler case" one paragraph before the entropy
-% increment calculation. Identify precisely which steps in the
-% derivation of $S_{GHY}\big|_{\mathcal{H}} = S_{\text{matter}}$
-% use this ansatz and which follow from the construction alone
-% (the Raychaudhuri equation, the AS pp-wave geometry, and the
-% GHY definition). If the ansatz is load-bearing, either derive
-% it from the construction or restrict the claim to "consistent
-% with the Bekenstein–Hawking ansatz" rather than presenting it
-% as an independent derivation.
 
 % TODO 3 [EXISTING]: Distinguish numerical equality from
 % ontological identity for $S_{GHY} = S_{\text{matter}}$.
@@ -547,7 +530,15 @@ From now on we use natural units $\hbar = c = 1$ unless
 otherwise specified; factors of $\hbar$ and $c$ are restored 
 where they aid physical interpretation.
 
-The arguments of Section~\ref{sec:heuristics} establish a heuristic relationship between information acquisition, acceleration, and gravitational effects, but leave open the question of what a single microstate looks like concretely. In standard treatments, the Unruh effect is derived by coupling a detector to a pre-existing acceleration and reading off a thermal response from the vacuum. Following~\cite{player2025driving}, we invert this logic: we place an interaction in the past, where a source injects non-thermal entangled excitations into the field, and show that the observer's accelerated response can be driven by these source-induced excitations. The thermal ensemble then emerges as a coarse-grained aggregate of such microstates, rather than being a primitive property of the vacuum.
+The arguments of Section~\ref{sec:heuristics} establish a heuristic relationship between information acquisition, acceleration, and gravitational effects, but leave open the question of what a single microstate looks like concretely. In standard treatments, the Unruh effect is derived by coupling a detector to a pre-existing acceleration and reading off a thermal response from the vacuum.
+In~\cite{player2025driving} this logic was inverted for a 
+scalar field: a source placed in the past injects non-thermal 
+entangled excitations into the field, and the observer's 
+accelerated response was shown to be driveable by these 
+source-induced excitations. We extend that construction here 
+to the spin-1 electromagnetic field, upgrading from scalar 
+to helicity-carrying Bell states and making the single-bit 
+structure of each measurement event explicit.
 
 Each microstate, equation \eqref{eq:microstate_vec} upcoming,
 is individually non-thermal in the sense that it carries a definite Rindler frequency 
@@ -673,10 +664,16 @@ polarization vectors
 The two terms in~\eqref{eq:bilocal_vec} are related by the CPT transformation 
 in the sense of Bisognano--Wichmann~\cite{bisognano1975duality}, which maps the 
 right wedge algebra to the left wedge algebra and simultaneously flips 
-$\lambda \to -\lambda$. The symmetrization is therefore not an ad hoc choice 
-but the unique assignment consistent with CPT symmetry and angular momentum 
-conservation at the emission vertex; the total angular momentum vanishes in 
-both terms.
+$\lambda \to -\lambda$.
+
+The symmetrization is therefore not an ad hoc choice but the 
+unique assignment consistent with CPT symmetry and angular 
+momentum conservation at the emission vertex: a scalar source 
+carries zero angular momentum, so the emitted pair must satisfy 
+$\lambda_R + \lambda_L = 0$, forcing anticorrelated helicities; 
+CPT then fixes the relative phase between the two terms, and 
+the total angular momentum vanishes in both.
+
 
 The sourced Lagrangian reads
 \begin{equation}
@@ -789,7 +786,7 @@ $(\lambda, -\lambda) = (+1,-1)$, yielding the single-microstate
         |1_{\omega,+1}\rangle_R\,|1_{\omega,-1}\rangle_L 
         + |1_{\omega,-1}\rangle_R\,|1_{\omega,+1}\rangle_L
       \right)
-      + \mathcal{O}(\text{higher order}).
+      + \mathcal{O}(g^2).
 \label{eq:microstate_vec}
 \end{equation}
 $\mathcal{R}$'s and $\mathcal{L}$'s helicity outcomes are 
@@ -1288,6 +1285,17 @@ Substituting into equation~\eqref{eq:deltaA} gives
 The horizon area grows by one discrete, calculable increment 
 per photon absorbed, microstate by microstate, without 
 reference to bulk thermodynamic averages.
+
+Here the null generators of the horizon are taken to be 
+affinely parametrised as $k^\mu = (\partial/\partial u)^\mu$ 
+in double-null coordinates, so that $\int T_{uu}\,du\,d^2x_\perp 
+= \hbar\omega$ is the total null energy of the photon. This 
+differs from the Killing-normalised convention by a factor of 
+the surface gravity $\kappa = a$; the two are related by 
+$(\partial/\partial u)^\mu = a(\partial/\partial\eta)^\mu$ 
+at the horizon, consistent with the standard 
+result $\Delta A = 8\pi G E/\kappa$ when $E = \hbar\omega$ 
+is the Killing energy.
 
 The longitudinal shift $\Delta v \propto -\ln r^2$ produced by each 
 AS pp-wave at the Rindler horizon is a supertranslation in the sense of 
