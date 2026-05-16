@@ -6,21 +6,6 @@
 % ================================================================
 
 % ----------------------------------------------------------------
-% ABSTRACT
-% ----------------------------------------------------------------
-
-% TODO 0 [NEW]: Restructure and thin the abstract.
-% The abstract is too compressed. Three major conceptual steps
-% (Unruh–Landauer bound, bilocal microstate construction,
-% GHY = S_matter) are presented in a single dense paragraph.
-% Split into at most three sentences per claim, and separate
-% what is derived from what is assumed. In particular, the
-% sentence beginning "The detector is then treated as..." chains
-% four distinct claims. Rewrite the abstract as two paragraphs:
-% the first stating the central result and the physical picture;
-% the second summarising the chain of supporting results.
-
-% ----------------------------------------------------------------
 % SECTION 1 — INTRODUCTION
 % ----------------------------------------------------------------
 
@@ -64,13 +49,6 @@
 % ----------------------------------------------------------------
 % SECTION 4 — MATTER AS A SUBSTRATE
 % ----------------------------------------------------------------
-
-% TODO 8 [EXISTING]: Decide on the zig-zag section.
-% It supports the channel picture but adds no new result. Either
-% give it a result (e.g., show the Compton frequency emerges from
-% the Higgs interaction rate in a way that tightens the
-% Bremermann connection) or cut it to a two-sentence remark and
-% footnote in Section 4.1.
 
 % ----------------------------------------------------------------
 % SECTION 5 — PP-WAVE GEOMETRY AND ACTION
@@ -197,6 +175,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{braket}
+\usepackage{enumerate}
 \usepackage{etoolbox}
 \usepackage{orcidlink}
 \usepackage[mathscr]{euscript}
@@ -220,29 +199,53 @@
 
 \abstract{
 Thermodynamic approaches to gravity, from Jacobson to Verlinde, 
-relate spacetime dynamics to horizon entropy but leave unspecified 
-the microscopic carriers of individual entropy increments. 
-We identify these with quantum measurement events, realized 
-explicitly as helicity-anticorrelated Bell states of photons 
-sourced by a bilocal driving term in the Rindler setting. 
-The central result is an event-by-event equality 
+leave unspecified the microscopic carriers of individual entropy 
+increments. We identify these with quantum measurement events 
+and make the identification explicit: eliminating temperature 
+between Landauer's principle and the Unruh effect yields a 
+single acceleration-dependent bound on the energy cost of 
+information acquisition, from which the Schwarzschild radius, 
+surface gravity, and Bekenstein--Hawking area law follow via 
+Newton's second law alone. We construct explicit microstates 
+realizing individual terms of the Unruh thermal ensemble as 
+helicity-anticorrelated Bell states of photons, sourced by a 
+bilocal driving term in the Rindler setting. Each microstate 
+produces an Aichelburg--Sexl pp-wave at the Rindler horizon; 
+applying the Raychaudhuri equation to the resulting null 
+congruence yields an event-by-event equality 
 $S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ between the 
 Gibbons--Hawking--York boundary term and the matter action, 
-with the Planck area $\ell_P^2$ as the conversion factor: 
-horizon geometry counts measurement events in geometric language. 
-From a single temperature-eliminated Unruh--Landauer bound, 
-standard black hole thermodynamics follows from Newton's laws. 
-These microstates are grounded in a concrete information-theoretic 
-picture of matter: massive bodies are timelike channels sampling 
-internal degrees of freedom at the Bremermann--Nyquist rate 
-$mc^2/h$, massless quanta are pure carriers between such channels, 
-and horizons are the spacelike surfaces at which handoff events 
-occur, with proper time emerging as accumulated quanta of action 
-along the worldline. This provides a framework 
-consistent with Wheeler's it-from-bit, in which the physical 
-record of each binary measurement outcome is written into matter, 
-and spacetime geometry is a derived property of matter's 
-information accounting.}
+with the Planck area $\ell_P^2$ as the conversion factor. 
+The Carnot efficiency bound and the Unruh--Landauer bound 
+are shown to be the same inequality viewed from opposite 
+directions. We discuss the EFT interpretation, in which the 
+GHY term arises as the effective action for one Rindler wedge 
+after integrating out the other, and the structural parallel 
+with ER=EPR at the single-microstate level.}
+\abstract{
+We identify the microscopic carriers of individual entropy 
+increments in thermodynamic approaches to gravity as quantum 
+measurement events. Eliminating temperature between Landauer's 
+principle and the Unruh effect yields a single 
+acceleration-dependent bound on the energy cost of information 
+acquisition, from which the Schwarzschild radius, surface 
+gravity, and Bekenstein--Hawking area law follow via Newton's 
+second law alone. We construct explicit microstates realizing 
+individual terms of the Unruh thermal ensemble as 
+helicity-anticorrelated Bell states of photons, sourced by a 
+bilocal driving term in the Rindler setting. Each microstate 
+produces an Aichelburg--Sexl pp-wave at the Rindler horizon; 
+applying the Raychaudhuri equation to the resulting null 
+congruence yields an event-by-event equality 
+$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ between the 
+Gibbons--Hawking--York boundary term and the matter action, 
+with the Planck area $\ell_P^2$ as the conversion factor. 
+The Carnot efficiency bound and the Unruh--Landauer bound 
+are shown to be the same inequality viewed from opposite 
+directions. We discuss the EFT interpretation, in which the 
+GHY term arises as the effective action for one Rindler wedge 
+after integrating out the other, and the structural parallel 
+with ER=EPR at the single-microstate level.}
 
 % Section 1
 \section{Introduction}
@@ -1019,7 +1022,7 @@ coincidental equality.
 \textbf{Definition (Handoff Event).}\ 
 A \emph{handoff event} at a horizon surface 
 $\mathcal{H}$ consists of: 
-\begin{enumerate}%[(i)]
+\begin{enumerate}[(i)]
 \item a massless quantum of Rindler frequency 
   $\omega$ and helicity $\lambda = \pm 1$ 
   transferring one quantum of action $\hbar$ 
