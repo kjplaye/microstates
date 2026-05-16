@@ -830,15 +830,16 @@ Wootters~\cite{page1983evolution,giovannetti2015quantum}:
 time arises from physical correlations between systems 
 rather than from a background parameter, with the 
 Bremermann rate setting the resolution at which those 
-correlations are sampled. This section develops the 
-channel picture and derives three results that 
-Section~\ref{sec:ppwave} realises geometrically: the 
-proportionality of the Bremermann and Bekenstein bounds 
-(Section~\ref{sec:horizon_channel}), a formal definition 
+correlations are sampled.
+This section develops the channel picture and derives two results that 
+Section~\ref{sec:ppwave} realises geometrically: a formal definition 
 of the handoff event through which space is generated at 
 horizons (Section~\ref{sec:handoff}), and the saturation 
 of channel capacity precisely at the Rindler horizon 
-(Section~\ref{sec:saturation}).
+(Section~\ref{sec:saturation}). Section~\ref{sec:horizon_channel} 
+motivates the Bremermann--Bekenstein equivalence; its geometric 
+proof is the central result of Section~\ref{sec:ppwave}.
+
 
 This viewpoint sidesteps a prior question about quantum 
 gravity: how can one quantize gravity without directly 
@@ -949,17 +950,13 @@ The photon passes through the horizon channel and
 deposits into the matter channel on the other side; 
 the handoff is the central event of the construction.
 
-The Bekenstein and Bremermann bounds are not merely 
-analogous: they count the same physical event from 
-orthogonal directions, related by the Unruh--Landauer 
-relation of Section~\ref{sec:heuristics}. To see this 
-explicitly, work in natural units $\hbar = c = 1$ and 
-express frequencies in units of the Rindler acceleration 
-$a$, so that $\Omega \equiv \omega/a$ is dimensionless. 
+The Bekenstein and Bremermann bounds count the same 
+physical event from orthogonal directions, related by 
+the Unruh--Landauer relation of Section~\ref{sec:heuristics}. 
 For a single photon of dimensionless Rindler frequency 
-$\Omega$ crossing the horizon, the Bremermann count 
-is the number of new resolution elements added to the 
-receiving timelike channel per Rindler period 
+$\Omega \equiv \omega/a$ crossing the horizon, the 
+Bremermann count is the number of new resolution elements 
+added to the receiving timelike channel per Rindler period 
 $\tau = 2\pi/a$:
 %
 \begin{equation}
@@ -969,42 +966,14 @@ $\tau = 2\pi/a$:
     \label{eq:bremermann_count}
 \end{equation}
 %
-The Bekenstein count of the same event is the spatial 
-entropy increment. By the Raychaudhuri calculation of 
-Section~\ref{sec:ppwave}, the horizon area increments 
-by $\Delta A = 8\pi G\omega = 8\pi G a\Omega$, giving
-%
-\begin{equation}
-    \Delta H_{\mathrm{Bek}} 
-    = \frac{\Delta A}{4\ell_P^2}
-    = \frac{8\pi G a\Omega}{4G}
-    = 2\pi\Omega.
-    \label{eq:bekenstein_count}
-\end{equation}
-%
-The two counts satisfy
-%
-\begin{equation}
-    \boxed{\Delta H_{\mathrm{Bek}} 
-    = 2\pi \cdot (\Delta f \cdot \tau),}
-    \label{eq:brem_bek_equiv}
-\end{equation}
-%
-with the factor $2\pi$ being the Rindler normalisation---the 
-same factor appearing in the Unruh temperature 
-$T = \hbar a / 2\pi k_B c$ and tracing to the 
-analytic continuation between Minkowski and Rindler 
-coordinates. At the fundamental Rindler mode $\Omega = 1$ 
-(one cycle per Rindler period), the Bremermann count 
-gives one new resolution element and the Bekenstein 
-count gives $\Delta H = 2\pi$ nats, consistent with 
-the direct calculation of Section~\ref{sec:ppwave}. 
-The equality $S_{GHY}|_{\mathcal{H}} = 
-S_{\mathrm{matter}}$ of Section~\ref{sec:ppwave} is 
-the geometric proof of~\eqref{eq:brem_bek_equiv}: 
-counting Planck-area patches spatially and counting 
-action quanta temporally give the same result up to 
-the universal Rindler factor $2\pi$.
+That the Bekenstein spatial count agrees with this 
+Bremermann temporal count, up to the universal Rindler 
+factor $2\pi$ tracing to the analytic continuation 
+between Minkowski and Rindler coordinates, is a 
+consequence of the central result 
+$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$, 
+established geometrically in Section~\ref{sec:ppwave}; 
+we defer the proof to that section.
 
 %------------------------------------------------------
 \subsection{The Handoff Event}
@@ -1320,17 +1289,6 @@ The horizon area grows by one discrete, calculable increment
 per photon absorbed, microstate by microstate, without 
 reference to bulk thermodynamic averages.
 
-Applying the Bekenstein--Hawking relation as a heuristic, valid for Schwarzschild but taken here as an ansatz 
-for the Rindler case, and substituting $\Delta E = \hbar\omega$, yields a corresponding entropy 
-increment
-\begin{equation}
-\Delta H = \frac{\Delta A}{4\ell_P^2} 
-         = \frac{2\pi\,\Delta E}{\hbar\omega}
-         = 2\pi,
-\end{equation}
-in natural units, consistent with one Planck-area patch per 
-detection event.
-
 The longitudinal shift $\Delta v \propto -\ln r^2$ produced by each 
 AS pp-wave at the Rindler horizon is a supertranslation in the sense of 
 Bondi--Metzner--Sachs (BMS) symmetry. Hawking, Perry, and 
@@ -1345,8 +1303,10 @@ identifies the symmetry without specifying the physical process that
 excites individual modes. The bilocal construction supplies that 
 process: each measurement event produces one AS pp-wave, which 
 deposits one supertranslation at the Rindler horizon, exciting one 
-mode of the $\mathrm{BMS}_3$ algebra. The entropy count is consistent with Carlip's result, the microstates being 
-counted are the measurement events themselves.
+mode of the $\mathrm{BMS}_3$ algebra.
+This microstate structure is consistent with Carlip's result: 
+the microstates being counted are the measurement events themselves.
+
 
 \subsection{Action and the Gravitational Boundary}
 \label{sec:microstate_action}
