@@ -502,8 +502,6 @@ temperature is eliminated entirely by substituting the
 Unruh relation, yielding a purely kinematic bound depending 
 only on acceleration, and the bound is applied to 
 individual carrier quanta rather than to bulk evaporation. 
-To our knowledge, the temperature-free 
-form equation~\eqref{eq:UL} has not appeared previously.
 
 This Unruh--Landauer bound is saturated for a photon at one bit
 when the wavelength equals the horizon distance up to a factor 
@@ -529,7 +527,7 @@ accelerations.
 
 
 \subsection{Momentum Transfer and Acceleration}
-In what follows, standard results emerge as consequences of the Unruh-Landauer relation and Newton's laws. The energy transfer $\Delta E$ implied by the relation is carried by a physical quantum, matter or radiation,  mediating the measurement interaction a \emph{thrust quantum}. For a relativistic carrier, the associated momentum transfer is
+In what follows, standard results emerge as consequences of the Unruh-Landauer relation and Newton's laws. The energy transfer $\Delta E$ implied by the relation is carried by a physical quantum, matter or radiation,  mediating the measurement interaction as a \emph{thrust quantum}. For a relativistic carrier, the associated momentum transfer is
 \begin{equation}
 \Delta p = \frac{\Delta E}{c}.
 \end{equation}
@@ -682,7 +680,8 @@ reinterprets a portion of the Unruh response as physically
 sourced thrust rather than thermal 
 fluctuation~\cite{player2025driving}, and it is the concrete 
 realisation of the Bayesian update arrow in 
-Figure~\ref{fig:diagram}: state reduction is not imposed from 
+Figure~\ref{fig:diagram} in the Conclusion: state reduction
+is not imposed from 
 outside but follows from the physical interaction at the 
 measurement event.
 
@@ -764,7 +763,7 @@ alone. The bilocal driving source is symmetrized over both helicity assignments,
     + \epsilon^{i*}_{(+1)}\, \epsilon^{j}_{(-1)}\right) f_L(x)\, f_R(y),
 \label{eq:bilocal_vec}
 \end{equation}
-where $\lambda$ is a coupling constant, $f_L$ and $f_R$ are normalised mode profiles supported
+where $g$ is a coupling constant, $f_L$ and $f_R$ are normalised mode profiles supported
 on the left and right wedges respectively, and $\epsilon^i_{(\lambda)}$ are the circular
 polarization vectors
 \begin{equation}
@@ -1191,6 +1190,70 @@ horizon, so the EFT breaks down exactly where the
 channel saturates.
 
 %------------------------------------------------------
+\subsection{Lorentz Covariance and Multi-Observer 
+Consistency}
+\label{sec:multiobserver}
+%------------------------------------------------------
+
+The discreteness of the channel picture --- one quantum 
+of action $\hbar$ per handoff event, one Planck-area 
+patch per bit --- might appear to conflict with Lorentz 
+invariance, since a preferred frame seems required to 
+count events. This conflict does not arise. The physical 
+events of the construction --- the emission at 
+$\mathcal{P}$, the photon pair, the AS pp-wave, the 
+area increment $\Delta A = 8\pi G\hbar\omega$ --- are 
+all Lorentz-covariant objects. Helicity is a 
+representation of the massless little group and is 
+Poincar\'{e}-covariant; the AS pp-wave is a solution to 
+the diffeomorphism-covariant Einstein equations; the 
+Raychaudhuri equation and the GHY boundary term are 
+diffeomorphism-invariant. What is observer-relative is 
+the \emph{decomposition} of these events into a 
+particular Rindler mode basis: a boosted Rindler 
+observer assigns a different frequency $\omega'$ to the 
+same photon, but the resulting area increment 
+$\Delta A = 8\pi G\hbar\omega'$ is the same physical 
+event viewed in a different frame, with the total 
+Bekenstein--Hawking count preserved under the boost.
+
+This contrasts with approaches that discretise spacetime 
+geometry directly --- Planck-scale 
+cells~\cite{wheeler1955geons} or causal 
+sets~\cite{bombelli1987space} --- where Lorentz 
+invariance is recovered only statistically at the 
+macroscopic level rather than holding event by event. 
+In the present construction, discreteness lives in the 
+matter sector ($\hbar$ is a Lorentz scalar; photons are 
+covariant objects), and the geometry inherits it through 
+the covariant Raychaudhuri equation. No statistical 
+recovery is required.
+
+The construction is naturally multi-observer rather than 
+single-frame. Standard QFT in the S-matrix formulation 
+assumes a single asymptotic observer who prepares the 
+initial state and measures the final state; in the 
+language of Section~\ref{sec:types}, there is one lab 
+and one measurement at the end. Horizon physics 
+requires a different framework: four observers 
+$\mathcal{P}$, $\mathcal{R}$, $\mathcal{L}$, 
+$\mathcal{F}$ each hold partial, causally 
+complementary information about the same physical 
+process. Neither $\mathcal{R}$ nor $\mathcal{L}$ alone 
+can reconstruct the emission at $\mathcal{P}$; their 
+two classical bits together can. The horizon is not 
+a barrier in a single-observer description but a 
+surface that makes the multi-observer structure of 
+the construction sharp: it is the boundary at which 
+$\mathcal{R}$'s and $\mathcal{L}$'s causal domains 
+separate. This is not a limitation of the framework 
+but its natural setting, and it is structurally the 
+same situation that arises in Wigner's friend 
+scenarios~\cite{brukner2018no} applied to 
+gravitational systems --- a point developed in 
+Section~\ref{sec:carnot}.
+
+%------------------------------------------------------
 \subsection{Types of Particles and Interactions}
 \label{sec:types}
 %------------------------------------------------------
@@ -1297,13 +1360,12 @@ each separating the causal past from the causal
 future of that interaction---the one-dimensional 
 analogue of the Rindler horizon, and matching 
 the holographic screen picture of 
-Verlinde~\cite{entropic}. This is illustrated in 
-Figure~\ref{timeline}.
+Verlinde~\cite{entropic}.a
 
 % Section 5
 \section{pp-Wave Geometry and Action}
 \label{sec:ppwave}
-WLOG we introduce coordinates for the photon traveling from $\mathcal{P}$ $(-1,0)$ to $\mathcal{R}$ $(0,1)$. Let $u = t - z + 1$ and $v = t + z + 1$, where the photon propagates along the null plane $u = 0$, $z$ is the longitudinal direction, and $(x,y)$ are transverse coordinates. Then $(u,v)$ = $(0,0)$ is $\mathcal{P}$'s location, $(u,v)$ = $(0,2)$ is $\mathcal{R}$'s location, and $(u,v)$ = $(0,1)$ is the intersection of the photon with the past right Rinder horizon. The situtation is reversed for the left moving photon, we swap $u$ and $v$ to describe photon moving from $\mathcal{P}$ to $\mathcal{L}$.
+WLOG we introduce coordinates for the photon traveling from $\mathcal{P}$ $(-1,0)$ to $\mathcal{R}$ $(0,1)$. Let $u = t - z + 1$ and $v = t + z + 1$, where the photon propagates along the null plane $u = 0$, $z$ is the longitudinal direction, and $(x,y)$ are transverse coordinates. Then $(u,v)$ = $(0,0)$ is $\mathcal{P}$'s location, $(u,v)$ = $(0,2)$ is $\mathcal{R}$'s location, and $(u,v)$ = $(0,1)$ is the intersection of the photon with the past right Rinder horizon. The situation is reversed for the left moving photon; we swap $u$ and $v$ to describe photon moving from $\mathcal{P}$ to $\mathcal{L}$.
 
 \subsection{The AS pp-Wave and Its Effects}
 
@@ -1725,11 +1787,64 @@ reservoir.
 \end{itemize}
 
 
-\subsection{Shannon Entropy}
+\subsection{Shannon Entropy, QBism, and 
+Wigner's Friend}
 
-The entropy variation in the isothermal legs should be understood as Shannon entropy associated with measurement outcomes in a fixed operational basis, rather than the von Neumann entropy of the global quantum state, which remains pure throughout. From an information-theoretic perspective, aligned with Copenhagen interpretation and QBism, the quantum state encodes an observer’s knowledge rather than an objective microstate, and thermodynamic entropy should therefore be identified with the classical uncertainty in measurement outcomes. In this sense, Shannon entropy provides the operationally relevant notion entering Landauer's principle, resolving the apparent tension between unitary evolution (which preserves von Neumann entropy) and thermodynamic irreversibility (which is manifest at the level of classical information processing).
+The entropy variation in the isothermal legs should be 
+understood as Shannon entropy associated with 
+measurement outcomes in a fixed operational basis, 
+rather than the von Neumann entropy of the global 
+quantum state, which remains pure throughout. This 
+distinction has a precise foundation. The four-observer 
+structure $\mathcal{P}$--$\mathcal{R}$--$\mathcal{L}$--$\mathcal{F}$ 
+is a gravitational realisation of the Wigner's friend 
+scenario~\cite{brukner2018no}: $\mathcal{P}$ 
+prepares the Bell state (Wigner's role), 
+$\mathcal{R}$ and $\mathcal{L}$ each measure it 
+(the friends' roles), and the question of when 
+``collapse'' occurred is observer-relative. From 
+$\mathcal{R}$'s perspective, the state collapsed 
+upon photon absorption; from the full Minkowski 
+perspective, the global state remained pure 
+throughout. These descriptions are not contradictory 
+but complementary.
 
-No decoherence assumption is required; Shannon entropy here is defined over the classical outcome distribution induced by a fixed measurement basis (the Rindler detector algebra), independent of the unitary evolution of the global state.
+The QBist framework~\cite{fuchs2014introducing} resolves 
+this cleanly, and is the natural home of the present 
+construction. In QBism, quantum states encode an 
+agent's beliefs rather than objective microstate 
+facts; the correlations between agents' outcomes 
+are objectively real and correctly predicted by the 
+Bell state structure, but no single agent holds the 
+``true'' global state. Each observer's Shannon 
+entropy --- the uncertainty in their helicity 
+outcome prior to measurement --- is valid relative 
+to them. The Carnot cycle is therefore formulated 
+relative to $\mathcal{R}$: its Shannon entropy 
+increases from zero to one bit on the isothermal 
+expansion leg, decreases on the isothermal 
+compression leg, and the area of the cycle in 
+$T$-$H$ space is the work extracted, all defined 
+by $\mathcal{R}$'s operational measurement basis.
+
+No decoherence assumption is required; Shannon 
+entropy here is defined over the classical outcome 
+distribution induced by a fixed measurement basis 
+(the Rindler detector algebra), independent of the 
+unitary evolution of the global state. The objectivity 
+of the Bekenstein--Hawking area count is not in 
+tension with the observer-relativity of the 
+individual microstate: the area increment 
+$\Delta A = 8\pi G\hbar\omega$ is a covariant 
+physical event, while the assignment of that event 
+to a particular observer's measurement record is 
+relational. Thermodynamic entropy, in this reading, 
+is the classical face of quantum observer-relativity: 
+it measures what a given agent does not yet know, 
+and its increase under measurement is the same 
+process as the Bayesian update arrow of 
+Figure~\ref{fig:diagram}, now with a thermodynamic 
+label attached.
 
 \subsection{Work and Efficiency}
 
@@ -1821,7 +1936,6 @@ in the mirror's erasure process, consistent with Landauer's
 principle applied to the re-emission step.
 
 % Section 8
-
 \section{Effective Field Theory Structure}
 \label{sec:eft}
 
@@ -2099,7 +2213,6 @@ its natural boundary condition.
 \end{prop}
 
 % Section 9
-
 \section{Towards Experimental Tests}
 \label{sec:experiment}
 
@@ -2302,32 +2415,48 @@ admits falsifiable consequences distinguishing it
 from standard thermodynamic treatments, remain open 
 questions for future work.
 
-One conceptual question the construction raises but does 
-not resolve deserves explicit acknowledgment. The 
-microstate events identified here are observer-relative 
-in the same sense as quantum state reduction: a given 
-measurement event is a microstate for the Rindler 
-observer who performs it, but may be invisible to a 
-different observer with a different causal horizon. The 
-Bekenstein--Hawking area is objective and 
-observer-independent; the present paper provides 
-observer-relative microstates that sum to the correct 
-area increment for a fixed Rindler observer, but does 
-not establish that different observers' counts agree, 
-nor that the construction is Lorentz covariant at the 
-microstate level. We conjecture that a covariant 
-formulation exists in which the microstate count is 
-independent of the choice of Rindler frame --- 
-consistent with the objectivity of the horizon area --- 
-and that this formulation will make contact with the 
-modular Hamiltonian approach of Bisognano and 
-Wichmann~\cite{bisognano1975duality}, in which the 
-Rindler Hamiltonian is canonically fixed by the modular 
-flow independently of the observer. We leave this for 
-future work.
+\subsection{On Subjectivity}
+The observer-relativity of the microstate construction 
+is a feature, not a gap. The Bekenstein--Hawking area 
+and horizon entropy are objective; the present 
+construction provides the observer-relative physical 
+process --- a quantum measurement event with a definite 
+energy--momentum transfer --- that generates each area 
+increment for a given Rindler observer. The physical 
+events (the photon pair, the AS pp-wave, the area 
+increment $\Delta A = 8\pi G\hbar\omega$) are 
+Lorentz-covariant; what is observer-relative is their 
+decomposition into Rindler modes, exactly as a Lorentz 
+boost changes a photon's frequency without changing 
+the physics. This is not the statistical recovery of 
+Lorentz invariance familiar from discrete spacetime 
+approaches~\cite{wheeler1955geons,bombelli1987space}; 
+it is covariance at the level of individual events, 
+with the matter sector ($\hbar$, photon helicity) 
+carrying the covariance and geometry inheriting it 
+through the Raychaudhuri equation.
 
-\subsection*{Conceptual Position and Contrast with 
-Di\'osi--Penrose}
+The multi-observer structure --- 
+$\mathcal{P}$, $\mathcal{R}$, $\mathcal{L}$, 
+$\mathcal{F}$, each with partial, causally 
+complementary information --- is the natural 
+gravitational setting for the consistency questions 
+raised by Wigner's 
+friend~\cite{brukner2018nogofacts} and addressed in 
+the relational~\cite{rovelli1996relational} and 
+QBist~\cite{fuchs2014qbism} programmes. Standard QFT 
+assumes a single asymptotic observer; horizon physics 
+forces the multi-observer structure into view. The 
+present construction does not resolve the hard 
+problem of how observer-relative descriptions 
+combine into a single objective spacetime --- this 
+remains open --- but it does show that a 
+multi-observer microstate picture is consistent with 
+the objective Bekenstein--Hawking count, and that 
+the Planck area $\ell_P^2$ is the conversion factor 
+between the objective (geometric) and 
+observer-relative (informational) descriptions of 
+the same physical event.
 
 The relation of the present construction to the 
 Di\'osi--Penrose objective collapse 
