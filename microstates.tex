@@ -1,3 +1,53 @@
+%###################################
+%######### Critical Issues #########
+%###################################
+% PROMPT: We are working together on a paper that is currently very rough, we are at the big strokes phase, looking to clean up any major issues and to connect to existing literature.  The final target is probably just arXiv, so think in those terms.  Here is the draft we have so far:
+%2. The Observer-Dependence Tension Is Unresolved
+%This is the deepest conceptual problem. You explicitly state microstates are observer-relative ("the same physical process may be information-bearing for one observer and external for another"), but Bekenstein-Hawking entropy is supposed to be an objective quantity of the black hole. You can't straightforwardly identify observer-dependent measurement events with the objective microscopic carriers of horizon entropy without explaining how the counting becomes observer-independent when you sum over all observers. Jacobson and Verlinde don't have this problem because they work with thermodynamic averages. You inherit it by going to the microstate level. This needs a direct response, not just an acknowledgment of the Bayesian picture.
+%
+%3. The "Causal Diamond" Step in Section 2 Is Circular
+%The identification Δt=2r/c\Delta t = 2r/c
+%Δt=2r/c — the interaction time equals the light-crossing time of the region — is doing enormous work in deriving the Schwarzschild radius, but it's unmotivated. You're essentially assuming the relevant scale is rr
+%r, then solving for rr
+%r. The cancellation of ΔE\Delta E
+%ΔE is elegant but the setup needs a cleaner physical justification. What selects rr
+%r as the causal diamond size? This is not the same as Bekenstein's original argument, though you claim a parallel.
+%
+%4. Landauer Acquisition vs. Erasure Is Muddled
+%Bennett's result (which you cite) is that *measurement* is thermodynamically free; it's the *erasure of the record* that costs kBTln⁡2k_BT \ln 2
+%kB​Tln2. Your Section 2 applies the Landauer bound to the energy of the *carrier* required to "imprint a classically distinguishable record," which is a non-standard application. The Carnot section then correctly puts the Landauer cost at erasure (re-emission). These two framings are in tension throughout. You need to commit to one or carefully explain how they're compatible. The phrase "minimum energy of any physical carrier representing ΔH\Delta H
+%ΔH nats" conflates the carrier energy with the thermodynamic cost of information processing.
+%
+%5. The Central Result Needs a Cleaner Derivation
+%Equation (5.9) — SGHY∣H=SmatterS_{GHY}|_\mathcal{H} = S_\text{matter}
+%SGHY​∣H​=Smatter​ — is presented as a computation, but the chain of identifications is: (a) on a stationary Rindler horizon θ=0\theta = 0
+%θ=0, (b) AS pp-waves perturb θ\theta
+%θ, (c) integrating gives ∑ΔAi\sum \Delta A_i
+%∑ΔAi​, (d) which equals 8πGSmatter8\pi G S_\text{matter}
+%8πGSmatter​ by (5.6), (e) the GHY prefactor c4/8πGc^4/8\pi G
+%c4/8πG then cancels to give equality. This works algebraically, but step (b) — how the AS pp-wave sources the expansion of the null congruence — deserves an explicit intermediate step rather than appeal to equation (5.4) alone. Reviewers will push on this.
+%
+%###########################################
+%##### Missing Literature Connections ######
+%###########################################
+%
+%These are significant gaps for an arXiv paper in this area:
+
+% Van Raamsdonk (2010), "Building up spacetime with quantum entanglement" — directly relevant to your Section 6 claim that entanglement generates space. His argument that the ER bridge encodes EPR entanglement predates the ER=EPR slogan and is more cautious. You should cite and position against it.
+
+%Ryu-Takayanagi (2006) — the Ryu-Takayanagi formula S=A/4GℏS = A/4G\hbar
+% S=A/4Gℏ is structurally identical to your SGHY=SmatterS_{GHY} = S_\text{matter}
+% SGHY​=Smatter​ in the holographic context. Your result should be explicitly compared: is it a flat-space analogue of RT? The literature on holographic entanglement entropy (Nishioka, Ryu, Takayanagi review 2009) would situate your result.
+
+%Bousso (2002), "The holographic principle" (Rev. Mod. Phys.) — your horizon channel and Bekenstein/Bremermann counting are closely related to covariant entropy bounds. Not citing Bousso's comprehensive treatment is a gap.
+
+%Strominger & Zhiboedov (2016), "Gravitational memory, BMS supertranslations and soft theorems" — you connect AS shifts to BMS supertranslations (citing Hawking-Perry-Strominger) but miss the memory/soft theorem triangle. Your construction is essentially producing gravitational memory events microstate by microstate. This is a key connection to develop.
+
+%Wald (1993) / Iyer-Wald (1994) on black hole entropy as Noether charge — your claim that the GHY term rather than the bulk EH action carries the gravitational degrees of freedom connects to Wald entropy. Padmanabhan is cited but Wald's framework is more foundational here.
+
+%Susskind-Uglum (1994) is cited, but you should also cite Callan-Wilczek (1994) on geometric entropy (you actually have it in the text but it may be missing from your bib). Adami & Ver Steeg or related Unruh-Landauer literature — the combination of Landauer + Unruh has appeared before (Deffner & Zurek 2016 discuss thermodynamic costs near horizons; Marolf & Sorbo 2011). You should verify your UL bound is genuinely novel or clearly acknowledge predecessors.
+
+
 % ================================================================
 % REVISION TODO LIST — ordered by paper section
 % Existing TODOs retain their original numbers.
@@ -205,41 +255,66 @@ directions. We discuss the EFT interpretation, in which the
 GHY term arises as the effective action for one Rindler wedge 
 after integrating out the other, and the structural parallel 
 with ER=EPR at the single-microstate level.}
-\abstract{
-We identify the microscopic carriers of individual entropy 
-increments in thermodynamic approaches to gravity as quantum 
-measurement events. Eliminating temperature between Landauer's 
-principle and the Unruh effect yields a single 
-acceleration-dependent bound on the energy cost of information 
-acquisition, from which the Schwarzschild radius, surface 
-gravity, and Bekenstein--Hawking area law follow via Newton's 
-second law alone. We construct explicit microstates realizing 
-individual terms of the Unruh thermal ensemble as 
-helicity-anticorrelated Bell states of photons, sourced by a 
-bilocal driving term in the Rindler setting. Each microstate 
-produces an Aichelburg--Sexl pp-wave at the Rindler horizon; 
-applying the Raychaudhuri equation to the resulting null 
-congruence yields an event-by-event equality 
-$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ between the 
-Gibbons--Hawking--York boundary term and the matter action, 
-with the Planck area $\ell_P^2$ as the conversion factor. 
-The Carnot efficiency bound and the Unruh--Landauer bound 
-are shown to be the same inequality viewed from opposite 
-directions. We discuss the EFT interpretation, in which the 
-GHY term arises as the effective action for one Rindler wedge 
-after integrating out the other, and the structural parallel 
-with ER=EPR at the single-microstate level.}
 
 % Section 1
 \section{Introduction}
 
 Two landmark results establish that gravity and Unruh thermodynamics are deeply intertwined. Jacobson showed that the Einstein equations can be derived from thermodynamic identities applied to local Rindler horizons, with horizon entropy playing the role of the fundamental quantity from which spacetime dynamics emerge~\cite{jacobson1995thermodynamics}. Verlinde extended this perspective, arguing that gravitational forces arise from entropy gradients on holographic screens, recasting gravity as an entropic rather than a fundamental interaction~\cite{entropic}. Both frameworks, however, operate at the level of bulk thermodynamics and leave open a prior question: what physical process underlies each individual entropy increment?
 
-We argue that the answer can be quantum measurement. Each act of information acquisition by a physical observer constitutes a discrete microstate event, and the collective backreaction of such events, together with the causal correlations they induce, give rise to gravitational effects:  Any observation is mediated by a physical interaction, information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. Then the equivalence principle makes this gravitational: the 
-local quantum field theory near a black hole horizon is identical 
+We argue that the answer can be quantum measurement.
+Each act of information acquisition by a given physical 
+observer constitutes a discrete microstate event; the 
+collective backreaction of such events, together with 
+the causal correlations they induce, give rise to 
+gravitational effects as seen by that observer.
+Local quantum field theory near a black hole horizon is identical 
 to that of a uniformly accelerated observer in flat spacetime, so 
 the Unruh effect and the Hawking effect are the same computation 
 in different coordinates~\cite{unruh1976notes, hawking1975particle}.
+
+
+The Bekenstein--Hawking area and the horizon entropy remain 
+objective, observer-independent quantities; what the 
+present construction provides is an identification of 
+the physical events underlying each area increment 
+\emph{from the perspective of a fixed Rindler observer}. 
+Whether observer-relative microstate counts sum 
+consistently to an observer-independent area law --- 
+that is, whether different Rindler observers' counts 
+agree when totalled over a complete set of measurement 
+events through the horizon --- is an important open 
+question that the present paper does not resolve, and 
+we flag it explicitly as future work in the Conclusion.
+
+Three existing programmes arrive at closely related 
+conclusions by different routes, and the present 
+construction makes contact with each. 
+Jacobson~\cite{jacobson1995thermodynamics} derives the 
+Einstein equations from thermodynamic identities on local 
+Rindler horizons but leaves open what physical process 
+underlies each entropy increment; the present paper 
+provides that process. 
+Van~Raamsdonk~\cite{van2010building} showed, in 
+the AdS/CFT setting, that entanglement between two spatial 
+regions generates the geometric connection between them, 
+working at the level of reduced density matrices and 
+entanglement entropy; the present construction realises 
+the same effect in flat Minkowski space, microstate by 
+microstate, with an explicit source. The BMS 
+programme~\cite{carlip2018black, hawking2016soft, 
+strominger2016gravitational} identifies the symmetry 
+algebra whose modes are excited at the horizon but does 
+not specify the physical process that excites individual 
+modes; the bilocal construction supplies that process. 
+In each case the convergence is not accidental: a single 
+physical picture---quantum measurement events as 
+energy--momentum transfers in the Rindler frame---has 
+enough internal structure to reproduce all three sets of 
+results without additional assumptions. The new result is 
+the event-by-event equality 
+$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$, which 
+none of the three programmes establishes.
+
 
 We proceed in two complementary way. First, 
 we construct explicit microstates: individual terms of the 
@@ -285,23 +360,20 @@ microstate construction is rich enough to support a fully
 reversible Carnot cycle at the individual microstate level, 
 with thermodynamic identities emerging as consequences.
 
-\subsection{Conceptual Roadmap}
+The approach taken here is a refactored version of the 
+Di\'osi--Penrose objective collapse 
+programme~\cite{penrose1996gravity, diosi1987universal} 
+in the following sense: where Di\'osi--Penrose postulates 
+that gravitational self-interaction objectively collapses 
+the wavefunction, we treat quantum measurement as a 
+subjective process mediated by energy--momentum transfer 
+and interpret state reduction as a Bayesian update for a 
+given observer. The gravitational effects we derive are 
+physically real consequences of this transfer but remain 
+observer-relative; Section~\ref{sec:conclusion} develops 
+this contrast and its open questions.
 
-Our approach is a refactored version of the Diósi--Penrose objective collapse programme~\cite{penrose1996gravity, diosi1987universal}, which postulates that gravity induces an objective, observer-independent collapse of the quantum state. In that framework, gravitational self-interaction is taken to define a physical timescale for wavefunction reduction, leading to a dynamical modification of standard quantum mechanics. We instead treat quantum measurement as a subjective process mediated by energy--momentum transfer, and interpret the reduction of the state as physical. The contrast between the two approaches is illustrated in Figure~\ref{fig:diagram}. The three solid arrows represent ``grounding relations''; the single dashed arrow represents the Di\'osi--Penrose causal postulate. It is the only relation in the diagram claimed to be objective and observer-independent, and it is the only one we do not adopt in this paper.
-
-
-\begin{figure}[h]
-\centering
-\begin{tikzcd}[row sep=4em, column sep=7em]
-\text{Gravitational field} \arrow[r, dashed, "\scalebox{0.7}{\shortstack{Di\'osi--Penrose}}"]
-    & \text{Quantum state reduction} \\
-\text{Acceleration} \arrow[u, "\scalebox{0.7}{\shortstack{equivalence\\principle}}"']
-                    \arrow[r, "\scalebox{0.7}{\shortstack{energy--momentum\\transfer}}"']
-    & \text{Observation} \arrow[u, "\scalebox{0.7}{\shortstack{Bayesian\\update}}"']
-\end{tikzcd}
-\caption{Solid arrows denote subjective grounding relations: $A \to B$ means every instance of $B$ is physically realized by an instance of $A$, for a given observer. The dashed arrow denotes the Di\'osi--Penrose postulate, where the relation is claimed to hold objectively rather than observer-relatively.}
-\label{fig:diagram}
-\end{figure}
+\subsection{Roadmap}
 
 In Section \ref{sec:heuristics} we explore a heuristic argument where we eliminate temperature using a combination of Landauer's principle with the Unruh effect and derive standard blackhole thermodynamics area and information laws as a consequence of Newton's laws. We then dive into a spin-1 version of the concrete microstate construction from our previous work~\cite{player2025driving} which we present in Section \ref{sec:microstates}; this realizes individual terms of the Unruh thermal ensemble via a Minkowski bilocal driving source. In Section \ref{sec:substrate} we develop a language for discussing emergent spacetime as a property of information bearing matter.
 Section~\ref{sec:ppwave} develops how the 
@@ -414,6 +486,25 @@ acceleration sets the minimum energy scale of the carrier. The full
 thermodynamic accounting, where the Landauer erasure cost appears 
 correctly, is deferred to Section~\ref{sec:carnot}.
 
+
+The connection between Landauer's principle and black hole 
+thermodynamics has been noted previously. Cort\^{e}s and 
+Liddle~\cite{cortes2024hawking} showed that Hawking 
+evaporation saturates the Landauer bound at the Hawking 
+temperature, identifying the two results as expressions of 
+the same process at the level of bulk evaporation.
+Related bounds on the energy cost of information 
+acquisition in curved spacetime have been derived using 
+the second law of thermodynamics applied to relativistic 
+communication channels~\cite{alvim2024landauer}.
+The present bound equation~\eqref{eq:UL} differs in two respects: 
+temperature is eliminated entirely by substituting the 
+Unruh relation, yielding a purely kinematic bound depending 
+only on acceleration, and the bound is applied to 
+individual carrier quanta rather than to bulk evaporation. 
+To our knowledge, the temperature-free 
+form equation~\eqref{eq:UL} has not appeared previously.
+
 This Unruh--Landauer bound is saturated for a photon at one bit
 when the wavelength equals the horizon distance up to a factor 
 of $2\pi/\ln 2$:
@@ -521,6 +612,25 @@ which is the Bekenstein-Hawking area law. Each measurement event contributes a d
 This derivation parallels Jacob Bekenstein’s original argument \cite{bekenstein}, in which the entropy increase of a black hole is inferred from the minimal energy required to localize and drop a system across the horizon; here, the same structure emerges from the minimal energy cost of registering information at the horizon scale.
 
 The two bounds are saturated simultaneously when $a = c^2/R$ — which is exactly the condition for being {\it at a horizon}. The horizon is therefore not just where thermodynamics happens to work out, it is the unique locus where the minimum cost of information acquisition equals the maximum information content of the region.
+
+Substituting the horizon condition $a = c^2/R$ directly 
+into the Unruh--Landauer bound~\eqref{eq:UL} yields
+\begin{equation}
+    \Delta H \leq \frac{2\pi R\,\Delta E}{\hbar c},
+\end{equation}
+which is precisely the Bekenstein universal entropy 
+bound~\cite{bekenstein1981universal} on the 
+entropy-to-energy ratio for a system of size $R$. 
+The Unruh--Landauer relation and the Bekenstein bound 
+are therefore the same inequality: the former is its 
+acceleration-frame expression, the latter its 
+position-space expression, and the Rindler horizon is 
+the surface at which the two descriptions coincide. 
+To our knowledge, the temperature-free 
+form~\eqref{eq:UL} derived by eliminating $T$ between 
+Landauer's principle and the Unruh effect, and its 
+identification with the Bekenstein bound at the horizon, 
+has not appeared previously in this form.
 
 % Section 3
 \section{Bilocal Microstate Construction}
@@ -1315,6 +1425,26 @@ mode of the $\mathrm{BMS}_3$ algebra.
 This microstate structure is consistent with Carlip's result: 
 the microstates being counted are the measurement events themselves.
 
+This places the bilocal construction inside the 
+soft-theorem / gravitational-memory / BMS triangle 
+established by Strominger and 
+Zhiboedov~\cite{strominger2016gravitational}. Each 
+measurement event sits at the intersection of three 
+equivalent descriptions: a gravitational memory burst 
+(the AS longitudinal shift $\Delta v \propto -\ln r^2$), 
+a zero-energy soft graviton insertion (a pole in the 
+Weinberg soft graviton 
+theorem~\cite{weinberg1965infrared}), and a BMS 
+supertranslation mode on the horizon. The bilocal source 
+makes this triangle constructive rather than merely 
+structural: one emitted photon pair produces one AS 
+pp-wave, one supertranslation, and one excited mode of 
+the $\mathrm{BMS}_3$ algebra, in a one-to-one 
+correspondence. The counting of horizon entropy via the 
+$\mathrm{BMS}_3$ central charge~\cite{carlip2018black} 
+then acquires a direct operational reading: it counts 
+measurement events, one supertranslation mode per 
+absorbed photon.
 
 \subsection{Action and the Gravitational Boundary}
 \label{sec:microstate_action}
@@ -1406,9 +1536,66 @@ result emerges from summing over the ensemble; the microstate
 picture supplies what the thermodynamic programmes leave open: 
 the physical process underlying each boundary contribution.
 
+The equality $S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ 
+is structurally related to the Ryu--Takayanagi 
+formula~\cite{ryu2006holographic}, which identifies the 
+entanglement entropy of a boundary region with the area 
+of a minimal bulk surface in AdS: $S_{\mathrm{ent}} = 
+A / 4G\hbar$. Three differences sharpen the comparison. 
+First, the present result holds in flat Minkowski space 
+on a Rindler horizon rather than on a minimal surface in 
+AdS, and requires no holographic dual. Second, it is an 
+equality of actions rather than of entropies, with the 
+Planck area $\ell_P^2$ as the conversion factor between 
+the two sides rather than as a fixed coefficient. Third, 
+it holds event by event rather than as a thermodynamic 
+average over a thermal ensemble: the AS pp-wave sourced 
+by a single photon produces a single calculable area 
+increment, and summing over events recovers the 
+thermodynamic result. Whether 
+$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ is the 
+flat-space Rindler limit of the Ryu--Takayanagi formula, 
+or whether the two results are independent derivations of 
+the same underlying holographic principle from orthogonal 
+directions, is a natural question for future work.
+
 % Section 6
 \section{Entanglement as Spatial Information}
 \label{sec:erepr}
+
+Van~Raamsdonk~\cite{van2010building} showed, in 
+the AdS/CFT setting, that the entanglement entropy between 
+two halves of a thermofield double state controls the 
+geometry connecting them: reducing entanglement elongates 
+the ER bridge until the geometry disconnects entirely. 
+The vacuum decomposition~\eqref{eq:vacuum_vec} is 
+precisely the thermofield double state~\cite{maldacena2003eternal}, 
+now in flat Minkowski space with helicity labels carried 
+through. The AS longitudinal shifts of 
+Section~\ref{sec:ppwave} are its event-by-event geometric 
+output: each measurement event displaces the two wedges 
+apart in opposite null directions, creating new coordinate 
+space between them.
+
+A potential sign puzzle deserves immediate attention. 
+Van~Raamsdonk's argument implies that a maximally 
+entangled state (such as the Bell state~\eqref{eq:microstate_vec}) 
+should produce maximal geometric \emph{connection} between 
+the two sides, whereas the AS shifts push the wedges 
+\emph{apart}. The resolution is that outward displacement 
+in the present construction is not disconnection but 
+creation of interior volume: the two wedges are not 
+separating topologically but making room for the geometry 
+between them, consistent with the positive longitudinal 
+shift generating new Minkowski space rather than a change 
+in causal structure. This is the event-by-event 
+realisation of Van~Raamsdonk's entanglement-generated 
+geometry. Three features go beyond his 
+argument: the setting is flat space without an AdS/CFT 
+dual; the result holds microstate by microstate rather 
+than at the level of entanglement entropy; and the source 
+$\mathcal{P}$ is explicit, providing the physical 
+mechanism that generates the entanglement.
 
 The bilocal source prepares an anticorrelated Bell 
 state~\eqref{eq:microstate_vec}. We consider the simplest 
@@ -1514,10 +1701,12 @@ The mirrors are ideal, in the sense that they do not retain a persistent copy of
 \end{figure}
 
 Consider the point of view of the right Rindler observer $\mathcal{R}$ who sees the event horizon as a thermal object.
-The Rindler horizon plays the role of the hot reservoir at 
-the Unruh temperature $T_H = \hbar a/2\pi k_B c$, consistent 
-with the standard identification of the horizon as a thermal 
-object. The Rindler wedge interior, where the mirror operates, 
+The Rindler horizon plays the role of the hot reservoir 
+at the Unruh temperature $T_H = \hbar a/2\pi k_B c$, 
+consistent with the standard identification of the 
+horizon as a thermal object and its connection to the 
+generalised second law~\cite{unruh1982acceleration}.
+The Rindler wedge interior, where the mirror operates, 
 is taken as the cold reservoir at temperature $T_C$. The 
 identification of $T_C$ with the Landauer erasure temperature 
 of the mirror is an ansatz of the present construction; its 
@@ -2057,7 +2246,36 @@ We have identified quantum measurement events as
 gravitational microstates in the Rindler setting, 
 partially answering the question left open by Jacobson and 
 Verlinde of what physical process underlies each 
-individual entropy increment. The central result is 
+individual entropy increment. The construction converges independently with three 
+established programmes. Jacobson's thermodynamic 
+derivation of the Einstein 
+equations~\cite{jacobson1995thermodynamics} requires a 
+physical process underlying each local entropy increment; 
+the bilocal measurement event is that process, identified 
+explicitly rather than postulated. 
+
+
+Van~Raamsdonk's entanglement-generates-geometry 
+argument~\cite{van2010building}, formulated at 
+the level of reduced density matrices in AdS/CFT, is 
+realised here in flat space microstate by microstate, 
+with the AS longitudinal shift as the concrete geometric 
+output of each entanglement event. The BMS 
+soft-theorem-memory 
+triangle~\cite{hawking2016soft,strominger2016gravitational} 
+identifies the symmetry structure at the horizon; the 
+bilocal construction populates that structure with a 
+concrete physical process, one measurement event per 
+excited supertranslation mode. That a single starting 
+point---quantum measurement as energy--momentum transfer 
+under proper acceleration---reproduces all three sets of 
+results without additional assumptions is evidence that 
+the identification of measurement events as gravitational 
+microstates is not merely consistent with these frameworks 
+but describes the elementary process they collectively 
+require.
+
+The central result is 
 the event-by-event equality $S_{GHY}|_{\mathcal{H}} 
 = S_{\text{matter}}$: the gravitational boundary 
 action and the matter action are the same quantity 
@@ -2084,8 +2302,74 @@ admits falsifiable consequences distinguishing it
 from standard thermodynamic treatments, remain open 
 questions for future work.
 
+One conceptual question the construction raises but does 
+not resolve deserves explicit acknowledgment. The 
+microstate events identified here are observer-relative 
+in the same sense as quantum state reduction: a given 
+measurement event is a microstate for the Rindler 
+observer who performs it, but may be invisible to a 
+different observer with a different causal horizon. The 
+Bekenstein--Hawking area is objective and 
+observer-independent; the present paper provides 
+observer-relative microstates that sum to the correct 
+area increment for a fixed Rindler observer, but does 
+not establish that different observers' counts agree, 
+nor that the construction is Lorentz covariant at the 
+microstate level. We conjecture that a covariant 
+formulation exists in which the microstate count is 
+independent of the choice of Rindler frame --- 
+consistent with the objectivity of the horizon area --- 
+and that this formulation will make contact with the 
+modular Hamiltonian approach of Bisognano and 
+Wichmann~\cite{bisognano1975duality}, in which the 
+Rindler Hamiltonian is canonically fixed by the modular 
+flow independently of the observer. We leave this for 
+future work.
+
+\subsection*{Conceptual Position and Contrast with 
+Di\'osi--Penrose}
+
+The relation of the present construction to the 
+Di\'osi--Penrose objective collapse 
+programme~\cite{penrose1996gravity, diosi1987universal} 
+is worth making precise. That programme postulates that 
+gravity induces an objective, observer-independent 
+collapse of the quantum state, with gravitational 
+self-interaction defining a physical timescale for 
+wavefunction reduction. We instead treat quantum 
+measurement as a subjective process mediated by 
+energy--momentum transfer, and interpret the reduction 
+of the state as a Bayesian update for a given observer. 
+The contrast is illustrated in 
+Figure~\ref{fig:diagram}: the three solid arrows 
+represent grounding relations that hold for a given 
+observer; the single dashed arrow represents the 
+Di\'osi--Penrose causal postulate, the only relation 
+claimed to be objective and observer-independent, and 
+the only one we do not adopt. The gravitational effects 
+derived in this paper are physically real consequences 
+of energy--momentum transfer but are observer-relative 
+by construction, consistent with the non-thermal 
+Minkowski vantage point maintained throughout.
+
+\begin{figure}[h]
+\centering
+\begin{tikzcd}[row sep=4em, column sep=7em]
+\text{Gravitational field} \arrow[r, dashed, "\scalebox{0.7}{\shortstack{Di\'osi--Penrose}}"]
+    & \text{Quantum state reduction} \\
+\text{Acceleration} \arrow[u, "\scalebox{0.7}{\shortstack{equivalence\\principle}}"']
+                    \arrow[r, "\scalebox{0.7}{\shortstack{energy--momentum\\transfer}}"']
+    & \text{Observation} \arrow[u, "\scalebox{0.7}{\shortstack{Bayesian\\update}}"']
+\end{tikzcd}
+\caption{Solid arrows denote subjective grounding relations: $A \to B$ means every instance of $B$ is physically realized by an instance of $A$, for a given observer. The dashed arrow denotes the Di\'osi--Penrose postulate, where the relation is claimed to hold objectively rather than observer-relatively.}
+\label{fig:diagram}
+\end{figure}
 
 % Section 11
+\section*{Acknowledgements}
+During the preparation of this work, the author utilized Anthropic's Claude as a research and drafting assistant. Specifically, the technology was used to co-develop the physical frameworks, assist in the structuring of the models, and refine the mathematical formulations. Following the generative process, the author strictly evaluated, verified, and edited all content. The author assumes full accountability for the physical accuracy, integrity, and conclusions of this work.
+
+% Section 12
 \section{Appendix: Consistency of the Double-Null Gauge Condition}
 \label{gauge_consistency}
 % Verification that double-null gauge does not over-constrain physical degrees of freedom
@@ -2226,13 +2510,6 @@ degrees of freedom. The CPT wedge-swap symmetry is preserved throughout:
 conditions on $A_+$ and $A_-$ are imposed symmetrically, and neither null direction 
 is privileged over the other.
 
-% Section 12
-\section*{Acknowledgements}
-The author used Claude (Anthropic) as an AI assistant 
-for critical discussion, feedback on arguments, and 
-editorial suggestions during the preparation of this 
-manuscript. All scientific content, calculations, and 
-conclusions are the author's own.
 
 \bibliographystyle{ieeetr}
 \bibliography{bibliography}
