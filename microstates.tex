@@ -2,22 +2,20 @@
 %######### Critical Issues #########
 %###################################
 % PROMPT: We are working together on a paper that is currently very rough, we are at the big strokes phase, looking to clean up any major issues and to connect to existing literature.  The final target is probably just arXiv, so think in those terms.  Here is the draft we have so far:
-%2. The Observer-Dependence Tension Is Unresolved
-%This is the deepest conceptual problem. You explicitly state microstates are observer-relative ("the same physical process may be information-bearing for one observer and external for another"), but Bekenstein-Hawking entropy is supposed to be an objective quantity of the black hole. You can't straightforwardly identify observer-dependent measurement events with the objective microscopic carriers of horizon entropy without explaining how the counting becomes observer-independent when you sum over all observers. Jacobson and Verlinde don't have this problem because they work with thermodynamic averages. You inherit it by going to the microstate level. This needs a direct response, not just an acknowledgment of the Bayesian picture.
-%
+
 %3. The "Causal Diamond" Step in Section 2 Is Circular
-%The identification Δt=2r/c\Delta t = 2r/c
-%Δt=2r/c — the interaction time equals the light-crossing time of the region — is doing enormous work in deriving the Schwarzschild radius, but it's unmotivated. You're essentially assuming the relevant scale is rr
-%r, then solving for rr
-%r. The cancellation of ΔE\Delta E
-%ΔE is elegant but the setup needs a cleaner physical justification. What selects rr
-%r as the causal diamond size? This is not the same as Bekenstein's original argument, though you claim a parallel.
-%
+% The identification Δt=2r/c\Delta t = 2r/c
+% Δt=2r/c — the interaction time equals the light-crossing time of the region — is doing enormous work in deriving the Schwarzschild radius, but it's unmotivated. You're essentially assuming the relevant scale is rr
+% r, then solving for rr
+% r. The cancellation of ΔE\Delta E
+% ΔE is elegant but the setup needs a cleaner physical justification. What selects rr
+% r as the causal diamond size? This is not the same as Bekenstein's original argument, though you claim a parallel.
+
 %4. Landauer Acquisition vs. Erasure Is Muddled
 %Bennett's result (which you cite) is that *measurement* is thermodynamically free; it's the *erasure of the record* that costs kBTln⁡2k_BT \ln 2
 %kB​Tln2. Your Section 2 applies the Landauer bound to the energy of the *carrier* required to "imprint a classically distinguishable record," which is a non-standard application. The Carnot section then correctly puts the Landauer cost at erasure (re-emission). These two framings are in tension throughout. You need to commit to one or carefully explain how they're compatible. The phrase "minimum energy of any physical carrier representing ΔH\Delta H
 %ΔH nats" conflates the carrier energy with the thermodynamic cost of information processing.
-%
+
 %5. The Central Result Needs a Cleaner Derivation
 %Equation (5.9) — SGHY∣H=SmatterS_{GHY}|_\mathcal{H} = S_\text{matter}
 %SGHY​∣H​=Smatter​ — is presented as a computation, but the chain of identifications is: (a) on a stationary Rindler horizon θ=0\theta = 0
@@ -26,18 +24,12 @@
 %∑ΔAi​, (d) which equals 8πGSmatter8\pi G S_\text{matter}
 %8πGSmatter​ by (5.6), (e) the GHY prefactor c4/8πGc^4/8\pi G
 %c4/8πG then cancels to give equality. This works algebraically, but step (b) — how the AS pp-wave sources the expansion of the null congruence — deserves an explicit intermediate step rather than appeal to equation (5.4) alone. Reviewers will push on this.
-%
+
 %###########################################
 %##### Missing Literature Connections ######
 %###########################################
 %
 %These are significant gaps for an arXiv paper in this area:
-
-% Van Raamsdonk (2010), "Building up spacetime with quantum entanglement" — directly relevant to your Section 6 claim that entanglement generates space. His argument that the ER bridge encodes EPR entanglement predates the ER=EPR slogan and is more cautious. You should cite and position against it.
-
-%Ryu-Takayanagi (2006) — the Ryu-Takayanagi formula S=A/4GℏS = A/4G\hbar
-% S=A/4Gℏ is structurally identical to your SGHY=SmatterS_{GHY} = S_\text{matter}
-% SGHY​=Smatter​ in the holographic context. Your result should be explicitly compared: is it a flat-space analogue of RT? The literature on holographic entanglement entropy (Nishioka, Ryu, Takayanagi review 2009) would situate your result.
 
 %Bousso (2002), "The holographic principle" (Rev. Mod. Phys.) — your horizon channel and Bekenstein/Bremermann counting are closely related to covariant entropy bounds. Not citing Bousso's comprehensive treatment is a gap.
 
@@ -55,16 +47,24 @@
 % in paper order relative to the existing list.
 % ================================================================
 
+% 0B — notation audit (SSS vs HHH) — needs a read-through
+% 2A — causal diamond justification
+% 3A — bilocal source uniqueness
+% 4A — zig-zag framing
+% 5A — mode normalization calculation
+% 5B — equality vs ontological identity
+% 5C — metric as counting question
+% 7A — kBTH=ℏωk_BT_H = \hbar\omega kB​TH​=ℏω justification
+% 7B — Carnot cycle rigor
+% 8A — efficiency calculation steps
+% 8B — Bousso citation
+% 9A — concrete observable
+% 9B — 10−44 J tension
+
+
 % ----------------------------------------------------------------
 % SECTION 1 — INTRODUCTION
 % ----------------------------------------------------------------
-
-% TODO 1A: Sharpen the Diosi–Penrose contrast.
-% The introduction distinguishes "subjective but physically real"
-% from "objective collapse" but the boundary is blurry. Add one
-% paragraph clarifying how a consequence can be physically real
-% for a given observer without being observer-independent, with a
-% concrete example drawn from the construction itself.
 
 % ----------------------------------------------------------------
 % SECTION 2 — MOTIVATING HEURISTICS
@@ -789,6 +789,20 @@ in the sense of Bisognano--Wichmann~\cite{bisognano1975duality}, which maps the
 right wedge algebra to the left wedge algebra and simultaneously flips 
 $\lambda \to -\lambda$.
 
+More precisely, the modular conjugation $J$ of 
+Bisognano--Wichmann maps a right-wedge creation 
+operator $a^{R\dagger}_{k,(\lambda)}$ to a left-wedge 
+creation operator $a^{L\dagger}_{-k,(-\lambda)}$, 
+implementing PCT between wedges. The Bell 
+state~\eqref{eq:microstate_vec} is the unique 
+two-photon state invariant under $J$: the 
+anticorrelated helicity assignment and the 
+symmetric superposition are not choices but 
+consequences of requiring $J$-invariance. The 
+bilocal source~\eqref{eq:bilocal_vec} is therefore 
+the unique source consistent with the algebraic 
+symmetry of the Rindler vacuum.
+
 The symmetrization is therefore not an ad hoc choice but the 
 unique assignment consistent with CPT symmetry and angular 
 momentum conservation at the emission vertex: a scalar source 
@@ -946,12 +960,24 @@ computational limit---three facets of the single fact that
 matter's state space has a resolution set by $\hbar$. Proper 
 time is accumulated action along a worldline, an emergent 
 quantity in the sense of Page and 
-Wootters~\cite{page1983evolution,giovannetti2015quantum}: 
-time arises from physical correlations between systems 
-rather than from a background parameter, with the 
-Bremermann rate setting the resolution at which those 
-correlations are sampled.
-This section develops the channel picture and derives two results that 
+Wootters~\cite{page1983evolution,giovannetti2015quantum}:
+
+The modular flow perspective of Connes and 
+Rovelli~\cite{connes1994neumann} gives this 
+identification a precise algebraic foundation: 
+in a generally covariant quantum theory, the 
+physical flow of time is the modular flow of 
+the state with respect to the observable algebra, 
+and the Bisognano--Wichmann theorem identifies 
+this flow with Rindler time evolution for the 
+vacuum restricted to one wedge. The Bremermann 
+sampling rate $mc^2/h$ is the rate at which 
+the matter channel accumulates modular flow 
+parameter, making proper time an emergent 
+property of the algebraic structure rather than 
+a background input.
+
+We next develop the channel picture and derive two results that 
 Section~\ref{sec:ppwave} realises geometrically: a formal definition 
 of the handoff event through which space is generated at 
 horizons (Section~\ref{sec:handoff}), and the saturation 
