@@ -61,10 +61,112 @@
 % 9A — concrete observable
 % 9B — 10−44 J tension
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % ----------------------------------------------------------------
-% SECTION 1 — INTRODUCTION
+% SECTION 0 — GLOBAL / CROSS-CUTTING
 % ----------------------------------------------------------------
+
+% TODO 0A: Trim the abstract.
+% At ~350 words the abstract is long even by arXiv standards.
+% The EFT and Carnot paragraphs can each be compressed to a
+% single sentence. The statement of the central result
+% $S_{GHY}|_{\mathcal{H}} = S_{\text{matter}}$ should be
+% foregrounded more clearly.
+
+% TODO 0B: Add a "logical structure" paragraph to the
+% Introduction, separate from the Roadmap.
+% The Roadmap lists sections sequentially but does not tell the
+% reader which parts are heuristic motivation and which are
+% technically precise claims. Add a short paragraph (3--5
+% sentences) explicitly labelling: §2 as heuristic motivation;
+% §3--5 as the technically precise microstate and geometric
+% results; §6--8 as applications and contextualisation. This
+% will help readers from both the GR and QI communities
+% orient themselves.
+
+% TODO 0C: Add a sketch of multi-observer consistency.
+% The Introduction honestly flags that whether observer-relative
+% microstate counts sum to the observer-independent
+% Bekenstein--Hawking area law is an open question. However,
+% without even a plausibility argument the paper is open to the
+% objection that the central result is frame-dependent and does
+% not recover the objective area law. Add at minimum a paragraph
+% (in §5 or the Conclusion) sketching why Lorentz covariance of
+% the AS pp-wave and the diffeomorphism-invariance of the GHY
+% term guarantee that different observers' counts are consistent,
+% or clearly delineate this as the key open problem and what
+% would be required to resolve it.
+
+% ----------------------------------------------------------------
+% SECTION 1 — INTRODUCTION (LITERATURE)
+% ----------------------------------------------------------------
+
+% TODO 1A: Cite Jacobson (2016).
+% "Entanglement equilibrium and the Einstein equation,"
+% PRL 116, 201101 (2016). This is a significant refinement of
+% the 1995 thermodynamic derivation and directly relevant to the
+% claim that measurement events underlie each entropy increment.
+% Not citing it will appear as an oversight to any referee
+% familiar with the area.
+
+% TODO 1B: Cite Bousso (2002).
+% "The holographic principle," Rev. Mod. Phys. 74, 825 (2002).
+% The covariant entropy bound is the natural context for the
+% Bekenstein--Bremermann equivalence of §4.3. The counting
+% argument there should be explicitly situated relative to
+% Bousso's bound.
+
+% TODO 1C: Cite Jafferis, Lewkowycz, Maldacena, Shenker (2016).
+% "Relative entropy equals bulk relative entropy," JHEP 06 (2016)
+% 004. The comparison to Ryu--Takayanagi in §5 currently engages
+% with the 2006 result without acknowledging the 2016 operational
+% sharpening. Citing JLMS will preempt a standard referee
+% objection and allow the comparison to be made more precisely.
+
+% TODO 1D: Cite Faulkner, Lewkowycz, Maldacena (2013).
+% "Quantum corrections to holographic entanglement entropy,"
+% JHEP 11 (2013) 074. Directly relevant to the §8.1 discussion
+
+% of quantum corrections to the GHY term
+% (Susskind--Uglum and Callan--Wilczek are cited; FLM is the
+% natural third reference in that sentence).
+
+% TODO 1E: Cite Susskind (2016) on ER=EPR.
+% "Copenhagen vs Everett, Teleportation, and ER=EPR,"
+% Fortschritte der Physik 64, 551 (2016). The ER=EPR connections
+% in §6 currently rest on the 2013 Maldacena "cool horizons"
+% paper alone. Susskind (2016) develops the single-microstate
+% version of ER=EPR, which is the level at which §6 operates.
+
+% TODO 1F: Cite Campiglia and Laddha (2015).
+% "Asymptotic symmetries and subleading soft graviton theorem,"
+% PRD 90, 124028 (2015). The BMS triangle discussion in §5 cites
+% Hawking--Perry--Strominger and Strominger--Zhiboedov; the
+% Campiglia--Laddha work completes the triangle and their
+% explicit mode decomposition is the closest existing analogue
+% to what the bilocal source produces.
+
+% TODO 1G: Update the Page--Wootters reference.
+% The current citation is the 1983 paper. Add Höhn, Smith, Lock,
+% "Equivalence of approaches to relational quantum dynamics in
+% and beyond quantum mechanics," PRX Quantum 2, 020301 (2021),
+% which is the modern treatment with quantum reference frames and
+% is the appropriate reference for the emergent proper-time
+% claims in §4.
+
+% TODO 1H: Add the foundational QBism reference.
+% Caves, Fuchs, Schack, "Quantum probabilities as Bayesian
+% probabilities," PRA 65, 022305 (2002). The current citation
+% Fuchs (2014) is a popular-level account; the 2002 paper is the
+% technical foundation and should be cited alongside it in §7.
+
+% TODO 1I: Cite Wall (2012).
+% "Proof of the generalized second law for rapidly changing
+% fields and arbitrary horizon slices," PRD 85, 104049 (2012).
+% Relevant to the Raychaudhuri + entropy argument in §5 and to
+% the generalised second law claims in §7.
+
 
 % ----------------------------------------------------------------
 % SECTION 2 — MOTIVATING HEURISTICS
@@ -305,18 +407,36 @@ $S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$, which
 none of the three programmes establishes.
 
 
-We proceed in two complementary way. First, 
-we construct explicit microstates: individual terms of the 
-Unruh thermal ensemble, realized as helicity-anticorrelated 
-Bell states of photons sourced by a bilocal driving term, each 
-corresponding to a single quantum measurement event with a 
-definite energy-momentum transfer. Second, and more 
-fundamentally, we develop an information-theoretic framework 
-that makes this identification natural: 
-massive matter as a timelike channel sampling internal degrees 
-of freedom at the Bremermann--Nyquist rate $mc^2/h$, massless 
-quanta as pure carriers between such channels, and horizons as 
-the spacelike surfaces at which channel handoffs occur.
+The paper has a two-layer structure that readers may wish 
+to enter differently depending on background. 
+The \emph{heuristic layer} (Section~\ref{sec:heuristics}) 
+requires only Landauer's principle, the Unruh effect, and 
+Newton's law; it recovers standard black hole thermodynamics 
+from a temperature-free kinematic bound and is 
+self-contained. The \emph{construction layer} 
+(Sections~\ref{sec:microstates}--\ref{sec:ppwave}) is the 
+technically precise core: a Bell state of photons with 
+anticorrelated helicities, sourced by a bilocal term in 
+the action, generates an Aichelburg--Sexl pp-wave at the 
+Rindler horizon; applying the Raychaudhuri equation to the 
+resulting null congruence yields the central result 
+$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ event by 
+event, with no thermodynamic averaging. 
+Sections~\ref{sec:erepr}--\ref{sec:eft} apply this 
+construction: the AS longitudinal shift is identified as 
+the flat-space, microstate-level realisation of 
+entanglement-generated geometry; the Carnot efficiency 
+bound and the Unruh--Landauer bound are shown to be the 
+same inequality viewed from opposite directions; and the 
+GHY term is derived as the effective action for one 
+Rindler wedge after integrating out the other in the 
+path integral. Readers primarily interested in the 
+quantum information content may read 
+Sections~\ref{sec:heuristics}, \ref{sec:microstates}, 
+and~\ref{sec:erepr} as a self-contained arc; readers 
+primarily interested in the geometric result may proceed 
+directly from Section~\ref{sec:microstates} to 
+Section~\ref{sec:ppwave}.
 
 
 The microstate construction 
@@ -685,12 +805,37 @@ and energy $E = \hbar\omega$, identifying the thrust quantum of
 Section~\ref{sec:heuristics} with a single photon whose 
 polarization outcome, upon detection, is the classical bit 
 acquired by each observer. The Bell state is the natural 
-completion of the CPT\footnote{PCT in Bisognano--Wichmann.} symmetry between wedges, which by the 
+completion of the PCT symmetry between wedges, which by the 
 Bisognano--Wichmann theorem~\cite{bisognano1975duality} is 
 implemented by the modular conjugation operator $J$ mapping 
 the right wedge algebra to the left wedge algebra,
 and as we discuss in Section~\ref{sec:ppwave}, the photons
 imprint a definite geometric signature onto the horizon.
+
+The anticorrelated helicity assignment in both 
+constructions traces to the same algebraic symmetry. 
+In the bilocal construction, the Bell 
+state~\eqref{eq:microstate_vec} is the unique two-photon 
+state invariant under the Bisognano--Wichmann modular 
+conjugation $J$, which implements PCT between the two 
+Rindler wedges and simultaneously flips 
+$\lambda \to -\lambda$. In the zig-zag, PCT maps the 
+right-helicity Weyl spinor $\psi_R$ to the left-helicity 
+spinor $\psi_L$---precisely the same operation, now 
+acting along the worldline rather than across a spatial 
+horizon. The anticorrelated pair in each case is the 
+PCT-invariant configuration of two massless helicity 
+eigenstates; the bilocal Bell state and the Dirac 
+4-spinor are therefore the same object at different 
+codimension: one lives on the $(1{+}1)$-dimensional 
+worldline, the other on the $(2{+}1)$-dimensional 
+horizon. The Lorentz algebra decomposition
+\begin{equation}
+\mathfrak{so}(3,1) \cong \mathfrak{su}(2) \times \mathfrak{su}(2)
+\end{equation}
+is the common algebraic statement: 
+the two $\mathfrak{su}(2)$ factors label the two 
+helicity sectors that PCT/$J$ exchanges in both cases.
 
 %------------------------------------------------------
 \subsection{A Source and Two Observers}
@@ -748,7 +893,7 @@ the symmetric double-null gauge condition
     A_+(z) = 0, \qquad A_-(z) = 0,
 \label{eq:doublenull}
 \end{equation}
-so that the gauge field is supported entirely on the transverse components $\mathbf{A}_\perp = (A^x, A^y)$. This gauge respects the CPT symmetry that swaps the two wedges $(z^+ \leftrightarrow z^-)$ simultaneously with $(R \leftrightarrow L)$, and therefore treats both observers symmetrically by construction. The residual gauge freedom is fixed by requiring $\partial_i A^i = 0$ in the transverse plane, leaving precisely the two physical helicity degrees of freedom $\epsilon^i_{(\lambda)}$ with $\lambda = \pm 1$; consistency with 
+so that the gauge field is supported entirely on the transverse components $\mathbf{A}_\perp = (A^x, A^y)$. This gauge respects the PCT symmetry that swaps the two wedges $(z^+ \leftrightarrow z^-)$ simultaneously with $(R \leftrightarrow L)$, and therefore treats both observers symmetrically by construction. The residual gauge freedom is fixed by requiring $\partial_i A^i = 0$ in the transverse plane, leaving precisely the two physical helicity degrees of freedom $\epsilon^i_{(\lambda)}$ with $\lambda = \pm 1$; consistency with 
 Maxwell's equations and the absence of over-determination are 
 verified in Appendix~\ref{gauge_consistency}.
 
@@ -773,7 +918,7 @@ polarization vectors
     \epsilon^i_{(+1)} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\i\end{pmatrix}, \qquad
     \epsilon^i_{(-1)} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix}.
 \end{equation}
-The two terms in~\eqref{eq:bilocal_vec} are related by the CPT transformation 
+The two terms in~\eqref{eq:bilocal_vec} are related by the PCT transformation 
 in the sense of Bisognano--Wichmann~\cite{bisognano1975duality}, which maps the 
 right wedge algebra to the left wedge algebra and simultaneously flips 
 $\lambda \to -\lambda$.
@@ -793,11 +938,11 @@ the unique source consistent with the algebraic
 symmetry of the Rindler vacuum.
 
 The symmetrization is therefore not an ad hoc choice but the 
-unique assignment consistent with CPT symmetry and angular 
+unique assignment consistent with PCT symmetry and angular 
 momentum conservation at the emission vertex: a scalar source 
 carries zero angular momentum, so the emitted pair must satisfy 
 $\lambda_R + \lambda_L = 0$, forcing anticorrelated helicities; 
-CPT then fixes the relative phase between the two terms, and 
+PCT then fixes the relative phase between the two terms, and 
 the total angular momentum vanishes in both.
 
 
@@ -821,11 +966,11 @@ The sourced Lagrangian reads
 \end{aligned}
 \label{eq:bilocal_lag}
 \end{equation}
-where the two creation operator pairs correspond to the two CPT-related helicity 
+where the two creation operator pairs correspond to the two PCT-related helicity 
 assignments. The interaction term in~\eqref{eq:bilocal_lag} is a two-mode squeezing 
 interaction at frequency $\omega$, now resolved by helicity and symmetrized over 
 both assignments: it is the direct vector-field analogue of the scalar squeezing 
-interaction~\cite{gerry2023introductory}, with the CPT symmetry between wedges 
+interaction~\cite{gerry2023introductory}, with the PCT symmetry between wedges 
 made explicit. The photon pair carries total angular momentum zero in each term, 
 consistent with emission from a scalar source at $\mathcal{P}$.
 
@@ -887,7 +1032,7 @@ frequency $\omega$, the Unruh modes are
                        - \sinh\theta_\omega\; b^{L\dagger}_{\omega,-\lambda},
 \label{eq:bogoliubov}
 \end{equation}
-where $\tanh\theta_\omega = e^{-\pi\omega c/a}$ encodes the Unruh distribution at acceleration $a$, and the CPT symmetry between wedges is reflected in the 
+where $\tanh\theta_\omega = e^{-\pi\omega c/a}$ encodes the Unruh distribution at acceleration $a$, and the PCT symmetry between wedges is reflected in the 
 superposition over both helicity assignments in the Bell state. The transformation~\eqref{eq:bogoliubov} is the standard Bogoliubov relation for a massless field~\cite{unruh1976notes, birrell1984quantum}, now carrying a helicity label throughout. The Minkowski vacuum thermofield double state, in the Rindler basis reads, for each helicity sector,
 \begin{equation}
     |0\rangle_M^{(\lambda)}
@@ -1334,28 +1479,29 @@ information-bearing for one observer and external
 for another.
 
 %------------------------------------------------------
-\subsection{The Zig-Zag Mechanism as Proof of Concept}
+\subsection{The Zig-Zag Mechanism}
 \label{sec:zigzag}
 %------------------------------------------------------
 
 The channel picture is not an ad hoc construction: 
-the handoff event of Section~\ref{sec:handoff} is 
-already realised concretely in Penrose's zig-zag 
-interpretation of the Dirac 
-equation~\cite{penrose2006road}, confirming that 
-the Bremermann rate $mc^2/h$ is the Higgs interaction 
-rate rather than a heuristic. The Lorentz algebra 
-decomposes as
-\begin{equation}
-    \mathfrak{so}(3,1) \cong 
-    \mathfrak{su}(2) \times \mathfrak{su}(2),
-\end{equation}
-where the two $\mathfrak{su}(2)$ factors correspond 
-to opposite helicities~\cite{ryder1996quantum}. A 
-Dirac 4-spinor decomposes into two Weyl 2-spinors 
-of opposite helicity and equal and opposite momenta, 
-interacting at regular intervals via the Higgs field 
-at the Compton frequency.
+the handoff event of Section~\ref{sec:handoff} is the 
+Rindler-horizon version of a structure already present in 
+Penrose's zig-zag interpretation of the Dirac 
+equation~\cite{penrose2006road}. The zig-zag is, in 
+precise terms, the bilocal construction of 
+Section~\ref{sec:microstates} realised along a single 
+massive worldline rather than across a spacelike horizon. 
+The Higgs field plays the role of the bilocal source 
+$\mathcal{P}$; the two Weyl spinors of opposite helicity 
+play the role of the two photons propagating to 
+$\mathcal{R}$ and $\mathcal{L}$; each Higgs interaction 
+is a handoff event in the sense of 
+Section~\ref{sec:handoff}, depositing one quantum of 
+action $\hbar$ and producing one sample of proper time 
+rather than one increment of horizon area. The 
+Bremermann rate $mc^2/h$ is the Higgs interaction rate; 
+the bilocal construction is its $(3{+}1)$-dimensional 
+horizon counterpart.
 
 \begin{figure}[h]
 \centering
@@ -1378,7 +1524,47 @@ of Section~\ref{sec:handoff}: it deposits one
 quantum of action $\hbar$, produces one sample of 
 proper time, records one helicity outcome, and 
 increments the matter-memory of the particle by 
-one Bremermann sample. Mass emerges from the 
+one Bremermann sample.
+
+The anticorrelated helicity assignment in both constructions 
+has a common algebraic origin in the Lie algebra decomposition 
+already noted above. The Bisognano--Wichmann modular 
+conjugation $J$ acts on right-wedge photon creation operators 
+as
+%
+\begin{equation}
+    J\, a^{R\dagger}_{k,\lambda}\, J^{-1} 
+    = a^{L\dagger}_{-k,-\lambda},
+\end{equation}
+%
+flipping helicity and reversing the spacelike separation 
+direction $R \leftrightarrow L$. The PCT operator $\Theta$ 
+acts on a right-handed Weyl spinor as
+%
+\begin{equation}
+    \Theta\, \psi_R(t,\mathbf{x})\, \Theta^{-1} 
+    \propto \psi_L(-t,-\mathbf{x}),
+\end{equation}
+%
+flipping helicity and reversing the timelike separation 
+direction $t \to -t$. In both cases the operation is the 
+same at the representation-theoretic level: exchange of 
+the two $\mathfrak{su}(2)$ factors of 
+$\mathfrak{so}(3,1) \cong \mathfrak{su}(2) \times 
+\mathfrak{su}(2)$, which is what helicity-flip means 
+algebraically. The operators $J$ and $\Theta$ act on 
+different Hilbert spaces and are not equal; what they 
+share is that they both select the same class of 
+invariant configuration --- anticorrelated helicities 
+--- because PCT-invariance forces that choice 
+independently of whether the separation between the two 
+helicity sectors is spacelike (Rindler horizon) or 
+timelike (Compton worldline). The bilocal Bell state 
+and the Dirac 4-spinor are therefore the same 
+PCT-invariant structure at different codimension, and 
+the Lie algebra is the common home of both.
+
+Mass emerges from the 
 regularity of these interactions: a particle is 
 massive because it undergoes repeated Higgs 
 interactions at the Compton frequency, and its 
@@ -1387,9 +1573,16 @@ $E = \hbar\omega$. Proper time along a worldline
 is then a foliation by discrete handoff events, 
 each separating the causal past from the causal 
 future of that interaction---the one-dimensional 
-analogue of the Rindler horizon, and matching 
-the holographic screen picture of 
-Verlinde~\cite{entropic}.a
+analogue of the Rindler horizon, and
+matching the holographic screen picture of 
+Verlinde~\cite{entropic}. The one-dimensional handoff 
+of the zig-zag and the horizon handoff of the bilocal 
+construction are therefore the timelike and spacelike 
+faces of the same elementary event: a PCT-invariant 
+exchange of one quantum of action between two massless 
+helicity eigenstates.
+
+
 
 % Section 5
 \section{pp-Wave Geometry and Action}
@@ -1770,13 +1963,13 @@ We consider in this section the case where $\mathcal{L}$ and $\mathcal{R}$ are m
 
 This reflects the energy back to the future sink 
 $\mathcal{F}$, located at $(t,z) = (1,0)$, which is 
-the CPT image of $\mathcal{P}$ under the combined 
+the PCT image of $\mathcal{P}$ under the combined 
 time-reversal and parity operation that swaps past 
 and future wedges. $\mathcal{F}$ plays the role of 
 a final absorber, receiving the reflected photons 
 and resetting the field state; its existence is 
 required by the reversibility of the ideal mirror 
-cycle and by the CPT symmetry of the bilocal 
+cycle and by the PCT symmetry of the bilocal 
 construction. The reflection is reversible in the 
 sense that the mirrors do not retain a persistent 
 copy of the information that they temporarily store.
@@ -2529,7 +2722,7 @@ Coulomb condition $\partial^i A_i = 0$:
           for a purely transverse source.
 \end{enumerate}
 The gauge is therefore internally consistent and does not over-constrain the physical 
-degrees of freedom. The CPT wedge-swap symmetry is preserved throughout: 
+degrees of freedom. The PCT wedge-swap symmetry is preserved throughout: 
 conditions on $A_+$ and $A_-$ are imposed symmetrically, and neither null direction 
 is privileged over the other.
 
