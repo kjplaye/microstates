@@ -488,7 +488,8 @@ Section~\ref{sec:ppwave} develops how the
 Gibbons--Hawking--York (GHY) horizon boundary term~\cite{gibbons1977action}
 counts matter's information as action and models 
 our entangled photons as AS pp-waves that create 
-space at the wedge horizons, following the gravitational shockwave framework of Dray, 't Hooft \cite{dray1985gravitational}, and others; the central result 
+space at the wedge horizons,
+following the gravitational shockwave framework of Dray and 't~Hooft~\cite{dray1985gravitational,hooft1996scattering}, and others; the central result 
 is that the GHY boundary term equals the matter 
 action event by event, $S_{GHY}|_\mathcal{H} = 
 S_{\text{matter}}$.
@@ -731,12 +732,28 @@ The Unruh--Landauer relation and the Bekenstein bound
 are therefore the same inequality: the former is its 
 acceleration-frame expression, the latter its 
 position-space expression, and the Rindler horizon is 
-the surface at which the two descriptions coincide. 
-To our knowledge, the temperature-free 
-form~\eqref{eq:UL} derived by eliminating $T$ between 
-Landauer's principle and the Unruh effect, and its 
-identification with the Bekenstein bound at the horizon, 
-has not appeared previously in this form.
+the surface at which the two descriptions coincide.
+The covariant generalisation of the Bekenstein bound to arbitrary null 
+hypersurfaces is the Bousso bound~\cite{bousso1999covariant}, which 
+bounds entropy on any non-expanding null congruence by the area of its 
+generating surface. The Raychaudhuri derivation of 
+Section~\ref{sec:ppwave} operates precisely on such a congruence; the 
+present construction can be read as a microstate-level realisation of the Bousso bound, with each handoff event contributing one Planck-area patch to the light-sheet.
+
+
+Pesci~\cite{pesci2007unruh} derived the covariant entropy bound from the 
+Unruh temperature by applying the second law of thermodynamics across 
+local Rindler horizons, the closest precursor to the present argument. 
+The present bound~\eqref{eq:UL} differs in two respects: temperature is 
+eliminated entirely by substituting the Unruh relation into Landauer's 
+principle rather than retained as an input to the second law, yielding a 
+purely kinematic bound depending only on acceleration; and the bound is 
+applied to individual carrier quanta rather than to a bulk thermodynamic 
+flux. The identification of~\eqref{eq:UL} with the Bekenstein 
+bound~\cite{bekenstein1981universal} at the horizon condition $a = c^2/R$, 
+and the reading of both as the same inequality in different frames, 
+appears to be new in this form.
+
 
 % Section 3
 \section{Bilocal Microstate Construction}
@@ -1658,8 +1675,10 @@ horizons in opposite null directions.
 The transverse focusing of the AS pp-wave produces a calculable 
 increment in horizon area. We derive this using the Raychaudhuri 
 equation on the null congruence generating the Rindler horizon, 
-following Jacobson~\cite{jacobson1995thermodynamics}, but applied 
-here to a single microstate rather than a thermodynamic average.
+following Jacobson~\cite{jacobson1995thermodynamics} and consistent 
+with the generalized second law for Rindler horizons proved by 
+Wall~\cite{wall2010proof}, but applied here to a single microstate 
+rather than a thermodynamic or ensemble average.
 
 For a null congruence with generators $k^\mu$ and expansion 
 $\theta$, the Raychaudhuri equation gives
@@ -1717,7 +1736,12 @@ black hole are enhanced to a $\mathrm{BMS}_3$ algebra whose central
 charge determines the Bekenstein--Hawking entropy, but his programme 
 identifies the symmetry without specifying the physical process that 
 excites individual modes. The bilocal construction supplies that 
-process: each measurement event produces one AS pp-wave, which 
+process. The shockwave S-matrix programme of 't~Hooft~\cite{hooft1996scattering} 
+established that the longitudinal AS shift is the fundamental dynamical 
+ingredient for horizon information exchange, working at the level of the
+full S-matrix; the present construction realises the same shift at the 
+level of a single microstate.
+Each measurement event produces one AS pp-wave, which 
 deposits one supertranslation at the Rindler horizon, exciting one 
 mode of the $\mathrm{BMS}_3$ algebra.
 This microstate structure is consistent with Carlip's result: 
@@ -2642,7 +2666,7 @@ Minkowski vantage point maintained throughout.
 
 % Section 10
 \section*{Acknowledgements}
-I am greatful to Claude for useful discussions.
+I am grateful to Claude for useful discussions.
 
 % Section 11
 \section{Appendix: Consistency of the Double-Null Gauge Condition}
