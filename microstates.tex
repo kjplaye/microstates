@@ -531,6 +531,18 @@ Appendix~\ref{gauge_consistency}.
 \section{Motivating Heuristics}
 \label{sec:heuristics}
 
+The heuristic arguments of this section are not 
+presented as derivations of the standard results,
+those results are well established, but as 
+a first demonstration that the Unruh--Landauer 
+language is consistent with them, recovering 
+correct answers from the new vocabulary without 
+additional assumptions. The construction layer 
+of Sections~\ref{sec:microstates}--\ref{sec:ppwave} 
+then shows the same consistency holds 
+microstate by microstate, which is the 
+new content.
+
 Landauer's principle \cite{landauer1961irreversibility} is conventionally 
 formulated for information erasure. Bennett~\cite{bennett1982thermodynamics} showed that 
 measurement itself can in principle be performed reversibly; it is the 
@@ -1825,17 +1837,39 @@ geometric count and the informational count must agree
 event by event. The calculation below verifies that 
 they do, closing the consistency loop.
 
-Each absorption sample deposits one quantum of action $\hbar$ into 
-the detector's matter-memory.
-The total action accumulated across 
-all measurement events is therefore
+
+Each absorption event transfers null energy $\hbar\omega_i$ across 
+the horizon. The matter action at the horizon is defined as the 
+null-surface integral of the stress-energy, evaluated over the 
+horizon generators:
 %
 \begin{equation}
-S_{\text{matter}} = \sum_i \hbar\omega_i,
+S_{\text{matter}} 
+\;=\; \sum_i \int T_{uu}^{(i)}\,du\,d^2x_\perp 
+\;=\; \sum_i \hbar\omega_i,
 \end{equation}
 %
-where the sum is over all absorption samples, each contributing 
-energy $\hbar\omega_i$ to the detector mass. This is the 
+where the second equality follows from energy conservation 
+applied to each photon. This is the null-surface analog of 
+the worldline action $\int E\,d\tau$: on a null surface the 
+affine parameter $u$ plays the role that proper time plays 
+on a timelike worldline, and the integral $\int T_{uu}\,du$ 
+plays the role of $\int E\,d\tau$. 
+
+The two are not the same integral. After the absorption event, 
+the detector's worldline action continues to accumulate as 
+$\hbar\omega_i\,\Delta\tau$ for all subsequent proper time 
+$\Delta\tau$, encoding the Bremermann memory of the event. 
+The equality $S_{GHY}|_{\mathcal{H}} = S_{\text{matter}}$ 
+holds for the null-surface version of the matter action, 
+evaluated at the moment of horizon crossing; it is a statement 
+about the handoff event itself, not about the subsequent 
+worldline evolution. The Rindler proper time $\eta$ and the 
+affine null parameter $u$ are related by $u \propto e^{-a\eta}$, 
+and it is this exponential relation---not a simple 
+proportionality---that is responsible for the Unruh 
+temperature and that distinguishes the null-surface action 
+from the worldline action. This is the 
 matter action counted sample by sample: one quantum of action 
 per event, one event per emitted pair.
 
@@ -2404,19 +2438,44 @@ bulk Einstein--Hilbert action vanishes on-shell:
 S_L\big|_{\text{on-shell}} 
 = \frac{1}{16\pi G}\int_L d^4x\sqrt{g}\,R = 0.
 \end{equation}
-%
-The left wedge contributes only through the 
-horizon coupling and the matter action:
+
+In a standard EFT path integral, integrating out 
+the left wedge would produce two contributions: 
+the gravitational boundary term $S_{GHY}$ (from 
+integration by parts of the bulk kinetic term) 
+and the matter action $S_{\text{matter}}^L$ 
+(from the left-moving photon). Treated as 
+independent, these would give 
+$e^{-S_{GHY} - S_{\text{matter}}^L}$, 
+and the effective action would be 
+$S_R + S_{GHY} + S_{\text{matter}}^L = 
+S_R + 2\hbar\omega$.
+
+The central result of 
+Section~\ref{sec:ppwave} resolves this: 
+$S_{GHY}$ and $S_{\text{matter}}^L$ are not 
+independent contributions but two descriptions 
+of the same physical event --- one photon 
+crossing the horizon --- counted geometrically 
+and informationally. Adding them separately 
+double-counts that event. The correct horizon 
+coupling is therefore $S_{\mathcal{H}} = 
+S_{GHY}$ alone, with $S_{\text{matter}}^L$ 
+already subsumed into the geometric boundary 
+term. At the saddle point:
 %
 \begin{equation}
 \left.
 \int \mathcal{D}g_L\,\mathcal{D}\phi_L\;
 e^{-S_L - S_{\mathcal{H}}}
 \right|_{\text{saddle}}
-= e^{-S_{GHY}|_{\mathcal{H}} 
-    - S_{\text{matter}}^L}.
+= e^{-S_{GHY}|_{\mathcal{H}}},
 \end{equation}
 %
+where $S_L|_{\text{on-shell}} = 0$ by 
+Ricci-flatness, and the effective action for 
+the right wedge is
+
 Since $S_{GHY}|_{\mathcal{H}} = 
 S_{\text{matter}}^L = \sum_i\hbar\omega_i$ 
 by equation~\eqref{eq:GHY_micro}, the effective 
