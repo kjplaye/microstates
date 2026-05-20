@@ -335,10 +335,14 @@ helicity-anticorrelated Bell states of photons, sourced by a
 bilocal driving term in the Rindler setting. Each microstate 
 produces an Aichelburg--Sexl pp-wave at the Rindler horizon; 
 applying the Raychaudhuri equation to the resulting null 
-congruence yields an event-by-event equality 
-$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ between the 
-Gibbons--Hawking--York boundary term and the matter action, 
-with the Planck area $\ell_P^2$ as the conversion factor. 
+congruence yields an event-by-event consistency check 
+$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$: the 
+Gibbons--Hawking--York boundary term and the matter action 
+count the same measurement events in geometric and 
+informational language respectively, with the Planck area 
+$\ell_P^2$ as the conversion factor, confirming that the 
+microstate identification is internally consistent across 
+all descriptions simultaneously.
 The Carnot efficiency bound and the Unruh--Landauer bound 
 are shown to be the same inequality viewed from opposite 
 directions. We discuss the EFT interpretation, in which the 
@@ -396,15 +400,24 @@ strominger2016gravitational} identifies the symmetry
 algebra whose modes are excited at the horizon but does 
 not specify the physical process that excites individual 
 modes; the bilocal construction supplies that process. 
+
 In each case the convergence is not accidental: a single 
 physical picture---quantum measurement events as 
 energy--momentum transfers in the Rindler frame---has 
 enough internal structure to reproduce all three sets of 
-results without additional assumptions. The new result is 
+results without additional assumptions.
+The central consistency check of the construction is 
 the event-by-event equality 
-$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$, which 
-none of the three programmes establishes.
-
+$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$: 
+the identity itself is not claimed to be new; its role 
+here is diagnostic. The fact that it holds microstate by 
+microstate---rather than only as a thermodynamic 
+average---is what validates the identification of 
+measurement events as the physical microstates each 
+programme requires. An identification that survived only 
+at the ensemble level would be consistent with many 
+underlying microstructures; one that holds event by 
+event is a much sharper constraint.
 
 The paper has a two-layer structure that readers may wish 
 to enter differently depending on background. 
@@ -1440,8 +1453,30 @@ separate. This is not a limitation of the framework
 but its natural setting, and it is structurally the 
 same situation that arises in Wigner's friend 
 scenarios~\cite{brukner2018no} applied to 
-gravitational systems --- a point developed in 
+gravitational systems---a point developed in 
 Section~\ref{sec:carnot}.
+
+The multi-observer structure exposed here is not 
+merely an analogy with Wigner's friend: it is 
+precisely that scenario, instantiated in a 
+gravitational context with causal separation enforced 
+by a horizon rather than by a laboratory door. 
+Whether the relational~\cite{rovelli1996relational}, 
+QBist~\cite{fuchs2014introducing}, or Everettian 
+frameworks are inequivalent in this setting is an 
+open question with physical consequences: different 
+resolutions imply different answers to whether 
+$\mathcal{R}$'s microstate count and $\mathcal{L}$'s 
+microstate count are consistent as objective facts 
+or only as relational ones. The information-theoretic 
+objects introduced here---the spatial bit, the PVM 
+projection, the handoff event, the matter-memory---are 
+the vocabulary in which that question must eventually 
+be posed, but they do not answer it. Multi-observer 
+quantum mechanics in the presence of horizons is 
+largely uncharted, and the present construction 
+should be read partly as a map of that problem space.
+
 
 %------------------------------------------------------
 \subsection{Types of Particles and Interactions}
@@ -1771,8 +1806,28 @@ absorbed photon.
 \subsection{Action and the Gravitational Boundary}
 \label{sec:microstate_action}
 
+The equality derived below is an internal consistency 
+check on the microstate identification, not a novel 
+result claimed in isolation. The thermodynamic 
+interpretation of the GHY boundary term on null 
+surfaces is established by Chakraborty and 
+Padmanabhan~\cite{chakraborty2020boundary}; the 
+broader programme of 
+Padmanabhan~\cite{padmanabhan2010thermodynamical} 
+identifies gravitational boundary terms as the 
+fundamental degrees of freedom at the ensemble level. 
+What the present construction contributes is not the 
+identity $S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ 
+but its realisation microstate by microstate: if 
+individual quantum measurement events genuinely are 
+the microstates underlying each area increment, the 
+geometric count and the informational count must agree 
+event by event. The calculation below verifies that 
+they do, closing the consistency loop.
+
 Each absorption sample deposits one quantum of action $\hbar$ into 
-the detector's matter-memory. The total action accumulated across 
+the detector's matter-memory.
+The total action accumulated across 
 all measurement events is therefore
 %
 \begin{equation}
@@ -1942,7 +1997,27 @@ independently of which basis is chosen. The question
 then has a binary answer: 
 $\mathcal{L}$ (left wedge) or $\mathcal{R}$ (right wedge). 
 This is a \emph{spatial bit}, a bit that encodes not a 
-polarization state but a location in space.
+polarization state but a location in space. The spatial bit is where the observer-relativity of 
+the construction becomes acute. From $\mathcal{R}$'s 
+perspective the answer to \textit{``who observed 
+$H_+$?''} is a definite classical fact, recorded in 
+matter-memory. From $\mathcal{P}$'s perspective before 
+any measurement, the answer is indeterminate: the Bell 
+state assigns no definite location to $H_+$. From the 
+full Minkowski perspective after both measurements, the 
+two records are perfectly correlated but the question 
+of \emph{when} the spatial fact became definite has no 
+observer-independent answer. A PVM by $\mathcal{R}$ on 
+a Bell state does not reveal a pre-existing spatial 
+fact; it \emph{creates} the spatial bit as a classical 
+record in $\mathcal{R}$'s matter-memory. Whether that 
+creation is an objective event or a relational one is 
+the hard problem of multi-observer quantum mechanics, 
+unresolved in flat space and unresolved here. The 
+construction does not dissolve this tension; it 
+localises it precisely, identifying the PVM projection 
+and the handoff event as the exact locus at which the 
+problem lives.
 
 Each measurement event has exactly two
 irreducible constituents: one quantum of action $\hbar$ written persistently into the
@@ -2592,12 +2667,32 @@ questions for future work.
 
 \subsection{On Subjectivity}
 The observer-relativity of the microstate construction 
-is a feature, not a gap. The Bekenstein--Hawking area 
-and horizon entropy are objective; the present 
-construction provides the observer-relative physical 
-process --- a quantum measurement event with a definite 
-energy--momentum transfer --- that generates each area 
-increment for a given Rindler observer.
+creates a genuine tension, and that tension is 
+intentional. The Bekenstein--Hawking area and horizon 
+entropy are objective, observer-independent quantities. 
+The microstates identified here---PVM projections by a 
+specific Rindler observer $\mathcal{R}$, recording a 
+spatial bit in a specific matter-memory---are 
+observer-relative. How observer-relative microstate 
+counts combine into an observer-independent area law is 
+not resolved here. This gap is not papered over: it is 
+the central open problem the construction exposes. 
+Multi-observer quantum mechanics lacks a consensus 
+account, even in flat space, of how different agents' 
+measurement records constitute a single objective 
+world. In the gravitational context---with causally 
+separated observers, non-commuting measurement 
+algebras across a horizon, and a spatial bit whose 
+definiteness is frame-dependent---the problem is 
+sharper, not softer. The present construction provides 
+the information-theoretic vocabulary in which the 
+problem must be stated: spatial bits, PVM projections, 
+handoff events, matter-memory, and the Planck area as 
+conversion factor between geometric and informational 
+counts. Whether any of this vocabulary is also part of 
+the problem's resolution remains entirely open, and 
+frankly that question seems at least as important as 
+the consistency checks this paper establishes.
 
 The Lorentz covariance of the construction follows 
 from the same observation. The frame is fixed by 
