@@ -419,6 +419,26 @@ at the ensemble level would be consistent with many
 underlying microstructures; one that holds event by 
 event is a much sharper constraint.
 
+A word on the nature of the central claim is appropriate. 
+The identification of quantum measurement events as 
+gravitational microstates is a conceptual proposal, not a 
+derivation from deeper axioms. We do not claim to prove 
+that measurement events \emph{must} be the microstates --- 
+that direction would require a complete theory of 
+multi-observer quantum mechanics in curved spacetime, which 
+does not yet exist. What we claim is weaker and, we 
+believe, more honest: the identification \emph{can} work. 
+The Unruh--Landauer relation is consistent with standard 
+black hole thermodynamics; the bilocal microstate 
+construction is internally consistent; and the 
+event-by-event equality 
+$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ 
+closes the consistency loop. No inconsistency has been 
+found. Whether the identification is \emph{necessary} --- 
+whether any consistent theory of quantum gravity must 
+realise it --- is a separate question this paper 
+deliberately leaves open.
+
 The paper has a two-layer structure that readers may wish 
 to enter differently depending on background. 
 The \emph{heuristic layer} (Section~\ref{sec:heuristics}) 
@@ -528,20 +548,30 @@ We finish with gauge consistency in
 Appendix~\ref{gauge_consistency}.
 
 % Section 2
-\section{Motivating Heuristics}
+\section{The Unruh--Landauer Relation and Verlinde-Style Heuristics}
 \label{sec:heuristics}
 
-The heuristic arguments of this section are not 
-presented as derivations of the standard results,
-those results are well established, but as 
-a first demonstration that the Unruh--Landauer 
-language is consistent with them, recovering 
-correct answers from the new vocabulary without 
-additional assumptions. The construction layer 
-of Sections~\ref{sec:microstates}--\ref{sec:ppwave} 
-then shows the same consistency holds 
-microstate by microstate, which is the 
-new content.
+This section contains two distinct parts that should be read 
+differently. The Unruh--Landauer relation of 
+Section~\ref{sec:UL} is an exact result: substituting the 
+Unruh temperature into Landauer's bound eliminates temperature 
+entirely, leaving a purely kinematic inequality depending only 
+on acceleration. No approximation is involved.
+
+The subsequent derivations of 
+Sections~\ref{sec:momentum}--\ref{sec:bekenstein} are 
+explicitly Verlinde-style heuristics~\cite{entropic}: they 
+recover standard black hole thermodynamics from Newton's laws 
+and the Unruh--Landauer relation, in the same spirit that 
+Verlinde recovers Newton's laws from entropy gradients. The 
+hand-waving is intentional and acknowledged. The purpose is 
+not to re-derive known results rigorously but to show that 
+the Unruh--Landauer language is consistent with them --- 
+running Verlinde's programme in reverse, as noted in the 
+Introduction. The construction layer of 
+Sections~\ref{sec:microstates}--\ref{sec:ppwave} then 
+establishes the same consistency microstate by microstate, 
+without heuristic approximation.
 
 Landauer's principle \cite{landauer1961irreversibility} is conventionally 
 formulated for information erasure. Bennett~\cite{bennett1982thermodynamics} showed that 
@@ -568,9 +598,8 @@ on holographic screens, the present argument recovers black
 hole thermodynamics from Newton's law of gravitation and the 
 Unruh--Landauer relation.
 
-
-\subsection{The Unruh-Landauer Relation}
-
+\subsection{The Unruh--Landauer Relation}
+\label{sec:UL}
 
 Landauer's principle bounds the minimum energy of any physical 
 carrier representing $\Delta H$ nats of information\footnote{We 
@@ -659,8 +688,19 @@ practically always satisfied for terrestrial observers,
 and is only approached near astrophysical or Planck-scale 
 accelerations.
 
-
 \subsection{Momentum Transfer and Acceleration}
+\label{sec:momentum}
+
+\noindent\textit{Note: the remainder of this section uses 
+Newtonian gravity and recovers correct relativistic results 
+by the same coincidence exploited by Verlinde~\cite{entropic} 
+and Bekenstein~\cite{bekenstein} --- the Newtonian 
+approximation happens to give the right answer at the 
+Schwarzschild scale, even though it formally breaks down 
+there. We make no attempt to disguise this.}
+
+\medskip
+
 In what follows, standard results emerge as consequences of the Unruh-Landauer relation and Newton's laws. The energy transfer $\Delta E$ implied by the relation is carried by a physical quantum, matter or radiation,  mediating the measurement interaction as a \emph{thrust quantum}. For a relativistic carrier, the associated momentum transfer is
 \begin{equation}
 \Delta p = \frac{\Delta E}{c}.
@@ -722,7 +762,8 @@ Evaluating the acceleration at $r = r_s$ gives the surface gravity of the detect
 \end{equation}
 in agreement with the standard Schwarzschild result. This is the acceleration that appears in the Unruh temperature associated with the detector's horizon, $T = \hbar \kappa / 2\pi k_B c$, providing an internal consistency check on the framework.
 
-\subsection{Bekenstein-Hawking Entropy}
+\subsection{Bekenstein--Hawking Entropy}
+\label{sec:bekenstein}
 
 Returning to the Unruh-Landauer relation~\eqref{eq:UL} and 
 substituting the surface gravity $\kappa$ for $a$---justified 
@@ -1468,16 +1509,36 @@ scenarios~\cite{brukner2018no} applied to
 gravitational systems---a point developed in 
 Section~\ref{sec:carnot}.
 
+
 The multi-observer structure exposed here is not 
 merely an analogy with Wigner's friend: it is 
 precisely that scenario, instantiated in a 
 gravitational context with causal separation enforced 
-by a horizon rather than by a laboratory door. 
+by a horizon rather than by a laboratory door.
+
+A complete formalism for multi-observer quantum 
+mechanics --- one that specifies consistently how 
+causally separated observers' measurement records 
+combine into a single description --- does not yet 
+exist. The Wigner's friend no-go 
+theorems~\cite{brukner2018no} and the 
+Frauchiger--Renner result~\cite{frauchiger2018quantum} 
+establish that the problem is sharp; the relational, 
+QBist, and Everettian programmes each dissolve it 
+differently rather than solving it. The present 
+construction does not require resolving this gap --- 
+it operates within a single observer's description --- 
+but it does require acknowledging it, since the 
+observer-independence of the Bekenstein--Hawking area 
+law is precisely the kind of combined description 
+that a complete multi-observer formalism would need 
+to underwrite.
+
 Whether the relational~\cite{rovelli1996relational}, 
 QBist~\cite{fuchs2014introducing}, or Everettian 
 frameworks are inequivalent in this setting is an 
-open question with physical consequences: different 
-resolutions imply different answers to whether 
+open question with physical consequences:
+different resolutions imply different answers to whether 
 $\mathcal{R}$'s microstate count and $\mathcal{L}$'s 
 microstate count are consistent as objective facts 
 or only as relational ones. The information-theoretic 
@@ -2790,7 +2851,11 @@ the central open problem the construction exposes.
 Multi-observer quantum mechanics lacks a consensus 
 account, even in flat space, of how different agents' 
 measurement records constitute a single objective 
-world. In the gravitational context---with causally 
+world --- and the Frauchiger--Renner 
+theorem~\cite{frauchiger2018quantum} shows this is 
+not merely a philosophical gap but a formal one, 
+with measurable consequences.
+In the gravitational context---with causally 
 separated observers, non-commuting measurement 
 algebras across a horizon, and a spatial bit whose 
 definiteness is frame-dependent---the problem is 
@@ -2898,13 +2963,27 @@ Minkowski vantage point maintained throughout.
                     \arrow[r, "\scalebox{0.7}{\shortstack{energy--momentum\\transfer}}"']
     & \text{Observation} \arrow[u, "\scalebox{0.7}{\shortstack{Bayesian\\update}}"']
 \end{tikzcd}
-\caption{Solid arrows denote subjective grounding relations: $A \to B$ means every instance of $B$ is physically realized by an instance of $A$, for a given observer. The dashed arrow denotes the Di\'osi--Penrose postulate, where the relation is claimed to hold objectively rather than observer-relatively.}
+\caption{Solid arrows denote subjective grounding relations 
+for a given observer: $A \to B$ means every instance of $B$ 
+is physically realised by an instance of $A$. This paper 
+establishes only the bottom and right solid arrows: proper 
+acceleration produces energy--momentum transfer, and 
+energy--momentum transfer underlies observation via Bayesian 
+update. Together these give a subjective path from 
+acceleration to quantum state reduction --- measurement 
+\emph{can} source gravitational effects consistent with 
+known thermodynamics. The dashed arrow is the 
+Di\'{o}si--Penrose postulate, which claims the reverse 
+direction holds \emph{objectively}: gravitational 
+self-interaction collapses the wavefunction. We do not 
+adopt this arrow. The diagram is explicitly asymmetric, 
+and that asymmetry is the point.}
 \label{fig:diagram}
 \end{figure}
 
 % Section 10
 \section*{Acknowledgements}
-I am grateful to Claude for useful discussions.
+Portions of this work were developed in dialogue with Claude (Anthropic). The author takes full responsibility for all claims.
 
 % Section 11
 \section{Appendix: Consistency of the Double-Null Gauge Condition}
