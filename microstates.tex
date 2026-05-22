@@ -1,3 +1,5 @@
+% PROMPT: We are working together on a paper that is currently very rough, we are at the big strokes phase. The eventual target is ArXiv, can you please take a look at it:
+
 %###################################
 %######### Critical Issues #########
 %###################################
@@ -329,226 +331,110 @@ between Landauer's principle and the Unruh effect yields a
 single acceleration-dependent bound on the energy cost of 
 information acquisition, from which the Schwarzschild radius, 
 surface gravity, and Bekenstein--Hawking area law follow via 
-Newton's second law alone. We construct explicit microstates 
-realizing individual terms of the Unruh thermal ensemble as 
-helicity-anticorrelated Bell states of photons, sourced by a 
-bilocal driving term in the Rindler setting. Each microstate 
-produces an Aichelburg--Sexl pp-wave at the Rindler horizon; 
-applying the Raychaudhuri equation to the resulting null 
-congruence yields an event-by-event consistency check 
-$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$: the 
-Gibbons--Hawking--York boundary term and the matter action 
-count the same measurement events in geometric and 
-informational language respectively, with the Planck area 
-$\ell_P^2$ as the conversion factor, confirming that the 
-microstate identification is internally consistent across 
-all descriptions simultaneously.
-The Carnot efficiency bound and the Unruh--Landauer bound 
-are shown to be the same inequality viewed from opposite 
-directions. We discuss the EFT interpretation, in which the 
-GHY term arises as the effective action for one Rindler wedge 
-after integrating out the other, and the structural parallel 
-with ER=EPR at the single-microstate level.}
+Newton's second law alone.
+Explicit microstates are constructed as helicity-anticorrelated 
+Bell states of photons sourced by a bilocal driving term; each 
+produces an Aichelburg--Sexl pp-wave at the Rindler horizon, and 
+the Raychaudhuri equation yields the event-by-event consistency 
+check $S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$: geometric 
+and informational counts of the same measurement events, with the 
+Planck area $\ell_P^2$ as the conversion factor. The Carnot 
+efficiency bound and the Unruh--Landauer bound are shown to be 
+the same inequality viewed from opposite directions, and the GHY 
+term arises as the effective action for one Rindler wedge after 
+integrating out the other.}
 
 % Section 1
 \section{Introduction}
 
-Two landmark results establish that gravity and Unruh thermodynamics are deeply intertwined. Jacobson showed that the Einstein equations can be derived from thermodynamic identities applied to local Rindler horizons, with horizon entropy playing the role of the fundamental quantity from which spacetime dynamics emerge~\cite{jacobson1995thermodynamics}. Verlinde extended this perspective, arguing that gravitational forces arise from entropy gradients on holographic screens, recasting gravity as an entropic rather than a fundamental interaction~\cite{entropic}. Both frameworks, however, operate at the level of bulk thermodynamics and leave open a prior question: what physical process underlies each individual entropy increment?
+Jacobson showed that the Einstein equations follow from thermodynamic 
+identities applied to local Rindler horizons~\cite{jacobson1995thermodynamics}; 
+Verlinde showed that gravitational forces arise from entropy gradients on 
+holographic screens~\cite{entropic}. Both frameworks operate at the level 
+of bulk thermodynamics and leave open a prior question: what physical 
+process underlies each individual entropy increment?
 
-We argue that the answer can be quantum measurement.
-Each act of information acquisition by a given physical 
-observer constitutes a discrete microstate event; the 
-collective backreaction of such events, together with 
-the causal correlations they induce, give rise to 
-gravitational effects as seen by that observer.
-Local quantum field theory near a black hole horizon is identical 
-to that of a uniformly accelerated observer in flat spacetime, so 
-the Unruh effect and the Hawking effect are the same computation 
-in different coordinates~\cite{unruh1976notes, hawking1975particle}.
+We argue the answer is quantum measurement. Each act of information 
+acquisition by a physical observer constitutes a discrete microstate event; 
+its energy--momentum transfer produces gravitational effects as seen by that 
+observer. Local quantum field theory near a black hole horizon is identical 
+to that of a uniformly accelerated observer in flat spacetime, so the Unruh 
+and Hawking effects are the same computation in different 
+coordinates~\cite{unruh1976notes, hawking1975particle}, and it is at this 
+shared locus that the identification is made precise.
 
+Three existing programmes arrive at closely related conclusions by different 
+routes. Jacobson~\cite{jacobson1995thermodynamics} derives the Einstein 
+equations from thermodynamic identities on local Rindler horizons but leaves 
+open what physical process underlies each entropy increment; the present 
+paper provides that process. Van~Raamsdonk~\cite{van2010building} showed, 
+in the AdS/CFT setting, that entanglement between two spatial regions 
+generates their geometric connection; the present construction realises the 
+same effect in flat Minkowski space, microstate by microstate, with an 
+explicit source. The BMS programme~\cite{carlip2018black, hawking2016soft, 
+strominger2016gravitational} identifies the symmetry algebra whose modes are 
+excited at the horizon but does not specify what excites individual modes; 
+the bilocal construction supplies that process. That a single starting 
+point---quantum measurement as energy--momentum transfer under proper 
+acceleration---reproduces all three sets of results without additional 
+assumptions is evidence that measurement events are not merely consistent 
+with these frameworks but describe the elementary process they collectively 
+require.
 
-The Bekenstein--Hawking area and the horizon entropy remain 
-objective, observer-independent quantities; what the 
-present construction provides is an identification of 
-the physical events underlying each area increment 
-\emph{from the perspective of a fixed Rindler observer}. 
-Whether observer-relative microstate counts sum 
-consistently to an observer-independent area law --- 
-that is, whether different Rindler observers' counts 
-agree when totalled over a complete set of measurement 
-events through the horizon --- is an important open 
-question that the present paper does not resolve, and 
-we flag it explicitly as future work in the Conclusion.
+The central technical result is the event-by-event equality 
+$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$: the 
+Gibbons--Hawking--York boundary term and the matter action count the 
+same measurement events in geometric and informational language 
+respectively, with the Planck area $\ell_P^2$ as the conversion factor. 
+Its role here is diagnostic. An identification of microstates that 
+survived only at the thermodynamic ensemble level would be consistent 
+with many underlying microstructures; one that holds event by event is 
+a sharper constraint, and that sharpness is what validates the proposal.
 
-Three existing programmes arrive at closely related 
-conclusions by different routes, and the present 
-construction makes contact with each. 
-Jacobson~\cite{jacobson1995thermodynamics} derives the 
-Einstein equations from thermodynamic identities on local 
-Rindler horizons but leaves open what physical process 
-underlies each entropy increment; the present paper 
-provides that process. 
-Van~Raamsdonk~\cite{van2010building} showed, in 
-the AdS/CFT setting, that entanglement between two spatial 
-regions generates the geometric connection between them, 
-working at the level of reduced density matrices and 
-entanglement entropy; the present construction realises 
-the same effect in flat Minkowski space, microstate by 
-microstate, with an explicit source. The BMS 
-programme~\cite{carlip2018black, hawking2016soft, 
-strominger2016gravitational} identifies the symmetry 
-algebra whose modes are excited at the horizon but does 
-not specify the physical process that excites individual 
-modes; the bilocal construction supplies that process. 
+The identification of quantum measurement events as gravitational 
+microstates is a conceptual proposal, not a derivation from deeper 
+axioms. We do not claim that measurement events \emph{must} be the 
+microstates --- that direction would require a complete theory of 
+multi-observer quantum mechanics in curved spacetime, which does not 
+yet exist. What we claim is weaker: the identification \emph{can} work. 
+The Unruh--Landauer relation is consistent with standard black hole 
+thermodynamics; the bilocal microstate construction is internally 
+consistent; and the event-by-event equality 
+$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ closes the consistency 
+loop. Whether the identification is \emph{necessary} is left open.
 
-In each case the convergence is not accidental: a single 
-physical picture---quantum measurement events as 
-energy--momentum transfers in the Rindler frame---has 
-enough internal structure to reproduce all three sets of 
-results without additional assumptions.
-The central consistency check of the construction is 
-the event-by-event equality 
-$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$: 
-the identity itself is not claimed to be new; its role 
-here is diagnostic. The fact that it holds microstate by 
-microstate---rather than only as a thermodynamic 
-average---is what validates the identification of 
-measurement events as the physical microstates each 
-programme requires. An identification that survived only 
-at the ensemble level would be consistent with many 
-underlying microstructures; one that holds event by 
-event is a much sharper constraint.
-
-A word on the nature of the central claim is appropriate. 
-The identification of quantum measurement events as 
-gravitational microstates is a conceptual proposal, not a 
-derivation from deeper axioms. We do not claim to prove 
-that measurement events \emph{must} be the microstates --- 
-that direction would require a complete theory of 
-multi-observer quantum mechanics in curved spacetime, which 
-does not yet exist. What we claim is weaker and, we 
-believe, more honest: the identification \emph{can} work. 
-The Unruh--Landauer relation is consistent with standard 
-black hole thermodynamics; the bilocal microstate 
-construction is internally consistent; and the 
-event-by-event equality 
-$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ 
-closes the consistency loop. No inconsistency has been 
-found. Whether the identification is \emph{necessary} --- 
-whether any consistent theory of quantum gravity must 
-realise it --- is a separate question this paper 
-deliberately leaves open.
-
-The paper has a two-layer structure that readers may wish 
-to enter differently depending on background. 
-The \emph{heuristic layer} (Section~\ref{sec:heuristics}) 
-requires only Landauer's principle, the Unruh effect, and 
-Newton's law; it recovers standard black hole thermodynamics 
-from a temperature-free kinematic bound and is 
-self-contained. The \emph{construction layer} 
-(Sections~\ref{sec:microstates}--\ref{sec:ppwave}) is the 
-technically precise core: a Bell state of photons with 
-anticorrelated helicities, sourced by a bilocal term in 
-the action, generates an Aichelburg--Sexl pp-wave at the 
-Rindler horizon; applying the Raychaudhuri equation to the 
-resulting null congruence yields the central result 
-$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ event by 
-event, with no thermodynamic averaging. 
-Sections~\ref{sec:erepr}--\ref{sec:eft} apply this 
-construction: the AS longitudinal shift is identified as 
-the flat-space, microstate-level realisation of 
-entanglement-generated geometry; the Carnot efficiency 
-bound and the Unruh--Landauer bound are shown to be the 
-same inequality viewed from opposite directions; and the 
-GHY term is derived as the effective action for one 
-Rindler wedge after integrating out the other in the 
-path integral. Readers primarily interested in the 
-quantum information content may read 
-Sections~\ref{sec:heuristics}, \ref{sec:microstates}, 
-and~\ref{sec:erepr} as a self-contained arc; readers 
-primarily interested in the geometric result may proceed 
-directly from Section~\ref{sec:microstates} to 
-Section~\ref{sec:ppwave}.
-
-
-The microstate construction 
-is the concrete quantum-mechanical realization of the channel 
-picture, and the channel picture is what makes each microstate 
-inevitable: a measurement event is a handoff between channels, 
-and a handoff has exactly the properties a gravitational 
-microstate must have. The central technical result, 
-$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$, sits precisely 
-at their intersection: it is simultaneously the statement that 
-horizon geometry counts measurement events microstate by 
-microstate, and that the Bekenstein spatial count of Planck-area 
-patches equals the Bremermann temporal count of action quanta, 
-with the Unruh--Landauer relation as the bridge connecting the 
-two directions of counting.
-
-A structuring choice runs throughout the paper: we work in the 
-non-thermal global Minkowski description rather than the thermal 
-Rindler description. The Rindler observer's thermal bath arises 
-from restricting to one wedge and tracing out the 
-other~\cite{fulling1973nonuniqueness,unruh1976notes,bisognano1975duality}; the 
-Minkowski vacuum is pure, and the individual microstates constructed 
-here are non-thermal. Temperature is not suppressed but relocated: 
-it is a derived quantity in the Rindler frame and absent as a 
-primitive in the Minkowski microstate picture. This vantage point 
-is maintained through Section~\ref{sec:erepr}; temperature 
-re-enters in Section~\ref{sec:carnot} not as a retreat to the 
-thermal description but as a demonstration that the non-thermal 
-microstate construction is rich enough to support a fully 
-reversible Carnot cycle at the individual microstate level, 
-with thermodynamic identities emerging as consequences.
-
-The approach taken here is a refactored version of the 
-Di\'osi--Penrose objective collapse 
-programme~\cite{penrose1996gravity, diosi1987universal} 
-in the following sense: where Di\'osi--Penrose postulates 
-that gravitational self-interaction objectively collapses 
-the wavefunction, we treat quantum measurement as a 
-subjective process mediated by energy--momentum transfer 
-and interpret state reduction as a Bayesian update for a 
-given observer. The gravitational effects we derive are 
-physically real consequences of this transfer but remain 
-observer-relative; Section~\ref{sec:conclusion} develops 
-this contrast and its open questions.
+Two structuring choices run throughout. We work in the non-thermal 
+global Minkowski description rather than the thermal Rindler description: 
+thermality is a derived consequence of restricting to one 
+wedge~\cite{fulling1973nonuniqueness, bisognano1975duality}, not a 
+primitive, and individual microstates are non-thermal. The approach 
+is also a refactored version of the Di\'osi--Penrose objective collapse 
+programme~\cite{penrose1996gravity, diosi1987universal}: where that 
+programme postulates that gravitational self-interaction objectively 
+collapses the wavefunction, we treat measurement as a subjective process 
+mediated by energy--momentum transfer, with state reduction as a Bayesian 
+update for a given observer; the contrast is developed in 
+Section~\ref{sec:conclusion}.
 
 \subsection{Roadmap}
 
-In Section \ref{sec:heuristics} we explore a heuristic argument where we eliminate temperature using a combination of Landauer's principle with the Unruh effect and derive standard blackhole thermodynamics area and information laws as a consequence of Newton's laws. We then dive into a spin-1 version of the concrete microstate construction from our previous work~\cite{player2025driving} which we present in Section \ref{sec:microstates}; this realizes individual terms of the Unruh thermal ensemble via a Minkowski bilocal driving source. In Section \ref{sec:substrate} we develop a language for discussing emergent spacetime as a property of information bearing matter.
-Section~\ref{sec:ppwave} develops how the 
-Gibbons--Hawking--York (GHY) horizon boundary term~\cite{gibbons1977action}
-counts matter's information as action and models 
-our entangled photons as AS pp-waves that create 
-space at the wedge horizons,
-following the gravitational shockwave framework of Dray and 't~Hooft~\cite{dray1985gravitational,hooft1996scattering}, and others; the central result 
-is that the GHY boundary term equals the matter 
-action event by event, $S_{GHY}|_\mathcal{H} = 
-S_{\text{matter}}$.
-
-Section~\ref{sec:erepr} 
-identifies the newly emergent space with the 
-measurement of a classical bit, and discusses the structural 
-parallel with the ER=EPR correspondence.  We circle back to temperature 
-in Section~\ref{sec:carnot} with a Carnot cycle 
-at the microstate level, connecting the Carnot 
-efficiency bound to the Unruh--Landauer bound as 
-the same inequality viewed from opposite 
-directions. Section~\ref{sec:eft} develops the 
-effective field theory structure of the 
-construction: the GHY term arises as the 
-effective action for the right wedge after 
-integrating out the left wedge in the path 
-integral, the Planck length emerges as the 
-geometric mean of the two natural scales, and 
-six equivalent conditions characterising EFT 
-validity are shown to coincide at the horizon. 
-We finish with gauge consistency in 
-Appendix~\ref{gauge_consistency}.
+The paper has a two-layer structure. The \emph{heuristic layer} 
+(Section~\ref{sec:heuristics}) requires only Landauer's principle, 
+the Unruh effect, and Newton's law; it recovers standard black hole 
+thermodynamics from a temperature-free kinematic bound and is 
+self-contained. The \emph{construction layer} 
+(Sections~\ref{sec:microstates}--\ref{sec:ppwave}) is the technically 
+precise core: a Bell state of photons with anticorrelated helicities, 
+sourced by a bilocal term in the action, generates an 
+Aichelburg--Sexl pp-wave at the Rindler horizon; applying the 
+Raychaudhuri equation to the resulting null congruence yields 
+$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ event by event. 
+Sections~\ref{sec:erepr}--\ref{sec:eft} apply this construction to 
+entanglement-generated geometry, the equivalence of the Carnot and 
+Unruh--Landauer bounds, and the EFT origin of the GHY term.
 
 % Section 2
-\section{The Unruh--Landauer Relation and Verlinde-Style Heuristics}
+\section{The Unruh--Landauer Bound and Motivating Heuristics}
 \label{sec:heuristics}
 
 This section contains two distinct parts that should be read 
