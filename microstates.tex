@@ -64,9 +64,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% ----------------------------------------------------------------
 % SECTION 0 — GLOBAL / CROSS-CUTTING
-% ----------------------------------------------------------------
 
 % TODO 0A: Trim the abstract.
 % At ~350 words the abstract is long even by arXiv standards.
@@ -99,9 +97,7 @@
 % or clearly delineate this as the key open problem and what
 % would be required to resolve it.
 
-% ----------------------------------------------------------------
 % SECTION 1 — INTRODUCTION (LITERATURE)
-% ----------------------------------------------------------------
 
 % TODO 1A: Cite Jacobson (2016).
 % "Entanglement equilibrium and the Einstein equation,"
@@ -169,9 +165,7 @@
 % the generalised second law claims in §7.
 
 
-% ----------------------------------------------------------------
 % SECTION 2 — MOTIVATING HEURISTICS
-% ----------------------------------------------------------------
 
 % TODO 2A: Justify the causal diamond time scale.
 % Equation (4) identifies the interaction time with
@@ -187,17 +181,11 @@
 % derivation to it.
 
 
-% ----------------------------------------------------------------
 % SECTION 3 — BILOCAL MICROSTATE CONSTRUCTION
-% ----------------------------------------------------------------
 
-% ----------------------------------------------------------------
 % SECTION 4 — MATTER AS A SUBSTRATE
-% ----------------------------------------------------------------
 
-% ----------------------------------------------------------------
 % SECTION 5 — PP-WAVE GEOMETRY AND ACTION
-% ----------------------------------------------------------------
 
 % TODO 5A: Cross-check and clarify the
 % $\Delta A = 8\pi G\hbar\omega$ result (Eq. for the area
@@ -230,9 +218,7 @@
 % move the open questions to the Conclusion as future work. It
 % must not appear in the submitted version.
 
-% ----------------------------------------------------------------
 % SECTION 6 — ENTANGLEMENT AS SPATIAL INFORMATION
-% ----------------------------------------------------------------
 
 % TODO 6A: Sharpen or compress the ER=EPR discussion.
 % Section 6 notes a structural parallel with the non-traversable
@@ -245,9 +231,7 @@
 % compress the ER=EPR material to two sentences in the Conclusion
 % under "future work" and remove Section 6.1 from the body.
 
-% ----------------------------------------------------------------
 % SECTION 7 — CARNOT CYCLE FROM UNRUH–LANDAUER
-% ----------------------------------------------------------------
 %TODO 7A: Justify the identification kBTH=ℏωk_B T_H = \hbar\omegakB​TH​=ℏω.Equation (47) identifies the hot reservoir temperature with the energy of a single photon via radiation pressure, but this step is not derived — it is essentially the Planck relation applied to one mode. The difficulty is that the paper operates in the non-thermal Minkowski description where the photon has a definite frequency ω\omegaω and is not thermal. A referee will ask why this single-frequency photon sets the Unruh temperature of the horizon rather than being one mode in a thermal distribution. Either derive this from the Bogoliubov transformation (the Rindler temperature is related to ω\omega ω and aaa via tanh⁡θω\tanh\theta_\omegatanhθω​, not directly to ℏω\hbar\omegaℏω) or explicitly flag this as an ansatz with the same status as the Bekenstein–Hawking ansatz in Section 5.3.
 
 % TODO 7B: Make the Carnot cycle mapping rigorous or
@@ -265,9 +249,7 @@
 % cycle" throughout and restrict all claims to the structural
 % parallel rather than the thermodynamic identity.
 
-% ----------------------------------------------------------------
 % SECTION 8 — EFFECTIVE FIELD THEORY STRUCTURE
-% ----------------------------------------------------------------
 
 % TODO 8A: Supply the intermediate steps in the Carnot
 % efficiency calculation.
@@ -317,7 +299,7 @@
 \begin{document}
 
 
-\title{Quantum Measurement, Microstates and Matter Channels}
+\title{Quantum Measurement, Minkowski Microstates and Matter Channels}
 \author[ ]{Kevin Player\footnote{\textit{kjplaye@gmail.com}} \,\orcidlink{0009-0000-7180-7985}}
 
 \maketitle
@@ -333,7 +315,7 @@ timelike and spacelike channels. Eliminating temperature
 between Landauer's principle and the Unruh effect yields a 
 single acceleration-dependent bound on the energy assoicated with
 the information.
-A single explicit construction, a helicity-anticorrelated Bell state in flat Minkowski space, makes simultaneous contact with Jacobson's thermodynamic derivation of the Einstein equations, Van Raamsdonk's entanglement-generated geometry, the BMS supertranslation structure at horizons, an explicit Carnot cycle, and effective field theory.}
+A single construction, a helicity-anticorrelated Bell state in flat Minkowski space, makes simultaneous contact with Jacobson's thermodynamic derivation of the Einstein equations, Van Raamsdonk's entanglement-generated geometry, the BMS supertranslation structure at horizons, a Carnot cycle, and effective field theory.}
 
 
 % Section 1
@@ -354,11 +336,8 @@ this impulse is locally indistinguishable from acceleration in
 a gravitational field. The logical structure is summarised in 
 Figure~\ref{fig:diagram}.
 We do not claim this is the complete microstate structure 
-of gravity; we provide one explicit construction, a 
-helicity-anticorrelated Bell state sourced by a bilocal 
-term in flat Minkowski space, and show that this single 
-example satisfies all required properties event by event. 
-It is a seed, not a complete theory.
+of gravity; instead we provide one explicit construction, measurements of a helicity-anticorrelated Bell state sourced by a bilocal 
+term in flat Minkowski space, and situate it in the current literature.
 
 \begin{figure}[h]
 \centering
@@ -372,13 +351,12 @@ It is a seed, not a complete theory.
 \caption{Solid arrows denote subjective grounding relations 
 for a given observer: $A \to B$ means every instance of $B$ 
 is physically realised by an instance of $A$. This paper 
-explores the bottom and right solid arrows. The dashed 
-arrow is the Di\'{o}si--Penrose postulate, which we do not 
-adopt. The asymmetry is the point.}
+explores the solid arrows. The dashed 
+arrow is the Di\'{o}si--Penrose postulate.}
 \label{fig:diagram}
 \end{figure}
 
-Three existing programmes arrive at closely related conclusions by different 
+Three existing programs arrive at closely related conclusions by different 
 routes. Jacobson~\cite{jacobson1995thermodynamics} derives the Einstein 
 equations from thermodynamic identities on local Rindler horizons but leaves 
 open what physical process underlies each entropy increment; the present 
@@ -386,28 +364,26 @@ paper provides that process. Van~Raamsdonk~\cite{van2010building} showed,
 in the AdS/CFT setting, that entanglement between two spatial regions 
 generates their geometric connection; the present construction realises the 
 same effect in flat Minkowski space, microstate by microstate, with an 
-explicit source. The BMS programme~\cite{carlip2018black, hawking2016soft, 
+explicit source. The BMS program~\cite{carlip2018black, hawking2016soft, 
 strominger2016gravitational} identifies the symmetry algebra whose modes are 
 excited at the horizon but does not specify what excites individual modes; 
 the bilocal construction supplies that process. That a single starting 
 point, quantum measurement as energy--momentum transfer under proper 
 acceleration, reproduces all three sets of results without additional 
 assumptions is evidence that measurement events are not merely consistent 
-with these frameworks but describe the elementary process they collectively 
-require.
+with these frameworks, but describe the elementary process they collectively require.
 
 Two structuring choices run throughout. We work in the non-thermal 
 global Minkowski description rather than the thermal Rindler description: 
 thermality is a derived consequence of restricting to one 
 wedge~\cite{fulling1973nonuniqueness, bisognano1975duality}, not a 
-primitive, and individual microstates are non-thermal. The approach 
-is also a refactored version of the Di\'osi--Penrose objective collapse 
-programme~\cite{penrose1996gravity, diosi1987universal}: where that 
-programme postulates that gravitational self-interaction objectively 
-collapses the wavefunction, we treat measurement as a subjective process 
-mediated by energy--momentum transfer, with state reduction as a Bayesian 
-update for a given observer; the contrast is developed in 
-Section~\ref{sec:conclusion}.
+primitive, and individual microstates are non-thermal. Our approach 
+is a refactored version of the Di\'osi--Penrose objective collapse 
+program~\cite{penrose1996gravity, diosi1987universal}: where that 
+program postulates that gravitational self-interaction objectively 
+collapses the wavefunction, we treat measurement as a
+subjective process mediated by energy--momentum transfer, with state reduction as a Bayesian 
+update for a given observer; the contrast evident in Figure \ref{fig:diagram}.
 
 \subsection{Roadmap}
 
@@ -433,7 +409,7 @@ Aichelburg--Sexl pp-wave at the Rindler horizon; applying the
 Raychaudhuri equation to the resulting null congruence yields 
 $S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ event by event. 
 Sections~\ref{sec:erepr}--\ref{sec:eft} apply this construction to 
-entanglement-generated geometry, the equivalence of the Carnot and 
+entanglement-generated geometry, the equivalence of Carnot and 
 Unruh--Landauer bounds, and the EFT origin of the GHY term.
 
 % Section 2
@@ -447,80 +423,48 @@ Unruh temperature into Landauer's bound eliminates temperature
 entirely, leaving a purely kinematic inequality depending only 
 on acceleration. No approximation is involved.
 
-The subsequent derivations of 
-Sections~\ref{sec:momentum}--\ref{sec:bekenstein} are 
-explicitly Verlinde-style heuristics~\cite{entropic}: they 
-recover standard black hole thermodynamics from Newton's laws 
-and the Unruh--Landauer relation, in the same spirit that 
-Verlinde recovers Newton's laws from entropy gradients. The 
-hand-waving is intentional and acknowledged. The purpose is 
-not to re-derive known results rigorously but to show that 
-the Unruh--Landauer language is consistent with them, 
-running Verlinde's programme in reverse, as noted in the 
-Introduction. The construction layer of 
-Sections~\ref{sec:microstates}--\ref{sec:ppwave} then 
-establishes the same consistency microstate by microstate, 
-without heuristic approximation.
+The subsequent derivations are explicitly 
+Verlinde-style heuristics~\cite{entropic}: the same 
+actors appear, acceleration, the Unruh relation, 
+Newton's laws, but thermality is eliminated rather 
+than embraced. Where Verlinde deploys the thermal 
+Rindler frame as the mechanism connecting entropy 
+to force, the Unruh--Landauer relation of 
+Section~\ref{sec:UL} eliminates temperature 
+entirely, and Newton's laws then recover standard 
+black hole thermodynamics directly from the 
+resulting kinematic bound. Thermality is a 
+consequence of restricted causal access to one 
+Rindler wedge~\cite{fulling1973nonuniqueness, 
+bisognano1975duality}, not a primitive.
 
-Landauer's principle \cite{landauer1961irreversibility} is conventionally 
-formulated for information erasure. Bennett~\cite{bennett1982thermodynamics} showed that 
-measurement itself can in principle be performed reversibly; it is the 
-erasure of the measurement record that necessarily costs energy. The bound 
-we derive here is a constraint on the energy of the physical carrier 
-required to imprint a classically distinguishable record under proper 
-acceleration $a$.
 
-For an accelerated observer, the relevant temperature is the Unruh temperature \cite{unruh1976notes}. Substituting one into the other eliminates temperature entirely, yielding a relation between information acquisition, energy transfer, and acceleration (a version of the black hole thermodynamics first law; equation (\ref{eq:UL}) upcoming). This creates a dictionary between the thermal description natural 
-to a Rindler observer and the non-thermal global Minkowski 
-description~\cite{fulling1973nonuniqueness,bisognano1975duality}: the Minkowski 
-vacuum is pure and non-thermal; restriction to one Rindler wedge 
-produces a mixed thermal state by tracing out the complementary 
-wedge, making thermality a consequence of restricted causal access 
-rather than a fundamental property of the state. The present paper 
-operates in the non-thermal Minkowski description throughout; the 
-thermal Rindler picture is a derived coarse-graining. In this way 
-we will derive a sequence of standard results in black hole 
-thermodynamics as a consequence of Newton's laws, running 
-Verlinde's entropic programme~\cite{entropic} in reverse: 
-where Verlinde recovers Newton's laws from entropy gradients 
-on holographic screens, the present argument recovers black 
-hole thermodynamics from Newton's law of gravitation and the 
-Unruh--Landauer relation.
+% Landauer's principle \cite{landauer1961irreversibility} is conventionally 
+% formulated for information erasure. Bennett~\cite{bennett1982thermodynamics} showed that 
+% measurement itself can in principle be performed reversibly; it is the 
+% erasure of the measurement record that necessarily costs energy. The bound 
+% we derive here is a constraint on the energy of the physical carrier 
+% required to imprint a classically distinguishable record under proper 
+% acceleration $a$.
+
 
 \subsection{The Unruh--Landauer Relation}
 \label{sec:UL}
 
-Landauer's principle bounds the minimum energy of any physical 
-carrier representing $\Delta H$ nats of information\footnote{We 
-are going to use $S$ for action later so use $H$ here for entropy 
-with units of nats to avoid carrying around a $\ln(2)$.} as 
-distinguishable degrees of freedom in a thermal environment at 
-temperature $T$:
 
+Landauer's principle~\cite{landauer1961irreversibility} 
+establishes $k_BT$ as the natural energy scale of one 
+distinguishable degree of freedom in a thermal environment 
+at temperature $T$: any physical carrier representing 
+$\Delta H$ nats must have at least this energy to be 
+distinguishable from thermal noise,
+%
 \begin{equation}
   \Delta E \geq k_B T \, \Delta H.
 \end{equation}
-
-The factor $k_BT$ is the thermal energy scale of one 
-distinguishable degree of freedom at temperature $T$---the 
-equipartition energy of one bit.
-This is Landauer's own 
-introductory framing: a degree of freedom carries $kT$ of 
-thermal energy, and any physical signal must have at least 
-this energy to be distinguishable from thermal 
-noise~\cite{landauer1961irreversibility}.
-This bound applies to any 
-physical process engaging such a degree of freedom in the 
-thermal environment; the direction of information flow, whether 
-acquisition, erasure, or transmission, does not change the 
-minimum energy required for the carrier to be physically 
-distinguishable. We apply it here as a constraint on the carrier 
-energy: to physically represent $\Delta H$ nats in the Rindler 
-vacuum, the carrier must engage at least $\Delta H$ nats of 
-thermally distinguishable degrees of freedom. The full 
-thermodynamic accounting of the measurement cycle, where the 
-Landauer erasure cost appears at re-emission, is given in 
-Section~\ref{sec:carnot}.
+%
+The direction of information flow, acquisition, erasure, 
+or transmission, does not change this threshold. 
 
 For an observer undergoing proper acceleration $a$, the Unruh effect associates a temperature
 \begin{equation}
@@ -535,8 +479,8 @@ Temperature has dropped out entirely: equation~\eqref{eq:UL} is a
 temperature-independent lower bound on the energy of the physical carrier 
 required to register one nat of information under proper acceleration $a$; 
 acceleration sets the minimum energy scale of the carrier. The full 
-thermodynamic accounting, where the Landauer erasure cost appears 
-correctly, is deferred to Section~\ref{sec:carnot}.
+thermodynamic accounting, where the Landauer erasure cost appears,
+is deferred to Section~\ref{sec:carnot}.
 
 
 The connection between Landauer's principle and black hole 
@@ -594,18 +538,27 @@ In what follows, standard results emerge as consequences of the Unruh-Landauer r
 \begin{equation}
 \Delta p = \frac{\Delta E}{c}.
 \end{equation}
-A measurement event localized to a spatial scale $r$ is bounded 
-by a causal diamond. The 
-temporal extent of this diamond is $\Delta t = 2r/c$, fixed entirely 
-by the causal geometry of the event rather than by any dynamical 
-assumption. We identify the interaction time with this natural causal 
-duration, so that
+A measurement event localized to a spatial scale $r$ 
+is bounded by a causal diamond with temporal extent 
+$\Delta t = 2r/c$. This identification is the 
+heuristic input from which the subsequent results 
+follow, then
+
 \begin{equation}
 a = \frac{\Delta p}{m_d \Delta t} = \frac{\Delta E}{2 m_d r}.
 \label{eq:accel}
 \end{equation}
 
-This perspective is closely related in spirit to Erik Verlinde’s entropic gravity \cite{entropic}, where forces arise from entropy gradients, but differs in that the present construction grounds each entropy increment in a discrete measurement event with an associated energy-momentum transfer, rather than in a coarse-grained thermodynamic gradient.
+This is closely related to Verlinde's entropic 
+gravity~\cite{entropic}: Verlinde identifies holographic 
+thrust on information screens with the origin of inertia 
+itself, and Newton's laws are a common ingredient in both 
+constructions. The present approach differs in grounding 
+each entropy increment in a discrete measurement event, the 
+measurement impulse playing the role of Verlinde's 
+holographic thrust, rather than in a coarse-grained 
+thermodynamic gradient.
+
 
 \subsection{The Schwarzschild Radius}
 
@@ -655,10 +608,10 @@ in agreement with the standard Schwarzschild result. This is the acceleration th
 \label{sec:bekenstein}
 
 Returning to the Unruh-Landauer relation~\eqref{eq:UL} and 
-substituting the surface gravity $\kappa$ for $a$---justified 
+substituting the surface gravity $\kappa$ for $a$, justified 
 by the equivalence principle: the local quantum field theory at 
 the black hole horizon is the same as in the Rindler 
-frame~\cite{unruh1976notes, hawking1975particle}---the entropy 
+frame~\cite{unruh1976notes, hawking1975particle}, the entropy 
 increment associated with an energy increment 
 $\Delta E = c^2 \Delta m_d$ is
 
@@ -699,12 +652,12 @@ present construction can be read as a microstate-level realisation of the Bousso
 Pesci~\cite{pesci2007unruh} derived the covariant entropy bound from the 
 Unruh temperature by applying the second law of thermodynamics across 
 local Rindler horizons, the closest precursor to the present argument. 
-The present bound~\eqref{eq:UL} differs in two respects: temperature is 
+The present bound equation~\eqref{eq:UL} differs in two respects: temperature is 
 eliminated entirely by substituting the Unruh relation into Landauer's 
 principle rather than retained as an input to the second law, yielding a 
 purely kinematic bound depending only on acceleration; and the bound is 
 applied to individual carrier quanta rather than to a bulk thermodynamic 
-flux. The identification of~\eqref{eq:UL} with the Bekenstein 
+flux. The identification of equation~\eqref{eq:UL} with the Bekenstein 
 bound~\cite{bekenstein1981universal} at the horizon condition $a = c^2/R$, 
 and the reading of both as the same inequality in different frames, 
 appears to be new in this form.
@@ -747,15 +700,15 @@ both the Planck distribution over $\omega$ and the mixed
 density matrix obtained by tracing out the complementary wedge 
 reflect the same epistemic situation. The bilocal construction 
 breaks this ignorance explicitly. Because $\mathcal{P}$ emits 
-at a definite frequency $\omega$, a measurement---a PVM 
-projection onto a definite helicity outcome---resolves both 
+at a definite frequency $\omega$, a measurement, a PVM 
+projection onto a definite helicity outcome, resolves both 
 coarse-grainings simultaneously: after the collapse there is 
 no $\omega$-averaging and no partial-trace ambiguity, and the 
 observer is at a specific point in microstate space within the 
 non-thermal Minkowski description. In this sense measurement 
 is access to the Minkowski description, and the apparent 
 thermal bath is replaced by a definite momentum 
-transfer---a thrust---sourced by $\mathcal{P}$. This 
+transfer, a thrust, sourced by $\mathcal{P}$. This 
 reinterprets a portion of the Unruh response as physically 
 sourced thrust rather than thermal 
 fluctuation~\cite{player2025driving}, and it is the concrete 
@@ -792,7 +745,7 @@ conjugation $J$, which implements PCT between the two
 Rindler wedges and simultaneously flips 
 $\lambda \to -\lambda$. In the zig-zag, PCT maps the 
 right-helicity Weyl spinor $\psi_R$ to the left-helicity 
-spinor $\psi_L$---precisely the same operation, now 
+spinor $\psi_L$, precisely the same operation, now 
 acting along the worldline rather than across a spatial 
 horizon. The anticorrelated pair in each case is the 
 PCT-invariant configuration of two massless helicity 
@@ -808,9 +761,7 @@ is the common algebraic statement:
 the two $\mathfrak{su}(2)$ factors label the two 
 helicity sectors that PCT/$J$ exchanges in both cases.
 
-%------------------------------------------------------
 \subsection{A Source and Two Observers}
-%------------------------------------------------------
 
 Three massive bodies are placed at spacetime
 positions $(t,z) = (0,1)$, $(0,-1)$, and $(-1,0)$, named \emph{$\mathcal{R}$} - {\it Right}, \emph{$\mathcal{L}$} - {\it Left}, and \emph{$\mathcal{P}$} - {\it Past} respectively. $\mathcal{P}$ serves as the
@@ -846,9 +797,7 @@ than a plane wave spread across the wedge.
 Non-thermality is a consequence of this 
 specificity, not an additional assumption.
 
-%------------------------------------------------------
 \subsection{Double-Null Gauge}
-%------------------------------------------------------
 
 The emission event naturally defines two null directions:
 the right-moving photon has wave-vector $k^\mu_R = (\omega, 0, 0, k)$ 
@@ -871,9 +820,7 @@ verified in Appendix~\ref{gauge_consistency}.
 The lack of manifest four-dimensional covariance in equation \eqref{eq:doublenull} is a consequence of aligning the gauge with the pair of physical null directions selected by the source, rather than an arbitrary choice. The full Lorentz group is broken to the little group preserving the pair $\{k^\mu_R, k^\mu_L\}$, which is the two-dimensional Euclidean group $ISO(2)$ acting on the transverse plane. This is precisely the little group of massless particles, and the two helicity eigenstates $\lambda = \pm 1$ are its irreducible representations. All physical results are independent of the gauge choice.
 
 
-%------------------------------------------------------
 \subsection{The Bilocal Source}
-%------------------------------------------------------
 
 In double-null gauge the electromagnetic field is characterised by its transverse components
 alone. The bilocal driving source is symmetrized over both helicity assignments,
@@ -967,9 +914,7 @@ acquired, summed over the rate of acquisition, equals the power required
 to sustain the acceleration.
 
 
-%------------------------------------------------------
 \subsection{Polarization Bogoliubov Transformation}
-%------------------------------------------------------
 
 We now show that the polarization labels survive the Rindler--Unruh mode decomposition,
 so that the thermal ensemble retains its helicity structure and the anticorrelation of the
@@ -1061,7 +1006,7 @@ operations per second for any system of energy $mc^2$, and
 Lloyd~\cite{lloyd2000ultimate} shows this bound is saturated 
 by quantum systems. The Compton frequency is therefore 
 simultaneously a clock rate, a sampling rate, and a 
-computational limit---three facets of the single fact that 
+computational limit, three facets of the single fact that 
 matter's state space has a resolution set by $\hbar$. Proper 
 time is accumulated action along a worldline, an emergent 
 quantity in the sense of Page and 
@@ -1106,10 +1051,8 @@ properties of matter itself, defined only up to the
 resolution set by the action $S/\hbar$, which is Lorentz 
 invariant by construction.
 
-%------------------------------------------------------
 \subsection{Matter as a Timelike Channel}
 \label{sec:channel}
-%------------------------------------------------------
 
 A massive particle carries phase along its worldline 
 at a rate set by its rest energy. The Compton frequency 
@@ -1176,10 +1119,8 @@ horizon the natural IR boundary of the matter channel
 and anticipating the EFT breakdown of 
 Section~\ref{sec:eft}.
 
-%------------------------------------------------------
 \subsection{The Horizon as a Spacelike Channel}
 \label{sec:horizon_channel}
-%------------------------------------------------------
 
 The three fundamental constants $c$, $\hbar$, and $G$ 
 play precise roles in the channel picture. The speed 
@@ -1226,10 +1167,8 @@ $S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$,
 established geometrically in Section~\ref{sec:ppwave}; 
 we defer the proof to that section.
 
-%------------------------------------------------------
 \subsection{The Handoff Event}
 \label{sec:handoff}
-%------------------------------------------------------
 
 The photon crossing the horizon is the handoff between 
 the timelike matter channel and the spacelike horizon 
@@ -1278,10 +1217,8 @@ sums $\hbar\omega$ over handoff events because that
 is what the term geometrically records, one 
 contribution per event.
 
-%------------------------------------------------------
 \subsection{Channel Capacity Saturation at the Horizon}
 \label{sec:saturation}
-%------------------------------------------------------
 
 The saturation wavelength $\lambda_{\mathrm{sat}} = 
 (2\pi/\ln 2)(c^2/a)$ of Section~\ref{sec:heuristics} 
@@ -1334,11 +1271,9 @@ all reduce to $\omega = \omega_{\mathrm{sat}}$ at the
 horizon, so the EFT breaks down exactly where the 
 channel saturates.
 
-%------------------------------------------------------
 \subsection{Lorentz Covariance and Multi-Observer 
 Consistency}
 \label{sec:multiobserver}
-%------------------------------------------------------
 
 The discreteness of the channel picture, one quantum 
 of action $\hbar$ per handoff event, one Planck-area 
@@ -1395,7 +1330,7 @@ separate. This is not a limitation of the framework
 but its natural setting, and it is structurally the 
 same situation that arises in Wigner's friend 
 scenarios~\cite{brukner2018no} applied to 
-gravitational systems---a point developed in 
+gravitational systems, a point developed in 
 Section~\ref{sec:carnot}.
 
 
@@ -1413,7 +1348,7 @@ exist. The Wigner's friend no-go
 theorems~\cite{brukner2018no} and the 
 Frauchiger--Renner result~\cite{frauchiger2018quantum} 
 establish that the problem is sharp; the relational, 
-QBist, and Everettian programmes each dissolve it 
+QBist, and Everettian programs each dissolve it 
 differently rather than solving it. The present 
 construction does not require resolving this gap, 
 it operates within a single observer's description, 
@@ -1431,8 +1366,8 @@ different resolutions imply different answers to whether
 $\mathcal{R}$'s microstate count and $\mathcal{L}$'s 
 microstate count are consistent as objective facts 
 or only as relational ones. The information-theoretic 
-objects introduced here---the spatial bit, the PVM 
-projection, the handoff event, the matter-memory---are 
+objects introduced here, the spatial bit, the PVM 
+projection, the handoff event, the matter-memory, are 
 the vocabulary in which that question must eventually 
 be posed, but they do not answer it. Multi-observer 
 quantum mechanics in the presence of horizons is 
@@ -1440,10 +1375,8 @@ largely uncharted, and the present construction
 should be read partly as a map of that problem space.
 
 
-%------------------------------------------------------
 \subsection{Types of Particles and Interactions}
 \label{sec:types}
-%------------------------------------------------------
 
 The distinction between massless and massive degrees 
 of freedom is operational in the channel picture: 
@@ -1491,10 +1424,8 @@ reduction: the same physical process may be
 information-bearing for one observer and external 
 for another.
 
-%------------------------------------------------------
 \subsection{The Tick-Tock Mechanism}
 \label{sec:zigzag}
-%------------------------------------------------------
 
 The channel picture is not an ad hoc construction:
 the handoff event of Section~\ref{sec:handoff} is the 
@@ -1583,8 +1514,8 @@ $\mathfrak{so}(3,1) \cong \mathfrak{su}(2) \times
 algebraically. The operators $J$ and $\Theta$ act on 
 different Hilbert spaces and are not equal; what they 
 share is that they both select the same class of 
-invariant configuration, anticorrelated helicities 
---- because PCT-invariance forces that choice 
+invariant configuration, anticorrelated helicities,
+because PCT-invariance forces that choice 
 independently of whether the separation between the two 
 helicity sectors is spacelike (Rindler horizon) or 
 timelike (Compton worldline). The bilocal Bell state 
@@ -1600,7 +1531,7 @@ mass is proportional to that frequency via
 $E = \hbar\omega$. Proper time along a worldline 
 is then a foliation by discrete handoff events, 
 each separating the causal past from the causal 
-future of that interaction---the one-dimensional 
+future of that interaction, the one-dimensional 
 analogue of the Rindler horizon, and
 matching the holographic screen picture of 
 Verlinde~\cite{entropic}. The one-dimensional handoff 
@@ -1730,10 +1661,10 @@ and the AS longitudinal shift is precisely the linearised
 supertranslation field on the horizon. Carlip~\cite{carlip2018black} 
 demonstrated that the near-horizon diffeomorphisms of a generic 
 black hole are enhanced to a $\mathrm{BMS}_3$ algebra whose central 
-charge determines the Bekenstein--Hawking entropy, but his programme 
+charge determines the Bekenstein--Hawking entropy, but his program 
 identifies the symmetry without specifying the physical process that 
 excites individual modes. The bilocal construction supplies that 
-process. The shockwave S-matrix programme of 't~Hooft~\cite{hooft1996scattering} 
+process. The shockwave S-matrix program of 't~Hooft~\cite{hooft1996scattering} 
 established that the longitudinal AS shift is the fundamental dynamical 
 ingredient for horizon information exchange, working at the level of the
 full S-matrix; the present construction realises the same shift at the 
@@ -1774,7 +1705,7 @@ result claimed in isolation. The thermodynamic
 interpretation of the GHY boundary term on null 
 surfaces is established by Chakraborty and 
 Padmanabhan~\cite{chakraborty2020boundary}; the 
-broader programme of 
+broader program of 
 Padmanabhan~\cite{padmanabhan2010thermodynamical} 
 identifies gravitational boundary terms as the 
 fundamental degrees of freedom at the ensemble level. 
@@ -1816,8 +1747,8 @@ evaluated at the moment of horizon crossing; it is a statement
 about the handoff event itself, not about the subsequent 
 worldline evolution. The Rindler proper time $\eta$ and the 
 affine null parameter $u$ are related by $u \propto e^{-a\eta}$, 
-and it is this exponential relation---not a simple 
-proportionality---that is responsible for the Unruh 
+and it is this exponential relation, not a simple 
+proportionality, that is responsible for the Unruh 
 temperature and that distinguishes the null-surface action 
 from the worldline action. This is the 
 matter action counted sample by sample: one quantum of action 
@@ -1892,18 +1823,18 @@ $\ell_P^2$ as the conversion factor, is a question the
 present construction motivates but does not settle, and we 
 leave it for future work.
 
-This result is consistent with and extends programmes of 
+This result is consistent with and extends programs of 
 Jacobson~\cite{jacobson1995thermodynamics} and 
 Padmanabhan~\cite{padmanabhan2010thermodynamical}, which argue 
 that the gravitational boundary term rather than the bulk 
 Einstein--Hilbert action is the fundamental gravitational degree 
-of freedom. Those programmes establish this at the level of 
+of freedom. Those programs establish this at the level of 
 thermodynamic averages. The present construction realizes the 
 same identification at the level of individual microstates, with 
 each boundary contribution sourced by a specific quantum 
 measurement event rather than a bulk average. The standard 
 result emerges from summing over the ensemble; the microstate 
-picture supplies what the thermodynamic programmes leave open: 
+picture supplies what the thermodynamic programs leave open: 
 the physical process underlying each boundary contribution.
 
 The equality $S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ 
@@ -2044,7 +1975,7 @@ but no signal can pass directly from $\mathcal{L}$ to $\mathcal{R}$,
 matching the non-traversability of the original Einstein--Rosen 
 bridge and the no-communication theorem on the EPR side. 
 We do not claim a full topological identification; whether 
-the construction makes contact with the ER=EPR programme 
+the construction makes contact with the ER=EPR program 
 in a flat-space limit is left for future work.
 
 % Section 7
@@ -2153,9 +2084,14 @@ precise value determines the Carnot efficiency $\eta = 1 - T_C/T_H$.
 \item {\bf Adiabatic Expansion:} This corresponds to the crossing over the past Rindler horizon from hot to cold, the absorption of the photon by the mirror.
 \item {\bf Isothermal Compression:} This corresponds to controlled 
 erasure of the detector's stored bit during the re-emission of the photon 
-by the mirror. This is where the Landauer cost is paid~\cite{bennett1982thermodynamics}: 
-an energy on the order of $k_B T_C \ln 2$ is dissipated into the cold 
-reservoir. 
+by the mirror.
+This is where the Landauer cost is 
+paid~\cite{landauer1961irreversibility, 
+bennett1982thermodynamics}: Bennett showed that 
+measurement can in principle be performed 
+reversibly; it is the erasure of the stored bit 
+at re-emission that necessarily dissipates energy, 
+at minimum $k_BT_C \ln 2$ into the cold reservoir.
 \item {\bf Adiabatic Compression:} This corresponds to the crossing over the future Rindler horizon from cold to hot, the absorption of the future sink $\mathcal{F}$ and reseting of the state to an eigenstate of $H_+$ or $H_-$, zero bits of Shannon entropy. 
 \end{itemize}
 
@@ -2242,8 +2178,8 @@ specific ontology is required to say this.
 
 The stand the construction takes enters 
 precisely at the PVM rule: each handoff event 
-is a projective measurement, and its outcome 
---- the helicity eigenvalue, the spatial bit, 
+is a projective measurement, and its outcome,
+the helicity eigenvalue, the spatial bit, 
 is recorded in the observer's matter-memory as 
 a persistent classical fact. Memory is what 
 grounds an observer in their particular 
@@ -2331,6 +2267,23 @@ operating at the Unruh temperature, with quantum measurement
 as the working substance and the classical bit as the 
 thermodynamic output.
 
+The classical precursor to this equivalence is the 
+Geroch process~\cite{bekenstein}: a box of radiation 
+lowered toward a black hole on a string extracts work 
+until, at the horizon, the box carries zero energy 
+from the perspective of an observer at infinity. 
+Bekenstein showed that dropping the box in must 
+increase the black hole's area, establishing a maximum 
+efficiency for work extraction that saves the second 
+law~\cite{bekenstein}. Our mirror plays the role of 
+the box, the measurement impulse plays the role of 
+the string tension, and the Unruh--Landauer bound is 
+Bekenstein's efficiency constraint expressed in the 
+language of information acquisition at the Rindler 
+horizon. The two bounds are not merely analogous; 
+they are the same inequality, with the Geroch process 
+as its classical limit and the Carnot cycle here as 
+its microstate realisation.
 
 The cold reservoir temperature $T_C$ is the Landauer 
 temperature associated with isolating the mirror from 
@@ -2377,10 +2330,8 @@ become incompatible, and the left wedge
 $\mathcal{L}$ is precisely the degrees of freedom 
 that the system has integrated out.
 
-%--------------------------------------------------
 \subsection{The GHY Term as Effective Action}
 \label{sec:eft_ghy}
-%--------------------------------------------------
 
 We now show that the GHY boundary term arises 
 as the effective action for $\mathcal{H}_R$ after 
@@ -2509,10 +2460,8 @@ whose UV divergences renormalize Newton's
 constant $G$. Equation~\eqref{eq:Seff} is the 
 leading classical contribution.
 
-%--------------------------------------------------
 \subsection{Partition Function and S-Matrix}
 \label{sec:eft_partition}
-%--------------------------------------------------
 
 The thermal partition function of the right wedge
 %
@@ -2545,10 +2494,8 @@ rotation, and each microstate~\eqref{eq:microstate_vec}
 contributes one term to $Z$ rather than the full 
 thermal trace.
 
-%--------------------------------------------------
 \subsection{Horizon Complementarity}
 \label{sec:eft_complementarity}
-%--------------------------------------------------
 
 The identification of $\mathcal{H}_R$ as system 
 and $\mathcal{H}_L \otimes \mathcal{H}_R$ as 
@@ -2570,10 +2517,8 @@ two-wedge descriptions become incompatible,
 consistently with the equivalence list of the 
 following subsection.
 
-%--------------------------------------------------
 \subsection{EFT Validity and the Planck Scale}
 \label{sec:eft_validity}
-%--------------------------------------------------
 
 The construction defines two natural length scales. 
 The system scale is the Compton wavelength of the 
@@ -2670,7 +2615,7 @@ gravitational microstates in the Rindler setting,
 partially answering the question left open by Jacobson and 
 Verlinde of what physical process underlies each 
 individual entropy increment. The construction converges independently with three 
-established programmes. Jacobson's thermodynamic 
+established programs. Jacobson's thermodynamic 
 derivation of the Einstein 
 equations~\cite{jacobson1995thermodynamics} requires a 
 physical process underlying each local entropy increment; 
@@ -2690,8 +2635,8 @@ identifies the symmetry structure at the horizon; the
 bilocal construction populates that structure with a 
 concrete physical process, one measurement event per 
 excited supertranslation mode. That a single starting 
-point---quantum measurement as energy--momentum transfer 
-under proper acceleration---reproduces all three sets of 
+point, quantum measurement as energy--momentum transfer 
+under proper acceleration, reproduces all three sets of 
 results without additional assumptions is evidence that 
 the identification of measurement events as gravitational 
 microstates is not merely consistent with these frameworks 
@@ -2730,9 +2675,9 @@ The observer-relativity of the microstate construction
 creates a genuine tension, and that tension is 
 intentional. The Bekenstein--Hawking area and horizon 
 entropy are objective, observer-independent quantities. 
-The microstates identified here---PVM projections by a 
+The microstates identified here, PVM projections by a 
 specific Rindler observer $\mathcal{R}$, recording a 
-spatial bit in a specific matter-memory---are 
+spatial bit in a specific matter-memory, are 
 observer-relative. How observer-relative microstate 
 counts combine into an observer-independent area law is 
 not resolved here. This gap is not papered over: it is 
@@ -2744,10 +2689,10 @@ world, and the Frauchiger--Renner
 theorem~\cite{frauchiger2018quantum} shows this is 
 not merely a philosophical gap but a formal one, 
 with measurable consequences.
-In the gravitational context---with causally 
+In the gravitational context, with causally 
 separated observers, non-commuting measurement 
 algebras across a horizon, and a spatial bit whose 
-definiteness is frame-dependent---the problem is 
+definiteness is frame-dependent, the problem is 
 sharper, not softer. The present construction provides 
 the information-theoretic vocabulary in which the 
 problem must be stated: spatial bits, PVM projections, 
@@ -2758,8 +2703,8 @@ the problem's resolution remains entirely open, and
 frankly that question seems at least as important as 
 the consistency checks this paper establishes.
 
-What the construction does not do---and does 
-not claim to do---is take a stand on the 
+What the construction does not do, and does 
+not claim to do, is take a stand on the 
 ontology of the wavefunction. The results are 
 independent of whether the PVM projection is 
 read as a Bayesian update, a relational fact 
@@ -2805,7 +2750,7 @@ gravitational setting for the consistency questions
 raised by Wigner's 
 friend~\cite{brukner2018no} and addressed in 
 the relational~\cite{rovelli1996relational} and 
-QBist~\cite{fuchs2014introducing} programmes. Standard QFT 
+QBist~\cite{fuchs2014introducing} programs. Standard QFT 
 assumes a single asymptotic observer; horizon physics 
 forces the multi-observer structure into view. The 
 present construction does not resolve the hard 
@@ -2822,8 +2767,8 @@ the same physical event.
 
 The relation of the present construction to the 
 Di\'osi--Penrose objective collapse 
-programme~\cite{penrose1996gravity, diosi1987universal} 
-is worth making precise. That programme postulates that 
+program~\cite{penrose1996gravity, diosi1987universal} 
+is worth making precise. That program postulates that 
 gravity induces an objective, observer-independent 
 collapse of the quantum state, with gravitational 
 self-interaction defining a physical timescale for 
@@ -2849,7 +2794,7 @@ Minkowski vantage point maintained throughout.
 Portions of this work were developed in dialogue with Claude (Anthropic). The author takes full responsibility for all claims.
 
 % Section 11
-\section{Appendix: Consistency of the Double-Null Gauge Condition}
+\section{Appendix A: Consistency of the Double-Null Gauge Condition}
 \label{gauge_consistency}
 % Verification that double-null gauge does not over-constrain physical degrees of freedom
 
@@ -2989,7 +2934,7 @@ degrees of freedom. The PCT wedge-swap symmetry is preserved throughout:
 conditions on $A_+$ and $A_-$ are imposed symmetrically, and neither null direction 
 is privileged over the other.
 
-\section{Appendix: Regularisation of the Aichelburg--Sexl Singularity}
+\section{Appendix B: Regularisation of the Aichelburg--Sexl Singularity}
 \label{sec:as_reg}
 
 The derivation of $\Delta A$ in Section~\ref{sec:deltaA} applies to 
