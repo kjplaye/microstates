@@ -1,218 +1,3 @@
-% PROMPT: We are working together on a paper that is currently very rough, we are at the big strokes phase. The eventual target is ArXiv, can you please take a look at it:
-
-%###################################
-%######### Critical Issues #########
-%###################################
-% PROMPT: We are working together on a paper that is currently very rough, we are at the big strokes phase, looking to clean up any major issues and to connect to existing literature.  The final target is probably just arXiv, so think in those terms.  Here is the draft we have so far:
-
-%3. The "Causal Diamond" Step in Section 2 Is Circular
-% The identification Δt=2r/c\Delta t = 2r/c
-% Δt=2r/c — the interaction time equals the light-crossing time of the region — is doing enormous work in deriving the Schwarzschild radius, but it's unmotivated. You're essentially assuming the relevant scale is rr
-% r, then solving for rr
-% r. The cancellation of ΔE\Delta E
-% ΔE is elegant but the setup needs a cleaner physical justification. What selects rr
-% r as the causal diamond size? This is not the same as Bekenstein's original argument, though you claim a parallel.
-
-%4. Landauer Acquisition vs. Erasure Is Muddled
-%Bennett's result (which you cite) is that *measurement* is thermodynamically free; it's the *erasure of the record* that costs kBTln⁡2k_BT \ln 2
-%kB​Tln2. Your Section 2 applies the Landauer bound to the energy of the *carrier* required to "imprint a classically distinguishable record," which is a non-standard application. The Carnot section then correctly puts the Landauer cost at erasure (re-emission). These two framings are in tension throughout. You need to commit to one or carefully explain how they're compatible. The phrase "minimum energy of any physical carrier representing ΔH\Delta H
-%ΔH nats" conflates the carrier energy with the thermodynamic cost of information processing.
-
-%5. The Central Result Needs a Cleaner Derivation
-%Equation (5.9) — SGHY∣H=SmatterS_{GHY}|_\mathcal{H} = S_\text{matter}
-%SGHY​∣H​=Smatter​ — is presented as a computation, but the chain of identifications is: (a) on a stationary Rindler horizon θ=0\theta = 0
-%θ=0, (b) AS pp-waves perturb θ\theta
-%θ, (c) integrating gives ∑ΔAi\sum \Delta A_i
-%∑ΔAi​, (d) which equals 8πGSmatter8\pi G S_\text{matter}
-%8πGSmatter​ by (5.6), (e) the GHY prefactor c4/8πGc^4/8\pi G
-%c4/8πG then cancels to give equality. This works algebraically, but step (b) — how the AS pp-wave sources the expansion of the null congruence — deserves an explicit intermediate step rather than appeal to equation (5.4) alone. Reviewers will push on this.
-
-%###########################################
-%##### Missing Literature Connections ######
-%###########################################
-%
-%These are significant gaps for an arXiv paper in this area:
-
-%Bousso (2002), "The holographic principle" (Rev. Mod. Phys.) — your horizon channel and Bekenstein/Bremermann counting are closely related to covariant entropy bounds. Not citing Bousso's comprehensive treatment is a gap.
-
-%Strominger & Zhiboedov (2016), "Gravitational memory, BMS supertranslations and soft theorems" — you connect AS shifts to BMS supertranslations (citing Hawking-Perry-Strominger) but miss the memory/soft theorem triangle. Your construction is essentially producing gravitational memory events microstate by microstate. This is a key connection to develop.
-
-%Wald (1993) / Iyer-Wald (1994) on black hole entropy as Noether charge — your claim that the GHY term rather than the bulk EH action carries the gravitational degrees of freedom connects to Wald entropy. Padmanabhan is cited but Wald's framework is more foundational here.
-
-%Susskind-Uglum (1994) is cited, but you should also cite Callan-Wilczek (1994) on geometric entropy (you actually have it in the text but it may be missing from your bib). Adami & Ver Steeg or related Unruh-Landauer literature — the combination of Landauer + Unruh has appeared before (Deffner & Zurek 2016 discuss thermodynamic costs near horizons; Marolf & Sorbo 2011). You should verify your UL bound is genuinely novel or clearly acknowledge predecessors.
-
-
-% ================================================================
-% REVISION TODO LIST — ordered by paper section
-% Existing TODOs retain their original numbers.
-% New TODOs are inserted with decimal numbers that place them
-% in paper order relative to the existing list.
-% ================================================================
-
-% 0B — notation audit (SSS vs HHH) — needs a read-through
-% 2A — causal diamond justification
-% 3A — bilocal source uniqueness
-% 5A — mode normalization calculation
-% 5B — equality vs ontological identity
-% 5C — metric as counting question
-% 7A — kBTH=ℏωk_BT_H = \hbar\omega kB​TH​=ℏω justification
-% 7B — Carnot cycle rigor
-% 8A — efficiency calculation steps
-% 8B — Bousso citation
-% 9A — concrete observable
-% 9B — 10−44 J tension
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% SECTION 0 — GLOBAL / CROSS-CUTTING
-
-% SECTION 1 — INTRODUCTION (LITERATURE)
-
-% TODO 1A: Cite Jacobson (2016).
-% "Entanglement equilibrium and the Einstein equation,"
-% PRL 116, 201101 (2016). This is a significant refinement of
-% the 1995 thermodynamic derivation and directly relevant to the
-% claim that measurement events underlie each entropy increment.
-% Not citing it will appear as an oversight to any referee
-% familiar with the area.
-
-% TODO 1C: Cite Jafferis, Lewkowycz, Maldacena, Shenker (2016).
-% "Relative entropy equals bulk relative entropy," JHEP 06 (2016)
-% 004. The comparison to Ryu--Takayanagi in §5 currently engages
-% with the 2006 result without acknowledging the 2016 operational
-% sharpening. Citing JLMS will preempt a standard referee
-% objection and allow the comparison to be made more precisely.
-
-% TODO 1D: Cite Faulkner, Lewkowycz, Maldacena (2013).
-% "Quantum corrections to holographic entanglement entropy,"
-% JHEP 11 (2013) 074. Directly relevant to the §8.1 discussion
-
-% of quantum corrections to the GHY term
-% (Susskind--Uglum and Callan--Wilczek are cited; FLM is the
-% natural third reference in that sentence).
-
-% TODO 1E: Cite Susskind (2016) on ER=EPR.
-% "Copenhagen vs Everett, Teleportation, and ER=EPR,"
-% Fortschritte der Physik 64, 551 (2016). The ER=EPR connections
-% in §6 currently rest on the 2013 Maldacena "cool horizons"
-% paper alone. Susskind (2016) develops the single-microstate
-% version of ER=EPR, which is the level at which §6 operates.
-
-% TODO 1F: Cite Campiglia and Laddha (2015).
-% "Asymptotic symmetries and subleading soft graviton theorem,"
-% PRD 90, 124028 (2015). The BMS triangle discussion in §5 cites
-% Hawking--Perry--Strominger and Strominger--Zhiboedov; the
-% Campiglia--Laddha work completes the triangle and their
-% explicit mode decomposition is the closest existing analogue
-% to what the bilocal source produces.
-
-% TODO 1G: Update the Page--Wootters reference.
-% The current citation is the 1983 paper. Add Höhn, Smith, Lock,
-% "Equivalence of approaches to relational quantum dynamics in
-% and beyond quantum mechanics," PRX Quantum 2, 020301 (2021),
-% which is the modern treatment with quantum reference frames and
-% is the appropriate reference for the emergent proper-time
-% claims in §4.
-
-% TODO 1H: Add the foundational QBism reference.
-% Caves, Fuchs, Schack, "Quantum probabilities as Bayesian
-% probabilities," PRA 65, 022305 (2002). The current citation
-% Fuchs (2014) is a popular-level account; the 2002 paper is the
-% technical foundation and should be cited alongside it in §7.
-
-
-% SECTION 2 — MOTIVATING HEURISTICS
-
-% TODO 2A: Justify the causal diamond time scale.
-% Equation (4) identifies the interaction time with
-% $\Delta t = 2r/c$, the light-crossing time of the localisation
-% region, and describes this as "fixed entirely by the causal
-% geometry rather than by any dynamical assumption." This is a
-% substantive physical assumption: the interaction time could
-% equally be the de Broglie time, the Compton time, or a
-% dynamical decoherence time. Add a sentence explaining why the
-% causal diamond duration is the correct choice for a measurement
-% event localised to scale $r$, or acknowledge that this is an
-% ansatz and assess the sensitivity of the Schwarzschild radius
-% derivation to it.
-
-
-% SECTION 3 — BILOCAL MICROSTATE CONSTRUCTION
-
-% SECTION 4 — MATTER AS A SUBSTRATE
-
-% SECTION 5 — PP-WAVE GEOMETRY AND ACTION
-
-% TODO 5A: Cross-check and clarify the
-% $\Delta A = 8\pi G\hbar\omega$ result (Eq. for the area
-% increment).
-% The standard Raychaudhuri result for a photon crossing a
-% Killing horizon gives $\Delta A = 8\pi G E / \kappa$, which
-% for a Rindler horizon $\kappa = a/c$ differs from the stated
-% result by a factor of $c/a$ unless a normalisation convention
-% absorbs it. Show explicitly how the standard formula reduces to
-% Eq. (5.5) in the Rindler case, or flag the normalisation choice
-% clearly.
-% 'm fairly confident in this analysis given the conventions from the prior paper, but the one thing I can't verify without seeing the explicit mode normalisation is whether ∫Tuu du d2x⊥=ℏω\int T_{uu}\,du\,d^2x_\perp = \hbar\omega
-% ∫Tuu​dud2x⊥​=ℏω exactly for a photon with Rindler frequency ω\omega
-% ω, or whether there's a residual factor of aa
-% a hiding in the mode normalisation. That's the calculation worth checking on paper before adding the note.
-
-
-% SECTION 6 — ENTANGLEMENT AS SPATIAL INFORMATION
-
-% TODO 6A: Sharpen or compress the ER=EPR discussion.
-% Section 6 notes a structural parallel with the non-traversable
-% Einstein–Rosen bridge and immediately disclaims a full
-% topological identification, leaving the section without a new
-% result. Either derive a specific consequence of the parallel —
-% for example, show that the no-communication theorem on the EPR
-% side corresponds to a precise non-traversability statement for
-% the AS longitudinal shifts in opposite null directions — or
-% compress the ER=EPR material to two sentences in the Conclusion
-% under "future work" and remove Section 6.1 from the body.
-
-% SECTION 7 — CARNOT CYCLE FROM UNRUH–LANDAUER
-%TODO 7A: Justify the identification kBTH=ℏωk_B T_H = \hbar\omegakB​TH​=ℏω.Equation (47) identifies the hot reservoir temperature with the energy of a single photon via radiation pressure, but this step is not derived — it is essentially the Planck relation applied to one mode. The difficulty is that the paper operates in the non-thermal Minkowski description where the photon has a definite frequency ω\omegaω and is not thermal. A referee will ask why this single-frequency photon sets the Unruh temperature of the horizon rather than being one mode in a thermal distribution. Either derive this from the Bogoliubov transformation (the Rindler temperature is related to ω\omega ω and aaa via tanh⁡θω\tanh\theta_\omegatanhθω​, not directly to ℏω\hbar\omegaℏω) or explicitly flag this as an ansatz with the same status as the Bekenstein–Hawking ansatz in Section 5.3.
-
-% TODO 7B: Make the Carnot cycle mapping rigorous or
-% relabel it throughout.
-% A Carnot cycle requires that isothermal legs hold temperature
-% constant while entropy changes, and adiabatic legs hold entropy
-% constant. The "isothermal expansion" leg is currently described
-% as Shannon entropy increasing from 0 to 1 bit, but the text
-% does not specify what temperature is held constant or by what
-% mechanism. Define the thermodynamic state space explicitly:
-% identify the state variables, specify what is held fixed in
-% each leg and at what temperature, and verify that each leg
-% satisfies the correct thermodynamic constraint. If this cannot
-% be done rigorously, rename the structure a "Carnot-analogous
-% cycle" throughout and restrict all claims to the structural
-% parallel rather than the thermodynamic identity.
-
-% SECTION 8 — EFFECTIVE FIELD THEORY STRUCTURE
-
-% TODO 8A: Supply the intermediate steps in the Carnot
-% efficiency calculation.
-% Equation (40) states
-% $\eta = 1 - \kappa/a = m_\mathcal{L}/(m_\mathcal{R}
-% + m_\mathcal{L})$ without derivation. The identification of
-% $\kappa$ (the surface gravity of the mirror) with
-% $m_\mathcal{L}$ and $a$ with $m_\mathcal{R} + m_\mathcal{L}$
-% is non-obvious and will stop readers. Add two or three lines of
-% algebra showing how $\kappa = Gm_\mathcal{L}/r_s^2$ and
-% $a = G(m_\mathcal{R}+m_\mathcal{L})/r_s^2$ reduce to the
-% stated mass ratio, or add a short footnote if the derivation is
-% standard.
-
-
-% AI deslop
-%  * british -> english s->z
-%  * em-dash
-% rather
-% orthogonal
-% is not just
-
 \documentclass[12pt,a4paper]{article}
 \usepackage[width=.75\textwidth]{caption}
 \usepackage{graphicx}
@@ -932,6 +717,37 @@ coarse-graining over the ensemble of microstates~\eqref{eq:microstate_vec}, is t
 helicity-resolved: each helicity sector thermalises independently, and the anticorrelation
 between wedges is preserved at every level of the construction.
 
+\subsection{Two Geometric Regimes}
+\label{sec:two_regimes}
+
+The microstate~\eqref{eq:microstate_vec} admits two complementary geometric 
+descriptions depending on the transverse localisation of the photon mode. 
+The bilocal source fixes a definite Rindler frequency $\omega$ but imposes 
+no constraint on transverse momentum. A mode with zero transverse momentum 
+is uniform across the horizon cross-section; a wave packet of characteristic 
+width $\sigma \sim c/\omega$ is localised within one wavelength of the photon 
+axis. These two limits correspond to geometrically distinct pp-waves at the 
+Rindler horizon, both analysed in Section~\ref{sec:ppwave}:
+
+\begin{itemize}
+\item \textbf{Delocalized limit} ($\sigma \to \infty$): the stress tensor is 
+uniform across the horizon, producing a \emph{planar impulsive wave} with 
+longitudinal shift $\Delta v \propto -r^2$. Exactly one BMS supertranslation 
+mode is excited.
+
+\item \textbf{Localized limit} ($\sigma \to 0$): the stress tensor concentrates 
+near the beam axis, recovering the Aichelburg--Sexl pp-wave with logarithmic 
+shift $\Delta v \propto -\ln r^2$. All BMS supertranslation modes are excited.
+\end{itemize}
+
+Both limits produce the same total horizon area increment 
+$\Delta A = 8\pi G\hbar\omega$, since both carry total null energy $\hbar\omega$; 
+the difference lies entirely in the spatial distribution of that increment 
+and the corresponding BMS mode content. The delocalized regime describes 
+the thermodynamic, ensemble-level face of the construction; the localized 
+regime describes the individual microstate face and is where we will show 
+$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ holds event by event.
+
 % Section 4
 \section{Matter as a Substrate}
 \label{sec:substrate}
@@ -1489,6 +1305,72 @@ helicity eigenstates.
 \label{sec:ppwave}
 WLOG we introduce coordinates for the photon traveling from $\mathcal{P}$ $(-1,0)$ to $\mathcal{R}$ $(0,1)$. Let $u = t - z + 1$ and $v = t + z + 1$, where the photon propagates along the null plane $u = 0$, $z$ is the longitudinal direction, and $(x,y)$ are transverse coordinates. Then $(u,v)$ = $(0,0)$ is $\mathcal{P}$'s location, $(u,v)$ = $(0,2)$ is $\mathcal{R}$'s location, and $(u,v)$ = $(0,1)$ is the intersection of the photon with the past right Rinder horizon. The situation is reversed for the left moving photon; we swap $u$ and $v$ to describe photon moving from $\mathcal{P}$ to $\mathcal{L}$.
 
+\subsection{The Planar Impulsive Wave: Delocalized Limit}
+\label{sec:planar_wave}
+
+When the photon carries zero transverse momentum its energy is uniform 
+across the horizon cross-section. The stress tensor at the horizon is
+\begin{equation}
+    T_{uu}(u,\mathbf{x}_\perp) = \frac{\hbar\omega}{A_\perp}\,\delta(u),
+    \label{eq:Tuu_planar}
+\end{equation}
+where $A_\perp$ is the transverse horizon area and $\delta(u)$ encodes the 
+impulsive character of the interaction. The corresponding gravitational 
+perturbation is a planar impulsive wave in Brinkmann form
+\begin{equation}
+    ds^2 = -2\,du\,dv + H_{ij}(u)\,x^i x^j\,du^2 + d\mathbf{x}_\perp^2,
+\end{equation}
+where the Einstein equation $R_{uu} = 8\pi G T_{uu}$ with 
+$R_{uu} = -\tfrac{1}{2}\mathrm{tr}(H_{ij})$ gives
+\begin{equation}
+    H_{ij}(u) = -\frac{8\pi G\hbar\omega}{A_\perp}\,\delta(u)\,\delta_{ij}.
+    \label{eq:H_planar}
+\end{equation}
+
+\paragraph{Area increment.}
+The Raychaudhuri equation on the null congruence gives
+\begin{equation}
+    \frac{d\theta}{du} = -8\pi G\,T_{uu} 
+    = -\frac{8\pi G\hbar\omega}{A_\perp}\,\delta(u),
+\end{equation}
+so the expansion receives an impulsive kick 
+$\Delta\theta = -8\pi G\hbar\omega/A_\perp$ at $u=0$. 
+Integrating over the horizon area:
+\begin{equation}
+    \boxed{\Delta A = A_\perp\,|\Delta\theta| = 8\pi G\hbar\omega,}
+    \label{eq:deltaA_planar}
+\end{equation}
+identical to the AS result derived in Section~\ref{sec:deltaA}, 
+here distributed uniformly rather than concentrated near the beam axis.
+
+\paragraph{Longitudinal shift and BMS structure.}
+The gravitational memory of the planar wave is
+\begin{equation}
+    \Delta v(\mathbf{x}_\perp) 
+    = \tfrac{1}{2}\bar{H}_{ij}\,x^i x^j 
+    = -\frac{4\pi G\hbar\omega}{A_\perp}\,r^2,
+    \label{eq:shift_planar}
+\end{equation}
+where $\bar{H}_{ij} = \int H_{ij}\,du$. This quadratic shift satisfies 
+$\nabla^2_\perp(\Delta v) = -8\pi G\hbar\omega/A_\perp = \mathrm{const}$. 
+A constant-Laplacian supertranslation field corresponds to a single 
+$\ell = 2$, $m = 0$ solid harmonic in the angular mode decomposition: 
+exactly one BMS mode is excited. 
+Compare the AS shift $\Delta v \propto -\ln r^2$, whose Laplacian is 
+$\nabla^2_\perp(\Delta v) \propto \delta^{(2)}(\mathbf{x}_\perp)$; 
+a point-source Laplacian couples to all angular harmonics, 
+so the AS wave populates the entire BMS spectrum.
+
+\paragraph{Cut-and-paste structure.}
+Despite its delocalized transverse profile, the planar impulsive wave 
+retains the cut-and-paste structure of the AS pp-wave: the geometry is 
+flat for $u < 0$ and $u > 0$, joined at $u = 0$ by the 
+identification~\eqref{eq:shift_planar} together with a transverse 
+velocity kick $\Delta\dot{x}^i = \bar{H}^i_{\ j} x^j = 
+-(8\pi G\hbar\omega/A_\perp)\,x^i$ directed inward. 
+The planar wave is therefore the global, uniform-expansion version 
+of the same horizon surgery that the AS wave performs locally.
+
 \subsection{The AS pp-Wave and Its Effects}
 
 Test particles at fixed transverse positions $(x,y)$ experience two effects as the shock front crosses $u = 0$:
@@ -1540,6 +1422,12 @@ horizons in opposite null directions.
 
 \subsection{Transverse Focusing Increments Horizon Area}
 \label{sec:deltaA}
+
+The Raychaudhuri calculation of Section~\ref{sec:planar_wave} already 
+establishes $\Delta A = 8\pi G\hbar\omega$ in the delocalized limit 
+via equation~\eqref{eq:deltaA_planar}. We now derive the same result 
+for the localized AS pp-wave, confirming that the area increment is 
+independent of the transverse localisation of the photon.
 
 The transverse focusing of the AS pp-wave produces a calculable 
 increment in horizon area. We derive this using the Raychaudhuri 
@@ -1636,6 +1524,46 @@ $\mathrm{BMS}_3$ central charge~\cite{carlip2018black}
 then acquires a direct operational reading: it counts 
 measurement events, one supertranslation mode per 
 absorbed photon.
+
+\subsection{The Localization Transition}
+\label{sec:loc_transition}
+
+The planar impulsive wave and the AS pp-wave are the two extremes of a 
+one-parameter family parametrised by the transverse width $\sigma$ of 
+the photon mode. Replacing the uniform density $\hbar\omega/A_\perp$ 
+in~\eqref{eq:Tuu_planar} with a normalized Gaussian 
+$g_\sigma(\mathbf{x}_\perp) = (\pi\sigma^2)^{-1}e^{-r^2/\sigma^2}$,
+\begin{equation}
+    T_{uu}(u,\mathbf{x}_\perp) 
+    = \hbar\omega\,g_\sigma(\mathbf{x}_\perp)\,\delta(u),
+\end{equation}
+gives a family that connects the two limits: as $\sigma \to \infty$ 
+(at fixed horizon area $A_\perp$) the energy density becomes approximately 
+uniform and the shift approaches the quadratic 
+form~\eqref{eq:shift_planar}; as $\sigma \to 0$ the energy concentrates 
+on the axis and the shift approaches the AS logarithmic 
+form~\eqref{eq:shift_AS}. The total null energy $\hbar\omega$ is 
+preserved throughout, so
+\begin{equation}
+    \Delta A = 8\pi G\int T_{uu}\,du\,d^2x_\perp = 8\pi G\hbar\omega
+\end{equation}
+holds for all $\sigma$. The regulated longitudinal shift of 
+Appendix~\ref{sec:as_reg} describes this interpolation in the 
+neighbourhood of the AS limit; the natural transverse scale 
+is the photon wavelength $\sigma \sim c/\omega$, consistent with 
+the regularization scheme of that appendix.
+
+The BMS mode content transitions continuously with $\sigma$. At large 
+$\sigma$ the Laplacian $\nabla^2_\perp(\Delta v)$ is approximately 
+constant, selecting the $\ell = 2$, $m=0$ mode; as $\sigma$ decreases, 
+the Laplacian sharpens toward a delta function and progressively higher 
+multipoles are populated until the full BMS spectrum is excited in the 
+AS limit. The localization transition is therefore simultaneously a 
+transition in the BMS mode content of the horizon perturbation, a 
+transition in the spatial distribution of the area increment, and, 
+via the correspondence established in~\cite{player2025driving}, the 
+geometric counterpart of the QFT transition from delocalized thermal 
+modes to localized non-thermal wave packets.
 
 \subsection{Action and the Gravitational Boundary}
 \label{sec:microstate_action}
@@ -1805,6 +1733,22 @@ directions, is a natural question for future work.
 \section{Entanglement as Spatial Information}
 \label{sec:erepr}
 
+The two geometric regimes of Section~\ref{sec:ppwave} carry complementary 
+entanglement interpretations. In the delocalized limit, the planar impulsive 
+wave uniformly displaces the entire horizon outward in the $+v$ direction 
+(right wedge) and $-v$ direction (left wedge): the two wedges are pushed apart 
+globally, and the geometric connection between them is generated by the 
+entanglement of the full thermofield double state~\eqref{eq:vacuum_vec}. 
+This is the ensemble-level version of Van Raamsdonk's 
+argument~\cite{van2010building}: the single BMS mode excited by the 
+delocalized photon corresponds to a global deformation of the geometry 
+connecting the two wedges. In the localized limit, the AS longitudinal 
+shift is concentrated in a cylindrical neighbourhood of the photon trajectory: 
+the two wedges are displaced apart locally, microstate by microstate, and the 
+geometric connection is built up event by event from individual measurement 
+interactions. The full Van Raamsdonk picture is the sum of these local events 
+over the ensemble; the bilocal construction makes each contributing event explicit.
+
 Van~Raamsdonk~\cite{van2010building} showed, in 
 the AdS/CFT setting, that the entanglement entropy between 
 two halves of a thermofield double state controls the 
@@ -1897,7 +1841,7 @@ established in Section~\ref{sec:substrate}, the horizon is a boundary that makes
 left/right distinction sharp; it is the matter on each side that accumulates the samples and
 holds the classical record. $\mathcal{R}$'s detector has absorbed one photon, increased its sampling rate, and registered polarization $H_+/H_-$. $\mathcal{L}$'s detector has absorbed one photon, increased its sampling rate, and registered polarization $H_-/H_+$. The two records are perfectly complementary by the anticorrelated structure of the bilocal source, and their complementarity is encoded in matter and is reflected in geometry.
 
-\subsection{Emergent Space and the Thermofield Double NEW}
+\subsection{Emergent Space and the Thermofield Double}
 The Unruh vacuum is the thermofield double state of the left 
 and right Rindler wedges~\cite{maldacena2013cool}: 
 equation~\eqref{eq:vacuum_vec} is precisely this state, with 
