@@ -92,9 +92,10 @@ arrow is the Di\'{o}si--Penrose postulate.}
 \end{figure}
 
 Three well-established programs provide the 
-grounding for the present construction, which 
-supplies the missing physical process in each: 
-quantum measurement. Jacobson~\cite{jacobson1995thermodynamics} derives the Einstein 
+grounding for the present construction; in each, 
+the missing physical process is quantum 
+measurement, which does not appear explicitly 
+in any of them. Jacobson~\cite{jacobson1995thermodynamics} derives the Einstein 
 equations from thermodynamic identities on local Rindler horizons but leaves 
 open what physical process underlies each entropy increment; the present 
 paper provides that process. Van~Raamsdonk ~\cite{van2010building} showed, 
@@ -382,7 +383,6 @@ bound~\cite{bekenstein1981universal} at the horizon condition $a = c^2/R$,
 and the reading of both as the same inequality in different frames, 
 appears to be new in this form.
 
-
 % Section 3
 \section{Bilocal Microstate Construction}
 \label{sec:microstates}
@@ -391,7 +391,13 @@ From now on we use natural units $\hbar = c = 1$ unless
 otherwise specified; factors of $\hbar$ and $c$ are restored 
 where they aid physical interpretation.
 
-The arguments of Section~\ref{sec:heuristics} establish a heuristic relationship between information acquisition, acceleration, and gravitational effects, but leave open the question of what a single microstate looks like concretely. In standard treatments, the Unruh effect is derived by coupling a detector to a pre-existing acceleration and reading off a thermal response from the vacuum.
+The arguments of Section~\ref{sec:heuristics} establish a 
+heuristic relationship between information acquisition, 
+acceleration, and gravitational effects, but leave open the 
+question of what a single microstate looks like concretely. 
+In standard treatments, the Unruh effect is derived by 
+coupling a detector to a pre-existing acceleration and reading 
+off a thermal response from the vacuum. 
 In~\cite{player2025driving} this logic was inverted for a 
 scalar field: a source placed in the past injects non-thermal 
 entangled excitations into the field, and the observer's 
@@ -401,24 +407,48 @@ to the spin-1 electromagnetic field, upgrading from scalar
 to helicity-carrying Bell states and making the single-bit 
 structure of each measurement event explicit.
 
-Consider the wedges in Figure \ref{paz} with distinguished points, right $\mathcal{R}$, left $\mathcal{L}$,
-and past $\mathcal{P}$, at positions $(t,z) = (0,1)$, $(0,-1)$, and $(-1,0)$.
-Each microstate, a projection of equation \eqref{eq:microstate_vec} upcoming,
-is individually non-thermal in the sense that it carries a definite Rindler frequency 
-$\omega$, the frequency natural to $\mathcal{R}$ and 
-$\mathcal{L}$, which differs from the Minkowski frequency seen 
-by $\mathcal{P}$ due to the position-dependent redshift of the 
-Rindler geometry.
-Thermality is not a property of any single microstate but of 
-the ensemble; it emerges when one models the detector response 
-within a wedge as a sum over all Rindler modes, as in the 
-standard Unruh--DeWitt treatment~\cite{unruh1976notes, 
-einstein1979general}, and is a consequence of that 
-mode-averaging rather than a premise of the construction. 
-The bilocal source eliminates this coarse-graining by 
-selecting a definite frequency $\omega$, fixing both the 
-observer location and the spatial origin of the detected 
-excitations~\cite{player2025driving}.
+\subsection{A Source and Two Observers}
+
+Three massive bodies are placed at spacetime positions 
+$(t,z) = (0,1)$, $(0,-1)$, and $(-1,0)$, named 
+\emph{$\mathcal{R}$}~--~\textit{Right}, 
+\emph{$\mathcal{L}$}~--~\textit{Left}, and 
+\emph{$\mathcal{P}$}~--~\textit{Past} respectively. 
+$\mathcal{P}$ serves as the common causal ancestor of the 
+accelerations of $\mathcal{R}$ and $\mathcal{L}$ (see 
+Figure~\ref{paz}). $\mathcal{P}$ emits an entangled pair of 
+spin-1 massless photons with momenta $\pm k$ and Rindler 
+frequency $\omega = \omega_k$. The momenta are perfectly 
+balanced, so the source exhibits no net back-reaction in this 
+minimal model. The two photons propagate into the left and 
+right Rindler wedges, where $\mathcal{L}$ and $\mathcal{R}$ 
+detect them respectively, each registering a helicity 
+eigenvalue and acquiring one classical bit of information.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.75]{paz.png}
+\captionsetup{width=0.7\textwidth}
+\caption{A source in the past, $\mathcal{P}$, emits an 
+entangled photon pair that accelerates $\mathcal{R}$ into 
+the right Rindler wedge and $\mathcal{L}$ into the left 
+Rindler wedge. The two null directions of propagation define 
+the $z^+$ and $z^-$ axes of the double-null coordinate 
+system.}
+\label{paz}
+\end{figure}
+
+The three-party structure $\mathcal{P}$--$\mathcal{R}$--$\mathcal{L}$ 
+is a tripartite entanglement: neither $\mathcal{R}$ nor 
+$\mathcal{L}$ alone holds sufficient information to 
+reconstruct the emission event at $\mathcal{P}$, but their 
+two complementary bits together do, making $\mathcal{P}$ the 
+logical AND of the pair and providing a natural 
+microstate-level realization of interior reconstruction.
+
+\subsection{PVM Localization and the Elimination of 
+Coarse-Graining}
+\label{sec:pvm_localization}
 
 The thermal Unruh distribution is the correct description for 
 an observer with no knowledge of the source of their 
@@ -426,246 +456,257 @@ acceleration: without access to $\mathcal{P}$'s emission
 history, all possible microstates appear equally likely, and 
 both the Planck distribution over $\omega$ and the mixed 
 density matrix obtained by tracing out the complementary wedge 
-reflect the same epistemic situation. The bilocal construction 
-breaks this ignorance explicitly. Because $\mathcal{P}$ emits 
-at a definite frequency $\omega$, a measurement, a PVM 
-projection onto a definite helicity outcome, resolves both 
-coarse-grainings simultaneously: after the collapse there is 
-no $\omega$-averaging and no partial-trace ambiguity, and the 
-observer is at a specific point in microstate space within the 
-non-thermal Minkowski description. In this sense measurement 
-is access to the Minkowski description, and the apparent 
-thermal bath is replaced by a definite momentum 
-transfer, a thrust, sourced by $\mathcal{P}$. This 
-reinterprets a portion of the Unruh response as physically 
-sourced thrust rather than thermal 
+reflect the same epistemic situation. Specifying the physical 
+locations of $\mathcal{P}$ and $\mathcal{R}$ breaks this 
+ignorance explicitly, eliminating both coarse-grainings 
+responsible for the apparent thermality of the standard Unruh 
+effect~\cite{player2025driving}: the unknown frequency of the 
+detected excitation, and the unspecified transverse position 
+of the source-detector pair. We now show that both 
+coarse-grainings are resolved by a single projective 
+argument, and that the interpolation between them is 
+controlled by a one-parameter family of diagonal Kraus 
+operators.
+
+\paragraph{Frequency localization.}
+In~\cite{player2025driving} the inversion of the standard 
+Unruh logic rests on a PVM projection in frequency space: 
+specifying the detector location $\mathcal{R}$ selects the 
+Rindler frequency $\omega$ the detector responds to, rather 
+than having the thermal bath impose a distribution over all 
+frequencies. Because $\mathcal{P}$ emits at a definite 
+frequency $\omega$, a PVM projection onto a definite helicity 
+outcome resolves the frequency coarse-graining: after the 
+collapse there is no $\omega$-averaging and no 
+partial-trace ambiguity, and the observer is at a specific 
+point in microstate space within the non-thermal Minkowski 
+description. In this sense measurement is access to the 
+Minkowski description, and the apparent thermal bath is 
+replaced by a definite momentum transfer, a thrust, sourced 
+by $\mathcal{P}$. This reinterprets a portion of the Unruh 
+response as physically sourced thrust rather than thermal 
 fluctuation~\cite{player2025driving}, and it is the concrete 
 realisation of the Bayesian update arrow in 
-Figure~\ref{fig:diagram}: state reduction
-is not imposed from 
+Figure~\ref{fig:diagram}: state reduction is not imposed from 
 outside but follows from the physical interaction at the 
 measurement event.
 
-We now upgrade this construction from a spin-0 scalar field in 
-our original source~\cite{player2025driving} to the spin-1 
-electromagnetic field with a superposition of helicity pairs in 
-a Bell state, introducing one unknown binary degree of freedom,
-the helicity outcome, undetermined until measured, which 
-is the single bit responsible for the remaining thermality in 
-the ensemble. The photon carries one quantum of action $\hbar$ 
-and energy $E = \hbar\omega$, identifying the thrust quantum of 
-Section~\ref{sec:heuristics} with a single photon whose 
-polarization outcome, upon detection, is the classical bit 
-acquired by each observer. The Bell state is the natural 
-completion of the PCT symmetry between wedges, which by the 
-Bisognano--Wichmann theorem~\cite{bisognano1975duality} is 
-implemented by the modular conjugation operator $J$ mapping 
-the right wedge algebra to the left wedge algebra,
-and as we discuss in Section~\ref{sec:ppwave}, the photons
-imprint a definite geometric signature onto the horizon.
-
-The anticorrelated helicity assignment in both 
-constructions traces to the same algebraic symmetry. 
-In the bilocal construction, the Bell 
-state~\eqref{eq:microstate_vec} is the unique two-photon 
-state invariant under the Bisognano--Wichmann modular 
-conjugation $J$, which implements PCT between the two 
-Rindler wedges and simultaneously flips 
-$\lambda \to -\lambda$. In the zig-zag, PCT maps the 
-right-helicity Weyl spinor $\psi_R$ to the left-helicity 
-spinor $\psi_L$, precisely the same operation, now 
-acting along the worldline rather than across a spatial 
-horizon. The anticorrelated pair in each case is the 
-PCT-invariant configuration of two massless helicity 
-eigenstates; the bilocal Bell state and the Dirac 
-4-spinor are therefore the same object at different 
-codimension: one lives on the $(1{+}1)$-dimensional 
-worldline, the other on the $(2{+}1)$-dimensional 
-horizon. The Lorentz algebra decomposition
+\paragraph{Transverse localization.}
+The same projective logic extends to the transverse 
+directions. The thermofield double state~\eqref{eq:vacuum_vec} 
+is a sum over all Rindler frequencies $\omega$ and all 
+transverse positions $\mathbf{x}_\perp$. A Rindler plane wave 
+at frequency $\omega$ is a coherent superposition over all 
+possible source-detector pairs $(\mathcal{P}', \mathcal{R}')$ 
+connected by null geodesics at that frequency:
+%
 \begin{equation}
-\mathfrak{so}(3,1) \cong \mathfrak{su}(2) \times \mathfrak{su}(2)
+    |1_{\omega,\mathrm{plane}}\rangle 
+    = \int d^2\mathbf{x}_\perp\, d\eta'\;
+      \phi(\mathbf{x}_\perp, \eta')\;
+      |\mathcal{P}'(\mathbf{x}_\perp,\eta'),\,
+       \mathcal{R}'(\mathbf{x}_\perp,\eta')\rangle,
+    \label{eq:plane_superposition}
 \end{equation}
-is the common algebraic statement: 
-the two $\mathfrak{su}(2)$ factors label the two 
-helicity sectors that PCT/$J$ exchanges in both cases.
+%
+with flat weight $\phi$. Specifying $\mathcal{P} = (-1,0)$ 
+and $\mathcal{R} = (0,1)$ projects onto the unique null 
+geodesic connecting them, resolving the transverse 
+coarse-graining simultaneously with the frequency 
+coarse-graining. A single PVM projection onto this geodesic 
+therefore selects a single term from the thermofield double 
+sum in both directions at once.
 
-\subsection{A Source, Two Observers, and PVM Localization}
-
-Three massive bodies are placed at spacetime
-positions $(t,z) = (0,1)$, $(0,-1)$, and $(-1,0)$, named \emph{$\mathcal{R}$} - {\it Right}, \emph{$\mathcal{L}$} - {\it Left}, and \emph{$\mathcal{P}$} - {\it Past} respectively. $\mathcal{P}$ serves as the
-common causal ancestor of the accelerations of $\mathcal{R}$ and $\mathcal{L}$ (see Figure~\ref{paz}).
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.75]{paz.png}
-\captionsetup{width=0.7\textwidth}
-\caption{A source in the past, $\mathcal{P}$, emits an entangled photon pair that accelerates $\mathcal{R}$ into the right Rindler wedge and $\mathcal{L}$ into the left Rindler wedge. The two null directions of propagation define the $z^+$ and $z^-$ axes of the double-null
-coordinate system.}
-\label{paz}
-\end{figure}
-$\mathcal{P}$ emits an entangled pair of spin-1 massless photons with momenta $\pm k$ and Rindler frequency $\omega = \omega_k$. The momenta are perfectly balanced, so the source exhibits no net back-reaction in this minimal model. The two photons propagate into the left and right Rindler wedges, where $\mathcal{L}$ and $\mathcal{R}$ detect them respectively, each registering a helicity eigenvalue and acquiring one classical bit of information.
-
-The three-party structure $\mathcal{P}$--$\mathcal{R}$--$\mathcal{L}$ 
-is a tripartite entanglement: neither $\mathcal{R}$ nor $\mathcal{L}$ 
-alone holds sufficient information to reconstruct the emission event 
-at $\mathcal{P}$, but their two complementary bits together do, making 
-$\mathcal{P}$ the logical AND of the pair and providing a natural 
-microstate-level realization of interior reconstruction.
-
-
-The specification of $\mathcal{P}$ at $(-1,0)$ and 
-$\mathcal{R}$ at $(0,1)$ is not merely a gauge 
-choice: fixing the locations of source and detector 
-eliminates both coarse-grainings responsible for 
-the apparent thermality of the standard Unruh 
-effect, the unknown location of the observer 
-within the wedge and the unspecified spatial origin 
-of the detected excitations~\cite{player2025driving}.
-
-The two coarse-grainings are resolved by a single 
-PVM projection defined by the physical 
-source-detector geometry. The thermofield double 
-state~\eqref{eq:vacuum_vec} is a sum over all 
-Rindler frequencies $\omega$ and all transverse 
-positions $\mathbf{x}_\perp$; specifying 
-$\mathcal{P} = (-1,0)$ and $\mathcal{R} = (0,1)$ 
-projects onto a single term in this sum 
-simultaneously in both directions. The null 
-geodesic connecting $\mathcal{P}$ to $\mathcal{R}$ 
-has a unique frequency, determined by the proper 
-distance and Rindler time between the two points, 
-and a unique transverse position, determined by 
-the spatial locations of the two points. A single 
-PVM projection onto this geodesic therefore 
-resolves the frequency coarse-graining and the 
-transverse coarse-graining at once, selecting the 
-microstate~\eqref{eq:microstate_vec} from the 
-thermofield double. The plane wave Unruh mode is 
-what remains when neither coarse-graining is 
-resolved; the thermal ensemble is what remains 
-when neither is resolved and $\mathcal{L}$ is 
-traced out; the individual non-thermal microstate 
-is what the PVM projection onto the 
-$\mathcal{P}$--$\mathcal{R}$ geodesic selects. 
-The localization transition of 
-Section~\ref{sec:loc_transition} is the geometric 
-signature of this projection: the interpolation 
-from the delocalized planar wave to the localized 
-AS pp-wave traces the same transition from 
-unresolved to resolved transverse position that 
-the PVM projection effects in the field theory.
-
-The sharpness of this projection is controlled by 
-the width $\sigma$ of the wavepacket shaping 
-function, which acts as a diagonal Kraus operator
+\paragraph{From POVM to PVM: the Stokes transition.}
+The sharpness of the transverse projection is controlled by 
+the width $\sigma$ of the wavepacket shaping function, which 
+acts as a diagonal Kraus operator:
 %
 \begin{equation}
     K_\sigma = \int d^2\mathbf{x}_\perp\, 
     e^{-r^2/2\sigma^2}\,
     |\mathbf{x}_\perp\rangle
     \langle\mathbf{x}_\perp|,
+    \label{eq:kraus}
 \end{equation}
 %
-with complementary operator $K_\sigma^\perp$ 
-satisfying $K_\sigma^\dagger K_\sigma + 
-(K_\sigma^\perp)^\dagger K_\sigma^\perp = 
-\mathbf{1}$ pointwise. This defines a POVM 
-interpolating between two limits: $\sigma \to 
-\infty$ gives $K_\sigma \to \mathbf{1}$, no 
-projection, recovering the full thermal plane 
-wave; $\sigma \to 0$ gives a sharp PVM projector 
-onto the $\mathcal{P}$--$\mathcal{R}$ null 
-geodesic, recovering the localized 
-microstate~\eqref{eq:microstate_vec}. The Stokes 
-phenomenon of~\cite{player2025driving}, the 
-transition in the asymptotic behavior of the 
-parabolic cylinder function $D_\nu(-z)$ across 
-the Stokes line $\arg z = \pi/4$, is the analytic 
-signature of this POVM-to-PVM transition: the 
-thermal regime $\sigma \to \infty$ corresponds to 
-the $e^{-\frac{1}{4}z^2}$ asymptotic branch, and 
-the localized regime $\sigma \to 0$ corresponds 
-to the $e^{\frac{1}{4}z^2}$ branch. The present 
-paper works entirely in the $\sigma \to 0$ PVM 
-limit; \cite{player2025driving} works in the 
-interior of the POVM family.
+with complementary operator $K_\sigma^\perp$ satisfying 
+$K_\sigma^\dagger K_\sigma + 
+(K_\sigma^\perp)^\dagger K_\sigma^\perp = \mathbf{1}$ 
+pointwise~\cite{kraus1983states, nielsen2001quantum}, since $e^{-r^2/\sigma^2} + 
+(1 - e^{-r^2/\sigma^2}) = 1$. This defines a one-parameter 
+POVM family interpolating between two limits: $\sigma \to 
+\infty$ gives $K_\sigma \to \mathbf{1}$, no projection, 
+recovering the full thermal plane wave; $\sigma \to 0$ gives 
+a sharp PVM projector onto the $\mathcal{P}$--$\mathcal{R}$ 
+null geodesic, recovering the localized non-thermal 
+microstate. The Stokes phenomenon of~\cite{player2025driving}, 
+the transition in the asymptotic behavior of the parabolic 
+cylinder function $D_\nu(-z)$ across the Stokes line 
+$\arg z = \pi/4$, is the analytic signature of this 
+POVM-to-PVM transition: the thermal regime $\sigma \to \infty$ 
+corresponds to the $e^{-\frac{1}{4}z^2}$ asymptotic branch, 
+and the localized regime $\sigma \to 0$ corresponds to the 
+$e^{\frac{1}{4}z^2}$ branch. The present paper works entirely 
+in the $\sigma \to 0$ PVM limit; \cite{player2025driving} 
+works in the interior of the POVM family, with the Stokes 
+line marking the boundary between thermal and non-thermal 
+behavior.
 
-The bilocal source excites a single Unruh mode at 
-definite Rindler frequency $\omega$: from 
-$\mathcal{R}$'s perspective this is a Rindler plane 
-wave at $\omega$ rather than a thermal superposition 
-over frequencies, while from $\mathcal{P}$'s 
-Minkowski perspective the same mode is spread across 
-Minkowski frequencies through the red/blue shift of 
-the Rindler geometry. 
-Non-thermality is a consequence of this 
-specificity, not an additional assumption.
+\paragraph{The microstate.}
+The result of both projections is an individually non-thermal 
+microstate carrying a definite Rindler frequency $\omega$ and 
+a definite transverse position. Thermality is not a property 
+of any single microstate but of the ensemble; it emerges when 
+one models the detector response within a wedge as a sum over 
+all Rindler modes, as in the standard Unruh--DeWitt 
+treatment~\cite{unruh1976notes, einstein1979general}, and is 
+a consequence of that mode-averaging rather than a premise of 
+the construction. The plane wave Unruh mode is what remains 
+when neither coarse-graining is resolved; the thermal ensemble 
+is what remains when neither is resolved and $\mathcal{L}$ is 
+traced out; the individual non-thermal microstate is what the 
+PVM projection onto the $\mathcal{P}$--$\mathcal{R}$ geodesic 
+selects. The localization transition of 
+Section~\ref{sec:loc_transition} is the geometric signature 
+of this: the interpolation from the delocalized planar wave 
+to the localized AS pp-wave traces the same POVM-to-PVM 
+transition in the geometry of the horizon perturbation.
+
+\subsection{Helicity Structure and PCT Symmetry}
+
+We now upgrade this construction from a spin-0 scalar field 
+in~\cite{player2025driving} to the spin-1 electromagnetic 
+field with a superposition of helicity pairs in a Bell state, 
+introducing one unknown binary degree of freedom --- the 
+helicity outcome, undetermined until measured --- which is 
+the single bit responsible for the remaining thermality in 
+the ensemble. The photon carries one quantum of action $\hbar$ 
+and energy $E = \hbar\omega$, identifying the thrust quantum 
+of Section~\ref{sec:heuristics} with a single photon whose 
+polarization outcome, upon detection, is the classical bit 
+acquired by each observer. The Bell state is the natural 
+completion of the PCT symmetry between wedges, which by the 
+Bisognano--Wichmann theorem~\cite{bisognano1975duality} is 
+implemented by the modular conjugation operator $J$ mapping 
+the right wedge algebra to the left wedge algebra, and as we 
+discuss in Section~\ref{sec:ppwave}, the photons imprint a 
+definite geometric signature onto the horizon.
+
+The anticorrelated helicity assignment in both constructions 
+traces to the same algebraic symmetry. In the bilocal 
+construction, the Bell state~\eqref{eq:microstate_vec} is the 
+unique two-photon state invariant under the 
+Bisognano--Wichmann modular conjugation $J$, which implements 
+PCT between the two Rindler wedges and simultaneously flips 
+$\lambda \to -\lambda$. In the zig-zag, PCT maps the 
+right-helicity Weyl spinor $\psi_R$ to the left-helicity 
+spinor $\psi_L$, precisely the same operation, now acting 
+along the worldline rather than across a spatial horizon. The 
+anticorrelated pair in each case is the PCT-invariant 
+configuration of two massless helicity eigenstates; the 
+bilocal Bell state and the Dirac 4-spinor are therefore the 
+same object at different codimension: one lives on the 
+$(1{+}1)$-dimensional worldline, the other on the 
+$(2{+}1)$-dimensional horizon. The Lorentz algebra 
+decomposition
+\begin{equation}
+\mathfrak{so}(3,1) \cong \mathfrak{su}(2) \times \mathfrak{su}(2)
+\end{equation}
+is the common algebraic statement: the two $\mathfrak{su}(2)$ 
+factors label the two helicity sectors that PCT/$J$ exchanges 
+in both cases.
 
 \subsection{Double-Null Gauge}
 
-The emission event naturally defines two null directions:
-the right-moving photon has wave-vector $k^\mu_R = (\omega, 0, 0, k)$ 
-and the left-moving photon has wave-vector $k^\mu_L = (\omega, 0, 0, -k)$, 
-with equal and opposite spatial momenta.
-These two null directions are precisely the $z^+$ and $z^-$ axes of double-null coordinates
+The emission event naturally defines two null directions: the 
+right-moving photon has wave-vector 
+$k^\mu_R = (\omega, 0, 0, k)$ and the left-moving photon has 
+wave-vector $k^\mu_L = (\omega, 0, 0, -k)$, with equal and 
+opposite spatial momenta. These two null directions are 
+precisely the $z^+$ and $z^-$ axes of double-null coordinates
 \begin{equation}
     z^\pm = \frac{1}{\sqrt{2}}(t \pm z),
 \end{equation}
-with transverse coordinates $\mathbf{z}_\perp = (x, y)$. Working in this frame we impose
-the symmetric double-null gauge condition
+with transverse coordinates $\mathbf{z}_\perp = (x, y)$. 
+Working in this frame we impose the symmetric double-null 
+gauge condition
 \begin{equation}
     A_+(z) = 0, \qquad A_-(z) = 0,
 \label{eq:doublenull}
 \end{equation}
-so that the gauge field is supported entirely on the transverse components $\mathbf{A}_\perp = (A^x, A^y)$. This gauge respects the PCT symmetry that swaps the two wedges $(z^+ \leftrightarrow z^-)$ simultaneously with $(R \leftrightarrow L)$, and therefore treats both observers symmetrically by construction. The residual gauge freedom is fixed by requiring $\partial_i A^i = 0$ in the transverse plane, leaving precisely the two physical helicity degrees of freedom $\epsilon^i_{(\lambda)}$ with $\lambda = \pm 1$; consistency with 
-Maxwell's equations and the absence of over-determination are 
-verified in Appendix~\ref{gauge_consistency}.
+so that the gauge field is supported entirely on the 
+transverse components $\mathbf{A}_\perp = (A^x, A^y)$. This 
+gauge respects the PCT symmetry that swaps the two wedges 
+$(z^+ \leftrightarrow z^-)$ simultaneously with 
+$(R \leftrightarrow L)$, and therefore treats both observers 
+symmetrically by construction. The residual gauge freedom is 
+fixed by requiring $\partial_i A^i = 0$ in the transverse 
+plane, leaving precisely the two physical helicity degrees of 
+freedom $\epsilon^i_{(\lambda)}$ with $\lambda = \pm 1$; 
+consistency with Maxwell's equations and the absence of 
+over-determination are verified in 
+Appendix~\ref{gauge_consistency}.
 
-The lack of manifest four-dimensional covariance in equation \eqref{eq:doublenull} is a consequence of aligning the gauge with the pair of physical null directions selected by the source, rather than an arbitrary choice. The full Lorentz group is broken to the little group preserving the pair $\{k^\mu_R, k^\mu_L\}$, which is the two-dimensional Euclidean group $ISO(2)$ acting on the transverse plane. This is precisely the little group of massless particles, and the two helicity eigenstates $\lambda = \pm 1$ are its irreducible representations. All physical results are independent of the gauge choice.
-
+The lack of manifest four-dimensional covariance in 
+equation~\eqref{eq:doublenull} is a consequence of aligning 
+the gauge with the pair of physical null directions selected 
+by the source, rather than an arbitrary choice. The full 
+Lorentz group is broken to the little group preserving the 
+pair $\{k^\mu_R, k^\mu_L\}$, which is the two-dimensional 
+Euclidean group $ISO(2)$ acting on the transverse plane. This 
+is precisely the little group of massless particles, and the 
+two helicity eigenstates $\lambda = \pm 1$ are its 
+irreducible representations. All physical results are 
+independent of the gauge choice.
 
 \subsection{The Bilocal Source}
 
-In double-null gauge the electromagnetic field is characterised by its transverse components
-alone. The bilocal driving source is symmetrized over both helicity assignments,
+In double-null gauge the electromagnetic field is 
+characterised by its transverse components alone. The bilocal 
+driving source is symmetrized over both helicity assignments,
 \begin{equation}
-    J^{ij}(x,y) = g\left( \epsilon^{i*}_{(-1)}\, \epsilon^{j}_{(+1)} 
-    + \epsilon^{i*}_{(+1)}\, \epsilon^{j}_{(-1)}\right) f_L(x)\, f_R(y),
+    J^{ij}(x,y) = g\left( \epsilon^{i*}_{(-1)}\, 
+    \epsilon^{j}_{(+1)} 
+    + \epsilon^{i*}_{(+1)}\, \epsilon^{j}_{(-1)}\right) 
+    f_L(x)\, f_R(y),
 \label{eq:bilocal_vec}
 \end{equation}
-where $g$ is a coupling constant, $f_L$ and $f_R$ are normalised mode profiles supported
-on the left and right wedges respectively, and $\epsilon^i_{(\lambda)}$ are the circular
-polarization vectors
+where $g$ is a coupling constant, $f_L$ and $f_R$ are 
+normalised mode profiles supported on the left and right 
+wedges respectively, and $\epsilon^i_{(\lambda)}$ are the 
+circular polarization vectors
 \begin{equation}
-    \epsilon^i_{(+1)} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\i\end{pmatrix}, \qquad
-    \epsilon^i_{(-1)} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix}.
+    \epsilon^i_{(+1)} = \frac{1}{\sqrt{2}}
+    \begin{pmatrix}1\\i\end{pmatrix}, \qquad
+    \epsilon^i_{(-1)} = \frac{1}{\sqrt{2}}
+    \begin{pmatrix}1\\-i\end{pmatrix}.
 \end{equation}
-The two terms in~\eqref{eq:bilocal_vec} are related by the PCT transformation 
-in the sense of Bisognano--Wichmann~\cite{bisognano1975duality}, which maps the 
-right wedge algebra to the left wedge algebra and simultaneously flips 
-$\lambda \to -\lambda$.
+The two terms in~\eqref{eq:bilocal_vec} are related by the 
+PCT transformation in the sense of 
+Bisognano--Wichmann~\cite{bisognano1975duality}, which maps 
+the right wedge algebra to the left wedge algebra and 
+simultaneously flips $\lambda \to -\lambda$.
 
 More precisely, the modular conjugation $J$ of 
-Bisognano--Wichmann maps a right-wedge creation 
-operator $a^{R\dagger}_{k,(\lambda)}$ to a left-wedge 
-creation operator $a^{L\dagger}_{-k,(-\lambda)}$, 
-implementing PCT between wedges. The Bell 
-state~\eqref{eq:microstate_vec} is the unique 
-two-photon state invariant under $J$: the 
-anticorrelated helicity assignment and the 
-symmetric superposition are not choices but 
-consequences of requiring $J$-invariance. The 
-bilocal source~\eqref{eq:bilocal_vec} is therefore 
-the unique source consistent with the algebraic 
-symmetry of the Rindler vacuum.
+Bisognano--Wichmann maps a right-wedge creation operator 
+$a^{R\dagger}_{k,(\lambda)}$ to a left-wedge creation 
+operator $a^{L\dagger}_{-k,(-\lambda)}$, implementing PCT 
+between wedges. The Bell state~\eqref{eq:microstate_vec} is 
+the unique two-photon state invariant under $J$: the 
+anticorrelated helicity assignment and the symmetric 
+superposition are not choices but consequences of requiring 
+$J$-invariance. The bilocal 
+source~\eqref{eq:bilocal_vec} is therefore the unique source 
+consistent with the algebraic symmetry of the Rindler vacuum.
 
 The symmetrization is therefore not an ad hoc choice but the 
 unique assignment consistent with PCT symmetry and angular 
 momentum conservation at the emission vertex: a scalar source 
-carries zero angular momentum, so the emitted pair must satisfy 
-$\lambda_R + \lambda_L = 0$, forcing anticorrelated helicities; 
-PCT then fixes the relative phase between the two terms, and 
-the total angular momentum vanishes in both.
-
+carries zero angular momentum, so the emitted pair must 
+satisfy $\lambda_R + \lambda_L = 0$, forcing anticorrelated 
+helicities; PCT then fixes the relative phase between the two 
+terms, and the total angular momentum vanishes in both.
 
 The sourced Lagrangian reads
 \begin{equation}
@@ -687,45 +728,55 @@ The sourced Lagrangian reads
 \end{aligned}
 \label{eq:bilocal_lag}
 \end{equation}
-where the two creation operator pairs correspond to the two PCT-related helicity 
-assignments. The interaction term in~\eqref{eq:bilocal_lag} is a two-mode squeezing 
-interaction at frequency $\omega$, now resolved by helicity and symmetrized over 
-both assignments: it is the direct vector-field analogue of the scalar squeezing 
-interaction~\cite{gerry2023introductory}, with the PCT symmetry between wedges 
-made explicit. The photon pair carries total angular momentum zero in each term, 
-consistent with emission from a scalar source at $\mathcal{P}$.
+where the two creation operator pairs correspond to the two 
+PCT-related helicity assignments. The interaction term 
+in~\eqref{eq:bilocal_lag} is a two-mode squeezing interaction 
+at frequency $\omega$, now resolved by helicity and 
+symmetrized over both assignments: it is the direct 
+vector-field analogue of the scalar squeezing 
+interaction~\cite{gerry2023introductory}, with the PCT 
+symmetry between wedges made explicit. The photon pair 
+carries total angular momentum zero in each term, consistent 
+with emission from a scalar source at $\mathcal{P}$.
 
-Each photon carries energy $E = \hbar\omega$ and one quantum of action $\hbar$, 
-identifying the thrust quantum of Section~\ref{sec:heuristics} with a concrete 
-physical object: the minimum actionable event is precisely a single photon. Its 
-polarization, undetermined until measured, is the quantum bit whose outcome 
-constitutes the classical record acquired by each observer upon detection.
+Each photon carries energy $E = \hbar\omega$ and one quantum 
+of action $\hbar$, identifying the thrust quantum of 
+Section~\ref{sec:heuristics} with a concrete physical object: 
+the minimum actionable event is precisely a single photon. 
+Its polarization, undetermined until measured, is the quantum 
+bit whose outcome constitutes the classical record acquired by 
+each observer upon detection.
 
-The Unruh--Landauer bound is saturated not at the level of an individual 
-photon but at the level of the source rate. The acceleration $a$ does not 
-fix the frequency $\omega$ of each emitted quantum; rather, it determines 
-the rate $\dot{N}$ at which the bilocal source must produce entangled pairs 
-in order to fully\footnote{The bilocal source may be only part of the 
-acceleration, so $\dot{N}$ is actually a lower bound.} implement that 
-acceleration, with the total power $\dot{N}\hbar\omega$ matching the Unruh 
-thermal flux. Each individual photon carries exactly one quantum of action 
-$\hbar$ and one binary helicity outcome, one bit in the sense of one 
-binary alternative, carrying $\ln 2$ nats, and these are paired by the 
-construction independently of $a$. The Landauer bound then operates as a 
-consistency condition on the ensemble: the minimum energy cost per bit 
-acquired, summed over the rate of acquisition, equals the power required 
-to sustain the acceleration.
-
+The Unruh--Landauer bound is saturated not at the level of an 
+individual photon but at the level of the source rate. The 
+acceleration $a$ does not fix the frequency $\omega$ of each 
+emitted quantum; rather, it determines the rate $\dot{N}$ at 
+which the bilocal source must produce entangled pairs in order 
+to fully\footnote{The bilocal source may be only part of the 
+acceleration, so $\dot{N}$ is actually a lower bound.} 
+implement that acceleration, with the total power 
+$\dot{N}\hbar\omega$ matching the Unruh thermal flux. Each 
+individual photon carries exactly one quantum of action 
+$\hbar$ and one binary helicity outcome, one bit in the sense 
+of one binary alternative carrying $\ln 2$ nats, and these 
+are paired by the construction independently of $a$. The 
+Landauer bound then operates as a consistency condition on 
+the ensemble: the minimum energy cost per bit acquired, 
+summed over the rate of acquisition, equals the power 
+required to sustain the acceleration.
 
 \subsection{Polarization Bogoliubov Transformation}
 
-We now show that the polarization labels survive the Rindler--Unruh mode decomposition,
-so that the thermal ensemble retains its helicity structure and the anticorrelation of the
-emitted pair descends unambiguously to the level of individual Rindler microstates.
+We now show that the polarization labels survive the 
+Rindler--Unruh mode decomposition, so that the thermal 
+ensemble retains its helicity structure and the 
+anticorrelation of the emitted pair descends unambiguously 
+to the level of individual Rindler microstates.
 
-In the transverse plane, the electromagnetic field in double-null gauge decomposes into
-two independent scalar-like sectors labelled by helicity $\lambda = \pm 1$. For each sector,
-the right-wedge field expands as
+In the transverse plane, the electromagnetic field in 
+double-null gauge decomposes into two independent 
+scalar-like sectors labelled by helicity $\lambda = \pm 1$. 
+For each sector, the right-wedge field expands as
 \begin{equation}
     A^i_\lambda(z) = \int_0^\infty \frac{d\omega}{2\pi}\,
         \frac{1}{\sqrt{2\omega}}\,\epsilon^i_{(\lambda)}
@@ -734,25 +785,39 @@ the right-wedge field expands as
             + b^{R\dagger}_{\omega,\lambda}\, u^{R*}_\omega(z)
         \right],
 \end{equation}
-where $u^R_\omega(z)$ are the right-wedge Rindler modes at Rindler frequency $\omega$, and
-$b^R_{\omega,\lambda}$, $b^{R\dagger}_{\omega,\lambda}$ are the corresponding annihilation
-and creation operators satisfying
+where $u^R_\omega(z)$ are the right-wedge Rindler modes at 
+Rindler frequency $\omega$, and $b^R_{\omega,\lambda}$, 
+$b^{R\dagger}_{\omega,\lambda}$ are the corresponding 
+annihilation and creation operators satisfying
 \begin{equation}
-    \left[b^R_{\omega,\lambda},\, b^{R\dagger}_{\omega',\lambda'}\right]
+    \left[b^R_{\omega,\lambda},\, 
+    b^{R\dagger}_{\omega',\lambda'}\right]
     = \delta(\omega - \omega')\,\delta_{\lambda\lambda'}.
 \end{equation}
-An identical expansion holds in the left wedge with $R \to L$ and $\lambda \to -\lambda$,
-reflecting the anticorrelated helicity assignment. Because each helicity sector is
-independently a scalar-like sector, the Bogoliubov transformation relating Minkowski and
-Rindler modes takes the same form in each sector. For helicity $\lambda$ at Rindler
+An identical expansion holds in the left wedge with 
+$R \to L$ and $\lambda \to -\lambda$, reflecting the 
+anticorrelated helicity assignment. Because each helicity 
+sector is independently a scalar-like sector, the Bogoliubov 
+transformation relating Minkowski and Rindler modes takes the 
+same form in each sector. For helicity $\lambda$ at Rindler 
 frequency $\omega$, the Unruh modes are
 \begin{equation}
-    c_{\omega,\lambda} = \cosh\theta_\omega\; b^R_{\omega,\lambda}
-                       - \sinh\theta_\omega\; b^{L\dagger}_{\omega,-\lambda},
+    c_{\omega,\lambda} = \cosh\theta_\omega\; 
+    b^R_{\omega,\lambda}
+                       - \sinh\theta_\omega\; 
+                       b^{L\dagger}_{\omega,-\lambda},
 \label{eq:bogoliubov}
 \end{equation}
-where $\tanh\theta_\omega = e^{-\pi\omega c/a}$ encodes the Unruh distribution at acceleration $a$, and the PCT symmetry between wedges is reflected in the 
-superposition over both helicity assignments in the Bell state. The transformation~\eqref{eq:bogoliubov} is the standard Bogoliubov relation for a massless field~\cite{unruh1976notes, birrell1984quantum}, now carrying a helicity label throughout. The Minkowski vacuum thermofield double state, in the Rindler basis reads, for each helicity sector,
+where $\tanh\theta_\omega = e^{-\pi\omega c/a}$ encodes the 
+Unruh distribution at acceleration $a$, and the PCT symmetry 
+between wedges is reflected in the superposition over both 
+helicity assignments in the Bell state. The 
+transformation~\eqref{eq:bogoliubov} is the standard 
+Bogoliubov relation for a massless 
+field~\cite{unruh1976notes, birrell1984quantum}, now carrying 
+a helicity label throughout. The Minkowski vacuum thermofield 
+double state, in the Rindler basis reads, for each helicity 
+sector,
 \begin{equation}
     |0\rangle_M^{(\lambda)}
     = \frac{1}{\cosh\theta_\omega}
@@ -761,15 +826,21 @@ superposition over both helicity assignments in the Bell state. The transformati
       |n_{\omega,-\lambda}\rangle_L,
 \label{eq:vacuum_vec}
 \end{equation}
-and the full vacuum is the product over all $\omega$ and both helicities:
+and the full vacuum is the product over all $\omega$ and both 
+helicities:
 \begin{equation}
-    |0\rangle_M = \prod_{\omega,\lambda} |0\rangle_M^{(\lambda)}.
+    |0\rangle_M = \prod_{\omega,\lambda} 
+    |0\rangle_M^{(\lambda)}.
 \end{equation}
 
-Equation~\eqref{eq:vacuum_vec} makes explicit that the Minkowski vacuum is a sum over
-entangled helicity-anticorrelated pairs at each Rindler frequency. The bilocal source
-selects a single term from this sum at fixed $\omega$ and fixed helicity pair
-$(\lambda, -\lambda) = (+1,-1)$, yielding the single-microstate
+Equation~\eqref{eq:vacuum_vec} makes explicit that the 
+Minkowski vacuum is a sum over entangled 
+helicity-anticorrelated pairs at each Rindler frequency. The 
+bilocal source, via the PVM projection of 
+Section~\ref{sec:pvm_localization}, selects a single term 
+from this sum at fixed $\omega$ and fixed helicity pair 
+$(\lambda, -\lambda) = (+1,-1)$, yielding the single 
+microstate
 \begin{equation}
     |\Psi_{\omega}\rangle_M
     = \frac{1}{\sqrt{2}}\left(
@@ -785,43 +856,59 @@ perfectly anticorrelated by the Bell state structure: each
 observer acquires one classical bit, and the two bits are 
 complements of one another.
 
-The key structural result is that the helicity label $\lambda$ is conserved under the
-Bogoliubov transformation: it enters equation~\eqref{eq:bogoliubov} as a spectator index and
-exits unchanged on the Unruh operators $c_{\omega,\lambda}$. Thermality, when it arises from
-coarse-graining over the ensemble of microstates~\eqref{eq:microstate_vec}, is therefore
-helicity-resolved: each helicity sector thermalises independently, and the anticorrelation
-between wedges is preserved at every level of the construction.
+The key structural result is that the helicity label $\lambda$ 
+is conserved under the Bogoliubov transformation: it enters 
+equation~\eqref{eq:bogoliubov} as a spectator index and exits 
+unchanged on the Unruh operators $c_{\omega,\lambda}$. 
+Thermality, when it arises from coarse-graining over the 
+ensemble of microstates~\eqref{eq:microstate_vec}, is 
+therefore helicity-resolved: each helicity sector thermalises 
+independently, and the anticorrelation between wedges is 
+preserved at every level of the construction.
 
 \subsection{Two Geometric Regimes}
 \label{sec:two_regimes}
 
-The microstate~\eqref{eq:microstate_vec} admits two complementary geometric 
-descriptions depending on the transverse localisation of the photon mode. 
-The bilocal source fixes a definite Rindler frequency $\omega$ but imposes 
-no constraint on transverse momentum. A mode with zero transverse momentum 
-is uniform across the horizon cross-section; a wave packet of characteristic 
-width $\sigma \sim c/\omega$ is localised within one wavelength of the photon 
-axis. These two limits correspond to geometrically distinct pp-waves at the 
-Rindler horizon, both analysed in Section~\ref{sec:ppwave}:
+The microstate~\eqref{eq:microstate_vec} admits two 
+complementary geometric descriptions depending on the 
+transverse localisation of the photon mode, corresponding 
+to the two limits of the Kraus family~\eqref{eq:kraus}. 
+The bilocal source fixes a definite Rindler frequency 
+$\omega$ but imposes no constraint on transverse momentum. 
+A mode with zero transverse momentum is uniform across the 
+horizon cross-section; a wave packet of characteristic width 
+$\sigma \sim c/\omega$ is localised within one wavelength of 
+the photon axis. These two limits correspond to geometrically 
+distinct pp-waves at the Rindler horizon, both analysed in 
+Section~\ref{sec:ppwave}:
 
 \begin{itemize}
-\item \textbf{Delocalized limit} ($\sigma \to \infty$): the stress tensor is 
-uniform across the horizon, producing a \emph{planar impulsive wave} with 
-longitudinal shift $\Delta v \propto -r^2$. Exactly one BMS supertranslation 
-mode is excited.
+\item \textbf{Delocalized limit} ($\sigma \to \infty$, 
+POVM $\to \mathbf{1}$): the stress tensor is uniform across 
+the horizon, producing a \emph{planar impulsive wave} with 
+longitudinal shift $\Delta v \propto -r^2$. Exactly one BMS 
+supertranslation mode is excited.
 
-\item \textbf{Localized limit} ($\sigma \to 0$): the stress tensor concentrates 
-near the beam axis, recovering the Aichelburg--Sexl pp-wave with logarithmic 
-shift $\Delta v \propto -\ln r^2$. All BMS supertranslation modes are excited.
+\item \textbf{Localized limit} ($\sigma \to 0$, POVM 
+$\to$ PVM): the stress tensor concentrates near the beam 
+axis, recovering the Aichelburg--Sexl pp-wave with 
+logarithmic shift $\Delta v \propto -\ln r^2$. All BMS 
+supertranslation modes are excited.
 \end{itemize}
 
 Both limits produce the same total horizon area increment 
-$\Delta A = 8\pi G\hbar\omega$, since both carry total null energy $\hbar\omega$; 
-the difference lies entirely in the spatial distribution of that increment 
-and the corresponding BMS mode content. The delocalized regime describes 
-the thermodynamic, ensemble-level face of the construction; the localized 
-regime describes the individual microstate face and is where we will show 
-$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ holds event by event.
+$\Delta A = 8\pi G\hbar\omega$, as shown in 
+Section~\ref{sec:ppwave} and Appendix~\ref{sec:as_reg}: 
+the Raychaudhuri equation applied to the null congruence 
+depends only on the total null energy $\hbar\omega$, 
+not on its transverse distribution;
+the difference lies entirely in the 
+spatial distribution of that increment and the corresponding 
+BMS mode content. The delocalized regime describes the 
+thermodynamic, ensemble-level face of the construction; the 
+localized regime describes the individual microstate face and 
+is where we will show $S_{GHY}|_{\mathcal{H}} = 
+S_{\mathrm{matter}}$ holds event by event.
 
 % Section 4
 \section{Matter as a Substrate}
