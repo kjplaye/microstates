@@ -401,13 +401,14 @@ to the spin-1 electromagnetic field, upgrading from scalar
 to helicity-carrying Bell states and making the single-bit 
 structure of each measurement event explicit.
 
-Each microstate, equation \eqref{eq:microstate_vec} upcoming,
+Consider the wedges in Figure \ref{paz} with distinguished points, right $\mathcal{R}$, left $\mathcal{L}$,
+and past $\mathcal{P}$, at positions $(t,z) = (0,1)$, $(0,-1)$, and $(-1,0)$.
+Each microstate, a projection of equation \eqref{eq:microstate_vec} upcoming,
 is individually non-thermal in the sense that it carries a definite Rindler frequency 
 $\omega$, the frequency natural to $\mathcal{R}$ and 
 $\mathcal{L}$, which differs from the Minkowski frequency seen 
 by $\mathcal{P}$ due to the position-dependent redshift of the 
 Rindler geometry.
-
 Thermality is not a property of any single microstate but of 
 the ensemble; it emerges when one models the detector response 
 within a wedge as a sum over all Rindler modes, as in the 
@@ -440,7 +441,7 @@ reinterprets a portion of the Unruh response as physically
 sourced thrust rather than thermal 
 fluctuation~\cite{player2025driving}, and it is the concrete 
 realisation of the Bayesian update arrow in 
-Figure~\ref{fig:diagram} in the Conclusion: state reduction
+Figure~\ref{fig:diagram}: state reduction
 is not imposed from 
 outside but follows from the physical interaction at the 
 measurement event.
@@ -552,6 +553,41 @@ from the delocalized planar wave to the localized
 AS pp-wave traces the same transition from 
 unresolved to resolved transverse position that 
 the PVM projection effects in the field theory.
+
+The sharpness of this projection is controlled by 
+the width $\sigma$ of the wavepacket shaping 
+function, which acts as a diagonal Kraus operator
+%
+\begin{equation}
+    K_\sigma = \int d^2\mathbf{x}_\perp\, 
+    e^{-r^2/2\sigma^2}\,
+    |\mathbf{x}_\perp\rangle
+    \langle\mathbf{x}_\perp|,
+\end{equation}
+%
+with complementary operator $K_\sigma^\perp$ 
+satisfying $K_\sigma^\dagger K_\sigma + 
+(K_\sigma^\perp)^\dagger K_\sigma^\perp = 
+\mathbf{1}$ pointwise. This defines a POVM 
+interpolating between two limits: $\sigma \to 
+\infty$ gives $K_\sigma \to \mathbf{1}$, no 
+projection, recovering the full thermal plane 
+wave; $\sigma \to 0$ gives a sharp PVM projector 
+onto the $\mathcal{P}$--$\mathcal{R}$ null 
+geodesic, recovering the localized 
+microstate~\eqref{eq:microstate_vec}. The Stokes 
+phenomenon of~\cite{player2025driving}, the 
+transition in the asymptotic behavior of the 
+parabolic cylinder function $D_\nu(-z)$ across 
+the Stokes line $\arg z = \pi/4$, is the analytic 
+signature of this POVM-to-PVM transition: the 
+thermal regime $\sigma \to \infty$ corresponds to 
+the $e^{-\frac{1}{4}z^2}$ asymptotic branch, and 
+the localized regime $\sigma \to 0$ corresponds 
+to the $e^{\frac{1}{4}z^2}$ branch. The present 
+paper works entirely in the $\sigma \to 0$ PVM 
+limit; \cite{player2025driving} works in the 
+interior of the POVM family.
 
 The bilocal source excites a single Unruh mode at 
 definite Rindler frequency $\omega$: from 
