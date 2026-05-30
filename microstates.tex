@@ -509,7 +509,13 @@ connected by null geodesics at that frequency:
     \label{eq:plane_superposition}
 \end{equation}
 %
-with flat weight $\phi$. Specifying $\mathcal{P} = (-1,0)$ 
+with flat weight $\phi$. The decomposition is schematic, 
+representing the intuition that a plane wave 
+is a uniform superposition over all possible 
+source-detector geometries at frequency $\omega$, 
+rather than a literal Fock space expansion.
+
+Specifying $\mathcal{P} = (-1,0)$ 
 and $\mathcal{R} = (0,1)$ projects onto the unique null 
 geodesic connecting them, resolving the transverse 
 coarse-graining simultaneously with the frequency 
@@ -530,17 +536,50 @@ acts as a diagonal Kraus operator:
     \label{eq:kraus}
 \end{equation}
 %
-with complementary operator $K_\sigma^\perp$ satisfying 
-$K_\sigma^\dagger K_\sigma + 
-(K_\sigma^\perp)^\dagger K_\sigma^\perp = \mathbf{1}$ 
+with complementary operator $K_\sigma^\perp$ satisfying
+$K_\sigma^\dagger K_\sigma + (K_\sigma^\perp)^\dagger K_\sigma^\perp = \mathbf{1}$ 
 pointwise~\cite{kraus1983states, nielsen2001quantum}, since $e^{-r^2/\sigma^2} + 
 (1 - e^{-r^2/\sigma^2}) = 1$. This defines a one-parameter 
 POVM family interpolating between two limits: $\sigma \to 
 \infty$ gives $K_\sigma \to \mathbf{1}$, no projection, 
-recovering the full thermal plane wave; $\sigma \to 0$ gives 
-a sharp PVM projector onto the $\mathcal{P}$--$\mathcal{R}$ 
-null geodesic, recovering the localized non-thermal 
-microstate. The Stokes phenomenon of~\cite{player2025driving}, 
+recovering the full thermal plane wave; $\sigma \to 0$ gives, after normalisation by 
+$(\pi\sigma^2)^{-1}$, a sharp PVM projector 
+onto the $\mathcal{P}$--$\mathcal{R}$ null 
+geodesic, recovering the localized non-thermal 
+microstate. The normalisation is required 
+because $\int e^{-r^2/\sigma^2}\,d^2x_\perp 
+= \pi\sigma^2 \to 0$ as $\sigma \to 0$; the 
+PVM limit is approached by the normalised 
+operator $(\pi\sigma^2)^{-1} K_\sigma$, which 
+converges to the projector 
+$|\mathbf{x}_\perp = 0\rangle
+\langle\mathbf{x}_\perp = 0|$ 
+onto the beam axis.
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{stokes.png}
+\captionsetup{width=0.7\textwidth}
+\caption{Trajectory of $z = iq\sigma + \mu/\sigma$ 
+in the complex plane as $\sigma$ interpolates 
+between the two limits of the Kraus 
+family~\eqref{eq:kraus}. The thermal limit 
+$\sigma \to \infty$ corresponds to $z$ on the 
+positive imaginary axis; the localized PVM limit 
+$\sigma \to 0$ corresponds to $z$ on the positive 
+real axis. The green Stokes lines at 
+$\arg z = \pi/4$ mark the boundary between the 
+two asymptotic regimes of the parabolic cylinder 
+function $D_\nu(-z)$, and therefore the boundary 
+between the POVM and PVM descriptions of the 
+transverse localization. Figure 
+from~\cite{player2025driving}.}
+\label{stokes_kraus}
+\end{figure}
+
+
+The Stokes phenomenon of~\cite{player2025driving}, Figure \ref{stokes_kraus}, 
 the transition in the asymptotic behavior of the parabolic 
 cylinder function $D_\nu(-z)$ across the Stokes line 
 $\arg z = \pi/4$, is the analytic signature of this 
@@ -1119,9 +1158,11 @@ A \emph{handoff event} at a horizon surface
 $\mathcal{H}$ consists of: 
 \begin{enumerate}[(i)]
 \item a massless quantum of Rindler frequency 
-  $\omega$ and helicity $\lambda = \pm 1$ 
-  transferring one quantum of action $\hbar$ 
-  across $\mathcal{H}$;
+$\omega$ and helicity $\lambda = \pm 1$, 
+selected by the PVM projection of 
+Section~\ref{sec:pvm_localization}, 
+transferring one quantum of action $\hbar$ 
+across $\mathcal{H}$;
 \item the receiving timelike channel 
   incrementing its Bremermann sampling rate 
   by $\Delta f = \omega / 2\pi$;
@@ -1206,6 +1247,15 @@ equivalent conditions of Proposition~\ref{prop:eft}
 all reduce to $\omega = \omega_{\mathrm{sat}}$ at the 
 horizon, so the EFT breaks down exactly where the 
 channel saturates.
+
+This saturation condition coincides with the 
+PVM limit of the Kraus family~\eqref{eq:kraus}: 
+the diagonal Kraus operator becomes a sharp 
+projector exactly when the photon wavepacket 
+carries one Landauer bit per Rindler period, 
+connecting the information-theoretic saturation 
+to the geometric localization of 
+Section~\ref{sec:pvm_localization}.
 
 \subsection{Lorentz Covariance and Multi-Observer 
 Consistency}
@@ -1735,12 +1785,21 @@ $\sigma$ the Laplacian $\nabla^2_\perp(\Delta v)$ is approximately
 constant, selecting the $\ell = 2$, $m=0$ mode; as $\sigma$ decreases, 
 the Laplacian sharpens toward a delta function and progressively higher 
 multipoles are populated until the full BMS spectrum is excited in the 
-AS limit. The localization transition is therefore simultaneously a 
-transition in the BMS mode content of the horizon perturbation, a 
-transition in the spatial distribution of the area increment, and, 
-via the correspondence established in~\cite{player2025driving}, the 
-geometric counterpart of the QFT transition from delocalized thermal 
-modes to localized non-thermal wave packets.
+AS limit.
+
+The localization transition is therefore 
+simultaneously a transition in the BMS mode 
+content of the horizon perturbation, a 
+transition in the spatial distribution of 
+the area increment, and the geometric 
+counterpart of the POVM-to-PVM transition 
+of Section~\ref{sec:pvm_localization}: the 
+one-parameter Kraus family~\eqref{eq:kraus} 
+parametrized by $\sigma$ has a direct 
+geometric image in the interpolation between 
+the planar impulsive wave and the AS pp-wave, 
+with the Stokes line of~\cite{player2025driving} 
+marking the boundary between the two regimes.
 
 \subsection{Action and the Gravitational Boundary}
 \label{sec:microstate_action}
@@ -2010,7 +2069,15 @@ of \emph{when} the spatial fact became definite has no
 observer-independent answer. A PVM by $\mathcal{R}$ on 
 a Bell state does not reveal a pre-existing spatial 
 fact; it \emph{creates} the spatial bit as a classical 
-record in $\mathcal{R}$'s matter-memory. Whether that 
+record in $\mathcal{R}$'s matter-memory.
+This is the same PVM projection as 
+Section~\ref{sec:pvm_localization}, now read 
+informationally rather than geometrically: 
+the projection that selects the localized 
+microstate from the thermofield double is 
+the same event as the projection that creates 
+the spatial bit in matter-memory.
+Whether that 
 creation is an objective event or a relational one is 
 the hard problem of multi-observer quantum mechanics, 
 unresolved in flat space and unresolved here. The 
@@ -2174,9 +2241,13 @@ identification of $T_C$ with the Landauer erasure temperature
 of the mirror is an ansatz of the present construction; its 
 precise value determines the Carnot efficiency $\eta = 1 - T_C/T_H$.
 
-
 \begin{itemize} 
-\item {\bf Isothermal Expansion:} The bilocal source prepares an entangled photon pair in the basis that $\mathcal{R}$ measures in ($H_+/H_-$ see section \ref{sec:erepr}). In this basis, the Shannon entropy of the Rindler outcome distribution increases from 0 to 1 bit, reflecting the transition from a deterministic prior state to a maximally uncertain Bell state induced by the bilocal entanglement structure, notionally ``drawing some heat from the environment $\mathcal{P}$''.
+\item {\bf Isothermal Expansion:} The bilocal source prepares an entangled photon pair in the basis that $\mathcal{R}$ measures in ($H_+/H_-$ see section \ref{sec:erepr}). In this basis, the Shannon entropy of the Rindler outcome distribution increases from 0 to 1 bit, reflecting the transition from a deterministic prior state to a maximally uncertain Bell state induced by the bilocal entanglement structure,
+  , i.e.\ the inverse of the PVM projection 
+of Section~\ref{sec:pvm_localization}: 
+the isothermal expansion runs the projection 
+backward, from a sharp microstate to the 
+full superposition; notionally ``drawing some heat from the environment $\mathcal{P}$''.
 \item {\bf Adiabatic Expansion:} This corresponds to the crossing over the past Rindler horizon from hot to cold, the absorption of the photon by the mirror.
 \item {\bf Isothermal Compression:} This corresponds to controlled 
 erasure of the detector's stored bit during the re-emission of the photon 
@@ -2753,11 +2824,15 @@ thermodynamic, geometric, information-theoretic, and
 effective field theory descriptions of the horizon, 
 the Carnot efficiency bound and the Unruh--Landauer 
 bound being the same inequality viewed from opposite 
-directions. Matter and horizon are orthogonal 
-information channels: matter the timelike substrate 
-of emergent proper time, the horizon the spacelike 
-surface through which measurement events generate 
-emergent space, evocative of ER=EPR at the 
+directions. Matter and horizon are orthogonal information 
+channels: matter the timelike substrate of 
+emergent proper time, the horizon the spacelike 
+surface through which PVM projections onto 
+null geodesics generate emergent space, with 
+the diagonal Kraus family~\eqref{eq:kraus} 
+interpolating between the thermal ensemble 
+and the individual non-thermal microstate.
+This is evocative of ER=EPR at the 
 single-microstate level. Whether this identification 
 extends from the boundary into the bulk, whether the 
 helicity structure of the emergent space constitutes a 
@@ -2765,6 +2840,7 @@ topological invariant, and whether the framework
 admits falsifiable consequences distinguishing it 
 from standard thermodynamic treatments, remain open 
 questions for future work.
+
 
 \subsection{On Subjectivity}
 The observer-relativity of the microstate construction 
