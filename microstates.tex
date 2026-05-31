@@ -75,12 +75,13 @@ we provide one explicit microstate construction, measurements of a
 helicity-anticorrelated Bell state sourced by a bilocal 
 term in flat Minkowski space, and situate it in the current literature.
 
+
 \begin{figure}[h]
 \centering
 \begin{tikzcd}[row sep=4em, column sep=7em]
-\text{Gravitational field} \arrow[r, dashed, "\scalebox{0.7}{\shortstack{Di\'osi--Penrose}}"]
-    & \text{Quantum state reduction} \\
-\text{Acceleration} \arrow[u, "\scalebox{0.7}{\shortstack{equivalence\\principle}}"']
+\text{Local Gravitational Effects} \arrow[r, dashed, "\scalebox{0.7}{\shortstack{Di\'osi--Penrose}}"]
+    & \text{Quantum State Reduction} \\
+\text{Acceleration} \arrow[u, "\scalebox{0.7}{\shortstack{local equivalence}}"']
                     \arrow[r, "\scalebox{0.7}{\shortstack{energy--momentum\\transfer}}"']
     & \text{Observation} \arrow[u, "\scalebox{0.7}{\shortstack{Bayesian\\update}}"']
 \end{tikzcd}
@@ -93,8 +94,8 @@ arrow is the Di\'{o}si--Penrose postulate.}
 \end{figure}
 
 
-That a single starting point --- quantum measurement as energy--momentum transfer 
-under proper acceleration --- makes simultaneous contact with three independent 
+That a single starting point, quantum measurement as energy--momentum transfer 
+under proper acceleration, makes simultaneous contact with three independent 
 programs, without additional assumptions, suggests that measurement events may 
 describe the elementary process those frameworks collectively require.
 Jacobson~\cite{jacobson1995thermodynamics} derives the Einstein 
@@ -221,9 +222,9 @@ individual carrier quanta rather than to bulk evaporation.
 
 This Unruh--Landauer bound is saturated for a photon at one bit
 when the wavelength equals the horizon distance up to a factor 
-of $2\pi/\ln 2$:
+of $4\pi^2/\ln 2$:
 \begin{equation}
-\lambda_{\text{sat}} = \frac{2\pi}{\ln 2}\cdot\frac{c^2}{a} \sim d_{\mathcal{H}},
+\lambda_{\text{sat}} = \frac{4\pi^2}{\ln 2}\cdot\frac{c^2}{a} \sim d_{\mathcal{H}},
 \end{equation}
 where $d_{\mathcal{H}} = c^2/a$ is the proper distance to the 
 Rindler horizon. The saturating photon is the fundamental mode of the causal diamond defined by the observer and the horizon, with wavelength commensurate with the horizon distance $d_\mathcal{H}$, too short to be 
@@ -248,9 +249,16 @@ accelerations.
 Newtonian gravity and recovers correct relativistic results 
 by the same coincidence exploited by Verlinde~\cite{entropic} 
 and Bekenstein~\cite{bekenstein}, the Newtonian 
-approximation happens to give the right answer at the 
+approximation happens to give the right answer\footnote{The correspondence is specific to the spherically symmetric case: the 
+Newtonian inverse-square law with a point mass reproduces the Schwarzschild 
+geometry at the horizon scale, but other matter distributions, the bilocal 
+source of Section~\ref{sec:microstates} among them, or the full Einstein 
+equations, will in general give different results. The heuristics of this 
+section should be read as recovering the Schwarzschild case only; the 
+construction layer makes no use of them.} at the 
 Schwarzschild scale, even though it formally breaks down 
 there. We make no attempt to disguise this.}
+
 
 \medskip
 
@@ -306,16 +314,6 @@ mass $m_d$. The cancellation of $\Delta E$ is the physical
 content of the result: whatever energy the thrust quantum 
 carries, the self-consistent horizon scale is set by the 
 detector alone.
-
-We note that the use of Newtonian gravity here is a 
-weak-field approximation, justified when $r \gg r_s$, and 
-that the self-consistency condition $r = r_s$ sits at its 
-boundary of validity. The fact that the exact GR result 
-agrees with this heuristic matching is a consequence shared 
-with Verlinde's entropic gravity~\cite{entropic} and 
-Bekenstein's original argument~\cite{bekenstein}, both of 
-which recover correct relativistic scales from Newtonian 
-reasoning applied at the horizon.
 
 \subsection{Surface Gravity}
 Evaluating the acceleration at $r = r_s$ gives the surface gravity of the detector:
@@ -456,7 +454,7 @@ history, all possible microstates appear equally likely, and
 both the Planck distribution over $\omega$ and the mixed 
 density matrix obtained by tracing out the complementary wedge 
 reflect the same epistemic situation. Specifying the physical 
-locations of $\mathcal{P}$ and $\mathcal{R}$ breaks this 
+locations of $\mathcal{P}$ and $\mathcal{R}$ (and $\mathcal{L}$ respectively) breaks this 
 ignorance explicitly, eliminating both coarse-grainings 
 responsible for the apparent thermality of the standard Unruh 
 effect~\cite{player2025driving}: the unknown frequency of the 
@@ -474,12 +472,14 @@ specifying the detector location $\mathcal{R}$ selects the
 Rindler frequency $\omega$ the detector responds to, rather 
 than having the thermal bath impose a distribution over all 
 frequencies. Because $\mathcal{P}$ emits at a definite 
-frequency $\omega$, a PVM projection onto a definite helicity 
-outcome resolves the frequency coarse-graining: after the 
-collapse there is no $\omega$-averaging and no 
+frequency $\omega$,
+a PVM projection onto the definite Rindler frequency $\omega$ 
+emitted by $\mathcal{P}$ resolves the frequency coarse-graining: 
+after the collapse there is no $\omega$-averaging and no 
 partial-trace ambiguity, and the observer is at a specific 
 point in microstate space within the non-thermal Minkowski 
-description. In this sense measurement is access to the 
+description.
+In this sense measurement is access to the 
 Minkowski description, and the apparent thermal bath is 
 replaced by a definite momentum transfer, a thrust, sourced 
 by $\mathcal{P}$. This reinterprets a portion of the Unruh 
@@ -490,37 +490,83 @@ Figure~\ref{fig:diagram}: state reduction is not imposed from
 outside but follows from the physical interaction at the 
 measurement event.
 
-\paragraph{Transverse localization.}
-The same projective logic extends to the transverse 
-directions. The thermofield double state~\eqref{eq:vacuum_vec} 
-is a sum over all Rindler frequencies $\omega$ and all 
-transverse positions $\mathbf{x}_\perp$. A Rindler plane wave 
-at frequency $\omega$ is a coherent superposition over all 
-possible source-detector pairs $(\mathcal{P}', \mathcal{R}')$ 
-connected by null geodesics at that frequency:
-%
-\begin{equation}
-    |1_{\omega,\mathrm{plane}}\rangle 
-    = \int d^2\mathbf{x}_\perp\, d\eta'\;
-      \phi(\mathbf{x}_\perp, \eta')\;
-      |\mathcal{P}'(\mathbf{x}_\perp,\eta'),\,
-       \mathcal{R}'(\mathbf{x}_\perp,\eta')\rangle,
-    \label{eq:plane_superposition}
-\end{equation}
-%
-with flat weight $\phi$. The decomposition is schematic, 
-representing the intuition that a plane wave 
-is a uniform superposition over all possible 
-source-detector geometries at frequency $\omega$, 
-rather than a literal Fock space expansion.
+Figure~\ref{paz_freq} illustrates the situation: the Unruh mode 
+phase structure connects $\mathcal{P}$ and $\mathcal{R}$ 
+via the null geodesic, and the PVM projection onto this 
+geodesic selects a single non-thermal microstate from 
+the thermal superposition.
 
-Specifying $\mathcal{P} = (-1,0)$ 
-and $\mathcal{R} = (0,1)$ projects onto the unique null 
-geodesic connecting them, resolving the transverse 
-coarse-graining simultaneously with the frequency 
-coarse-graining. A single PVM projection onto this geodesic 
-therefore selects a single term from the thermofield double 
-sum in both directions at once.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{paz_freq.png}
+\captionsetup{width=0.7\textwidth}
+\caption{The points $\mathcal{P}$ and $\mathcal{R}$ are marked 
+with white dots, connected by the null geodesic (black arrow). 
+The rainbow coloring shows the Unruh mode phase structure 
+across Minkowski space, analytically continued from the 
+right Rindler wedge. A PVM projection onto this null 
+geodesic selects a single frequency from the thermal 
+superposition, replacing the full delocalized mode with 
+the localized non-thermal microstate of 
+equation~\eqref{eq:microstate_vec}.}
+\label{paz_freq}
+\end{figure}
+
+\paragraph{Transverse localization.}
+
+A Unruh mode at frequency $\omega$ can be understood 
+as a uniform superposition over all possible source-detector 
+pairs $(\mathcal{P}', \mathcal{R}')$ connected by null 
+geodesics at that frequency, with flat weight over their 
+transverse positions $\mathbf{x}_\perp$ and Minkowski time 
+$t'$. This decomposition is at the level of mode functions; 
+the corresponding quantum state is the thermofield double 
+sum~\eqref{eq:vacuum_vec}, which is the Fock space 
+realisation of the same superposition. Specifying 
+$\mathcal{P} = (-1,0)$ and $\mathcal{R} = (0,1)$ then 
+performs a PVM projection at the state level, selecting 
+the unique term corresponding to the 
+$\mathcal{P}$--$\mathcal{R}$ null geodesic and yielding 
+the localized non-thermal 
+microstate~\eqref{eq:microstate_vec}.
+
+A single PVM projection onto the $\mathcal{P}$--$\mathcal{R}$ 
+null geodesic therefore resolves both coarse-grainings 
+simultaneously: the frequency coarse-graining of the 
+paragraph above and the transverse coarse-graining 
+addressed here. One physical specification of source 
+and detector does the work of two separate projections.
+
+% The same projective logic extends to the transverse 
+% directions. The thermofield double state~\eqref{eq:vacuum_vec} 
+% is a sum over all Rindler frequencies $\omega$ and all 
+% transverse positions $\mathbf{x}_\perp$. A Rindler plane wave 
+% at frequency $\omega$ is a coherent superposition over all 
+% possible source-detector pairs $(\mathcal{P}', \mathcal{R}')$ 
+% connected by null geodesics at that frequency:
+% %
+% \begin{equation}
+%     |1_{\omega,\mathrm{plane}}\rangle 
+%     = \int d^2\mathbf{x}_\perp\, d\eta'\;
+%       \phi(\mathbf{x}_\perp, \eta')\;
+%       |\mathcal{P}'(\mathbf{x}_\perp,\eta'),\,
+%        \mathcal{R}'(\mathbf{x}_\perp,\eta')\rangle,
+%     \label{eq:plane_superposition}
+% \end{equation}
+% %
+% with flat weight $\phi$. The decomposition is schematic, 
+% representing the intuition that a plane wave 
+% is a uniform superposition over all possible 
+% source-detector geometries at frequency $\omega$, 
+% rather than a literal Fock space expansion.
+
+% Specifying $\mathcal{P} = (-1,0)$ 
+% and $\mathcal{R} = (0,1)$ projects onto the unique null 
+% geodesic connecting them, resolving the transverse 
+% coarse-graining simultaneously with the frequency 
+% coarse-graining. A single PVM projection onto this geodesic 
+% therefore selects a single term from the thermofield double 
+% sum in both directions at once.
 
 \paragraph{From POVM to PVM: the Stokes transition.}
 The sharpness of the transverse projection is controlled by 
@@ -590,21 +636,6 @@ in the $\sigma \to 0$ PVM limit; \cite{player2025driving}
 works in the interior of the POVM family, with the Stokes 
 line marking the boundary between thermal and non-thermal 
 behavior.
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.5]{paz_freq.png}
-\captionsetup{width=0.7\textwidth}
-\caption{The points $\mathcal{P}$ and $\mathcal{R}$ are marked 
-with white dots, connected by the null geodesic (black arrow). 
-The rainbow coloring shows the Rindler mode frequency structure 
-across the wedge. A PVM projection onto this null line selects 
-a single frequency from the thermal superposition, replacing 
-the full delocalized mode with the localized non-thermal 
-microstate of equation~\eqref{eq:microstate_vec}.}
-\label{paz_freq}
-\end{figure}
-
 
 \paragraph{The microstate.}
 The result of both projections is an individually non-thermal 
@@ -2776,8 +2807,9 @@ its natural boundary condition.
 \section{Conclusion}
 \label{sec:conclusion}
 
-We have identified quantum measurement events as 
-gravitational microstates in the Rindler setting, 
+We have proposed quantum measurement events as explicit models
+of gravitational microstates
+in the Rindler setting, 
 partially answering the question left open by Jacobson and 
 Verlinde of what physical process underlies each 
 individual entropy increment. The construction converges independently with three 
