@@ -434,9 +434,13 @@ and the left-moving photon propagates along $v = 0$.
 \caption{A source in the past, $\mathcal{P}$, emits an 
 entangled photon pair that accelerates $\mathcal{R}$ into 
 the right Rindler wedge and $\mathcal{L}$ into the left 
-Rindler wedge. The two null directions of propagation define 
-the $z^+$ and $z^-$ axes of the double-null coordinate 
-system.}
+Rindler wedge.
+The two null directions of propagation define 
+the null coordinates $u = t - z + 1$ and $v = t + z + 1$, 
+with the right-moving photon propagating along $u = 0$ 
+and the left-moving photon along $v = 0$; these are 
+the $z^-$ and $z^+$ axes of the double-null coordinate 
+system of Section~\ref{sec:doublenull}.}
 \label{paz}
 \end{figure}
 
@@ -456,11 +460,11 @@ almheiri2021entropy}, where the interior is recovered
 as classical correlations in the joint record of 
 complementary exterior observers.
 
-\subsection{PVM Localization and the Elimination of Coarse-Graining NEW}
+\subsection{PVM Localization and the Elimination of Coarse-Graining}
 \label{sec:pvm_localization}
 
-The Unruh mode plays a double role in this construction. 
-As a QFT object it is a coefficient in a mode expansion, 
+The Unruh mode plays a double role in this
+construction. As a QFT object it is a coefficient in a mode expansion, 
 a solution to the wave equation analytically continued 
 from the Rindler wedge into all of Minkowski space. 
 But once $\mathcal{P}$ is specified as a real physical 
@@ -482,6 +486,20 @@ precise location of $\mathcal{R}$ within the wedge,
 and about the spatial origin of the detected excitation,
 that the present construction eliminates explicitly.
 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{paz_freq.png}
+\captionsetup{width=0.7\textwidth}
+\caption{The points $\mathcal{P}$ and $\mathcal{R}$ are marked 
+with white dots, connected by the null geodesic (black arrow). 
+The rainbow coloring shows the Unruh mode phase 
+structure across Minkowski space. A PVM projection onto this null line selects 
+a single frequency from the thermal superposition, replacing 
+the full delocalized mode with the localized non-thermal 
+microstate of equation~\eqref{eq:microstate_vec}.}
+\label{paz_freq}
+\end{figure}
+
 \paragraph{Longitudinal localization.}
 The primary localization is in the longitudinal $(t,z)$ 
 plane, which is the setting of Figure~\ref{paz_freq} 
@@ -492,18 +510,18 @@ pointwise by a Gaussian shaping function $N_{\mu,\sigma}$
 of width $\sigma$ in $(t,z)$, then paired via the 
 Klein--Gordon inner product with a Rindler mode $r_k$, 
 yields an overlap expressible in terms of parabolic 
-cylinder functions $D_\nu(-z)$. The Gaussian could 
+cylinder functions $D_\nu(-\zeta)$. The Gaussian could 
 equivalently have been applied to the Rindler side; 
 what matters is that $\sigma$ controls the degree of 
 longitudinal localization of the source-detector pair.
 The Stokes phenomenon 
-in the asymptotics of $D_\nu(-z)$ as $\sigma$ varies 
+in the asymptotics of $D_\nu(-\zeta)$ as $\sigma$ varies 
 drives a transition between two physically distinct 
 regimes: $\sigma \to \infty$ gives the thermal regime 
-where the $e^{-\frac{1}{4}z^2}$ branch dominates, 
+where the $e^{-\frac{1}{4}\zeta^2}$ branch dominates, 
 and $\sigma \to 0$ gives the localized non-thermal 
-regime where the $e^{+\frac{1}{4}z^2}$ branch dominates, 
-with the Stokes line at $\arg z = \pi/4$ marking the 
+regime where the $e^{+\frac{1}{4}\zeta^2}$ branch dominates, 
+with the Stokes line at $\arg \zeta = \pi/4$ marking the 
 boundary between them.
 
 In the present paper the same Gaussian shaping function 
@@ -513,9 +531,22 @@ is reread as a Kraus operator acting on the quantum state.
 |u\rangle\langle u|\; du,
 \label{eq:kraus_longitudinal}
 \end{equation}
-where $u = t - z + 1$,
-parametrizing a one-parameter POVM family in the 
-longitudinal direction. Specifying $\mathcal{R} = (0,1)$ 
+where $u = t - z + 1$ is the null coordinate\footnote{In 
+\cite{player2025driving}, which works in 1+1 
+dimensions with spatial coordinate $x$, the 
+complex Stokes variable is denoted $z = iq\sigma 
++ \mu/\sigma$; we use $\zeta$ here to avoid 
+confusion with the longitudinal spatial coordinate 
+$z$ of the present paper.} 
+defined in Section~\ref{sec:ppwave}.
+The operator $K_\sigma$ together with its complement 
+$K_\sigma^\perp$ satisfying 
+$K_\sigma^\dagger K_\sigma + 
+(K_\sigma^\perp)^\dagger K_\sigma^\perp = \mathbf{1}$ 
+defines a one-parameter POVM family; 
+the Stokes transition between its two asymptotic 
+regimes is illustrated in Figure~\ref{stokes_kraus}.
+Specifying $\mathcal{R} = (0,1)$ 
 and $\mathcal{P} = (-1,0)$ is precisely the $\sigma \to 0$ 
 limit: the Kraus operator sharpens to a PVM projector 
 onto the unique null geodesic connecting them, selecting 
@@ -533,6 +564,28 @@ mathematical object is being read in two complementary
 languages, field theory and measurement theory, with 
 the Stokes line marking the boundary between them.
 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{stokes.png}
+\captionsetup{width=0.7\textwidth}
+\caption{
+Trajectory of $\zeta = iq\sigma + \mu/\sigma$ 
+in the complex plane as $\sigma$ interpolates 
+between the two limits of the Kraus 
+family~\eqref{eq:kraus_longitudinal}. The thermal limit 
+$\sigma \to \infty$ corresponds to $\zeta$ on the 
+positive imaginary axis; the localized PVM limit 
+$\sigma \to 0$ corresponds to $\zeta$ on the positive 
+real axis. The green Stokes lines at 
+$\arg \zeta = \pi/4$ mark the boundary between the 
+two asymptotic regimes of the parabolic cylinder 
+function $D_\nu(-\zeta)$, and therefore the boundary 
+between the POVM and PVM descriptions of the 
+longitudinal localization. Figure 
+from~\cite{player2025driving}.}
+\label{stokes_kraus}
+\end{figure}
+
 \paragraph{Transverse localization.}
 The transverse $(x,y)$ directions require a separate 
 and independent localization. A Rindler plane wave at 
@@ -546,7 +599,7 @@ directions, selecting the unique null geodesic and
 resolving the remaining coarse-graining over transverse 
 position. The transverse shaping is controlled by an 
 independent width $\sigma_\perp$, which we treat as a 
-free parameter in Section~\ref{sec:microstates} and 
+free parameter in Section~\ref{sec:two_regimes} and 
 whose physical consequences are developed in 
 Section~\ref{sec:ppwave}.
 
@@ -590,220 +643,6 @@ selects; the thermal ensemble is what remains when
 neither coarse-graining is resolved and $\mathcal{L}$ 
 is traced out.
 
-\subsection{PVM Localization and the Elimination of Coarse-Graining}
-\label{sec:pvm_localization}
-
-The thermal Unruh distribution is the correct description for 
-an observer with no knowledge of the source of their 
-acceleration: without access to $\mathcal{P}$'s emission 
-history, all possible microstates appear equally likely, and 
-both the Planck distribution over $\omega$ and the mixed 
-density matrix obtained by tracing out the complementary wedge 
-reflect the same epistemic situation. Specifying the physical 
-locations of $\mathcal{P}$ and $\mathcal{R}$ (and $\mathcal{L}$ respectively) breaks this 
-ignorance explicitly, eliminating both coarse-grainings 
-responsible for the apparent thermality of the standard Unruh 
-effect~\cite{player2025driving}: the unknown frequency of the 
-detected excitation, and the unspecified transverse position 
-of the source-detector pair. We now show that both 
-coarse-grainings are resolved by a single projective 
-argument, and that the interpolation between them is 
-controlled by a one-parameter family of diagonal Kraus 
-operators.
-
-\paragraph{Frequency localization.}
-In~\cite{player2025driving} the inversion of the standard 
-Unruh logic rests on a PVM projection in frequency space: 
-specifying the detector location $\mathcal{R}$ selects the 
-Rindler frequency $\omega$ the detector responds to, rather 
-than having the thermal bath impose a distribution over all 
-frequencies. Because $\mathcal{P}$ emits at a definite 
-frequency $\omega$,
-a PVM projection onto the definite Rindler frequency $\omega$ 
-emitted by $\mathcal{P}$ resolves the frequency coarse-graining: 
-after the collapse there is no $\omega$-averaging and no 
-partial-trace ambiguity, and the observer is at a specific 
-point in microstate space within the non-thermal Minkowski 
-description.
-In this sense measurement is access to the 
-Minkowski description, and the apparent thermal bath is 
-replaced by a definite momentum transfer, a thrust, sourced 
-by $\mathcal{P}$. This reinterprets a portion of the Unruh 
-response as physically sourced thrust rather than thermal 
-fluctuation~\cite{player2025driving}, and it is the concrete 
-realisation of the Bayesian update arrow in 
-Figure~\ref{fig:diagram}: state reduction is not imposed from 
-outside but follows from the physical interaction at the 
-measurement event.
-
-Figure~\ref{paz_freq} illustrates the situation: the Unruh mode 
-phase structure connects $\mathcal{P}$ and $\mathcal{R}$ 
-via the null geodesic, and the PVM projection onto this 
-geodesic selects a single non-thermal microstate from 
-the thermal superposition.
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.5]{paz_freq.png}
-\captionsetup{width=0.7\textwidth}
-\caption{The points $\mathcal{P}$ and $\mathcal{R}$ are marked 
-with white dots, connected by the null geodesic (black arrow). 
-The rainbow coloring shows the Unruh mode phase structure 
-across Minkowski space, analytically continued from the 
-right Rindler wedge. A PVM projection onto this null 
-geodesic selects a single frequency from the thermal 
-superposition, replacing the full delocalized mode with 
-the localized non-thermal microstate of 
-equation~\eqref{eq:microstate_vec}.}
-\label{paz_freq}
-\end{figure}
-
-\paragraph{Transverse localization.}
-
-The same projective logic extends to the transverse 
-directions. The thermofield double state~\eqref{eq:vacuum_vec} 
-is a sum over all Rindler frequencies $\omega$ and all 
-transverse positions $\mathbf{x}_\perp$. A Rindler plane wave 
-at frequency $\omega$ is a coherent superposition over all 
-possible source-detector pairs $(\mathcal{P}', \mathcal{R}')$ 
-connected by null geodesics at that frequency:
-%
-\begin{equation}
-    |1_{\omega,\mathrm{plane}}\rangle 
-    = \int d^2\mathbf{x}_\perp\, d\eta'\;
-      \phi(\mathbf{x}_\perp, \eta')\;
-      |\mathcal{P}'(\mathbf{x}_\perp,\eta'),\,
-       \mathcal{R}'(\mathbf{x}_\perp,\eta')\rangle,
-    \label{eq:plane_superposition}
-\end{equation}
-%
-with flat weight $\phi$. The decomposition is schematic, 
-representing the intuition that a plane wave 
-is a uniform superposition over all possible 
-source-detector geometries at frequency $\omega$, 
-rather than a literal Fock space expansion.
-
-Specifying $\mathcal{P} = (-1,0)$ 
-and $\mathcal{R} = (0,1)$ projects onto the unique null 
-geodesic connecting them, resolving the transverse 
-coarse-graining simultaneously with the frequency 
-coarse-graining. A single PVM projection onto this geodesic 
-therefore selects a single term from the thermofield double 
-sum in both directions at once.
-
-ATTEMPT TO CLEAN THINGS UP BELOW
-
-A Unruh mode at frequency $\omega$ can be understood 
-as a uniform superposition over all possible source-detector 
-pairs $(\mathcal{P}', \mathcal{R}')$ connected by null 
-geodesics at that frequency, with flat weight over their 
-transverse positions $\mathbf{x}_\perp$ and Minkowski time 
-$t'$. This decomposition is at the level of mode functions; 
-the corresponding quantum state is the thermofield double 
-sum~\eqref{eq:vacuum_vec}, which is the Fock space 
-realisation of the same superposition. Specifying 
-$\mathcal{P} = (-1,0)$ and $\mathcal{R} = (0,1)$ then 
-performs a PVM projection at the state level, selecting 
-the unique term corresponding to the 
-$\mathcal{P}$--$\mathcal{R}$ null geodesic and yielding 
-the localized non-thermal 
-microstate~\eqref{eq:microstate_vec}.
-
-A single PVM projection onto the $\mathcal{P}$--$\mathcal{R}$ 
-null geodesic therefore resolves both coarse-grainings 
-simultaneously: the frequency coarse-graining of the 
-paragraph above and the transverse coarse-graining 
-addressed here. One physical specification of source 
-and detector does the work of two separate projections.
-
-\paragraph{From POVM to PVM: the Stokes transition.}
-The sharpness of the transverse projection is controlled by 
-the width $\sigma$ of the wavepacket shaping function, which 
-acts as a diagonal Kraus operator:
-%
-\begin{equation}
-    K_\sigma = \int d^2\mathbf{x}_\perp\, 
-    e^{-r^2/2\sigma^2}\,
-    |\mathbf{x}_\perp\rangle
-    \langle\mathbf{x}_\perp|,
-    \label{eq:kraus}
-\end{equation}
-%
-with complementary operator $K_\sigma^\perp$ satisfying
-$K_\sigma^\dagger K_\sigma + (K_\sigma^\perp)^\dagger K_\sigma^\perp = \mathbf{1}$ 
-pointwise~\cite{kraus1983states, nielsen2001quantum}, since $e^{-r^2/\sigma^2} + 
-(1 - e^{-r^2/\sigma^2}) = 1$. This defines a one-parameter 
-POVM family interpolating between two limits: $\sigma \to 
-\infty$ gives $K_\sigma \to \mathbf{1}$, no projection, 
-recovering the full thermal plane wave; $\sigma \to 0$ gives, after normalisation by 
-$(\pi\sigma^2)^{-1}$, a sharp PVM projector 
-onto the $\mathcal{P}$--$\mathcal{R}$ null 
-geodesic, recovering the localized non-thermal 
-microstate. The normalisation is required 
-because $\int e^{-r^2/\sigma^2}\,d^2x_\perp 
-= \pi\sigma^2 \to 0$ as $\sigma \to 0$; the 
-PVM limit is approached by the normalised 
-operator $(\pi\sigma^2)^{-1} K_\sigma$, which 
-converges to the projector 
-$|\mathbf{x}_\perp = 0\rangle
-\langle\mathbf{x}_\perp = 0|$ 
-onto the beam axis.
-
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.5]{stokes.png}
-\captionsetup{width=0.7\textwidth}
-\caption{Trajectory of $z = iq\sigma + \mu/\sigma$ 
-in the complex plane as $\sigma$ interpolates 
-between the two limits of the Kraus 
-family~\eqref{eq:kraus}. The thermal limit 
-$\sigma \to \infty$ corresponds to $z$ on the 
-positive imaginary axis; the localized PVM limit 
-$\sigma \to 0$ corresponds to $z$ on the positive 
-real axis. The green Stokes lines at 
-$\arg z = \pi/4$ mark the boundary between the 
-two asymptotic regimes of the parabolic cylinder 
-function $D_\nu(-z)$, and therefore the boundary 
-between the POVM and PVM descriptions of the 
-transverse localization. Figure 
-from~\cite{player2025driving}.}
-\label{stokes_kraus}
-\end{figure}
-
-
-The Stokes phenomenon of~\cite{player2025driving}, Figure \ref{stokes_kraus}, 
-the transition in the asymptotic behavior of the parabolic 
-cylinder function $D_\nu(-z)$ across the Stokes line 
-$\arg z = \pi/4$, is the analytic signature of this 
-POVM-to-PVM transition: the thermal regime $\sigma \to \infty$ 
-corresponds to the $e^{-\frac{1}{4}z^2}$ asymptotic branch, 
-and the localized regime $\sigma \to 0$ corresponds to the 
-$e^{\frac{1}{4}z^2}$ branch. The present paper works entirely 
-in the $\sigma \to 0$ PVM limit; \cite{player2025driving} 
-works in the interior of the POVM family, with the Stokes 
-line marking the boundary between thermal and non-thermal 
-behavior.
-
-\paragraph{The microstate.}
-The result of both projections is an individually non-thermal 
-microstate carrying a definite Rindler frequency $\omega$ and 
-a definite transverse position. Thermality is not a property 
-of any single microstate but of the ensemble; it emerges when 
-one models the detector response within a wedge as a sum over 
-all Rindler modes, as in the standard Unruh--DeWitt 
-treatment~\cite{unruh1976notes, einstein1979general}, and is 
-a consequence of that mode-averaging rather than a premise of 
-the construction. The plane wave Unruh mode is what remains 
-when neither coarse-graining is resolved; the thermal ensemble 
-is what remains when neither is resolved and $\mathcal{L}$ is 
-traced out; the individual non-thermal microstate is what the 
-PVM projection onto the $\mathcal{P}$--$\mathcal{R}$ geodesic 
-selects. The localization transition of 
-Section~\ref{sec:loc_transition} is the geometric signature 
-of this: the interpolation from the delocalized planar wave 
-to the localized AS pp-wave traces the same POVM-to-PVM 
-transition in the geometry of the horizon perturbation.
 
 \subsection{Helicity Structure and PCT Symmetry}
 
@@ -826,9 +665,9 @@ discuss in Section~\ref{sec:ppwave}, the photons imprint a
 definite geometric signature onto the horizon.
 
 The anticorrelated helicity assignment in both constructions 
-traces to the same algebraic symmetry. In the bilocal 
-construction, the Bell state~\eqref{eq:microstate_vec} is the 
-unique two-photon state invariant under the 
+traces to the same algebraic symmetry.
+The Bell state~\eqref{eq:microstate_vec} is a 
+two-photon state invariant under the 
 Bisognano--Wichmann modular conjugation $J$, which implements 
 PCT between the two Rindler wedges and simultaneously flips 
 $\lambda \to -\lambda$. In the zig-zag, PCT maps the 
@@ -850,7 +689,7 @@ factors label the two helicity sectors that PCT/$J$ exchanges
 in both cases.
 
 \subsection{Double-Null Gauge}
-
+\label{sec:doublenull}
 The emission event naturally defines two null directions: the 
 right-moving photon has wave-vector 
 $k^\mu_R = (\omega, 0, 0, k)$ and the left-moving photon has 
@@ -1105,7 +944,8 @@ preserved at every level of the construction.
 The microstate~\eqref{eq:microstate_vec} admits two 
 complementary geometric descriptions depending on the 
 transverse localisation of the photon mode, corresponding 
-to the two limits of the Kraus family~\eqref{eq:kraus}. 
+to the two limits of the Kraus family~\eqref{eq:kraus}
+parametrized by $\sigma_\perp$.
 The bilocal source fixes a definite Rindler frequency 
 $\omega$ but imposes no constraint on transverse momentum. 
 A mode with zero transverse momentum is uniform across the 
@@ -1116,13 +956,13 @@ distinct pp-waves at the Rindler horizon, both analysed in
 Section~\ref{sec:ppwave}:
 
 \begin{itemize}
-\item \textbf{Delocalized limit} ($\sigma \to \infty$, 
+\item \textbf{Delocalized limit} ($\sigma_\perp \to \infty$, 
 POVM $\to \mathbf{1}$): the stress tensor is uniform across 
 the horizon, producing a \emph{planar impulsive wave} with 
 longitudinal shift $\Delta v \propto -r^2$. Exactly one BMS 
 supertranslation mode is excited.
 
-\item \textbf{Localized limit} ($\sigma \to 0$, POVM 
+\item \textbf{Localized limit} ($\sigma_\perp \to 0$, POVM 
 $\to$ PVM): the stress tensor concentrates near the beam 
 axis, recovering the Aichelburg--Sexl pp-wave with 
 logarithmic shift $\Delta v \propto -\ln r^2$. All BMS 
