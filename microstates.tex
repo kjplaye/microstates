@@ -436,15 +436,156 @@ system.}
 \end{figure}
 
 The three-party structure $\mathcal{P}$--$\mathcal{R}$--$\mathcal{L}$ 
-is a tripartite entanglement: neither $\mathcal{R}$ nor 
-$\mathcal{L}$ alone holds sufficient information to 
-reconstruct the emission event at $\mathcal{P}$, but their 
-two complementary bits together do, making $\mathcal{P}$ the 
-logical AND of the pair and providing a natural 
-microstate-level realization of interior reconstruction.
+realises a form of tripartite entanglement with a natural 
+interior reconstruction interpretation. 
+Neither $\mathcal{R}$ nor $\mathcal{L}$ alone can distinguish 
+a correlated Bell-state emission at $\mathcal{P}$ from an 
+uncorrelated thermal source: each observer's reduced 
+density matrix is thermal, exactly as in the standard Unruh 
+effect. Together, their two anticorrelated bits reveal the 
+correlation structure of the emission event, identifying it 
+as a specific Bell state at a specific frequency, and 
+providing a microstate-level analogue of black hole 
+interior reconstruction~\cite{penington2020entanglement, 
+almheiri2021entropy}, where the interior is recovered 
+as classical correlations in the joint record of 
+complementary exterior observers.
 
-\subsection{PVM Localization and the Elimination of 
-Coarse-Graining}
+\subsection{PVM Localization and the Elimination of Coarse-Graining NEW}
+\label{sec:pvm_localization}
+
+The Unruh mode plays a double role in this construction. 
+As a QFT object it is a coefficient in a mode expansion, 
+a solution to the wave equation analytically continued 
+from the Rindler wedge into all of Minkowski space. 
+But once $\mathcal{P}$ is specified as a real physical 
+source via the squeezing interaction~\eqref{eq:bilocal_lag}, 
+the mode function acquires a second interpretation: 
+it is a probability amplitude in the Born rule sense, 
+encoding where $\mathcal{R}$ is likely to detect the 
+emitted quantum. This is the inversion of the standard 
+Unruh--DeWitt logic. Rather than coupling a detector to 
+a pre-existing acceleration and reading off a thermal 
+distribution by averaging over all Rindler frequencies, 
+we front-load the logic at $\mathcal{P}$: the source 
+fixes the frequency $\omega_k$ and the mode function 
+then specifies the probability amplitude for detection. 
+Thermality, in this picture, is not a primitive 
+property of the vacuum seen by an accelerating observer 
+but a consequence of residual ignorance, about the 
+precise location of $\mathcal{R}$ within the wedge, 
+and about the spatial origin of the detected excitation,
+that the present construction eliminates explicitly.
+
+\paragraph{Longitudinal localization.}
+The primary localization is in the longitudinal $(t,z)$ 
+plane, which is the setting of Figure~\ref{paz_freq} 
+and of the parabolic cylinder function analysis 
+of~\cite{player2025driving}.
+In that work, a Minkowski mode $\varphi_q^*$ multiplied 
+pointwise by a Gaussian shaping function $N_{\mu,\sigma}$ 
+of width $\sigma$ in $(t,z)$, then paired via the 
+Klein--Gordon inner product with a Rindler mode $r_k$, 
+yields an overlap expressible in terms of parabolic 
+cylinder functions $D_\nu(-z)$. The Gaussian could 
+equivalently have been applied to the Rindler side; 
+what matters is that $\sigma$ controls the degree of 
+longitudinal localization of the source-detector pair.
+The Stokes phenomenon 
+in the asymptotics of $D_\nu(-z)$ as $\sigma$ varies 
+drives a transition between two physically distinct 
+regimes: $\sigma \to \infty$ gives the thermal regime 
+where the $e^{-\frac{1}{4}z^2}$ branch dominates, 
+and $\sigma \to 0$ gives the localized non-thermal 
+regime where the $e^{+\frac{1}{4}z^2}$ branch dominates, 
+with the Stokes line at $\arg z = \pi/4$ marking the 
+boundary between them.
+
+In the present paper the same Gaussian shaping function 
+is reread as a Kraus operator acting on the quantum state.
+\begin{equation}
+  K_\sigma = \int e^{-u^2/2\sigma^2}\;
+|u\rangle\langle u|\; du,
+\label{eq:kraus_longitudinal}
+\end{equation}
+where $u = t - z + 1$,
+parametrizing a one-parameter POVM family in the 
+longitudinal direction. Specifying $\mathcal{R} = (0,1)$ 
+and $\mathcal{P} = (-1,0)$ is precisely the $\sigma \to 0$ 
+limit: the Kraus operator sharpens to a PVM projector 
+onto the unique null geodesic connecting them, selecting 
+a single definite frequency $\omega_k$ from what would 
+otherwise be a thermal superposition over all Rindler 
+frequencies. This is visible directly in 
+Figure~\ref{paz_freq}: the rainbow phase structure of 
+the Unruh mode concentrates onto the null line between 
+$\mathcal{P}$ and $\mathcal{R}$, and the PVM projection 
+selects that line. The Stokes transition 
+of~\cite{player2025driving} is therefore not merely a 
+field-theoretic regularization result but the analytic 
+signature of the POVM-to-PVM transition: the same 
+mathematical object is being read in two complementary 
+languages, field theory and measurement theory, with 
+the Stokes line marking the boundary between them.
+
+\paragraph{Transverse localization.}
+The transverse $(x,y)$ directions require a separate 
+and independent localization. A Rindler plane wave at 
+frequency $\omega$ is a coherent superposition over all 
+possible source-detector pairs $(\mathcal{P}', 
+\mathcal{R}')$ connected by null geodesics at that 
+frequency, uniform in the transverse plane. Specifying 
+$\mathcal{P} = (-1,0)$ and $\mathcal{R} = (0,1)$ 
+performs a second PVM projection, now in the transverse 
+directions, selecting the unique null geodesic and 
+resolving the remaining coarse-graining over transverse 
+position. The transverse shaping is controlled by an 
+independent width $\sigma_\perp$, which we treat as a 
+free parameter in Section~\ref{sec:microstates} and 
+whose physical consequences are developed in 
+Section~\ref{sec:ppwave}.
+
+The two widths $\sigma$ and $\sigma_\perp$ control 
+physically distinct aspects of the construction and 
+need not be sent to zero together. The longitudinal 
+$\sigma$ governs the POVM-to-PVM transition and the 
+thermal-to-non-thermal transition analyzed via the 
+Stokes phenomenon; Section~\ref{sec:microstates} 
+works entirely in the $\sigma \to 0$ PVM limit. 
+The transverse $\sigma_\perp$ controls the spatial 
+profile of the horizon perturbation and the BMS mode 
+content: $\sigma_\perp \to \infty$ produces a planar 
+impulsive wave exciting a single BMS supertranslation 
+mode, while $\sigma_\perp \to 0$ recovers the 
+Aichelburg--Sexl pp-wave with logarithmic shift 
+$\Delta v \propto -\ln r^2$ exciting the full BMS 
+spectrum. The central results of the paper, the 
+area increment $\Delta A = 8\pi G\hbar\omega$ and 
+the event-by-event equality 
+$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$, 
+are independent of $\sigma_\perp$, fixed by energy 
+conservation alone.
+
+\paragraph{The microstate.}
+The result of both projections is an individually 
+non-thermal microstate carrying a definite Rindler 
+frequency $\omega$ and a definite longitudinal 
+position on the null geodesic from $\mathcal{P}$ 
+to $\mathcal{R}$. Thermality is not a property of 
+any single microstate but of the ensemble; it 
+emerges when one models the detector response 
+within a wedge as a sum over all Rindler modes, 
+as in the standard Unruh--DeWitt 
+treatment~\cite{unruh1976notes,einstein1979general}, 
+and is a consequence of that mode-averaging rather 
+than a premise of the construction. The individual 
+non-thermal microstate is what the PVM projection 
+onto the $\mathcal{P}$--$\mathcal{R}$ null geodesic 
+selects; the thermal ensemble is what remains when 
+neither coarse-graining is resolved and $\mathcal{L}$ 
+is traced out.
+
+\subsection{PVM Localization and the Elimination of Coarse-Graining}
 \label{sec:pvm_localization}
 
 The thermal Unruh distribution is the correct description for 
@@ -514,6 +655,39 @@ equation~\eqref{eq:microstate_vec}.}
 
 \paragraph{Transverse localization.}
 
+The same projective logic extends to the transverse 
+directions. The thermofield double state~\eqref{eq:vacuum_vec} 
+is a sum over all Rindler frequencies $\omega$ and all 
+transverse positions $\mathbf{x}_\perp$. A Rindler plane wave 
+at frequency $\omega$ is a coherent superposition over all 
+possible source-detector pairs $(\mathcal{P}', \mathcal{R}')$ 
+connected by null geodesics at that frequency:
+%
+\begin{equation}
+    |1_{\omega,\mathrm{plane}}\rangle 
+    = \int d^2\mathbf{x}_\perp\, d\eta'\;
+      \phi(\mathbf{x}_\perp, \eta')\;
+      |\mathcal{P}'(\mathbf{x}_\perp,\eta'),\,
+       \mathcal{R}'(\mathbf{x}_\perp,\eta')\rangle,
+    \label{eq:plane_superposition}
+\end{equation}
+%
+with flat weight $\phi$. The decomposition is schematic, 
+representing the intuition that a plane wave 
+is a uniform superposition over all possible 
+source-detector geometries at frequency $\omega$, 
+rather than a literal Fock space expansion.
+
+Specifying $\mathcal{P} = (-1,0)$ 
+and $\mathcal{R} = (0,1)$ projects onto the unique null 
+geodesic connecting them, resolving the transverse 
+coarse-graining simultaneously with the frequency 
+coarse-graining. A single PVM projection onto this geodesic 
+therefore selects a single term from the thermofield double 
+sum in both directions at once.
+
+ATTEMPT TO CLEAN THINGS UP BELOW
+
 A Unruh mode at frequency $\omega$ can be understood 
 as a uniform superposition over all possible source-detector 
 pairs $(\mathcal{P}', \mathcal{R}')$ connected by null 
@@ -536,37 +710,6 @@ simultaneously: the frequency coarse-graining of the
 paragraph above and the transverse coarse-graining 
 addressed here. One physical specification of source 
 and detector does the work of two separate projections.
-
-% The same projective logic extends to the transverse 
-% directions. The thermofield double state~\eqref{eq:vacuum_vec} 
-% is a sum over all Rindler frequencies $\omega$ and all 
-% transverse positions $\mathbf{x}_\perp$. A Rindler plane wave 
-% at frequency $\omega$ is a coherent superposition over all 
-% possible source-detector pairs $(\mathcal{P}', \mathcal{R}')$ 
-% connected by null geodesics at that frequency:
-% %
-% \begin{equation}
-%     |1_{\omega,\mathrm{plane}}\rangle 
-%     = \int d^2\mathbf{x}_\perp\, d\eta'\;
-%       \phi(\mathbf{x}_\perp, \eta')\;
-%       |\mathcal{P}'(\mathbf{x}_\perp,\eta'),\,
-%        \mathcal{R}'(\mathbf{x}_\perp,\eta')\rangle,
-%     \label{eq:plane_superposition}
-% \end{equation}
-% %
-% with flat weight $\phi$. The decomposition is schematic, 
-% representing the intuition that a plane wave 
-% is a uniform superposition over all possible 
-% source-detector geometries at frequency $\omega$, 
-% rather than a literal Fock space expansion.
-
-% Specifying $\mathcal{P} = (-1,0)$ 
-% and $\mathcal{R} = (0,1)$ projects onto the unique null 
-% geodesic connecting them, resolving the transverse 
-% coarse-graining simultaneously with the frequency 
-% coarse-graining. A single PVM projection onto this geodesic 
-% therefore selects a single term from the thermofield double 
-% sum in both directions at once.
 
 \paragraph{From POVM to PVM: the Stokes transition.}
 The sharpness of the transverse projection is controlled by 
