@@ -1135,52 +1135,53 @@ distribution of that increment across the horizon and
 the corresponding BMS mode content excited by each profile.
 
 % Section 4
+
 \section{Matter as a Substrate}
 \label{sec:substrate}
 
-Quantum mechanics already endows every massive particle with 
-a natural channel structure. A particle of mass $m$ 
-accumulates phase at the Compton frequency $f_C = mc^2/h$; 
-the Bohr--Sommerfeld condition $\oint p\,dq = nh$ expresses 
-this as the accrual of phase in integer units of $h$, so 
-that physical evolution is discrete at the scale set by the 
-action. Bremermann's computational 
-limit~\cite{bremermann1962optimization} recovers the same 
-rate $mc^2/h$ as the maximum number of distinguishable 
-operations per second for any system of energy $mc^2$, and 
-Lloyd~\cite{lloyd2000ultimate} shows this bound is saturated 
-by quantum systems. The Compton frequency is therefore 
-simultaneously a clock rate, a sampling rate, and a 
-computational limit, three facets of the single fact that 
-matter's state space has a resolution set by $\hbar$. Proper 
-time is accumulated action along a worldline, an emergent 
-quantity in the sense of Page and 
-Wootters~\cite{page1983evolution,giovannetti2015quantum}:
+This section develops the physical picture underlying 
+the bilocal construction of Section~\ref{sec:microstates}: 
+matter as an information-processing substrate, and the 
+horizon as the surface at which that substrate's 
+descriptive capacity saturates. The section has three 
+interlocking threads.
 
-The modular flow perspective of Connes and 
-Rovelli~\cite{connes1994neumann} gives this 
-identification a precise algebraic foundation: 
-in a generally covariant quantum theory, the 
-physical flow of time is the modular flow of 
-the state with respect to the observable algebra, 
-and the Bisognano--Wichmann theorem identifies 
-this flow with Rindler time evolution for the 
-vacuum restricted to one wedge. The Bremermann 
-sampling rate $mc^2/h$ is the rate at which 
-the matter channel accumulates modular flow 
-parameter, making proper time an emergent 
-property of the algebraic structure rather than 
-a background input.
+The first thread (Sections~\ref{sec:channel}--\ref{sec:horizon_channel}) 
+is a channel-theoretic argument: a massive particle 
+carries phase at the Compton frequency $mc^2/h$, which 
+simultaneously sets its clock rate, its sampling rate 
+via Bremermann's limit, and its maximum information 
+throughput. The horizon enters as the surface at which 
+this timelike channel hands off to the spacelike horizon 
+channel, with the Planck area $\ell_P^2$ as the 
+conversion factor between the two.
 
-We next develop the channel picture and derive two results that 
-Section~\ref{sec:ppwave} realises geometrically: a formal definition 
-of the handoff event through which space is generated at 
-horizons (Section~\ref{sec:handoff}), and the saturation 
-of channel capacity precisely at the Rindler horizon 
-(Section~\ref{sec:saturation}). Section~\ref{sec:horizon_channel} 
-motivates the Bremermann--Bekenstein equivalence; its geometric 
-proof is the central result of Section~\ref{sec:ppwave}.
+The second thread (Sections~\ref{sec:handoff}--\ref{sec:saturation}) 
+is a formal definition and its consequences: the handoff 
+event is defined precisely as the transfer of one quantum 
+of action $\hbar$ and one classical bit across the horizon, 
+and the channel capacity is shown to saturate at the 
+Rindler horizon at exactly one bit per Rindler period, 
+the same condition as the PVM limit of 
+Section~\ref{sec:pvm_localization} and the EFT boundary 
+of Section~\ref{sec:eft}.
 
+The third thread (Sections~\ref{sec:types}--\ref{sec:zigzag}) 
+broadens the picture: the distinction between massless 
+carriers and massive memory substrates is shown to be 
+the operational content of the mass/massless divide in 
+the Standard Model, and the tick-tock mechanism connects 
+the horizon handoff to the Penrose zig-zag construction 
+for the Dirac equation, making the bilocal Bell state 
+and the Dirac 4-spinor instances of the same PCT-invariant 
+structure at different codimension.
+
+The two results that Section~\ref{sec:ppwave} uses 
+directly are the handoff definition of 
+Section~\ref{sec:handoff} and the saturation condition 
+of Section~\ref{sec:saturation}; the remaining material 
+is conceptual context that motivates and connects these 
+results to the broader framework.
 
 This viewpoint sidesteps a prior question about quantum 
 gravity: how can one quantize gravity without directly 
@@ -1196,6 +1197,25 @@ properties of matter itself, defined only up to the
 resolution set by the action $S/\hbar$, which is Lorentz 
 invariant by construction.
 
+The identification of proper time with accumulated 
+action connects to two independent programs in the 
+literature. The Page--Wootters 
+mechanism~\cite{page1983evolution,giovannetti2015quantum} 
+derives time evolution from entanglement between a 
+clock system and the rest of the universe, consistent 
+with the view that proper time is an emergent rather 
+than background quantity. The modular flow perspective 
+of Connes and Rovelli~\cite{connes1994neumann} gives 
+a complementary algebraic picture: in a generally 
+covariant quantum theory the physical flow of time 
+is the modular flow of the state with respect to the 
+observable algebra, which the Bisognano--Wichmann 
+theorem identifies with Rindler time evolution for 
+the vacuum restricted to one wedge. Both programs 
+support the view that proper time is emergent; the 
+present construction does not depend on either but 
+is consistent with both.
+
 \subsection{Matter as a Timelike Channel}
 \label{sec:channel}
 
@@ -1207,11 +1227,16 @@ $\oint p\, dq = nh$ is its coarse-grained expression:
 it is the correct effective description at energy scales 
 below $mc^2$, where the sub-Compton phase structure is 
 unresolved and action accumulates in integer units of 
-$h$. This is not a limitation but a feature, the 
-condition is technically precise in the Heisenberg 
-sense, valid exactly within the EFT window defined 
-by the Compton scale as UV cutoff and the horizon 
-distance as IR cutoff (Section~\ref{sec:eft}). 
+$h$.
+This is not a limitation but a feature: the 
+Bohr--Sommerfeld condition holds exactly within 
+the EFT window defined by the Compton scale as 
+UV cutoff and the horizon distance as IR cutoff 
+(Section~\ref{sec:eft}), where the Heisenberg 
+uncertainty $\Delta E \Delta t \sim \hbar$ prevents 
+resolution of sub-Compton phase structure and action 
+accumulates in integer units of $h$ to within the 
+precision allowed by that window.
 Bremermann's computational 
 limit~\cite{bremermann1962optimization} independently 
 recovers the same rate as the maximum clock rate of 
@@ -1258,7 +1283,15 @@ and other quantum numbers, and the dynamic range is
 $\log_2$ of the dimension of the internal Hilbert space. 
 The channel capacity~\eqref{eq:channel_capacity} sets 
 the rate at which matter can accumulate and process 
-information; Section~\ref{sec:saturation} shows that 
+information, under the assumption that each Bremermann 
+sample accesses the full $d$-dimensional internal Hilbert 
+space; for composite systems the accessible dimension per 
+sample may be less than $d$, in which case~\eqref{eq:channel_capacity} 
+is an upper bound rather than an equality. For the 
+elementary particles of Section~\ref{sec:microstates}, 
+where $d = 2$ corresponds to the two helicity eigenstates, 
+the bound is saturated by construction.
+Section~\ref{sec:saturation} shows that 
 this rate saturates at the Rindler horizon, making the 
 horizon the natural IR boundary of the matter channel 
 and anticipating the EFT breakdown of 
@@ -1293,8 +1326,13 @@ the Unruh--Landauer relation of Section~\ref{sec:heuristics}.
 For a single photon of dimensionless Rindler frequency 
 $\Omega \equiv \omega/a$ crossing the horizon, the 
 Bremermann count is the number of new resolution elements 
-added to the receiving timelike channel per Rindler period 
-$\tau = 2\pi/a$:
+added to the receiving timelike channel per Rindler period. 
+The Rindler period $\tau = 2\pi/a$ is the natural time 
+unit of the accelerated observer: it is the period of the 
+thermal oscillations seen by a Rindler detector at 
+acceleration $a$, set by the Unruh temperature via 
+$\tau = \hbar/k_BT_H = 2\pi/a$ in natural units. The 
+Bremermann count per Rindler period is then:
 %
 \begin{equation}
     \Delta f \cdot \tau 
@@ -1335,7 +1373,9 @@ transferring one quantum of action $\hbar$
 across $\mathcal{H}$;
 \item the receiving timelike channel 
   incrementing its Bremermann sampling rate 
-  by $\Delta f = \omega / 2\pi$;
+  by $\Delta f = \omega / 2\pi$, as established 
+  by the Bremermann count~\eqref{eq:bremermann_count} 
+  of Section~\ref{sec:horizon_channel};
 \item the helicity outcome $\lambda$ recorded 
   as one classical bit in the receiving channel's 
   matter-memory; and
@@ -1352,11 +1392,11 @@ Each handoff event has exactly two irreducible
 constituents: one quantum of action $\hbar$ written 
 into matter-memory, incrementing the Bremermann 
 sampling rate, and one bit of classical information, 
-the helicity outcome. These are not independent: the 
-action quantum $\hbar$ and the helicity $\lambda = 
-\pm 1$ are two aspects of the same physical object, 
-the energy $\hbar\omega$ and angular momentum 
-$\pm\hbar$ of a single photon. With this definition 
+the helicity outcome. These are not independent: they 
+are the energy $\hbar\omega$ and angular momentum 
+$\pm\hbar$ of a single photon, two properties of the 
+same physical object that cannot be separated.
+With this definition 
 in hand, the equality $S_{GHY}|_{\mathcal{H}} = 
 S_{\mathrm{matter}}$ of Section~\ref{sec:ppwave} 
 becomes a counting statement: the GHY boundary term 
@@ -1373,21 +1413,21 @@ acquires a precise meaning in the channel picture.
 A photon of frequency $\omega$ absorbed by a detector 
 increments its Bremermann sampling rate by 
 $\Delta f = \omega / 2\pi$. Over one Rindler period 
-$\tau = 2\pi c/a$, the number of new resolution 
+$\tau = 2\pi/a$, the number of new resolution 
 elements added to the timelike channel is
 %
 \begin{equation}
     \Delta f \cdot \tau 
-    = \frac{\omega}{2\pi} \cdot \frac{2\pi c}{a} 
-    = \frac{\omega c}{a}.
+    = \frac{\omega}{2\pi} \cdot \frac{2\pi}{a} 
+    = \frac{\omega}{a} = \Omega.
     \label{eq:channel_increment}
 \end{equation}
 %
 The Landauer saturation frequency follows from 
-$\lambda_{\mathrm{sat}} = 2\pi c / \omega_{\mathrm{sat}}$:
+$\lambda_{\mathrm{sat}} = 2\pi / \omega_{\mathrm{sat}}$:
 %
 \begin{equation}
-    \omega_{\mathrm{sat}} = \frac{a \ln 2}{c}.
+    \omega_{\mathrm{sat}} = a \ln 2.
 \end{equation}
 %
 Substituting into~\eqref{eq:channel_increment}:
@@ -1395,7 +1435,7 @@ Substituting into~\eqref{eq:channel_increment}:
 \begin{equation}
     \left.\Delta f \cdot \tau\right|_{\omega = 
     \omega_{\mathrm{sat}}} 
-    = \frac{\omega_{\mathrm{sat}} c}{a} 
+    = \frac{\omega_{\mathrm{sat}}}{a} 
     = \ln 2.
     \label{eq:saturation_result}
 \end{equation}
@@ -1419,7 +1459,8 @@ horizon, so the EFT breaks down exactly where the
 channel saturates.
 
 This saturation condition coincides with the 
-PVM limit of the Kraus family~\eqref{eq:kraus_longitudinal}: 
+PVM limit of the longitudinal Kraus 
+family~\eqref{eq:kraus_longitudinal}: 
 the diagonal Kraus operator becomes a sharp 
 projector exactly when the photon wavepacket 
 carries one Landauer bit per Rindler period, 
@@ -1427,9 +1468,8 @@ connecting the information-theoretic saturation
 to the geometric localization of 
 Section~\ref{sec:pvm_localization}.
 
-\subsection{Lorentz Covariance and Multi-Observer 
-Consistency}
-\label{sec:multiobserver}
+\subsection{Lorentz Covariance}
+\label{sec:lorentz_covariance}
 
 The discreteness of the channel picture, one quantum 
 of action $\hbar$ per handoff event, one Planck-area 
@@ -1464,78 +1504,6 @@ matter sector ($\hbar$ is a Lorentz scalar; photons are
 covariant objects), and the geometry inherits it through 
 the covariant Raychaudhuri equation. No statistical 
 recovery is required.
-
-The construction is naturally multi-observer rather than 
-single-frame. Standard QFT in the S-matrix formulation 
-assumes a single asymptotic observer who prepares the 
-initial state and measures the final state; in the 
-language of Section~\ref{sec:types}, there is one lab 
-and one measurement at the end. Horizon physics 
-requires a different framework: four observers 
-$\mathcal{P}$, $\mathcal{R}$, $\mathcal{L}$, 
-$\mathcal{F}$ each hold partial, causally 
-complementary information about the same physical 
-process. Neither $\mathcal{R}$ nor $\mathcal{L}$ alone 
-can reconstruct the emission at $\mathcal{P}$; their 
-two classical bits together can. The horizon is not 
-a barrier in a single-observer description but a 
-surface that makes the multi-observer structure of 
-the construction sharp: it is the boundary at which 
-$\mathcal{R}$'s and $\mathcal{L}$'s causal domains 
-separate. This is not a limitation of the framework 
-but its natural setting, and it is structurally the 
-same situation that arises in Wigner's friend 
-scenarios~\cite{brukner2018no} applied to 
-gravitational systems, a point developed in 
-Section~\ref{sec:carnot}.
-
-
-The multi-observer structure exposed here is not 
-merely an analogy with Wigner's friend: it is 
-precisely that scenario, instantiated in a 
-gravitational context with causal separation enforced 
-by a horizon rather than by a laboratory door.
-
-A complete formalism for multi-observer quantum 
-mechanics, one that specifies consistently how 
-causally separated observers' measurement records 
-combine into a single description, does not yet 
-exist. The Wigner's friend no-go 
-theorems~\cite{brukner2018no} and the 
-Frauchiger--Renner result~\cite{frauchiger2018quantum} 
-establish that the problem is sharp; the relational, 
-QBist, and Everettian programs each dissolve it 
-differently rather than solving it. The present 
-construction operates within a single observer's 
-description but does not treat the gap as a 
-liability: the observer-independence of the 
-Bekenstein--Hawking area law emerges here not from 
-a completed multi-observer formalism but from the 
-common causal ancestry of $\mathcal{P}$, which 
-enforces intersubjective consistency between 
-$\mathcal{R}$'s and $\mathcal{L}$'s records without 
-requiring an objective wavefunction. The 
-Frauchiger--Renner and Wigner's friend problems 
-remain open in general; the construction shows that 
-causal ancestry is sufficient to ground 
-intersubjective agreement in this specific setting.
-
-Whether the relational~\cite{rovelli1996relational}, 
-QBist~\cite{fuchs2014introducing}, or Everettian 
-frameworks are inequivalent in this setting is an 
-open question with physical consequences:
-different resolutions imply different answers to whether 
-$\mathcal{R}$'s microstate count and $\mathcal{L}$'s 
-microstate count are consistent as objective facts 
-or only as relational ones. The information-theoretic 
-objects introduced here, the spatial bit, the PVM 
-projection, the handoff event, the matter-memory, are 
-the vocabulary in which that question must eventually 
-be posed, but they do not answer it. Multi-observer 
-quantum mechanics in the presence of horizons is 
-largely uncharted, and the present construction 
-should be read partly as a map of that problem space.
-
 
 \subsection{Types of Particles and Interactions}
 \label{sec:types}
@@ -1576,15 +1544,30 @@ fall into three classes. \textbf{Absorption} produces
 a persistent classical record: a quantum of action is 
 deposited and information is written. 
 \textbf{Emission} is the reverse: stored information 
-is released and the record is lost. 
+is released and the record is lost.
 \textbf{Reflection} is absorption followed by 
 emission; whether it constitutes an 
 information-bearing interaction depends on whether 
-a persistent record survives. These categories are 
-observer-relative in the same sense as quantum state 
-reduction: the same physical process may be 
-information-bearing for one observer and external 
-for another.
+a persistent record survives. The ideal mirror of 
+Section~\ref{sec:carnot} is precisely the limiting 
+case of reflection with no persistent record: it 
+absorbs the photon, temporarily stores the helicity 
+outcome, and re-emits without retaining a copy, 
+making the interaction thermodynamically reversible 
+at the cost of paying the Landauer erasure price 
+at re-emission.
+
+These categories are observer-relative in the same 
+sense as quantum state reduction: just as state 
+reduction is a Bayesian update for a given observer 
+grounded in their causal access to the measurement 
+outcome, the classification of an interaction as 
+absorption, emission, or reflection depends on 
+whether the observer in question retains a persistent 
+record of the outcome. The same physical process may 
+be information-bearing for one observer and purely 
+external for another, depending on whether a record 
+is written into their matter-memory.
 
 \subsection{The Tick-Tock Mechanism}
 \label{sec:zigzag}
@@ -1594,7 +1577,13 @@ the handoff event of Section~\ref{sec:handoff} is the
 Rindler-horizon version of what Penrose calls the zig-zag 
 construction~\cite{penrose2006road}, which we term the 
 tick-tock mechanism to emphasise the alternating rhythm 
-of handoff events rather than the geometry of the path.
+of handoff events rather than the geometry of the path. 
+At each vertex the helicity flips, and it is this 
+alternating helicity that produces spin, visible in 
+Figure~\ref{zigzag} as the green loops representing 
+the two $\mathfrak{su}(2)$ factors cycling between 
+handoff events.
+
 The tick-tock is, in 
 precise terms, the bilocal construction of 
 Section~\ref{sec:microstates} realised along a single 
@@ -1685,12 +1674,19 @@ and the Dirac 4-spinor are therefore the same
 PCT-invariant structure at different codimension, and 
 the Lie algebra is the common home of both.
 
+
 Mass emerges from the 
 regularity of these interactions: a particle is 
 massive because it undergoes repeated Higgs 
 interactions at the Compton frequency, and its 
-mass is proportional to that frequency via 
-$E = \hbar\omega$. Proper time along a worldline 
+mass is set by that rate via $m = h\dot{N}_{Higgs}/c^2$, 
+where $\dot{N}_{Higgs}$ is the Higgs interaction rate 
+per unit proper time. This is the handoff-event 
+reading of $E = \hbar\omega$: mass is not a static 
+property but a rate, the frequency at which the 
+particle exchanges one quantum of action with the 
+Higgs field.
+Proper time along a worldline 
 is then a foliation by discrete handoff events, 
 each separating the causal past from the causal 
 future of that interaction, the one-dimensional 
@@ -2312,6 +2308,75 @@ looks like in AdS, when the source $\mathcal{P}$ is not
 explicitly available and the connection between wedges must be 
 encoded in the geometry itself.
 
+\subsection{Observer-Relativity and the Multi-Observer Problem}
+The construction is naturally multi-observer rather than 
+single-frame. Standard QFT in the S-matrix formulation 
+assumes a single asymptotic observer who prepares the 
+initial state and measures the final state; in the 
+language of Section~\ref{sec:types}, there is one lab 
+and one measurement at the end. Horizon physics 
+requires a different framework: four observers 
+$\mathcal{P}$, $\mathcal{R}$, $\mathcal{L}$, 
+$\mathcal{F}$ each hold partial, causally 
+complementary information about the same physical 
+process. Neither $\mathcal{R}$ nor $\mathcal{L}$ alone 
+can reconstruct the emission at $\mathcal{P}$; their 
+two classical bits together can. The horizon is not 
+a barrier in a single-observer description but a 
+surface that makes the multi-observer structure of 
+the construction sharp: it is the boundary at which 
+$\mathcal{R}$'s and $\mathcal{L}$'s causal domains 
+separate. This is not a limitation of the framework 
+but its natural setting, and it is structurally the 
+same situation that arises in Wigner's friend 
+scenarios~\cite{brukner2018no} applied to 
+gravitational systems, a point developed in the following section.
+
+The multi-observer structure exposed here is not 
+merely an analogy with Wigner's friend: it is 
+precisely that scenario, instantiated in a 
+gravitational context with causal separation enforced 
+by a horizon rather than by a laboratory door.
+
+A complete formalism for multi-observer quantum 
+mechanics, one that specifies consistently how 
+causally separated observers' measurement records 
+combine into a single description, does not yet 
+exist. The Wigner's friend no-go 
+theorems~\cite{brukner2018no} and the 
+Frauchiger--Renner result~\cite{frauchiger2018quantum} 
+establish that the problem is sharp; the relational, 
+QBist, and Everettian programs each dissolve it 
+differently rather than solving it. The present 
+construction operates within a single observer's 
+description but does not treat the gap as a 
+liability: the observer-independence of the 
+Bekenstein--Hawking area law emerges here not from 
+a completed multi-observer formalism but from the 
+common causal ancestry of $\mathcal{P}$, which 
+enforces intersubjective consistency between 
+$\mathcal{R}$'s and $\mathcal{L}$'s records without 
+requiring an objective wavefunction. The 
+Frauchiger--Renner and Wigner's friend problems 
+remain open in general; the construction shows that 
+causal ancestry is sufficient to ground 
+intersubjective agreement in this specific setting.
+
+Whether the relational~\cite{rovelli1996relational}, 
+QBist~\cite{fuchs2014introducing}, or Everettian 
+frameworks are inequivalent in this setting is an 
+open question with physical consequences:
+different resolutions imply different answers to whether 
+$\mathcal{R}$'s microstate count and $\mathcal{L}$'s 
+microstate count are consistent as objective facts 
+or only as relational ones. The information-theoretic 
+objects introduced here, the spatial bit, the PVM 
+projection, the handoff event, the matter-memory, are 
+the vocabulary in which that question must eventually 
+be posed, but they do not answer it. Multi-observer 
+quantum mechanics in the presence of horizons is 
+largely uncharted, and the present construction 
+should be read partly as a map of that problem space.
 
 % Section 7
 \section{Carnot Cycle from Unruh--Landauer}
