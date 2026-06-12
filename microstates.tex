@@ -449,11 +449,14 @@ spin-1 massless photons with momenta $\pm k$ and Rindler
 frequency $\omega = \omega_k$.
 The momenta are perfectly balanced by construction: the two photons 
 carry spatial momenta $+k\hat{z}$ and $-k\hat{z}$ respectively, so 
-the total linear momentum vanishes, $k + (-k) = 0$; the anticorrelated 
-helicities $(\lambda_R, \lambda_L) = (+1,-1)$ and $(-1,+1)$ each 
-carry zero net angular momentum, and the Bell state 
-superposition~\eqref{eq:microstate_vec} preserves this, so the source 
-exhibits no net back-reaction in linear or angular momentum.
+the total linear momentum vanishes, $k + (-k) = 0$. The angular 
+momentum vanishes term by term: in each helicity assignment 
+$(\lambda_R, \lambda_L) = (+1,-1)$ and $(-1,+1)$, the total 
+helicity is $\lambda_R + \lambda_L = (+1) + (-1) = 0$ and 
+$(-1) + (+1) = 0$ respectively, and the symmetric Bell state 
+superposition~\eqref{eq:microstate_vec} preserves this since 
+both terms contribute zero independently. The source therefore 
+exhibits no net back-reaction in either linear or angular momentum.
 The two photons propagate into the left and right Rindler wedges, 
 where $\mathcal{L}$ and $\mathcal{R}$ detect them respectively 
 via absorption, the momentum impulse of which accelerates each 
@@ -600,13 +603,9 @@ is reread as a Kraus operator acting on the quantum state.
 |u\rangle\langle u|\; du,
 \label{eq:kraus_longitudinal}
 \end{equation}
-where $u = t - z + 1$ is the null coordinate\footnote{In 
-\cite{player2025driving}, which works in 1+1 
-dimensions with spatial coordinate $x$, the 
-complex Stokes variable is denoted $z = iq\sigma 
-+ \mu/\sigma$; we use $\zeta$ here to avoid 
-confusion with the longitudinal spatial coordinate 
-$z$ of the present paper.} 
+where $u = t - z + 1$ is the null coordinate\footnote{We use $\zeta$ for the Stokes variable 
+of~\cite{player2025driving} to avoid confusion 
+with the longitudinal spatial coordinate $z$.}
 defined in Section~\ref{sec:ppwave}.
 The operator $K_\sigma$ together with its complement 
 \begin{equation}
@@ -636,6 +635,13 @@ signature of the POVM-to-PVM transition: the same
 mathematical object is being read in two complementary 
 languages, field theory and measurement theory, with 
 the Stokes line marking the boundary between them.
+The helicity label $\lambda$ enters the longitudinal 
+mode function as a spectator index and does not affect 
+the $u$-dependence of the Kraus 
+operator~\eqref{eq:kraus_longitudinal}; the Stokes 
+transition analysis of~\cite{player2025driving} therefore 
+applies independently to each helicity sector without 
+modification.
 
 \begin{figure}[h]
 \centering
@@ -1033,29 +1039,26 @@ helicities:
 Equation~\eqref{eq:vacuum_vec} makes explicit that the 
 Minkowski vacuum is a sum over entangled 
 helicity-anticorrelated pairs at each Rindler frequency.
-the bilocal source, via the PVM projection of 
-Section~\ref{sec:pvm_localization}, selects a single term 
-from this sum at fixed $\omega$ and fixed helicity pair 
-$(\lambda, -\lambda) = (+1,-1)$, yielding the single 
-microstate
+The bilocal source specifies a physical emission event: 
+exactly one pair, at fixed $\omega$, with fixed helicity 
+assignment. The PVM projection of 
+Section~\ref{sec:pvm_localization} identifies this event 
+with the $n=1$ term in the vacuum 
+decomposition~\eqref{eq:vacuum_vec} at that $\omega$ and 
+helicity pair. The higher $n$ terms are not suppressed by 
+any weak-coupling assumption; they correspond to different 
+physical events --- two-pair emissions, three-pair 
+emissions, and so on --- that this source simply does not 
+describe. The selection is prescriptive, not perturbative. 
+The resulting single microstate is
 \begin{equation}
     |\Psi_{\omega}\rangle_M
     = \frac{1}{\sqrt{2}}\left(
         |1_{\omega,+1}\rangle_R\,|1_{\omega,-1}\rangle_L 
         + |1_{\omega,-1}\rangle_R\,|1_{\omega,+1}\rangle_L
-      \right)
-      + \mathcal{O}(g^2).
+      \right).
 \label{eq:microstate_vec}
 \end{equation}
-The state $|\Psi_\omega\rangle_M$ is obtained by projecting 
-the Minkowski vacuum~\eqref{eq:vacuum_vec} onto the $n=1$ 
-sector at fixed $\omega$ and fixed helicity pair. 
-Multi-photon terms at $n \geq 2$ are present in the full 
-vacuum decomposition but are not selected by the PVM 
-projection, which by construction picks out the single-pair 
-sector. The single-microstate description is therefore exact 
-within the projected sector, with no weak-coupling assumption 
-required.
 $\mathcal{R}$'s and $\mathcal{L}$'s helicity outcomes are 
 undetermined until measurement, at which point they are 
 perfectly anticorrelated by the Bell state structure: each 
