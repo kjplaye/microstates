@@ -55,15 +55,32 @@ Carnot cycle, and effective field theory.}
 % Section 1
 \section{Introduction}
 
-Thermodynamic approaches to gravity are remarkably successful and remarkably 
-incomplete. Jacobson derives the Einstein equations from entropy and temperature 
-on local Rindler horizons~\cite{jacobson1995thermodynamics}; Verlinde derives 
+We propose quantum measurement events as the elementary 
+units of spacetime information processing and show this 
+is consistent with geometric, thermodynamic, and effective 
+field theory descriptions of the horizon. In this 
+information-theoretic framework, matter is the fundamental 
+substrate: proper time emerges from discrete action quanta 
+accumulated along worldlines, spatial geometry emerges from 
+handoff events at horizons, and the Planck area $\ell_P^2$ 
+is the conversion factor between the two. This gives a 
+Lorentz-invariant alternative to approaches that discretize 
+geometry directly, discreteness lives in the matter 
+sector via $\hbar$, and geometry inherits it through the 
+covariant Raychaudhuri equation.
+
+Thermodynamic approaches to gravity are remarkably successful 
+and remarkably incomplete. Jacobson derives the Einstein 
+equations from entropy and temperature on local Rindler 
+horizons~\cite{jacobson1995thermodynamics}; Verlinde derives 
 gravitational forces from entropy gradients on holographic 
-screens~\cite{entropic}. Both frameworks operate at the level of bulk 
-thermodynamics and neither specifies what physical process underlies each 
-individual entropy increment. This paper proposes an answer: quantum measurement 
-events, modeled as energy-momentum transfers under proper acceleration, provide 
-explicit realizations of those increments in flat Minkowski space.
+screens~\cite{entropic}. Both frameworks operate at the level 
+of bulk thermodynamics and neither specifies what physical 
+process underlies each individual entropy increment. The 
+information-theoretic framework proposed here supplies that 
+process: quantum measurement events, modeled as energy-momentum 
+transfers under proper acceleration, provide explicit 
+realizations of those increments in flat Minkowski space.
 
 The physical reasoning is as follows: any measurement is mediated by a physical 
 interaction, so information acquisition necessarily involves an exchange of energy 
@@ -115,30 +132,48 @@ a candidate process.
 
 \subsection{Roadmap}
 
-Our central technical result is the event-by-event equality 
-$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$: the 
-Gibbons--Hawking--York boundary term and the matter action count the 
-same measurement events in geometric and informational language 
-respectively, with the Planck area $\ell_P^2$ as the conversion factor. 
-Its role here is diagnostic. An identification of microstates that 
-survived only at the thermodynamic ensemble level would be consistent 
-with many underlying microstructures; one that holds event by event is 
-a sharper constraint, and that sharpness is what validates the proposal.
+The central claim of this paper is the information-theoretic 
+framework of Section~\ref{sec:substrate}: matter is the 
+timelike substrate of emergent proper time, the horizon is 
+the spacelike surface through which handoff events generate 
+emergent space, and the Planck area $\ell_P^2$ is the 
+conversion factor between the two descriptions. The 
+event-by-event equality $S_{GHY}|_{\mathcal{H}} = 
+S_{\mathrm{matter}}$, the Gibbons--Hawking--York boundary 
+term and the matter action counting the same measurement 
+events in geometric and informational language respectively,
+is the consistency check that validates this framework. 
+That it holds event by event rather than only at the 
+thermodynamic ensemble level is what makes the check sharp: 
+many microstructures are consistent with bulk thermodynamics, 
+but the event-by-event equality constrains which ones are 
+consistent with the geometry.
 
-The paper has a two-layer structure. The \emph{heuristic layer} 
-(Section~\ref{sec:heuristics}) requires only Landauer's principle, 
-the Unruh effect, and Newton's law; it recovers standard black hole 
-thermodynamics from a temperature-free kinematic bound and is 
-self-contained. The \emph{construction layer} 
-(Sections~\ref{sec:microstates}--\ref{sec:ppwave}) is the technically 
-precise core: a Bell state of photons with anticorrelated helicities, 
-sourced by a bilocal term in the action, generates an 
-Aichelburg--Sexl pp-wave at the Rindler horizon; applying the 
-Raychaudhuri equation to the resulting null congruence yields 
-$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ event by event. 
-Sections~\ref{sec:erepr}--\ref{sec:eft} apply this construction to 
-entanglement-generated geometry, the equivalence of Carnot and 
-Unruh--Landauer bounds, and the EFT origin of the GHY term.
+The paper has three layers. The \emph{framework layer} 
+(Section~\ref{sec:substrate}) is the conceptual core: 
+matter as a timelike information channel, the horizon as 
+a spacelike handoff surface, and the handoff event as the 
+elementary unit of both proper time and spatial geometry. 
+This is the information-theoretic alternative to standard 
+thermal quantum gravity that the rest of the paper 
+elaborates and validates. The \emph{heuristic layer} 
+(Section~\ref{sec:heuristics}) requires only Landauer's 
+principle, the Unruh effect, and Newton's law; it recovers 
+standard black hole thermodynamics from a temperature-free 
+kinematic bound and is self-contained. The 
+\emph{construction layer} 
+(Sections~\ref{sec:microstates},~\ref{sec:ppwave}) 
+exhibits one explicit Minkowski microstate, a Bell state 
+of photons with anticorrelated helicities selected by a 
+bilocal source, and shows that applying the Raychaudhuri 
+equation to the resulting AS pp-wave yields 
+$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ event by 
+event, consistent with the framework. 
+Sections~\ref{sec:erepr}--\ref{sec:eft} apply the 
+framework to entanglement-generated geometry, the 
+equivalence of Carnot and Unruh--Landauer bounds, and 
+the EFT origin of the GHY term.
+
 
 % Section 2
 \section{The Unruh--Landauer Bound and Motivating Heuristics}
@@ -1135,53 +1170,85 @@ distribution of that increment across the horizon and
 the corresponding BMS mode content excited by each profile.
 
 % Section 4
-
 \section{Matter as a Substrate}
 \label{sec:substrate}
 
-This section develops the physical picture underlying 
-the bilocal construction of Section~\ref{sec:microstates}: 
-matter as an information-processing substrate, and the 
-horizon as the surface at which that substrate's 
-descriptive capacity saturates. The section has three 
-interlocking threads.
+This section is the conceptual core of the paper. We 
+propose that matter is the fundamental substrate of 
+spacetime information processing: proper time is emergent 
+from discrete action quanta accumulated along worldlines, 
+spatial geometry is emergent from handoff events at 
+horizons, and the Planck area $\ell_P^2$ is the conversion 
+factor between the two descriptions. This is a specific, 
+tangible alternative to approaches that quantize geometry 
+directly~\cite{wheeler1955geons, bombelli1987space}: 
+discreteness lives in the matter sector via $\hbar$, is 
+Lorentz invariant by construction, and geometry inherits 
+it through the covariant Raychaudhuri equation. No 
+statistical recovery of Lorentz invariance is required.
 
-The first thread (Sections~\ref{sec:channel}--\ref{sec:horizon_channel}) 
-is a channel-theoretic argument: a massive particle 
-carries phase at the Compton frequency $mc^2/h$, which 
-simultaneously sets its clock rate, its sampling rate 
-via Bremermann's limit, and its maximum information 
-throughput. The horizon enters as the surface at which 
-this timelike channel hands off to the spacelike horizon 
-channel, with the Planck area $\ell_P^2$ as the 
-conversion factor between the two.
+The framework has three interlocking components.
 
-The second thread (Sections~\ref{sec:handoff}--\ref{sec:saturation}) 
-is a formal definition and its consequences: the handoff 
-event is defined precisely as the transfer of one quantum 
-of action $\hbar$ and one classical bit across the horizon, 
-and the channel capacity is shown to saturate at the 
-Rindler horizon at exactly one bit per Rindler period, 
-the same condition as the PVM limit of 
+The first (Sections~\ref{sec:channel}--\ref{sec:horizon_channel}) 
+establishes matter as a timelike information channel: a 
+massive particle carries phase at the Compton frequency 
+$mc^2/h$, simultaneously setting its clock rate, its 
+sampling rate via Bremermann's limit, and its maximum 
+information throughput. The horizon enters as the surface 
+at which this timelike channel hands off to the spacelike 
+horizon channel, with the Planck area $\ell_P^2$ as the 
+conversion factor. This is the information-theoretic 
+content of the Bekenstein--Hawking area law: one Planck 
+area per handoff event, one handoff event per bit.
+
+The second (Sections~\ref{sec:handoff}--\ref{sec:saturation}) 
+makes this precise: the handoff event is defined as the 
+transfer of one quantum of action $\hbar$ and one 
+classical bit across the horizon. Channel capacity 
+saturates at the Rindler horizon at exactly one bit per 
+Rindler period, connecting the information-theoretic 
+saturation to the PVM limit of 
 Section~\ref{sec:pvm_localization} and the EFT boundary 
-of Section~\ref{sec:eft}.
+of Section~\ref{sec:eft}. The consistency check 
+$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ of 
+Section~\ref{sec:ppwave} is the geometric expression 
+of this saturation condition: Section~\ref{sec:ppwave} 
+uses the handoff definition and saturation condition 
+from this framework and finds them consistent with the 
+Raychaudhuri equation event by event.
 
-The third thread (Sections~\ref{sec:types}--\ref{sec:zigzag}) 
-broadens the picture: the distinction between massless 
-carriers and massive memory substrates is shown to be 
-the operational content of the mass/massless divide in 
-the Standard Model, and the tick-tock mechanism connects 
-the horizon handoff to the Penrose zig-zag construction 
-for the Dirac equation, making the bilocal Bell state 
-and the Dirac 4-spinor instances of the same PCT-invariant 
-structure at different codimension.
+The third (Sections~\ref{sec:types}--\ref{sec:zigzag}) 
+shows that this framework is already implicit in the 
+Standard Model: the mass/massless divide is the 
+operational distinction between memory substrates and 
+handoff carriers, and the Penrose zig-zag construction 
+for the Dirac equation is the timelike version of the 
+horizon handoff, with the Higgs field playing the role 
+of the bilocal source. The bilocal Bell state and the 
+Dirac 4-spinor are the same PCT-invariant structure at 
+different codimension. This consilience with existing 
+physics is not a derivation but a consistency: the 
+framework does not contradict the Standard Model but 
+shows that the handoff structure is already present in 
+it.
 
-The two results that Section~\ref{sec:ppwave} uses 
-directly are the handoff definition of 
-Section~\ref{sec:handoff} and the saturation condition 
-of Section~\ref{sec:saturation}; the remaining material 
-is conceptual context that motivates and connects these 
-results to the broader framework.
+The connection to existing programs in quantum gravity 
+and quantum foundations is developed throughout. The 
+Page--Wootters mechanism~\cite{page1983evolution, 
+giovannetti2015quantum} and the Connes--Rovelli modular 
+flow~\cite{connes1994neumann} both support the view that 
+proper time is emergent; the present framework gives a 
+specific physical mechanism. Verlinde's entropic 
+gravity~\cite{entropic} operates at the thermodynamic 
+level; the present framework supplies the microstate 
+structure beneath it. The Wigner's friend 
+problem~\cite{brukner2018no} and the 
+Frauchiger--Renner theorem~\cite{frauchiger2018quantum} 
+identify the multi-observer problem as sharp; the 
+information-theoretic vocabulary introduced here,
+spatial bits, PVM projections, handoff events, 
+matter-memory, is the natural language in which 
+that problem must be posed in a gravitational context.
 
 This viewpoint sidesteps a prior question about quantum 
 gravity: how can one quantize gravity without directly 
@@ -1320,7 +1387,7 @@ The photon passes through the horizon channel and
 deposits into the matter channel on the other side; 
 the handoff is the central event of the construction.
 
-The Bekenstein and Bremermann bounds count the same 
+We propose that the Bekenstein and Bremermann bounds count the same 
 physical event from orthogonal directions, related by 
 the Unruh--Landauer relation of Section~\ref{sec:heuristics}. 
 For a single photon of dimensionless Rindler frequency 
@@ -1342,13 +1409,14 @@ Bremermann count per Rindler period is then:
 \end{equation}
 %
 That the Bekenstein spatial count agrees with this 
-Bremermann temporal count, up to the universal Rindler 
-factor $2\pi$ tracing to the analytic continuation 
-between Minkowski and Rindler coordinates, is a 
-consequence of the central result 
-$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$, 
-established geometrically in Section~\ref{sec:ppwave}; 
-we defer the proof to that section.
+Bremermann temporal count is consistent with the 
+central result $S_{GHY}|_{\mathcal{H}} = 
+S_{\mathrm{matter}}$, established geometrically in 
+Section~\ref{sec:ppwave}. The universal factor of 
+$2\pi$ appearing in this agreement is associated 
+with the analytic continuation between Minkowski 
+and Rindler coordinates; we defer the detailed 
+accounting to Section~\ref{sec:ppwave}.
 
 \subsection{The Handoff Event}
 \label{sec:handoff}
@@ -1395,7 +1463,7 @@ sampling rate, and one bit of classical information,
 the helicity outcome. These are not independent: they 
 are the energy $\hbar\omega$ and angular momentum 
 $\pm\hbar$ of a single photon, two properties of the 
-same physical object that cannot be separated.
+same physical object.
 With this definition 
 in hand, the equality $S_{GHY}|_{\mathcal{H}} = 
 S_{\mathrm{matter}}$ of Section~\ref{sec:ppwave} 
@@ -1572,10 +1640,11 @@ is written into their matter-memory.
 \subsection{The Tick-Tock Mechanism}
 \label{sec:zigzag}
 
-The channel picture is not an ad hoc construction:
-the handoff event of Section~\ref{sec:handoff} is the 
-Rindler-horizon version of what Penrose calls the zig-zag 
-construction~\cite{penrose2006road}, which we term the 
+The handoff event of Section~\ref{sec:handoff} is 
+analogous to what Penrose calls the zig-zag 
+construction~\cite{penrose2006road}, here realised 
+at a spacelike horizon rather than along a timelike 
+worldline, which we term the 
 tick-tock mechanism to emphasise the alternating rhythm 
 of handoff events rather than the geometry of the path. 
 At each vertex the helicity flips, and it is this 
@@ -1584,10 +1653,11 @@ Figure~\ref{zigzag} as the green loops representing
 the two $\mathfrak{su}(2)$ factors cycling between 
 handoff events.
 
-The tick-tock is, in 
-precise terms, the bilocal construction of 
-Section~\ref{sec:microstates} realised along a single 
-massive worldline rather than across a spacelike horizon. 
+Structurally, the tick-tock mirrors the bilocal 
+construction of Section~\ref{sec:microstates} 
+realised along a single massive worldline rather 
+than across a spacelike horizon; we present this 
+as a suggestive analogy rather than a derived result.
 The Higgs field plays the role of the bilocal source 
 $\mathcal{P}$; the two Weyl spinors of opposite helicity 
 play the role of the two photons propagating to 
@@ -1622,7 +1692,8 @@ the Higgs mechanism for an electron.}
 \end{figure}
 
 The structural parallel with the bilocal construction 
-and the handoff definition is exact: the two Weyl 
+and the handoff definition is close at the level of 
+the Lie algebra decomposition: the two Weyl 
 spinors correspond to the two photons emitted by 
 $\mathcal{P}$; the Higgs interaction corresponds to 
 the absorption events at $\mathcal{R}$ and 
@@ -1675,13 +1746,15 @@ PCT-invariant structure at different codimension, and
 the Lie algebra is the common home of both.
 
 
-Mass emerges from the 
-regularity of these interactions: a particle is 
-massive because it undergoes repeated Higgs 
-interactions at the Compton frequency, and its 
-mass is set by that rate via $m = h\dot{N}_{Higgs}/c^2$, 
-where $\dot{N}_{Higgs}$ is the Higgs interaction rate 
-per unit proper time. This is the handoff-event 
+In this analogy, mass is associated with the 
+regularity of these interactions: heuristically, 
+a particle is massive because it undergoes repeated 
+Higgs interactions at the Compton frequency, and 
+its mass is related to that rate via 
+$m = h\dot{N}_{Higgs}/c^2$. This is a 
+reinterpretation of the standard Higgs mechanism 
+in handoff-event language, not a new claim about it.
+This is the handoff-event 
 reading of $E = \hbar\omega$: mass is not a static 
 property but a rate, the frequency at which the 
 particle exchanges one quantum of action with the 
@@ -1692,12 +1765,12 @@ each separating the causal past from the causal
 future of that interaction, the one-dimensional 
 analogue of the Rindler horizon, and
 matching the holographic screen picture of 
-Verlinde~\cite{entropic}. The one-dimensional handoff 
-of the zig-zag and the horizon handoff of the bilocal 
-construction are therefore the timelike and spacelike 
-faces of the same elementary event: a PCT-invariant 
-exchange of one quantum of action between two massless 
-helicity eigenstates.
+Verlinde~\cite{entropic}.
+This suggests that the one-dimensional handoff 
+of the zig-zag and the horizon handoff of the 
+bilocal construction are analogous elementary 
+events, the timelike and spacelike faces of the 
+same PCT-invariant structure.
 
 % Section 5
 \section{pp-Wave Geometry and Action}
@@ -3014,12 +3087,24 @@ its natural boundary condition.
 \section{Conclusion}
 \label{sec:conclusion}
 
-We have proposed quantum measurement events as explicit 
-models of gravitational microstates in the Rindler setting, 
-partially answering the question left open by Jacobson and 
-Verlinde of what physical process underlies each individual 
-entropy increment. The construction converges independently 
-with three established programs. Jacobson's thermodynamic 
+We have proposed quantum measurement events as the 
+elementary units of spacetime information processing 
+and shown this is consistent with geometric, 
+thermodynamic, and effective field theory descriptions 
+of the horizon. The central claim, that matter is 
+the timelike substrate of emergent proper time, the 
+horizon is the spacelike surface through which handoff 
+events generate emergent space, and the Planck area 
+$\ell_P^2$ is the conversion factor between the two 
+descriptions, gives a specific, tangible, 
+Lorentz-invariant alternative to approaches that 
+quantize geometry directly. The event-by-event equality 
+$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ is the 
+consistency check that validates this framework, not 
+the result itself. The construction makes contact with 
+three established programs.
+
+Jacobson's thermodynamic 
 derivation of the Einstein 
 equations~\cite{jacobson1995thermodynamics} requires a 
 physical process underlying each local entropy increment; 
