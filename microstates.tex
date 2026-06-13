@@ -835,9 +835,8 @@ left-wedge algebra and simultaneously flips $\lambda \to
 natural state in this momentum sector invariant under that 
 operation. The common algebraic origin of this anticorrelation 
 in the Lorentz algebra decomposition $\mathfrak{so}(3,1) \cong 
-\mathfrak{su}(2) \times \mathfrak{su}(2)$, and its connection 
-to the ``tick-tock'' mechanism of Section~\ref{sec:zigzag}, is 
-developed in detail in Section~\ref{sec:zigzag}.
+\mathfrak{su}(2) \times \mathfrak{su}(2)$, developed in 
+Section~\ref{sec:zigzag}.
 
 \subsection{Double-Null Gauge}
 \label{sec:doublenull}
@@ -1202,15 +1201,16 @@ Raychaudhuri equation.
 The framework has three interlocking components: matter as 
 a timelike channel whose capacity saturates at the Rindler 
 horizon (Sections~\ref{sec:channel}--\ref{sec:saturation}); 
-the handoff event as the elementary unit transferring one 
-quantum of action and one classical bit across that horizon, 
+a handoff event as an elementary unit transferring quanta of
+action and information across that horizon, 
 with the geometric consistency check 
 $S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ verified 
 in Section~\ref{sec:ppwave}; and the observation that this 
 structure is already implicit in the Standard Model via the 
-Penrose zig-zag, with the bilocal Bell state and the Dirac 
-4-spinor as the same PCT-invariant structure at different 
-codimension (Sections~\ref{sec:types}--\ref{sec:zigzag}).
+Penrose zig-zag, where
+the bilocal Bell state and the Dirac 4-spinor 
+realize the same PCT-invariant helicity structure 
+in spacelike and timelike separations respectively. (Sections~\ref{sec:types}--\ref{sec:zigzag}).
 
 This viewpoint sidesteps a prior question about quantum 
 gravity: how can one quantize gravity without directly 
@@ -1229,24 +1229,16 @@ invariant by construction.
 \subsection{Matter as a Timelike Channel}
 \label{sec:channel}
 
+
 A massive particle carries phase along its worldline 
-at a rate set by its rest energy. The Compton frequency 
-$f = mc^2/h$ is the natural clock rate of a mass $m$, 
-and the Bohr--Sommerfeld quantization condition 
-$\oint p\, dq = nh$ is its coarse-grained expression: 
-it is the correct effective description at energy scales 
-below $mc^2$, where the sub-Compton phase structure is 
-unresolved and action accumulates in integer units of 
-$h$.
-This is not a limitation but a feature: the 
-Bohr--Sommerfeld condition holds exactly within 
-the EFT window defined by the Compton scale as 
-UV cutoff and the horizon distance as IR cutoff 
-(Section~\ref{sec:eft}), where the Heisenberg 
-uncertainty $\Delta E \Delta t \sim \hbar$ prevents 
-resolution of sub-Compton phase structure and action 
-accumulates in integer units of $h$ to within the 
-precision allowed by that window.
+at a rate set by its rest energy.
+The Compton frequency $f = mc^2/h$ is the natural 
+clock rate of a mass $m$: it is the rate at which 
+the phase $e^{iS/\hbar}$ completes one cycle, and 
+$\hbar$ is the minimal unit of action that can be 
+transferred in a single interaction. The regime in 
+which this description operates for our microstate, and its natural 
+boundaries, are developed in Section~\ref{sec:eft}.
 Bremermann's computational 
 limit~\cite{bremermann1962optimization} independently 
 recovers the same rate as the maximum clock rate of 
@@ -1255,13 +1247,18 @@ agree because $\hbar$ is the minimal unit of physical
 evolution at that scale.
 
 Each quantum corresponds to one 
-sample\footnote{We use the information theoretic term 
-\emph{sample} throughout to denote a single zero crossing 
-of the phase $e^{iS/\hbar}$ in the path integral. The 
-term \emph{event} or \emph{tick} may be substituted 
-throughout. It is defined only up to the Heisenberg 
-resolution.} of the phase $e^{iS/\hbar}$ in the path 
-integral. The matter substrate gives rise to a channel 
+sample of the phase $e^{iS/\hbar}$ in the path 
+integral and we use the information-theoretic term \emph{sample} 
+throughout to denote a single zero crossing. The term 
+\emph{event} may be substituted throughout. The 
+sampling resolution is limited by the Heisenberg 
+uncertainty $\Delta E \Delta t \sim \hbar$, which 
+plays the role of the Nyquist limit for the matter 
+channel: sub-Compton phase structure cannot be 
+resolved without energy sufficient to leave the 
+single-particle regime~\cite{millette2011heisenberg}.
+
+The matter substrate gives rise to a channel 
 capacity in the Shannon sense: for a system of mass $m$ 
 with internal Hilbert space dimension $d$, the maximum 
 rate of information flow is
@@ -1323,12 +1320,22 @@ $\ell_P^2 = \hbar G/c^3$ is the Planck area, the
 minimal spatial region per independent quantum of 
 action.
 
-The horizon enters the channel picture as the surface 
-at which the matter-memory on one side becomes causally 
-disconnected from the matter-memory on the other. 
-The photon passes through the horizon channel and 
-deposits into the matter channel on the other side; 
-the handoff is the central event of the construction.
+The horizon enters the channel picture in a double role. 
+As a \emph{channel}, it is the surface through which 
+causal connection is established: the photon crosses it 
+and that crossing is the handoff event, converting 
+quantum entanglement between the wedges into a classical 
+record in matter-memory. As a \emph{barrier}, it is the 
+surface at which this conversion makes the opposite wedge 
+causally irrelevant to the receiving observer's future 
+evolution. The disconnection between wedges is therefore 
+not a pre-existing feature of the geometry that the 
+photon happens to cross; it is a consequence of the 
+handoff itself. Before the crossing $\mathcal{R}$ and 
+$\mathcal{L}$ share a global pure state; after it, 
+$\mathcal{L}$ is inaccessible to $\mathcal{R}$ precisely 
+because the entanglement has been consumed in producing 
+the classical record.
 
 We propose that the Bekenstein and Bremermann bounds count the same 
 physical event from orthogonal directions, related by 
@@ -1366,15 +1373,17 @@ accounting to Section~\ref{sec:ppwave}.
 
 The photon crossing the horizon is the handoff between 
 the timelike matter channel and the spacelike horizon 
-channel. We now define this object precisely, so that 
-Section~\ref{sec:ppwave} can identify it with a 
-specific geometric structure rather than deriving a 
-coincidental equality.
+channel.
 
 \begin{quote}
 \textbf{Definition (Handoff Event).}\ 
-A \emph{handoff event} at a horizon surface 
-$\mathcal{H}$ consists of: 
+A \emph{handoff event} is a horizon-crossing 
+interaction that transfers action into matter-memory 
+and records information.
+
+In the explicit bilocal construction of 
+Section~\ref{sec:microstates}, this takes the 
+following specific form:
 \begin{enumerate}[(i)]
 \item a massless quantum of Rindler frequency 
 $\omega$ and helicity $\lambda = \pm 1$, 
@@ -1397,7 +1406,11 @@ Property~(iv) follows from the Raychaudhuri equation
 applied to the null congruence at $\mathcal{H}$ and 
 is derived in Section~\ref{sec:ppwave}; it is listed 
 here to make the geometric content of the handoff 
-explicit.
+explicit. Whether properties~(i)--(iii) generalize 
+beyond the photon case, to massive carriers, 
+higher-spin fields, or POVM rather than PVM 
+projections, is a question the construction 
+motivates but does not answer.
 \end{quote}
 Each handoff event has exactly two irreducible 
 constituents: one quantum of action $\hbar$ written 
@@ -1583,78 +1596,44 @@ is written into their matter-memory.
 \subsection{The Tick-Tock Mechanism}
 \label{sec:zigzag}
 
-The handoff event of Section~\ref{sec:handoff} is 
-analogous to what Penrose calls the zig-zag 
-construction~\cite{penrose2006road}, here realised 
-at a spacelike horizon rather than along a timelike 
-worldline, which we term the 
-tick-tock mechanism to emphasise the alternating rhythm 
-of handoff events rather than the geometry of the path. 
-At each vertex the helicity flips, and it is this 
-alternating helicity that produces spin, visible in 
-Figure~\ref{zigzag} as the green loops representing 
-the two $\mathfrak{su}(2)$ factors cycling between 
-handoff events.
-
-Structurally, the tick-tock mirrors the bilocal 
-construction of Section~\ref{sec:microstates} 
-realised along a single massive worldline rather 
-than across a spacelike horizon; we present this 
-as a suggestive analogy rather than a derived result.
-The Higgs field plays the role of the bilocal source 
-$\mathcal{P}$; the two Weyl spinors of opposite helicity 
-play the role of the two photons propagating to 
-$\mathcal{R}$ and $\mathcal{L}$; each Higgs interaction 
-is a handoff event in the sense of 
-Section~\ref{sec:handoff}, depositing one quantum of 
-action $\hbar$ and producing one sample of proper time 
-rather than one increment of horizon area. The 
-Bremermann rate $mc^2/h$ is the Higgs interaction rate; 
-the bilocal construction is its $(3{+}1)$-dimensional 
-horizon counterpart.
+The handoff event of Section~\ref{sec:handoff} has a 
+natural analogue along a timelike worldline. Penrose's 
+zig-zag construction~\cite{penrose2006road} represents 
+a massive fermion as two massless Weyl spinors of 
+opposite helicity, coupled at each vertex by the Higgs 
+field and alternating in a zig-zag pattern; we term 
+this the tick-tock mechanism to emphasise the 
+alternating rhythm of handoff events rather than the 
+geometry of the path. The parallel with the bilocal 
+construction is structural: the Higgs field plays the 
+role of $\mathcal{P}$, the two Weyl spinors play the 
+role of the two photons propagating to $\mathcal{R}$ 
+and $\mathcal{L}$, and each vertex is a handoff event 
+depositing one quantum of action and producing one 
+sample of proper time rather than one increment of 
+horizon area. We present this as a suggestive analogy 
+rather than a derived result.
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.7]{zig_zag_color.png}
-\caption{The tick-tock particle picture of the Dirac 
-equation, after Penrose~\cite{penrose2006road}. 
-A massive electron (blue) alternates between 
-right- and left-helicity massless segments, coupled 
-at each vertex by the Higgs field (red). The green 
-loops indicate spin emerging from the alternating 
-helicity, the two $\mathfrak{su}(2)$ factors of 
-$\mathfrak{so}(3,1) \cong \mathfrak{su}(2) \times 
-\mathfrak{su}(2)$ made visual. Each vertex is a 
-handoff event in the sense of 
-Section~\ref{sec:handoff}: one quantum of action 
-deposited, one helicity outcome recorded, one 
-sample of proper time produced. Adapted from~\cite{penrose2006road}. 
-Penrose's interpretation of the Dirac equation and 
-the Higgs mechanism for an electron.}
+\caption{The tick-tock mechanism. A massive particle 
+(blue) alternates between right- and left-helicity 
+massless segments, coupled at each vertex by the Higgs 
+field (red). Spin emerges from the alternating helicity 
+flip at each vertex (green loops), visible as the two 
+$\mathfrak{su}(2)$ factors of $\mathfrak{so}(3,1) 
+\cong \mathfrak{su}(2) \times \mathfrak{su}(2)$ cycling 
+between handoff events. Each vertex is a handoff event: 
+one quantum of action deposited, one helicity outcome 
+recorded, one sample of proper time produced.}
 \label{zigzag}
 \end{figure}
 
-The structural parallel with the bilocal construction 
-and the handoff definition is close at the level of 
-the Lie algebra decomposition: the two Weyl 
-spinors correspond to the two photons emitted by 
-$\mathcal{P}$; the Higgs interaction corresponds to 
-the absorption events at $\mathcal{R}$ and 
-$\mathcal{L}$; between interactions each spinor is 
-massless and moves at $c$, a pure carrier. Each 
-Higgs interaction is a handoff event in the sense 
-of Section~\ref{sec:handoff}: it deposits one 
-quantum of action $\hbar$, produces one sample of 
-proper time, records one helicity outcome, and 
-increments the matter-memory of the particle by 
-one Bremermann sample.
-
-
-The anticorrelated helicity assignment in both constructions 
-has a common algebraic origin in the Lie algebra decomposition 
-already noted above. The Bisognano--Wichmann modular 
-conjugation $J$ acts on right-wedge photon creation operators 
-as
+The anticorrelated helicity assignment in both 
+constructions has a common algebraic origin. The 
+Bisognano--Wichmann modular conjugation $J$ acts on 
+right-wedge photon creation operators as
 %
 \begin{equation}
     J\, a^{R\dagger}_{k,\lambda}\, J^{-1} 
@@ -1662,8 +1641,8 @@ as
 \end{equation}
 %
 flipping helicity and reversing the spacelike separation 
-direction $R \leftrightarrow L$. The PCT operator $\Theta$ 
-acts on a right-handed Weyl spinor as
+direction $R \leftrightarrow L$. The PCT operator 
+$\Theta$ acts on a right-handed Weyl spinor as
 %
 \begin{equation}
     \Theta\, \psi_R(t,\mathbf{x})\, \Theta^{-1} 
@@ -1671,49 +1650,16 @@ acts on a right-handed Weyl spinor as
 \end{equation}
 %
 flipping helicity and reversing the timelike separation 
-direction $t \to -t$. In both cases the operation is the 
-same at the representation-theoretic level: exchange of 
-the two $\mathfrak{su}(2)$ factors of 
+direction $t \to -t$. In both cases the operation is 
+the same at the representation-theoretic level: exchange 
+of the two $\mathfrak{su}(2)$ factors of 
 $\mathfrak{so}(3,1) \cong \mathfrak{su}(2) \times 
-\mathfrak{su}(2)$, which is what helicity-flip means 
-algebraically. The operators $J$ and $\Theta$ act on 
-different Hilbert spaces and are not equal; what they 
-share is that they both select the same class of 
-invariant configuration, anticorrelated helicities,
-because PCT-invariance forces that choice 
-independently of whether the separation between the two 
-helicity sectors is spacelike (Rindler horizon) or 
-timelike (Compton worldline). The bilocal Bell state 
-and the Dirac 4-spinor are therefore the same 
-PCT-invariant structure at different codimension, and 
-the Lie algebra is the common home of both.
+\mathfrak{su}(2)$. The operators $J$ and $\Theta$ act 
+on different Hilbert spaces; what they share is that 
+both select anticorrelated helicities as the unique 
+PCT-invariant configuration, whether the separation 
+between
 
-
-In this analogy, mass is associated with the 
-regularity of these interactions: heuristically, 
-a particle is massive because it undergoes repeated 
-Higgs interactions at the Compton frequency, and 
-its mass is related to that rate via 
-$m = h\dot{N}_{Higgs}/c^2$. This is a 
-reinterpretation of the standard Higgs mechanism 
-in handoff-event language, not a new claim about it.
-This is the handoff-event 
-reading of $E = \hbar\omega$: mass is not a static 
-property but a rate, the frequency at which the 
-particle exchanges one quantum of action with the 
-Higgs field.
-Proper time along a worldline 
-is then a foliation by discrete handoff events, 
-each separating the causal past from the causal 
-future of that interaction, the one-dimensional 
-analogue of the Rindler horizon, and
-matching the holographic screen picture of 
-Verlinde~\cite{entropic}.
-This suggests that the one-dimensional handoff 
-of the zig-zag and the horizon handoff of the 
-bilocal construction are analogous elementary 
-events, the timelike and spacelike faces of the 
-same PCT-invariant structure.
 
 \subsection{Relation to Existing Programs}
 \label{sec:literature}
