@@ -1,3 +1,19 @@
+% Section 6 (Entanglement as Spatial Information) mixes the ER=EPR discussion, the spatial bit concept, and the observer-relativity problem without fully resolving any of them. The sign puzzle paragraph is important and handled well, but the section as a whole feels like it's setting up future work more than delivering present results.
+% 
+% Claims that need tightening
+% 
+% The statement that the Unruh-Landauer relation and the Bekenstein bound "are the same inequality" (Section 2.4) is made confidently but the argument is essentially dimensional — you're substituting a=c2/Ra = c^2/R
+% a=c2/R. The claim that "this appears to be new in this form" would benefit from a more careful literature check, particularly Bousso's work and Casini's reformulation of the Bekenstein bound.
+% The EFT section (Section 8) makes the GHY term emergence argument, but the saddle point evaluation glosses over what it means to "integrate out the left wedge" in a non-perturbative sense. The double-counting argument for why SGHYS_{GHY}
+% SGHY​ and SmatterLS_\text{matter}^L
+% SmatterL​ aren't independent is physically intuitive but would benefit from being stated more carefully — a referee will push on this.
+% Proposition 1 (EFT Validity) lists six equivalent conditions but the equivalences aren't all proven in the paper — some are asserted. Worth either proving them or labeling it as a conjecture/claim.
+% 
+% Missing pieces
+% 
+% You cite Wall's proof of the generalized second law but the connection to your single-microstate result deserves more discussion. Wall works in a different regime and a sentence noting why the classical focusing theorem suffices here (pure state, no need for QNEC) would help.
+% The regularization appendix is good but you never discuss what happens to the BMS structure under regularization — you note the AS limit excites all BMS modes but the regulated case is left implicit.
+% 
 \documentclass[12pt,a4paper]{article}
 \usepackage[width=.75\textwidth]{caption}
 \usepackage{graphicx}
@@ -1173,82 +1189,28 @@ the corresponding BMS mode content excited by each profile.
 \section{Matter as a Substrate}
 \label{sec:substrate}
 
-This section is the conceptual core of the paper. We 
-propose that matter is the fundamental substrate of 
+We propose that matter is the fundamental substrate of 
 spacetime information processing: proper time is emergent 
 from discrete action quanta accumulated along worldlines, 
 spatial geometry is emergent from handoff events at 
 horizons, and the Planck area $\ell_P^2$ is the conversion 
-factor between the two descriptions. This is a specific, 
-tangible alternative to approaches that quantize geometry 
-directly~\cite{wheeler1955geons, bombelli1987space}: 
-discreteness lives in the matter sector via $\hbar$, is 
-Lorentz invariant by construction, and geometry inherits 
-it through the covariant Raychaudhuri equation. No 
-statistical recovery of Lorentz invariance is required.
+factor between the two descriptions. Discreteness lives in 
+the matter sector via $\hbar$, is Lorentz invariant by 
+construction, and geometry inherits it through the covariant 
+Raychaudhuri equation.
 
-The framework has three interlocking components.
-
-The first (Sections~\ref{sec:channel}--\ref{sec:horizon_channel}) 
-establishes matter as a timelike information channel: a 
-massive particle carries phase at the Compton frequency 
-$mc^2/h$, simultaneously setting its clock rate, its 
-sampling rate via Bremermann's limit, and its maximum 
-information throughput. The horizon enters as the surface 
-at which this timelike channel hands off to the spacelike 
-horizon channel, with the Planck area $\ell_P^2$ as the 
-conversion factor. This is the information-theoretic 
-content of the Bekenstein--Hawking area law: one Planck 
-area per handoff event, one handoff event per bit.
-
-The second (Sections~\ref{sec:handoff}--\ref{sec:saturation}) 
-makes this precise: the handoff event is defined as the 
-transfer of one quantum of action $\hbar$ and one 
-classical bit across the horizon. Channel capacity 
-saturates at the Rindler horizon at exactly one bit per 
-Rindler period, connecting the information-theoretic 
-saturation to the PVM limit of 
-Section~\ref{sec:pvm_localization} and the EFT boundary 
-of Section~\ref{sec:eft}. The consistency check 
-$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ of 
-Section~\ref{sec:ppwave} is the geometric expression 
-of this saturation condition: Section~\ref{sec:ppwave} 
-uses the handoff definition and saturation condition 
-from this framework and finds them consistent with the 
-Raychaudhuri equation event by event.
-
-The third (Sections~\ref{sec:types}--\ref{sec:zigzag}) 
-shows that this framework is already implicit in the 
-Standard Model: the mass/massless divide is the 
-operational distinction between memory substrates and 
-handoff carriers, and the Penrose zig-zag construction 
-for the Dirac equation is the timelike version of the 
-horizon handoff, with the Higgs field playing the role 
-of the bilocal source. The bilocal Bell state and the 
-Dirac 4-spinor are the same PCT-invariant structure at 
-different codimension. This consilience with existing 
-physics is not a derivation but a consistency: the 
-framework does not contradict the Standard Model but 
-shows that the handoff structure is already present in 
-it.
-
-The connection to existing programs in quantum gravity 
-and quantum foundations is developed throughout. The 
-Page--Wootters mechanism~\cite{page1983evolution, 
-giovannetti2015quantum} and the Connes--Rovelli modular 
-flow~\cite{connes1994neumann} both support the view that 
-proper time is emergent; the present framework gives a 
-specific physical mechanism. Verlinde's entropic 
-gravity~\cite{entropic} operates at the thermodynamic 
-level; the present framework supplies the microstate 
-structure beneath it. The Wigner's friend 
-problem~\cite{brukner2018no} and the 
-Frauchiger--Renner theorem~\cite{frauchiger2018quantum} 
-identify the multi-observer problem as sharp; the 
-information-theoretic vocabulary introduced here,
-spatial bits, PVM projections, handoff events, 
-matter-memory, is the natural language in which 
-that problem must be posed in a gravitational context.
+The framework has three interlocking components: matter as 
+a timelike channel whose capacity saturates at the Rindler 
+horizon (Sections~\ref{sec:channel}--\ref{sec:saturation}); 
+the handoff event as the elementary unit transferring one 
+quantum of action and one classical bit across that horizon, 
+with the geometric consistency check 
+$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ verified 
+in Section~\ref{sec:ppwave}; and the observation that this 
+structure is already implicit in the Standard Model via the 
+Penrose zig-zag, with the bilocal Bell state and the Dirac 
+4-spinor as the same PCT-invariant structure at different 
+codimension (Sections~\ref{sec:types}--\ref{sec:zigzag}).
 
 This viewpoint sidesteps a prior question about quantum 
 gravity: how can one quantize gravity without directly 
@@ -1263,25 +1225,6 @@ recover discreteness from matter: space and time are
 properties of matter itself, defined only up to the 
 resolution set by the action $S/\hbar$, which is Lorentz 
 invariant by construction.
-
-The identification of proper time with accumulated 
-action connects to two independent programs in the 
-literature. The Page--Wootters 
-mechanism~\cite{page1983evolution,giovannetti2015quantum} 
-derives time evolution from entanglement between a 
-clock system and the rest of the universe, consistent 
-with the view that proper time is an emergent rather 
-than background quantity. The modular flow perspective 
-of Connes and Rovelli~\cite{connes1994neumann} gives 
-a complementary algebraic picture: in a generally 
-covariant quantum theory the physical flow of time 
-is the modular flow of the state with respect to the 
-observable algebra, which the Bisognano--Wichmann 
-theorem identifies with Rindler time evolution for 
-the vacuum restricted to one wedge. Both programs 
-support the view that proper time is emergent; the 
-present construction does not depend on either but 
-is consistent with both.
 
 \subsection{Matter as a Timelike Channel}
 \label{sec:channel}
@@ -1771,6 +1714,81 @@ of the zig-zag and the horizon handoff of the
 bilocal construction are analogous elementary 
 events, the timelike and spacelike faces of the 
 same PCT-invariant structure.
+
+\subsection{Relation to Existing Programs}
+\label{sec:literature}
+
+The matter-substrate framework of this section makes contact 
+with two independent programs in quantum foundations that 
+approach emergent time from complementary directions.
+
+The Page--Wootters mechanism~\cite{page1983evolution, 
+giovannetti2015quantum} derives time evolution relationally: 
+a global static state $|\Psi\rangle \in 
+\mathcal{H}_{\mathrm{clock}} \otimes \mathcal{H}_{\mathrm{sys}}$ 
+satisfying a Wheeler--DeWitt-like constraint yields emergent 
+dynamics when conditioned on clock eigenstates $|t\rangle$. 
+The mechanism is exact but leaves the physical identity of 
+the clock system unspecified. The present framework 
+supplies that identity: the matter substrate is the clock, 
+with phase $e^{iS/\hbar}$ advancing at the Bremermann rate 
+$mc^2/h$. The standard mechanism assumes a continuous clock 
+time $t$; the present construction replaces this with a 
+discrete sequence of handoff events, each acting as a PVM 
+conditioning step that advances the Bremermann count by one 
+quantum of action. Proper time is relational in exactly the 
+Page--Wootters sense, but the clock states are physical 
+rather than abstract.
+
+The modular flow perspective of Connes and 
+Rovelli~\cite{connes1994neumann} approaches the same 
+problem algebraically. In a generally covariant quantum 
+theory the Hamiltonian vanishes on physical states and no 
+preferred time exists; Connes and Rovelli show that a state 
+$\omega$ on a von Neumann algebra $\mathcal{M}$ nonetheless 
+generates a canonical one-parameter automorphism group, the 
+modular flow $\sigma_t^\omega$, via Tomita--Takesaki theory. 
+This flow satisfies the KMS condition and is 
+thermodynamically indistinguishable from thermal time 
+evolution. The Bisognano--Wichmann 
+theorem~\cite{bisognano1975duality}, already central to 
+the PCT structure of Section~\ref{sec:microstates}, 
+identifies this modular flow concretely with Rindler time 
+evolution for the vacuum restricted to one wedge. The 
+connection to the present framework is therefore already 
+implicit in the construction: the horizon $\mathcal{H}$ is 
+precisely the algebraic cutoff that Connes and Rovelli 
+require, restricting the observable algebra to the right 
+wedge and generating the modular flow as a consequence. 
+What the present framework adds is a discrete substrate 
+beneath that flow: the continuous modular parameter is the 
+thermodynamic limit of discrete Bremermann samples, and the 
+KMS thermal character of the modular flow is the 
+ensemble-level expression of the saturation condition of 
+Section~\ref{sec:saturation}.
+
+The two programs are thus not independent supports for 
+emergent time but complementary descriptions of the same 
+structure at different levels: Page--Wootters gives the 
+kinematic conditioning on individual clock states, 
+Connes--Rovelli gives the thermodynamic flow that emerges 
+when those states are coarse-grained across a horizon. The 
+matter substrate and the handoff event are the microscopic 
+objects that both programs require but neither specifies.
+
+Verlinde's entropic gravity~\cite{entropic} operates at the 
+thermodynamic level of the same horizon structure; the 
+present framework supplies the microstate layer beneath it, 
+with each handoff event realising one entropy increment of 
+the kind Verlinde's screens accumulate in bulk. The 
+Wigner's friend problem~\cite{brukner2018no} and the 
+Frauchiger--Renner theorem~\cite{frauchiger2018quantum} 
+identify the multi-observer problem as formally sharp; the 
+vocabulary introduced here --- spatial bits, PVM 
+projections, handoff events, matter-memory --- is the 
+natural language in which that problem must be posed when 
+the observers are causally separated by a horizon, a point 
+developed in Section~\ref{sec:erepr}.
 
 % Section 5
 \section{pp-Wave Geometry and Action}
