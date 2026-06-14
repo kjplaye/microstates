@@ -71,124 +71,87 @@ Carnot cycle, and effective field theory.}
 % Section 1
 \section{Introduction}
 
-We propose quantum measurement events as the elementary 
-units of spacetime information processing and show this 
-is consistent with geometric, thermodynamic, and effective 
-field theory descriptions of the horizon. In this 
-information-theoretic framework, matter is the fundamental 
-substrate: proper time emerges from discrete action quanta 
-accumulated along worldlines, spatial geometry emerges from 
-handoff events at horizons, and the Planck area $\ell_P^2$ 
-is the conversion factor between the two. This gives a 
-Lorentz-invariant alternative to approaches that discretize 
-geometry directly, discreteness lives in the matter 
-sector via $\hbar$, and geometry inherits it through the 
-covariant Raychaudhuri equation.
-
-Thermodynamic approaches to gravity are remarkably successful 
-and remarkably incomplete. Jacobson derives the Einstein 
+Jacobson derives the Einstein 
 equations from entropy and temperature on local Rindler 
 horizons~\cite{jacobson1995thermodynamics}; Verlinde derives 
 gravitational forces from entropy gradients on holographic 
 screens~\cite{entropic}. Both frameworks operate at the level 
-of bulk thermodynamics and neither specifies what physical 
-process underlies each individual entropy increment. The 
-information-theoretic framework proposed here supplies that 
-process: quantum measurement events, modeled as energy-momentum 
-transfers under proper acceleration, provide explicit 
-realizations of those increments in flat Minkowski space.
+of bulk thermodynamics and leave open a prior question: {\it what physical process underlies each individual entropy increment?}
 
-The physical reasoning is as follows: any measurement is mediated by a physical 
-interaction, so information acquisition necessarily involves an exchange of energy 
-and momentum; by the equivalence principle, this impulse is locally 
-indistinguishable from acceleration in a gravitational field. 
-We do not claim to have a complete quantum gravity program; instead
-we provide one explicit microstate construction, measurements of a
-helicity-anticorrelated Bell state sourced by a bilocal 
-term in flat Minkowski space, and situate it in the current literature.
+We will show how the answer can be quantum measurement by developing an information-theoretic language that connects ``thrust'' microstates, that can drive the Unruh effect \cite{player2025driving}, to the general quantum gravity program. We do this philosophically and with an explicit microstate construction which we then connect to current literature.
 
+Before we dig in though, we first briefly outline our high level philosophical argument about how quantum measurement naturally connects to gravity. The general setup is pictured in the commutative\footnote{This refactors the Di\'{o}si--Penrose postulate. } diagram in Figure \ref{fig:diagram}, which we will walk through from the top right clockwise around the bottom to the top left. Quantum state reduction always happens due to an observation. Any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. And then the equivalence principle implies that this impulse is locally indistinguishable from the effect of a gravitational field.
 
 \begin{figure}[h]
-\centering
-\begin{tikzcd}[row sep=4em, column sep=7em]
-\text{Local Gravitational Effects} \arrow[r, dashed, "\scalebox{0.7}{\shortstack{Di\'osi--Penrose}}"]
+  \centering
+  \begin{tikzcd}[row sep=4em, column sep=7em]
+\text{Local Gravitational Effects} 
+\arrow[r, dashed, "\scalebox{0.7}{\shortstack{Di\'osi--Penrose}}"]
     & \text{Quantum State Reduction} \\
-\text{Acceleration} \arrow[u, "\scalebox{0.7}{\shortstack{local equivalence}}"']
-                    \arrow[r, "\scalebox{0.7}{\shortstack{energy--momentum\\transfer}}"']
-    & \text{Observation} \arrow[u, "\scalebox{0.7}{\shortstack{Bayesian\\update}}"']
+\text{Acceleration} 
+\arrow[u, "\scalebox{0.7}{\shortstack{local equivalence\\\S\ref{sec:ppwave}}}"']
+\arrow[r, "\scalebox{0.7}{\shortstack{energy--momentum\\transfer\\\S\ref{sec:heuristics}}}"']
+    & \text{Observation} 
+\arrow[u, "\scalebox{0.7}{\shortstack{Bayesian\\update\\\S\ref{sec:microstates},\S\ref{sec:erepr}}}"']
 \end{tikzcd}
 \caption{Solid arrows denote subjective grounding relations 
 for a given observer: $A \to B$ means every instance of $B$ 
-is physically realised by an instance of $A$. This paper 
+is physically realized by an instance of $A$. This paper 
 explores the solid arrows. The dashed 
-arrow is the Di\'{o}si--Penrose postulate.}
+arrow is the Di\'{o}si--Penrose postulate. Section~\ref{sec:substrate} develops the 
+information-theoretic framework that connects 
+all four corners into a single physical event.}
 \label{fig:diagram}
 \end{figure}
 
-
-That a single simple construction, quantum measurement as energy--momentum 
-transfer under proper acceleration, realised by one explicit photon pair in 
-flat Minkowski space, makes simultaneous contact with three independent 
-programs suggests that measurement events of this kind may describe the 
-elementary process those frameworks collectively require. We do not claim 
-this construction is unique or irreducible; we claim it is sufficient and 
-concrete.
-Jacobson~\cite{jacobson1995thermodynamics} derives the Einstein 
-equations from thermodynamic identities on local Rindler horizons but leaves 
-open what physical process underlies each entropy increment at the level of 
-individual microstates; the present paper proposes that process. 
-Van~Raamsdonk~\cite{van2010building} showed, in the AdS/CFT setting, that 
-entanglement between two spatial regions generates their geometric connection; 
-the present construction realises the same effect in flat Minkowski space, 
-microstate by microstate, with an explicit source. The BMS 
-program~\cite{carlip2018black, hawking2016soft, strominger2016gravitational} 
-identifies the symmetry algebra whose modes are excited at the horizon but does 
-not specify what excites individual modes; the bilocal construction supplies 
-a candidate process.
-
 \subsection{Roadmap}
 
-The central claim of this paper is the information-theoretic 
-framework of Section~\ref{sec:substrate}: matter is the 
-timelike substrate of emergent proper time, the horizon is 
-the spacelike surface through which handoff events generate 
-emergent space, and the Planck area $\ell_P^2$ is the 
-conversion factor between the two descriptions. The 
-event-by-event equality $S_{GHY}|_{\mathcal{H}} = 
-S_{\mathrm{matter}}$, the Gibbons--Hawking--York boundary 
-term and the matter action counting the same measurement 
-events in geometric and informational language respectively,
-is the consistency check that validates this framework. 
-That it holds event by event rather than only at the 
-thermodynamic ensemble level is what makes the check sharp: 
-many microstructures are consistent with bulk thermodynamics, 
-but the event-by-event equality constrains which ones are 
-consistent with the geometry.
+The paper develops each arrow of Figure~\ref{fig:diagram} 
+in turn, with Section~\ref{sec:substrate} providing the 
+information-theoretic framework that unifies them into a 
+single physical event,  one handoff between matter 
+channels mediated by a massless quantum.
 
-The paper has three layers. The \emph{framework layer} 
-(Section~\ref{sec:substrate}) is the conceptual core: 
-matter as a timelike information channel, the horizon as 
-a spacelike handoff surface, and the handoff event as the 
-elementary unit of both proper time and spatial geometry. 
-This is the information-theoretic alternative to standard 
-thermal quantum gravity that the rest of the paper 
-elaborates and validates. The \emph{heuristic layer} 
-(Section~\ref{sec:heuristics}) requires only Landauer's 
-principle, the Unruh effect, and Newton's law; it recovers 
-standard black hole thermodynamics from a temperature-free 
-kinematic bound and is self-contained. The 
-\emph{construction layer} 
-(Sections~\ref{sec:microstates},~\ref{sec:ppwave}) 
-exhibits one explicit Minkowski microstate, a Bell state 
-of photons with anticorrelated helicities selected by a 
-bilocal source, and shows that applying the Raychaudhuri 
-equation to the resulting AS pp-wave yields 
-$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ event by 
-event, consistent with the framework. 
-Sections~\ref{sec:erepr}--\ref{sec:eft} apply the 
-framework to entanglement-generated geometry, the 
-equivalence of Carnot and Unruh--Landauer bounds, and 
-the EFT origin of the GHY term.
+The \textbf{energy--momentum transfer} arrow is developed 
+in Section~\ref{sec:heuristics}: substituting the Unruh 
+temperature into Landauer's principle eliminates 
+temperature entirely, yielding a purely kinematic bound 
+on the energy cost of information acquisition under 
+acceleration. The thrust quantum,  the photon carrying 
+the impulse,  is the physical carrier of this bound.
+
+The \textbf{Bayesian update} arrow is developed in 
+Sections~\ref{sec:microstates} and~\ref{sec:erepr}: 
+the POVM-to-PVM transition selects a single non-thermal 
+microstate from the Minkowski vacuum, the helicity 
+outcome is recorded as a spatial bit in matter-memory, 
+and the anti-correlation between right and 
+left Rindler wedges is enforced by their common causal 
+ancestry in the past wedge.
+
+The \textbf{local equivalence} arrow is developed in 
+Section~\ref{sec:ppwave}: the absorbed 
+photon sources an AS pp-wave at the Rindler horizon, 
+the Raychaudhuri equation gives a discrete area increment 
+$\Delta A = 8\pi G\hbar\omega$, and the event-by-event 
+equality $S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ 
+closes the consistency loop between geometry and 
+information.
+
+Section~\ref{sec:substrate} is the conceptual core. 
+It explains why these three arrows are aspects of one 
+physical event: the handoff event deposits one quantum 
+of action into matter-memory, records one classical bit, 
+and imprints one Planck-area patch onto the horizon, 
+all simultaneously. The Planck area $\ell_P^2$ is the 
+conversion factor between the geometric and 
+informational descriptions.
+
+\subsection{Summary}
+Each act of information acquisition by a physical observer constitutes a discrete microstate event, and the collective backreaction of such events, together with the causal correlations they induce, gives rise to gravitational effects.  We study the effect in flat Minkowski space, where 
+individual measurement events source local curvature 
+perturbations without requiring a 
+globally curved background.
 
 
 % Section 2
@@ -1090,8 +1053,8 @@ with the $n=1$ term in the vacuum
 decomposition~\eqref{eq:vacuum_vec} at that $\omega$ and 
 helicity pair. The higher $n$ terms are not suppressed by 
 any weak-coupling assumption; they correspond to different 
-physical events --- two-pair emissions, three-pair 
-emissions, and so on --- that this source simply does not 
+physical events,  two-pair emissions, three-pair 
+emissions, and so on,  that this source simply does not 
 describe. The selection is prescriptive, not perturbative. 
 The resulting single microstate is
 \begin{equation}
@@ -1183,7 +1146,15 @@ the corresponding BMS mode content excited by each profile.
 
 We propose that matter is the fundamental substrate of 
 spacetime information processing by reinterpreting 
-quantum mechanics in an information-theoretic way. 
+quantum mechanics in an information-theoretic way:
+proper time emerges from discrete action quanta 
+accumulated along worldlines, spatial geometry emerges from 
+handoff events at horizons, and the Planck area $\ell_P^2$ 
+is the conversion factor between the two. This gives a 
+Lorentz-invariant alternative to approaches that discretize 
+geometry directly, discreteness lives in the matter 
+sector via $\hbar$, and geometry inherits it through the 
+covariant Raychaudhuri equation.
 The following subsections develop this in stages:
 
 \begin{enumerate}
@@ -1196,14 +1167,15 @@ The following subsections develop this in stages:
       is a separating surface through which two timelike matter channels
       communicate with $\ell_P^2$     as the conversion factor.
     \item \textbf{The handoff event} 
-    (Section~\ref{sec:handoff}): The communication, an elementary massless carrier 
+      (Section~\ref{sec:handoff}): The communication, an elementary
+      massless carrier, 
     transfers action and information between matter-memories.
 \end{enumerate}
 We then discuss particle types and types of interactions (Section~\ref{sec:types}), and finish up with a way to understand Dirac's electron as a Compton clock (Section~\ref{sec:zigzag}) connecting our framework to the Standard Model via Penrose's zig-zag.
 
 Our approach sidesteps a prior question about quantum 
-gravity: how can one quantize gravity without directly 
-quantizing spacetime or its curvature degrees of freedom? 
+gravity: {\it how can one quantize gravity without directly 
+quantizing spacetime or its curvature degrees of freedom?} 
 Common approaches posit Planck-scale 
 cells~\cite{wheeler1955geons} or discrete spacetime 
 events~\cite{bombelli1987space}, but Lorentz invariance 
@@ -2260,7 +2232,7 @@ largely uncharted, and the present construction
 should be read partly as a map of that problem space.
 
 % Section 7
-\section{Carnot Cycle from Unruh--Landauer}
+\section{Appendix A: Carnot Cycle from Unruh--Landauer}
 \label{sec:carnot}
 
 The Carnot cycle developed here is evaluated at the saturation 
@@ -2598,7 +2570,7 @@ in the mirror's erasure process, consistent with Landauer's
 principle applied to the re-emission step.
 
 % Section 8
-\section{Effective Field Theory Structure}
+\section{Appendix B: Effective Field Theory Structure}
 \label{sec:eft}
 
 The bilocal construction has a natural effective 
@@ -3058,7 +3030,7 @@ for future work.
 Portions of this work were developed in dialogue with Claude (Anthropic). The author takes full responsibility for all claims.
 
 % Section 11
-\section{Appendix A: Consistency of the Double-Null Gauge Condition}
+\section{Appendix C: Consistency of the Double-Null Gauge Condition}
 \label{gauge_consistency}
 
 We verify that the double-null gauge condition $A_+ = A_- = 0$ is consistent with 
@@ -3197,7 +3169,7 @@ degrees of freedom. The PCT wedge-swap symmetry is preserved throughout:
 conditions on $A_+$ and $A_-$ are imposed symmetrically, and neither null direction 
 is privileged over the other.
 
-\section{Appendix B: Regularisation of the Aichelburg--Sexl Singularity}
+\section{Appendix D: Regularisation of the Aichelburg--Sexl Singularity}
 \label{sec:as_reg}
 
 The derivation of $\Delta A$ in Section~\ref{sec:deltaA} applies to 
