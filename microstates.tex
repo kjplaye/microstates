@@ -64,8 +64,7 @@ information.
 A single construction, a helicity-anticorrelated Bell state in flat
 Minkowski space, makes contact with Jacobson's thermodynamic
 derivation of the Einstein equations, Van Raamsdonk's entanglement-generated
-geometry, the BMS supertranslation structure at horizons, a
-Carnot cycle, and effective field theory.}
+geometry, the BMS supertranslation structure at horizons.}
 
 
 % Section 1
@@ -1535,75 +1534,10 @@ developed in Section~\ref{sec:erepr}.
 % Section 5
 \section{pp-Wave Geometry and Action}
 \label{sec:ppwave}
-WLOG we introduce coordinates for the photon traveling from $\mathcal{P}$ $(-1,0)$ to $\mathcal{R}$ $(0,1)$.
+We introduce coordinates for the photon traveling from $\mathcal{P}$ $(-1,0)$ to $\mathcal{R}$ $(0,1)$ (there is a similar story for the left wedge).
 We work in the null coordinates $u, v$ defined 
-in Section~\ref{sec:microstates}, where the photon propagates along the null plane $u = 0$, $z$ is the longitudinal direction, and $(x,y)$ are transverse coordinates. Then $(u,v)$ = $(0,0)$ is $\mathcal{P}$'s location, $(u,v)$ = $(0,2)$ is $\mathcal{R}$'s location, and $(u,v)$ = $(0,1)$ is the intersection of the photon with the past right Rinder horizon. The situation is reversed for the left moving photon; we swap $u$ and $v$ to describe photon moving from $\mathcal{P}$ to $\mathcal{L}$.
+in Section~\ref{sec:microstates}, where the photon propagates along the null plane $u = 0$, $z$ is the longitudinal direction, and $(x,y)$ are transverse coordinates. Then $(u,v)$ = $(0,0)$ is $\mathcal{P}$'s location, $(u,v)$ = $(0,2)$ is $\mathcal{R}$'s location, and $(u,v)$ = $(0,1)$ is the intersection of the photon with the past right Rindler horizon.
 
-\subsection{The Planar Impulsive Wave: Delocalized Limit}
-\label{sec:planar_wave}
-
-When the photon carries zero transverse momentum its energy is uniform 
-across the horizon cross-section. The stress tensor at the horizon is
-\begin{equation}
-    T_{uu}(u,\mathbf{x}_\perp) = \frac{\hbar\omega}{A_\perp}\,\delta(u),
-    \label{eq:Tuu_planar}
-\end{equation}
-where $A_\perp$ is the transverse horizon area and $\delta(u)$ encodes the 
-impulsive character of the interaction. The corresponding gravitational 
-perturbation is a planar impulsive wave in Brinkmann form
-\begin{equation}
-    ds^2 = -2\,du\,dv + H_{ij}(u)\,x^i x^j\,du^2 + d\mathbf{x}_\perp^2,
-\end{equation}
-where the Einstein equation $R_{uu} = 8\pi G T_{uu}$ with 
-$R_{uu} = -\tfrac{1}{2}\mathrm{tr}(H_{ij})$ gives
-\begin{equation}
-    H_{ij}(u) = -\frac{8\pi G\hbar\omega}{A_\perp}\,\delta(u)\,\delta_{ij}.
-    \label{eq:H_planar}
-\end{equation}
-
-\paragraph{Area increment.}
-The Raychaudhuri equation on the null congruence gives
-\begin{equation}
-    \frac{d\theta}{du} = -8\pi G\,T_{uu} 
-    = -\frac{8\pi G\hbar\omega}{A_\perp}\,\delta(u),
-\end{equation}
-so the expansion receives an impulsive kick 
-$\Delta\theta = -8\pi G\hbar\omega/A_\perp$ at $u=0$. 
-Integrating over the horizon area:
-\begin{equation}
-    \boxed{\Delta A = A_\perp\,|\Delta\theta| = 8\pi G\hbar\omega,}
-    \label{eq:deltaA_planar}
-\end{equation}
-identical to the AS result derived in Section~\ref{sec:deltaA}, 
-here distributed uniformly rather than concentrated near the beam axis.
-
-\paragraph{Longitudinal shift and BMS structure.}
-The gravitational memory of the planar wave is
-\begin{equation}
-    \Delta v(\mathbf{x}_\perp) 
-    = \tfrac{1}{2}\bar{H}_{ij}\,x^i x^j 
-    = -\frac{4\pi G\hbar\omega}{A_\perp}\,r^2,
-    \label{eq:shift_planar}
-\end{equation}
-where $\bar{H}_{ij} = \int H_{ij}\,du$. This quadratic shift satisfies 
-$\nabla^2_\perp(\Delta v) = -8\pi G\hbar\omega/A_\perp = \mathrm{const}$. 
-A constant-Laplacian supertranslation field corresponds to a single 
-$\ell = 2$, $m = 0$ solid harmonic in the angular mode decomposition: 
-exactly one BMS mode is excited. 
-Compare the AS shift $\Delta v \propto -\ln r^2$, whose Laplacian is 
-$\nabla^2_\perp(\Delta v) \propto \delta^{(2)}(\mathbf{x}_\perp)$; 
-a point-source Laplacian couples to all angular harmonics, 
-so the AS wave populates the entire BMS spectrum.
-
-\paragraph{Cut-and-paste structure.}
-Despite its delocalized transverse profile, the planar impulsive wave 
-retains the cut-and-paste structure of the AS pp-wave: the geometry is 
-flat for $u < 0$ and $u > 0$, joined at $u = 0$ by the 
-identification~\eqref{eq:shift_planar} together with a transverse 
-velocity kick $\Delta\dot{x}^i = \bar{H}^i_{\ j} x^j = 
--(8\pi G\hbar\omega/A_\perp)\,x^i$ directed inward. 
-The planar wave is therefore the global, uniform-expansion version 
-of the same horizon surgery that the AS wave performs locally.
 
 \subsection{The AS pp-Wave and Its Effects}
 
@@ -1620,12 +1554,13 @@ Test particles at fixed transverse positions $(x,y)$ experience two effects as t
     \begin{equation}
     \Delta \mathbf{v}_\perp \propto \nabla \ln r \propto \frac{1}{r},
     \end{equation}
-    directed toward the axis. Test particles are pulled toward the centre of the wave, regardless of their initial transverse separation.
+    directed toward the axis. Test particles are pulled toward the centre of the 
+wave, with the kick strength growing as $1/r$ toward the axis.
 \end{enumerate}
 
 \subsection{The Longitudinal Shift Makes Space}
 
-The longitudinal shift deserves closer attention, because it carries a meaning beyond a mere coordinate displacement. The photon emitted by $\mathcal{P}$ propagates along the null direction; as it crosses the Rindler horizon, the AS shift displaces the future light cone of every test particle it passes. For the photon traveling into the right wedge, the shift pushes the right wedge's geometry in the $+v$ direction; for the entangled partner traveling into the left wedge, the shift pushes the left wedge in the $-v$ direction. The two wedges are displaced \emph{away from each other} along the longitudinal null direction. See Figure \ref{paz_shift}.
+The longitudinal shift deserves closer attention, because it carries a meaning beyond a mere coordinate displacement. The photon emitted by $\mathcal{P}$ propagates along the null direction; as it crosses the Rindler horizon, the AS shift displaces the future light cone of every test particle it passes. For the photon traveling into the right wedge, the shift pushes the right wedge's geometry in the $+v$ direction; for the entangled partner traveling into the left wedge, the shift pushes the left wedge in the $+u$ direction. The two wedges are displaced \emph{away from each other} along the longitudinal null direction. See Figure \ref{paz_shift}.
 
 \begin{figure}[h]
 \centering
@@ -1649,19 +1584,32 @@ horizons in opposite null directions.
 \subsection{Transverse Focusing Increments Horizon Area}
 \label{sec:deltaA}
 
-The Raychaudhuri calculation of Section~\ref{sec:planar_wave} already 
-establishes $\Delta A = 8\pi G\hbar\omega$ in the delocalized limit 
-via equation~\eqref{eq:deltaA_planar}. We now derive the same result 
-for the localized AS pp-wave, confirming that the area increment is 
-independent of the transverse localisation of the photon.
+The area increment $\Delta$ is 
+independent of the transverse localization of the photon. 
+In the delocalized limit the stress tensor is uniform 
+across the horizon and produces a planar shift 
+$\Delta v \propto -r^2$; in the localized limit it 
+concentrates near the beam axis and produces the AS 
+logarithmic shift $\Delta v \propto -\ln r^2$. Both 
+are supertranslations in the BMS sense and both give 
+the same area increment, as the Raychaudhuri 
+calculation below shows. The one-parameter family of 
+Gaussian transverse profiles interpolating between 
+these two limits, parametrized by width $\sigma$, is 
+the geometric counterpart of the POVM-to-PVM transition 
+of Section~\ref{sec:pvm_localization}: the spatial 
+distribution of the area increment sharpens from 
+uniform to concentrated as $\sigma \to 0$, while 
+the total $\Delta A$ remains fixed by energy 
+conservation throughout.
 
-The transverse focusing of the AS pp-wave produces a calculable 
-increment in horizon area. We derive this using the Raychaudhuri 
-equation on the null congruence generating the Rindler horizon, 
-following Jacobson~\cite{jacobson1995thermodynamics} and consistent 
-with the generalized second law for Rindler horizons proved by 
-Wall~\cite{wall2010proof}, but applied here to a single microstate 
-rather than a thermodynamic or ensemble average.
+We derive the area increment using the Raychaudhuri 
+equation on the null congruence generating the Rindler 
+horizon, following Jacobson~\cite{jacobson1995thermodynamics} 
+and consistent with the generalized second law for 
+Rindler horizons proved by Wall~\cite{wall2010proof}, 
+but applied here to a single microstate rather than 
+a thermodynamic or ensemble average.
 
 For a null congruence with generators $k^\mu$ and expansion 
 $\theta$, the Raychaudhuri equation gives
@@ -1676,16 +1624,16 @@ and using $k^\mu = \delta^\mu_u$, the area change is
 \Delta A = 8\pi G \int T_{uu}\, du\, d^2x_\perp.
 \label{eq:deltaA}
 \end{equation}
-In a strict AS construction, the source is a point particle 
-and $T_{\mu\nu}$ is distributional, concentrated on the axis. 
-The present construction provides a natural regularization: the 
-photon is a normalizable mode of the electromagnetic field in 
-double-null gauge, with a smooth transverse profile set by the 
-wavelength $\sim c/\omega$. The electromagnetic stress-energy 
-$T_{uu}$ is well-defined throughout, integrates to $\hbar\omega$ 
-over the transverse plane by energy conservation, and recovers 
-the strict AS limit as $\omega \to \infty$ with the logarithmic 
-divergence regulated at the scale $c/\omega$.
+The present construction provides a natural regularization 
+of the strict AS point-source limit: the photon is a 
+normalizable mode of the electromagnetic field in 
+double-null gauge, with a smooth transverse profile set 
+by the wavelength $\sim c/\omega$. The electromagnetic 
+stress-energy $T_{uu}$ is well-defined throughout, 
+integrates to $\hbar\omega$ over the transverse plane 
+by energy conservation, and recovers the strict AS limit 
+as $\omega \to \infty$ with the logarithmic divergence 
+regulated at the scale $c/\omega$.
 
 Substituting into equation~\eqref{eq:deltaA} gives
 \begin{equation}
@@ -1713,98 +1661,27 @@ at the horizon, consistent with the standard
 result $\Delta A = 8\pi G E/\kappa$ when $E = \hbar\omega$ 
 is the Killing energy.
 
-The longitudinal shift $\Delta v \propto -\ln r^2$ produced by each 
-AS pp-wave at the Rindler horizon is a supertranslation in the sense of 
-Bondi--Metzner--Sachs (BMS) symmetry. Hawking, Perry, and 
-Strominger~\cite{hawking2016soft} showed explicitly that a black 
-hole is supertranslated by the passage of an asymmetric shockwave, 
-and the AS longitudinal shift is precisely the linearised 
-supertranslation field on the horizon. Carlip~\cite{carlip2018black} 
-demonstrated that the near-horizon diffeomorphisms of a generic 
-black hole are enhanced to a $\mathrm{BMS}_3$ algebra whose central 
-charge determines the Bekenstein--Hawking entropy, but his program 
-identifies the symmetry without specifying the physical process that 
-excites individual modes. The bilocal construction supplies that 
-process. The shockwave S-matrix program of 't~Hooft~\cite{hooft1996scattering} 
-established that the longitudinal AS shift is the fundamental dynamical 
-ingredient for horizon information exchange, working at the level of the
-full S-matrix; the present construction realises the same shift at the 
-level of a single microstate.
-Each measurement event produces one AS pp-wave, which 
-deposits one supertranslation at the Rindler horizon, exciting one 
-mode of the $\mathrm{BMS}_3$ algebra.
-This microstate structure is consistent with Carlip's result: 
-the microstates being counted are the measurement events themselves.
+The longitudinal shift $\Delta v \propto -\ln r^2$ produced 
+by each AS pp-wave at the Rindler horizon is a supertranslation 
+in the sense of Bondi--Metzner--Sachs (BMS) symmetry. 
+Hawking, Perry, and Strominger~\cite{hawking2016soft} showed 
+explicitly that a black hole is supertranslated by the passage 
+of an asymmetric shockwave, and the AS longitudinal shift is 
+precisely the linearised supertranslation field on the horizon. 
+Carlip~\cite{carlip2018black} demonstrated that the near-horizon 
+diffeomorphisms of a generic black hole are enhanced to a 
+$\mathrm{BMS}_3$ algebra whose central charge determines the 
+Bekenstein--Hawking entropy, but his program identifies the 
+symmetry without specifying the physical process that excites 
+individual modes. The bilocal construction supplies that process: 
+each measurement event produces one AS pp-wave and deposits 
+one supertranslation at the Rindler horizon. The shockwave 
+S-matrix program of 't~Hooft~\cite{hooft1996scattering} 
+established that the longitudinal AS shift is the fundamental 
+dynamical ingredient for horizon information exchange at the 
+level of the full S-matrix; the present construction realises 
+the same shift at the level of a single microstate.
 
-This places the bilocal construction inside the 
-soft-theorem / gravitational-memory / BMS triangle 
-established by Strominger and 
-Zhiboedov~\cite{strominger2016gravitational}. Each 
-measurement event sits at the intersection of three 
-equivalent descriptions: a gravitational memory burst 
-(the AS longitudinal shift $\Delta v \propto -\ln r^2$), 
-a zero-energy soft graviton insertion (a pole in the 
-Weinberg soft graviton 
-theorem~\cite{weinberg1965infrared}), and a BMS 
-supertranslation mode on the horizon. The bilocal source 
-makes this triangle constructive rather than merely 
-structural: one emitted photon pair produces one AS 
-pp-wave, one supertranslation, and one excited mode of 
-the $\mathrm{BMS}_3$ algebra, in a one-to-one 
-correspondence. The counting of horizon entropy via the 
-$\mathrm{BMS}_3$ central charge~\cite{carlip2018black} 
-then acquires a direct operational reading: it counts 
-measurement events, one supertranslation mode per 
-absorbed photon.
-
-\subsection{The Localization Transition}
-\label{sec:loc_transition}
-
-The planar impulsive wave and the AS pp-wave are the two extremes of a 
-one-parameter family parametrised by the transverse width $\sigma$ of 
-the photon mode. Replacing the uniform density $\hbar\omega/A_\perp$ 
-in~\eqref{eq:Tuu_planar} with a normalized Gaussian 
-$g_\sigma(\mathbf{x}_\perp) = (\pi\sigma^2)^{-1}e^{-r^2/\sigma^2}$,
-\begin{equation}
-    T_{uu}(u,\mathbf{x}_\perp) 
-    = \hbar\omega\,g_\sigma(\mathbf{x}_\perp)\,\delta(u),
-\end{equation}
-gives a family that connects the two limits: as $\sigma \to \infty$ 
-(at fixed horizon area $A_\perp$) the energy density becomes approximately 
-uniform and the shift approaches the quadratic 
-form~\eqref{eq:shift_planar}; as $\sigma \to 0$ the energy concentrates 
-on the axis and the shift approaches the AS logarithmic 
-form~\eqref{eq:shift_AS}. The total null energy $\hbar\omega$ is 
-preserved throughout, so
-\begin{equation}
-    \Delta A = 8\pi G\int T_{uu}\,du\,d^2x_\perp = 8\pi G\hbar\omega
-\end{equation}
-holds for all $\sigma$. The regulated longitudinal shift of 
-Appendix~\ref{sec:as_reg} describes this interpolation in the 
-neighbourhood of the AS limit; the natural transverse scale 
-is the photon wavelength $\sigma \sim c/\omega$, consistent with 
-the regularization scheme of that appendix.
-
-The BMS mode content transitions continuously with $\sigma$. At large 
-$\sigma$ the Laplacian $\nabla^2_\perp(\Delta v)$ is approximately 
-constant, selecting the $\ell = 2$, $m=0$ mode; as $\sigma$ decreases, 
-the Laplacian sharpens toward a delta function and progressively higher 
-multipoles are populated until the full BMS spectrum is excited in the 
-AS limit.
-
-The localization transition is therefore 
-simultaneously a transition in the BMS mode 
-content of the horizon perturbation, a 
-transition in the spatial distribution of 
-the area increment, and the geometric 
-counterpart of the POVM-to-PVM transition 
-of Section~\ref{sec:pvm_localization}: the 
-one-parameter Kraus family~\eqref{eq:kraus_longitudinal} 
-parametrized by $\sigma$ has a direct 
-geometric image in the interpolation between 
-the planar impulsive wave and the AS pp-wave, 
-with the Stokes line of~\cite{player2025driving} 
-marking the boundary between the two regimes.
 
 \subsection{Action and the Gravitational Boundary}
 \label{sec:microstate_action}
@@ -1883,9 +1760,9 @@ pp-wave perturbations:
 %
 \begin{equation}
 S_{GHY}\big|_{\mathcal{H}} 
-= \frac{c^4}{8\pi G}\int_{\mathcal{H}} \theta\, d^2x_\perp\, du 
-= \frac{c^4}{8\pi G}\sum_i \Delta A_i 
-= \frac{c^4}{8\pi G} \cdot 8\pi G\sum_i \hbar\omega_i 
+= \frac{1}{8\pi G}\int_{\mathcal{H}} \theta\, d^2x_\perp\, du 
+= \frac{1}{8\pi G}\sum_i \Delta A_i 
+= \frac{1}{8\pi G} \cdot 8\pi G\sum_i \hbar\omega_i 
 = \sum_i \hbar\omega_i
 = S_{\text{matter}}.
 \label{eq:GHY_micro}
@@ -2006,14 +1883,16 @@ precise role at that boundary for future work.
 \label{sec:erepr}
 
 The two geometric regimes of Section~\ref{sec:ppwave} carry complementary 
-entanglement interpretations. In the delocalized limit, the planar impulsive 
+entanglement interpretations.
+In the delocalized limit, the planar impulsive 
 wave uniformly displaces the entire horizon outward in the $+v$ direction 
 (right wedge) and $-v$ direction (left wedge): the two wedges are pushed apart 
 globally, and the geometric connection between them is generated by the 
 entanglement of the full thermofield double state~\eqref{eq:vacuum_vec}. 
 This is the ensemble-level version of Van Raamsdonk's 
-argument~\cite{van2010building}: the single BMS mode excited by the 
-delocalized photon corresponds to a global deformation of the geometry 
+argument~\cite{van2010building}: the delocalized photon produces a 
+global deformation of the geometry connecting the two wedges via 
+a BMS supertranslation at the horizon.
 connecting the two wedges. In the localized limit, the AS longitudinal 
 shift is concentrated in a cylindrical neighbourhood of the photon trajectory: 
 the two wedges are displaced apart locally, microstate by microstate, and the 
@@ -2889,12 +2768,14 @@ argument~\cite{van2010building}, formulated at the level
 of reduced density matrices in AdS/CFT, is realised here 
 in flat space microstate by microstate, with the AS 
 longitudinal shift as the concrete geometric output of 
-each entanglement event. The BMS soft-theorem-memory 
+each entanglement event.
+The BMS soft-theorem-memory 
 triangle~\cite{hawking2016soft,strominger2016gravitational} 
 identifies the symmetry structure at the horizon; the 
 bilocal construction populates that structure with a 
-concrete physical process, one measurement event per 
-excited supertranslation mode.
+concrete physical process: each measurement event 
+produces an AS longitudinal shift that is a 
+supertranslation in the BMS sense.
 
 The geometric consistency check is the event-by-event 
 equality $S_{GHY}|_{\mathcal{H}} = S_{\text{matter}}$: 
