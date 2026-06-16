@@ -1,0 +1,293 @@
+% Section 10
+\section{Appendix B: Effective Field Theory Structure}
+\label{sec:eft}
+
+The bilocal construction has a natural effective 
+field theory interpretation. The right wedge 
+$\mathcal{R}$ is the \emph{system}, with energy 
+scale $E_{\text{sys}}$; the full Minkowski space 
+$\mathcal{R} \cup \mathcal{L}$ is the 
+\emph{environment}, with energy scale 
+$E_{\text{env}} = E_{\text{sys}} + E_\mathcal{L}$. 
+The Rindler horizon is the EFT cutoff surface: 
+it is the boundary at which the system's 
+description and the full Minkowski description 
+become incompatible, and the left wedge 
+$\mathcal{L}$ is precisely the degrees of freedom 
+that the system has integrated out.
+
+\subsection{The GHY Term as Effective Action}
+\label{sec:eft_ghy}
+
+We now show that the GHY boundary term arises 
+as the effective action for $\mathcal{H}_R$ after 
+integrating out $\mathcal{H}_L$ in the path 
+integral, elevating the identification 
+$S_{GHY}|_\mathcal{H} = S_{\text{matter}}$ from 
+Section~\ref{sec:ppwave} from an algebraic 
+observation to a structural result.
+
+\paragraph{Setup.}
+The full Euclidean path integral for gravity and 
+matter decomposes over the two wedges as
+%
+\begin{equation}
+Z = \int \mathcal{D}g_R\,\mathcal{D}\phi_R
+    \int \mathcal{D}g_L\,\mathcal{D}\phi_L\;
+    e^{-S_R - S_L - S_{\mathcal{H}}},
+\end{equation}
+%
+where $S_{\mathcal{H}}$ is the boundary term at 
+the horizon coupling the two wedges. Integrating 
+out the left wedge defines the effective action:
+%
+\begin{equation}
+e^{-S_{\text{eff}}[g_R,\phi_R]}
+= \int \mathcal{D}g_L\,\mathcal{D}\phi_L\;
+  e^{-S_L - S_{\mathcal{H}}}.
+\label{eq:eff_action_def}
+\end{equation}
+
+\paragraph{Origin of the horizon coupling.}
+Integration by parts applied to any kinetic term 
+produces a boundary contribution at $\mathcal{H}$. 
+For the gravitational field this is the 
+Gibbons--Hawking--York term~\cite{gibbons1977action}
+%
+\begin{equation}
+S_{\mathcal{H}} = S_{GHY}\big|_{\mathcal{H}} 
+= \frac{1}{8\pi G}\int_{\mathcal{H}} 
+  d^2x_\perp\,d\lambda\;\theta,
+\end{equation}
+%
+which couples the two wedge geometries through 
+their expansion $\theta$ at the horizon, precisely 
+as a scalar kinetic term couples $\phi_L$ and 
+$\phi_R$ through their normal derivatives.
+
+\paragraph{Saddle point evaluation.}
+The classical solution in the left wedge is flat 
+Minkowski space perturbed by the AS pp-wave of the 
+left-moving photon. Aichelburg--Sexl pp-waves are 
+Ricci flat ($R_{\mu\nu} = 0$) in vacuum, so the 
+bulk Einstein--Hilbert action vanishes on-shell:
+%
+\begin{equation}
+S_L\big|_{\text{on-shell}} 
+= \frac{1}{16\pi G}\int_L d^4x\sqrt{g}\,R = 0.
+\end{equation}
+
+In a standard EFT path integral, integrating out 
+the left wedge would produce two contributions: 
+the gravitational boundary term $S_{GHY}$ (from 
+integration by parts of the bulk kinetic term) 
+and the matter action $S_{\text{matter}}^L$ 
+(from the left-moving photon). Treated as 
+independent, these would give 
+$e^{-S_{GHY} - S_{\text{matter}}^L}$, 
+and the effective action would be 
+$S_R + S_{GHY} + S_{\text{matter}}^L = 
+S_R + 2\hbar\omega$.
+
+The consistency check of 
+Section~\ref{sec:ppwave} resolves this: 
+$S_{GHY}$ and $S_{\text{matter}}^L$ are not 
+independent contributions but two descriptions 
+of the same physical event, one photon 
+crossing the horizon, counted geometrically 
+and informationally. Adding them separately 
+double-counts that event. The correct horizon 
+coupling is therefore $S_{\mathcal{H}} = 
+S_{GHY}$ alone, with $S_{\text{matter}}^L$ 
+already subsumed into the geometric boundary 
+term. At the saddle point:
+%
+\begin{equation}
+\left.
+\int \mathcal{D}g_L\,\mathcal{D}\phi_L\;
+e^{-S_L - S_{\mathcal{H}}}
+\right|_{\text{saddle}}
+= e^{-S_{GHY}|_{\mathcal{H}}},
+\end{equation}
+%
+where $S_L|_{\text{on-shell}} = 0$ by 
+Ricci-flatness, and the effective action for 
+the right wedge is
+
+Since $S_{GHY}|_{\mathcal{H}} = 
+S_{\text{matter}}^L = \sum_i\hbar\omega_i$ 
+by equation~\eqref{eq:GHY_micro}, the effective 
+action for the right wedge is
+%
+\begin{equation}
+\boxed{
+S_{\text{eff}}[g_R,\phi_R]
+= S_R[g_R,\phi_R] + S_{GHY}\big|_{\mathcal{H}}.
+}
+\label{eq:Seff}
+\end{equation}
+%
+The GHY term is the contribution to the right 
+wedge effective action from integrating out the 
+left wedge at the classical level. The bulk left 
+wedge action vanishes by Ricci-flatness of the 
+AS solution; the entire left wedge effect is 
+encoded in the boundary term at the horizon.
+
+\paragraph{Quantum corrections.}
+Fluctuations of $\phi_L$ around the saddle 
+generate corrections to $S_{\text{eff}}$ 
+suppressed by $\ell_P^2/A$ relative to the 
+classical term. These are the standard 
+entanglement entropy contributions studied by 
+Susskind--Uglum~\cite{susskind1994black} and 
+Callan--Wilczek~\cite{callan1994geometric}, 
+whose UV divergences renormalize Newton's 
+constant $G$. Equation~\eqref{eq:Seff} is the 
+leading classical contribution.
+
+\subsection{Partition Function and S-Matrix}
+\label{sec:eft_partition}
+
+The thermal partition function of the right wedge
+%
+\begin{equation}
+Z = \mathrm{Tr}_{\mathcal{H}_R}\,
+    e^{-H_R/k_BT_H}
+\end{equation}
+%
+is obtained from the full Minkowski vacuum by 
+tracing out $\mathcal{H}_L$: integrating out the 
+left wedge in the path integral yields the thermal 
+density matrix for $\mathcal{H}_R$, and $\ln Z$ 
+generates the connected correlation functions of 
+the right wedge EFT. The S-matrix of the full 
+bilocal construction connects the past state at 
+$\mathcal{P}$ to the future sink $\mathcal{F}$:
+%
+\begin{equation}
+S = \langle\mathcal{F}|\mathcal{P}\rangle
+  = \mathrm{Tr}\,e^{-iHt/\hbar},
+\end{equation}
+%
+which under Wick rotation $\tau = it$ becomes 
+$Z = \mathrm{Tr}\,e^{-H\tau/\hbar}$. The Carnot 
+cycle of Section~\ref{sec:carnot} is therefore 
+the thermodynamic avatar of this S-matrix element: 
+the real-time bilocal construction and its 
+thermodynamic description are related by Wick 
+rotation, and each microstate~\eqref{eq:microstate_vec} 
+contributes one term to $Z$ rather than the full 
+thermal trace.
+
+\subsection{Horizon Complementarity}
+\label{sec:eft_complementarity}
+
+The identification of $\mathcal{H}_R$ as system 
+and $\mathcal{H}_L \otimes \mathcal{H}_R$ as 
+environment is the operational content of horizon 
+complementarity~\cite{susskind1993stretched}: the 
+right wedge observer sees a thermal state at $T_H$, 
+while the full Minkowski observer sees a pure 
+entangled state. These are the EFT and UV 
+descriptions of the same microstate. The spatial 
+bit, the answer to ``who observed $H_+$?'', 
+is visible to $\mathcal{R}$ as a classical record 
+but its quantum origin in the entangled pair is 
+accessible only to the full Minkowski observer who 
+holds both wedges. Complementarity is not an 
+additional postulate here but an operational 
+consequence of the EFT structure: the horizon is 
+the surface at which the single-wedge and 
+two-wedge descriptions become incompatible, 
+consistently with the equivalence list of the 
+following subsection.
+
+\subsection{EFT Validity and the Planck Scale}
+\label{sec:eft_validity}
+
+The construction defines two natural length scales. 
+The system scale is the Compton wavelength of the 
+detector
+%
+\begin{equation}
+\lambda_C = \frac{\hbar}{m_\mathcal{R} c},
+\end{equation}
+%
+the scale below which the single-particle 
+description of $\mathcal{R}$ breaks down. The 
+environment scale is the proper horizon distance
+%
+\begin{equation}
+d_\mathcal{H} = \frac{c^2}{a},
+\end{equation}
+%
+the scale at which the single-bit description 
+saturates. The EFT is valid when these scales are 
+separated, $\lambda_C \ll d_\mathcal{H}$; it 
+breaks down when they coincide. The Planck length
+%
+\begin{equation}
+\ell_P = \sqrt{\frac{\hbar G}{c^3}} 
+       = \sqrt{\lambda_C \cdot r_s}
+\label{eq:planck_geometric_mean}
+\end{equation}
+%
+is the geometric mean of the Compton wavelength 
+and the Schwarzschild radius $r_s = 2Gm/c^2$: 
+it is the unique length scale built from both 
+$\hbar$ and $G$ and is the scale at which 
+$\lambda_C = r_s$, i.e.\ where the system scale 
+and the gravitational scale coincide. The Planck 
+scale is therefore the fixed point of the EFT: 
+the unique scale at which the quantum and 
+gravitational descriptions become equally valid 
+and the EFT has no regime of applicability.
+
+The Carnot efficiency of Section~\ref{sec:carnot}
+measures the separation between these scales. 
+With $T_H = \hbar a/2\pi k_Bc$ and $T_C = 
+\hbar\kappa/2\pi k_Bc$, the efficiency
+%
+\begin{equation}
+\eta = 1 - \frac{T_C}{T_H} 
+     = 1 - \frac{\kappa}{a}
+     = \frac{m_\mathcal{L}}
+            {m_\mathcal{R} + m_\mathcal{L}}
+\label{eq:eta_mass}
+\end{equation}
+%
+is the fraction of the total mass residing in 
+the environment, the degrees of freedom 
+integrated out. The following conditions are 
+simultaneously equivalent:
+
+\begin{prop}[EFT Validity]
+\label{prop:eft}
+The following are equivalent for the bilocal 
+construction:
+\begin{enumerate}
+    \item $\kappa < a$ \quad 
+    (mirror surface gravity less than global 
+    Rindler acceleration)
+    \item $E_{\mathrm{sys}} < E_{\mathrm{env}}$ 
+    \quad (system energy less than environment)
+    \item $\eta > 0$ \quad 
+    (Carnot cycle extracts positive work)
+    \item $\lambda_C < d_\mathcal{H}$ \quad 
+    (Compton scale inside horizon distance)
+    \item $\ell_P / \lambda_C \ll 1$ \quad
+    (equivalently $m_\mathcal{R} \gg m_P$, 
+    the detector mass is super-Planckian)
+    \item $\mathcal{R}$ is a proper subsystem of 
+    its environment.
+\end{enumerate}
+The boundary case where all inequalities become 
+equalities is simultaneously the horizon 
+condition, the Planck condition 
+$\lambda_C = r_s = \ell_P$, and the 
+thermodynamic equilibrium condition $\eta = 0$. 
+The EFT breaks down exactly at the horizon, 
+which is not a failure of the framework but 
+its natural boundary condition.
+\end{prop}

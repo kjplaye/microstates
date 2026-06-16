@@ -1,0 +1,165 @@
+% Section 13
+\section{Appendix E: Regularisation of the Aichelburg--Sexl Singularity}
+\label{sec:as_reg}
+
+The derivation of $\Delta A$ in Section~\ref{sec:deltaA} applies to 
+a normalizable photon mode but inherits from the strict 
+Aichelburg--Sexl construction a distributional stress tensor 
+$T_{uu} \propto \delta^{(2)}(\mathbf{x}_\perp)$ and a longitudinal 
+shift $\Delta v \propto -\ln r^2$ that diverges on the axis $r \to 0$. 
+The electromagnetic construction of Section~\ref{sec:microstates} 
+provides a natural regularisation: the photon is a normalizable 
+mode of the electromagnetic field in double-null gauge, with a 
+smooth Gaussian transverse profile of characteristic width 
+$\sigma \sim c/\omega$ set by its wavelength. We carry out the 
+regularisation explicitly here.
+
+\paragraph{Photon stress tensor and energy conservation.}
+In double-null gauge with $A_+ = A_- = 0$, the only nonzero field 
+strengths at the shock front are $F_{ui} = \partial_u A_i$. Since 
+$g_{uu} = 0$ in double-null coordinates, the stress tensor 
+component sourcing the shift is
+%
+\begin{equation}
+    T_{uu}(u, \mathbf{x}_\perp) 
+    = \sum_{i=1,2}(\partial_u A_i)^2 
+    = \hbar\omega\, f(u)\, g_\sigma(r),
+    \label{eq:Tuu_reg}
+\end{equation}
+%
+where $f(u)$ is a normalised longitudinal profile 
+($\int_{-\infty}^{\infty} f\,du = 1$) encoding the photon 
+wavepacket, and
+%
+\begin{equation}
+    g_\sigma(r) 
+    = \frac{1}{\pi\sigma^2}\,e^{-r^2/\sigma^2}, 
+    \qquad \sigma \sim \frac{c}{\omega},
+    \label{eq:gaussian_profile}
+\end{equation}
+%
+is a Gaussian transverse profile normalised so that 
+$\int g_\sigma\, d^2x_\perp = 1$. 
+The total null energy follows immediately from energy conservation:
+%
+\begin{equation}
+    \int T_{uu}\,du\,d^2x_\perp 
+    = \hbar\omega \int f\,du \int g_\sigma\,d^2x_\perp 
+    = \hbar\omega,
+    \label{eq:null_energy_reg}
+\end{equation}
+%
+independently of the profile shape.
+
+\paragraph{Area increment.}
+Substituting equation~\eqref{eq:null_energy_reg} into the 
+Raychaudhuri result~\eqref{eq:deltaA}:
+%
+\begin{equation}
+    \Delta A 
+    = 8\pi G \int T_{uu}\,du\,d^2x_\perp 
+    = 8\pi G\hbar\omega.
+    \label{eq:deltaA_reg}
+\end{equation}
+%
+The area increment is finite, independent of $\sigma$, and 
+determined entirely by the photon energy $\hbar\omega$. The 
+regularisation does not alter the area result; it only 
+regularises the spatial distribution of the shift.
+
+\paragraph{The regulated longitudinal shift.}
+Applying the Einstein equations to the perturbed pp-wave metric 
+$ds^2 = -2\,du\,dv + h(\mathbf{x}_\perp)\delta(u)\,du^2 
++ d^2\mathbf{x}_\perp$ at the shock front, the Ricci component 
+$R_{uu} = 8\pi G T_{uu}$ gives the two-dimensional Poisson 
+equation for the shift $\Delta v = h$:
+%
+\begin{equation}
+    \nabla^2_\perp\,\Delta v 
+    = -16\pi G\hbar\omega\; g_\sigma(r)
+    = -\frac{16G\hbar\omega}{\sigma^2}\,e^{-r^2/\sigma^2}.
+    \label{eq:poisson_reg}
+\end{equation}
+%
+The total source integral 
+$\int \nabla^2_\perp\,\Delta v\,d^2x_\perp = -16\pi G\hbar\omega$ 
+matches the strict AS case, with the delta function replaced by 
+a smooth Gaussian source. Applying Gauss's theorem in two 
+dimensions to the radially symmetric source:
+%
+\begin{equation}
+    \frac{d\,\Delta v}{dr} 
+    = -\frac{8G\hbar\omega}{r}
+      \left(1 - e^{-r^2/\sigma^2}\right),
+    \label{eq:grad_reg}
+\end{equation}
+%
+which vanishes at $r = 0$ (the shift is smooth on axis) and 
+approaches $-8G\hbar\omega/r$ for $r \gg \sigma$, recovering 
+the AS form. 
+
+Integrating equation~\eqref{eq:grad_reg} and using the 
+identity 
+$\int_0^x (1 - e^{-t})/t\,dt = \gamma + \ln x + E_1(x)$,
+where $\gamma$ is the Euler--Mascheroni constant 
+and $E_1(x) = \int_x^\infty e^{-t}/t\,dt$ is the exponential 
+integral, with reference scale $r_0 \gg \sigma$ 
+defined by $\Delta v(r_0) = 0$:
+%
+\begin{equation}
+    \boxed{
+    \Delta v(r) 
+    = -4G\hbar\omega\!\left[\ln\frac{r^2}{r_0^2} 
+      + E_1\!\!\left(\frac{r^2}{\sigma^2}\right)\right].
+    }
+    \label{eq:shift_reg}
+\end{equation}
+
+\paragraph{Limiting behaviour.}
+
+\noindent\textit{On axis, $r \to 0$.}\;
+Using the small-argument expansion 
+$E_1(x) \to -\gamma - \ln x$ as $x\to 0^+$, the bracket 
+in~\eqref{eq:shift_reg} has the finite limit
+%
+\begin{align}
+    \ln\frac{r^2}{r_0^2} + E_1\!\!\left(\frac{r^2}{\sigma^2}\right)
+    &\;\xrightarrow{r\,\to\,0}\;
+    \ln\frac{r^2}{r_0^2} - \gamma - \ln\frac{r^2}{\sigma^2}
+    = \ln\frac{\sigma^2}{r_0^2} - \gamma,
+    \label{eq:bracket_limit}
+\end{align}
+%
+giving the finite on-axis value
+%
+\begin{equation}
+    \Delta v(0) 
+    = 4G\hbar\omega
+    \!\left[\ln\frac{r_0^2}{\sigma^2} + \gamma\right].
+    \label{eq:shift_center}
+\end{equation}
+%
+The logarithmic divergence of the strict AS shift at $r = 0$ is 
+resolved: $\Delta v(0)$ grows as $\ln(r_0/\sigma)$ but is finite 
+for any $\sigma > 0$.
+
+\medskip
+\noindent\textit{Far from axis, $r \gg \sigma$.}\;
+For large argument, $E_1(r^2/\sigma^2) \to 0$ exponentially, 
+and~\eqref{eq:shift_reg} reduces to
+%
+\begin{equation}
+    \Delta v(r \gg \sigma) 
+    \;\approx\; -4G\hbar\omega\ln\frac{r^2}{r_0^2},
+    \label{eq:shift_AS}
+\end{equation}
+%
+recovering the strict AS logarithmic profile.
+
+\paragraph{Recovery of the strict limit.}
+As $\sigma \to 0$ at fixed $r > 0$, $E_1(r^2/\sigma^2) \to 0$ 
+and equation~\eqref{eq:shift_reg} reduces to the strict 
+form~\eqref{eq:shift_AS} pointwise for all $r > 0$, while 
+$\Delta v(0) \to +\infty$ logarithmically via 
+equation~\eqref{eq:shift_center}, recovering the AS singularity 
+on-axis.

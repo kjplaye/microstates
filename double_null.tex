@@ -1,0 +1,139 @@
+% Section 12
+\section{Appendix D: Consistency of the Double-Null Gauge Condition}
+\label{gauge_consistency}
+
+We verify that the double-null gauge condition $A_+ = A_- = 0$ is consistent with 
+Maxwell's equations and leaves exactly two physical degrees of freedom.
+
+\subsection{Coordinates and Notation}
+
+In double-null coordinates $(x^+, x^-, x^1, x^2)$ the Minkowski metric reads
+\begin{equation}
+    ds^2 = -2\,dx^+\,dx^- + (dx^1)^2 + (dx^2)^2,
+\end{equation}
+so that $\partial_+ = \partial/\partial x^+$, $\partial_- = \partial/\partial x^-$, and 
+the d'Alembertian is
+\begin{equation}
+    \Box = -2\partial_+\partial_- + \partial_i\partial^i, \qquad i = 1,2.
+\end{equation}
+The gauge field has components $A_\mu = (A_+, A_-, A_1, A_2)$ and transforms as
+\begin{equation}
+    A_\mu \to A_\mu + \partial_\mu\Lambda
+\end{equation}
+under a gauge transformation with parameter $\Lambda(x^+, x^-, x^1, x^2)$.
+
+\subsection{Imposing the Gauge Conditions in Stages}
+
+The single gauge parameter $\Lambda$ is a function of all four coordinates. We use 
+it in three stages, each consuming a different functional dependence.
+
+\paragraph{Stage 1: $A_+ = 0$.}
+Requiring $A_+ + \partial_+\Lambda = 0$ determines $\Lambda$ as a function of $x^+$:
+\begin{equation}
+    \Lambda(x^+, x^-, x^i) = -\int^{x^+} A_+(s, x^-, x^i)\,ds 
+                              + \Lambda_0(x^-, x^i),
+\end{equation}
+where $\Lambda_0(x^-, x^i)$ is an arbitrary residual function independent of $x^+$.
+
+\paragraph{Stage 2: $A_- = 0$.}
+Under the residual freedom $\Lambda_0(x^-, x^i)$, the $A_-$ component transforms as
+$A_- \to A_- + \partial_-\Lambda_0$. Setting this to zero determines $\Lambda_0$ as a 
+function of $x^-$:
+\begin{equation}
+    \Lambda_0(x^-, x^i) = -\int^{x^-} A_-(s, x^i)\,ds + \Lambda_1(x^i),
+\end{equation}
+where $\Lambda_1(x^i)$ is a residual function of the transverse coordinates only.
+
+\paragraph{Stage 3: Transverse Coulomb condition $\partial^i A_i = 0$.}
+Under the remaining freedom $\Lambda_1(x^i)$, the transverse components transform as 
+$A_i \to A_i + \partial_i\Lambda_1$. Imposing $\partial^i A_i = 0$ requires
+\begin{equation}
+    \nabla^2_\perp\Lambda_1 = -\partial^i A_i,
+\end{equation}
+which is a Poisson equation in the transverse plane with a unique solution (up to 
+harmonic functions, fixed by boundary conditions). This exhausts the gauge freedom 
+entirely.
+
+The three conditions have consumed the full gauge parameter $\Lambda$ in stages, 
+with no over-determination: each stage uses a strictly different functional 
+dependence of $\Lambda$.
+
+\subsection{Physical Degrees of Freedom}
+
+After imposing $A_+ = A_- = 0$ and $\partial^i A_i = 0$, the remaining components 
+are $A_1$ and $A_2$ subject to one differential constraint $\partial^i A_i = 0$. 
+In momentum space this reads $k^i A_i = 0$.
+
+For our specific construction, the photons propagate in the $\pm z$ direction, 
+so their wave-vectors are purely null: $k^i_\perp = 0$ for $i = 1,2$. The 
+transverse Coulomb condition $k^i A_i = 0$ is therefore trivially satisfied for 
+any $A_1, A_2$, and both transverse components are independent. The two circular 
+polarization vectors
+\begin{equation}
+    \epsilon^i_{(+1)} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\i\end{pmatrix}, \qquad
+    \epsilon^i_{(-1)} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix}
+\end{equation}
+are the two independent physical degrees of freedom, corresponding to helicity 
+$\lambda = \pm 1$. This is the correct count for a massless spin-1 field in four 
+dimensions.
+
+The trivial satisfaction of the transverse Coulomb condition 
+relies on the photons propagating purely in the $\pm z$ direction 
+with vanishing transverse momentum $k^i_\perp = 0$. For photons 
+with nonzero transverse momentum the condition $k^i A_i = 0$ 
+imposes a non-trivial constraint and the degree of freedom count 
+requires revisiting.
+
+\subsection{Consistency with Maxwell's Equations}
+
+With $A_+ = A_- = 0$ and $\partial^i A_i = 0$, the non-zero field strength 
+components are
+\begin{equation}
+    F_{+i} = \partial_+ A_i, \qquad F_{-i} = \partial_- A_i, \qquad 
+    F_{ij} = \partial_i A_j - \partial_j A_i, \qquad F_{+-} = 0.
+\end{equation}
+Maxwell's equations $\partial^\mu F_{\mu\nu} = J_\nu$ decompose as follows.
+
+\paragraph{Transverse components $\nu = i$:}
+\begin{equation}
+    -2\partial_+\partial_- A_i + \partial^j(\partial_j A_i - \partial_i A_j) = J_i.
+\end{equation}
+Using $\partial^i A_i = 0$, the second term simplifies to $\partial^j\partial_j A_i$, 
+giving the standard wave equation
+\begin{equation}
+    \boxed{\Box A_i = J_i.}
+    \label{eq:wave}
+\end{equation}
+
+\paragraph{Null components $\nu = \pm$:}
+\begin{equation}
+    -\partial^i\partial_\pm A_i = J_\pm.
+\end{equation}
+These are constraint equations relating the null source components to the transverse 
+field. For our bilocal source, which is purely transverse, $J_+ = J_- = 0$, and the 
+constraints reduce to
+\begin{equation}
+    \partial^i\partial_\pm A_i = 0.
+\end{equation}
+Differentiating the transverse Coulomb condition $\partial^i A_i = 0$ with respect 
+to $x^\pm$ gives $\partial^i(\partial_\pm A_i) = 0$, so these constraints are 
+automatically satisfied. \checkmark
+
+\subsection{Summary}
+
+The double-null gauge condition $A_+ = A_- = 0$ supplemented by the transverse 
+Coulomb condition $\partial^i A_i = 0$:
+\begin{enumerate}
+    \item uses the gauge freedom of $\Lambda$ completely and without over-determination,
+          via a three-stage procedure consuming the $x^+$-, $x^-$-, and $x^i$-dependent
+          parts of $\Lambda$ in sequence;
+    \item leaves exactly two physical degrees of freedom, the helicity eigenstates
+          $\lambda = \pm 1$, consistent with the known count for a massless spin-1 field;
+    \item reduces Maxwell's equations to the standard transverse wave equation
+          $\Box A_i = J_i$, with the null constraint equations automatically satisfied
+          for a purely transverse source.
+\end{enumerate}
+The gauge is therefore internally consistent and does not over-constrain the physical 
+degrees of freedom. The PCT wedge-swap symmetry is preserved throughout: 
+conditions on $A_+$ and $A_-$ are imposed symmetrically, and neither null direction 
+is privileged over the other.
