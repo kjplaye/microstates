@@ -205,7 +205,7 @@ temperature-independent lower bound on the energy of the physical carrier
 required to register one nat of information under proper acceleration $a$; 
 acceleration sets the minimum energy scale of the carrier. The full 
 thermodynamic accounting, where the Landauer erasure cost appears,
-is deferred to Section~\ref{sec:carnot}.
+is deferred to future work.
 
 
 The connection between Landauer's principle and black hole 
@@ -627,20 +627,42 @@ frequencies. This is visible directly in
 Figure~\ref{paz_freq}: the rainbow phase structure of 
 the Unruh mode concentrates onto the null line between 
 $\mathcal{P}$ and $\mathcal{R}$, and the PVM projection 
-selects that line. The Stokes transition 
+selects that line.
+
+The Stokes transition 
 of~\cite{player2025driving} is therefore not merely a 
 field-theoretic regularization result but the analytic 
 signature of the POVM-to-PVM transition: the same 
 mathematical object is being read in two complementary 
 languages, field theory and measurement theory, with 
 the Stokes line marking the boundary between them.
+Specifically, the result imported from~\cite{player2025driving} 
+is Proposition~3 of that paper: the overlap between a 
+Gaussian-shaped Minkowski source of width $\sigma$ and 
+a Rindler mode at frequency $\omega$ is expressible in 
+terms of parabolic cylinder functions $D_\nu(-\zeta)$, 
+whose asymptotic behaviour undergoes a Stokes transition 
+at $\arg\zeta = \pi/4$. In the present paper this 
+result is reread as the operator statement that the 
+Kraus family~\eqref{eq:kraus_longitudinal} interpolates 
+between a POVM ($\sigma \to \infty$) and a PVM 
+($\sigma \to 0$), with the Stokes line marking the 
+boundary between the two regimes.
+
 The helicity label $\lambda$ enters the longitudinal 
 mode function as a spectator index and does not affect 
 the $u$-dependence of the Kraus 
 operator~\eqref{eq:kraus_longitudinal}; the Stokes 
-transition analysis of~\cite{player2025driving} therefore 
+transition analysis of~\cite{player2025driving}, which 
+is carried out in 1+1 dimensions, therefore 
 applies independently to each helicity sector without 
-modification.
+modification. The extension to 3+1 dimensions introduces 
+the transverse coordinates $(x,y)$ as an independent 
+sector: because the wave equation in double-null 
+coordinates separates, the longitudinal Stokes analysis 
+is unaffected by the transverse directions, which are 
+handled separately by the transverse Kraus 
+family~\eqref{eq:kraus}.
 
 \begin{figure}[h]
 \centering
@@ -739,8 +761,7 @@ normalizable in the strict sense; similarly, the
 AS longitudinal shift $\Delta v \propto -\ln r^2$ 
 diverges on axis at $r = 0$ in the strict localized 
 limit. Both divergences are regularized by keeping 
-$\sigma > 0$, as carried out explicitly for the 
-geometric side in Appendix~\ref{sec:as_reg}. The 
+$\sigma > 0$. The 
 parameter $\sigma$ therefore plays a unified role: 
 it is simultaneously the width of the Kraus operator 
 in the longitudinal direction, the transverse profile 
@@ -818,10 +839,7 @@ $(R \leftrightarrow L)$, and therefore treats both observers
 symmetrically by construction. The residual gauge freedom is 
 fixed by requiring $\partial_i A^i = 0$ in the transverse 
 plane, leaving precisely the two physical helicity degrees of 
-freedom $\epsilon^i_{(\lambda)}$ with $\lambda = \pm 1$; 
-consistency with Maxwell's equations and the absence of 
-over-determination are verified in 
-Appendix~\ref{gauge_consistency}.
+freedom $\epsilon^i_{(\lambda)}$ with $\lambda = \pm 1$. 
 
 The lack of manifest four-dimensional covariance in 
 equation~\eqref{eq:doublenull} is a consequence of aligning 
@@ -836,9 +854,7 @@ irreducible representations. All physical results are independent of the gauge c
 the helicity eigenvalues $\lambda = \pm 1$ are representations 
 of the massless little group $ISO(2)$ and are therefore 
 Poincar\'{e}-covariant objects independent of how the 
-gauge is fixed, and the consistency of the double-null 
-gauge with Maxwell's equations and the correct degree-of-freedom 
-count is verified explicitly in Appendix~\ref{gauge_consistency}.
+gauge is fixed.
 
 \subsection{The Bilocal Source}
 
@@ -1115,8 +1131,7 @@ supertranslation modes are excited.
 \end{itemize}
 
 Both limits produce the same total horizon area increment 
-$\Delta A = 8\pi G\hbar\omega$, as shown in 
-Section~\ref{sec:ppwave} and Appendix~\ref{sec:as_reg}. 
+$\Delta A = 8\pi G\hbar\omega$.
 The physical reason is that the Raychaudhuri equation 
 integrates the null energy $T_{uu}$ over the entire 
 transverse horizon cross-section: regardless of how 
@@ -1365,8 +1380,8 @@ is released and the record is lost.
 \textbf{Reflection} is absorption followed by 
 emission; whether it constitutes an 
 information-bearing interaction depends on whether 
-a persistent record survives. The ideal mirror of 
-Section~\ref{sec:carnot} is precisely the limiting 
+a persistent record survives. The ideal mirror
+is a limiting 
 case of reflection with no persistent record: it 
 absorbs the photon, temporarily stores the helicity 
 outcome, and re-emits without retaining a copy, 
@@ -1523,16 +1538,17 @@ identify the multi-observer problem as formally sharp; the
 vocabulary introduced here, spatial bits, PVM 
 projections, handoff events, matter-memory, is the 
 natural language in which that problem must be posed when 
-the observers are causally separated by a horizon, a point 
-developed in Section~\ref{sec:erepr}.
+the observers are causally separated by a horizon.
 
 % Section 5
 \section{pp-Wave Geometry and Action}
 \label{sec:ppwave}
-We introduce coordinates for the photon traveling from $\mathcal{P}$ $(-1,0)$ to $\mathcal{R}$ $(0,1)$ (there is a similar story for the left wedge).
 We work in the null coordinates $u, v$ defined 
-in Section~\ref{sec:microstates}, where the photon propagates along the null plane $u = 0$, $z$ is the longitudinal direction, and $(x,y)$ are transverse coordinates. Then $(u,v)$ = $(0,0)$ is $\mathcal{P}$'s location, $(u,v)$ = $(0,2)$ is $\mathcal{R}$'s location, and $(u,v)$ = $(0,1)$ is the intersection of the photon with the past right Rindler horizon.
-
+in Section~\ref{sec:microstates}, with $\mathcal{P}$ 
+at $(u,v) = (0,0)$, $\mathcal{R}$ at $(0,2)$, and 
+the photon propagating along $u = 0$ and intersecting 
+the past right Rindler horizon at $(0,1)$; 
+the left wedge is symmetric.
 
 \subsection{The AS pp-Wave and Its Effects}
 
@@ -1768,50 +1784,12 @@ that the gravitational boundary term on null surfaces has a
 thermodynamic interpretation as a heat density $Ts$ of the null 
 surface, establishing $S_{GHY}|_{\mathcal{H}} = \text{heat content}$ 
 at the level of thermodynamic averages. The present result realises 
-the same identity at the level of individual microstates, with each 
-contribution to $S_{GHY}$ sourced by a specific quantum measurement 
-event rather than a bulk thermal average.
-
-The matter action and the gravitational boundary action are 
-therefore equal, event by event, on the stationary Rindler 
-horizon. This is not a bulk result: the bulk Einstein--Hilbert 
-action vanishes on-shell, and it is the boundary term that 
-carries the physical content. The microstate construction 
-identifies what that boundary content is: each contribution to 
-$S_{GHY}$ corresponds to one quantum of action deposited into 
-matter-memory by one measurement event, precisely the handoff 
-event of Section~\ref{sec:handoff}. The event-by-event equality 
-$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ is therefore 
-the geometric consistency check on the information-theoretic 
-framework of Section~\ref{sec:substrate}: the Raychaudhuri 
+the same identity at the level of individual microstates: each 
+contribution to $S_{GHY}$ corresponds to one quantum of action 
+deposited into matter-memory by one measurement event, precisely 
+the handoff event of Section~\ref{sec:handoff}. The Raychaudhuri 
 equation and the handoff definition count the same events 
 in two languages, and they agree.
-
-
-The equality $S_{GHY}\big|_{\mathcal{H}} = S_{\text{matter}}$ 
-suggests a stronger reading, which we flag as speculative 
-but worth stating. The bulk Einstein--Hilbert action 
-vanishes on-shell, so it is the boundary term alone that 
-carries the gravitational degrees of freedom. If the boundary 
-term counts matter action quanta event by event, as 
-equation~\eqref{eq:GHY_micro} shows, then the geometry at 
-the horizon is not an independent quantity that happens to 
-equal the matter action: it \emph{is} the matter action, 
-expressed in geometric language. The Planck area $\ell_P^2 = 
-\hbar G/c^3$ is the conversion factor between the two 
-descriptions, relating one quantum of action $\hbar$ to one 
-Planck-area patch on the horizon. In this reading the metric 
-near the horizon is not a smooth field that matter happens to 
-perturb; it is a coarse-grained count of the action quanta 
-that have passed through the horizon surface, with the 
-Bekenstein--Hawking area law as the statement that these two 
-counts agree. We do not claim to establish this here; it is 
-a direction the present construction motivates and that we 
-leave for future work. Whether this identification extends 
-from the boundary into the bulk, that is, whether the Ricci 
-scalar $R$ can be understood as an action-quanta density 
-with $\ell_P^2$ as the conversion factor, is the central 
-open question.
 
 This result is consistent with and extends programs of 
 Jacobson~\cite{jacobson1995thermodynamics} and 
@@ -1826,52 +1804,6 @@ measurement event rather than a bulk average. The standard
 result emerges from summing over the ensemble; the microstate 
 picture supplies what the thermodynamic programs leave open: 
 the physical process underlying each boundary contribution.
-
-The equality $S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ 
-is structurally related to the Ryu--Takayanagi 
-formula~\cite{ryu2006holographic}, which identifies the 
-entanglement entropy of a boundary region with the area 
-of a minimal bulk surface in AdS: $S_{\mathrm{ent}} = 
-A / 4G\hbar$. Three differences sharpen the comparison. 
-First, the present result holds in flat Minkowski space 
-on a Rindler horizon rather than on a minimal surface in 
-AdS, and requires no holographic dual. Second, it is an 
-equality of actions rather than of entropies, with the 
-Planck area $\ell_P^2$ as the conversion factor between 
-the two sides rather than as a fixed coefficient. Third, 
-it holds event by event rather than as a thermodynamic 
-average over a thermal ensemble: the AS pp-wave sourced 
-by a single photon produces a single calculable area 
-increment, and summing over events recovers the 
-thermodynamic result. Whether 
-$S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$ is the 
-flat-space Rindler limit of the Ryu--Takayanagi formula, 
-or whether the two results are independent derivations of 
-the same underlying holographic principle from orthogonal 
-directions, is a natural question for future work.
-
-The classical focusing theorem used above to derive 
-$\Delta A = 8\pi G\hbar\omega$ has a quantum 
-generalisation, the Quantum Null Energy 
-Condition (QNEC)~\cite{bousso2016quantum, 
-ceyhan2020recovering}, which replaces the null 
-energy condition with a bound involving the second 
-derivative of von Neumann entropy of the outgoing 
-field state along the null generators. The QNEC is 
-the natural framework for extending the present 
-construction beyond pure microstates: the classical 
-focusing theorem suffices here because the bilocal 
-construction maintains a globally pure state 
-throughout, with no need to trace out either wedge. 
-At the boundary of EFT validity, where the 
-single-wedge Rindler description requires tracing 
-out $\mathcal{L}$ and the global pure state gives 
-way to a mixed thermal state, the QNEC becomes the 
-operative inequality; that it saturates precisely 
-at $\omega = \omega_{\mathrm{sat}}$ is consistent 
-with the six equivalent conditions of 
-Proposition~\ref{prop:eft}, and we leave its 
-precise role at that boundary for future work.
 
 % Section 6
 \section{Entanglement as Spatial Information}
@@ -2193,7 +2125,25 @@ consequences distinguishing it from standard thermodynamic
 treatments, and whether the flat-space construction 
 presented here is the Rindler limit of a more general 
 statement about arbitrary horizons, remain open questions 
-for future work.
+for future work. The relation to the Ryu--Takayanagi 
+formula~\cite{ryu2006holographic} is a natural question 
+in this context: the present result holds in flat Minkowski 
+space on a Rindler horizon rather than on a minimal surface 
+in AdS, is an equality of actions rather than entropies, 
+and holds event by event rather than as a thermodynamic 
+average. Whether $S_{GHY}|_{\mathcal{H}} = 
+S_{\mathrm{matter}}$ is the flat-space Rindler limit of 
+Ryu--Takayanagi, or an independent derivation of the same 
+underlying holographic principle, we leave open.
+
+The classical focusing theorem suffices for the pure 
+microstates treated here; the natural extension beyond 
+pure microstates is the Quantum Null Energy 
+Condition~\cite{bousso2016quantum, ceyhan2020recovering}, 
+which replaces the null energy condition with a bound 
+involving the second derivative of von Neumann entropy 
+along the null generators. We leave its precise role 
+at the boundary of EFT validity for future work.
 
 % Section 8
 \section*{Acknowledgements}
