@@ -25,59 +25,30 @@
 \begin{document}
 
 
-\title{Quantum Measurement, Minkowski Microstates and Matter Channels}
+\title{Quantum Measurement, Minkowski Microstates, and Matter Channels}
 \author[ ]{Kevin Player\footnote{\textit{kjplaye@gmail.com}} \,\orcidlink{0009-0000-7180-7985}}
 
 \maketitle
 
 \abstract{
-We propose that quantum measurement events are the 
-microscopic carriers of individual entropy increments 
-in thermodynamic approaches to gravity
-and develop the information-theoretic vocabulary to make
-that connection precise.
-Matter is the 
-timelike substrate of emergent proper time; the horizon 
-is the spacelike surface through which handoff events 
-generate emergent space; and the Planck area $\ell_P^2$ 
-is the conversion factor between the two descriptions. 
+We show how quantum measurements naturally play the role of
+microstates in thermodynamic approaches to gravity
+and develop an information-theoretic language to explore
+the connection with a simple example.
 Eliminating temperature between Landauer's principle and 
 the Unruh effect yields a purely kinematic 
 acceleration-dependent bound on the energy cost of 
-information acquisition. A helicity-anticorrelated Bell 
-state in flat Minkowski space serves as the explicit 
-microstate: a bilocal source in the past emits an 
-entangled photon pair whose absorption by two Rindler 
-observers produces a discrete horizon area increment 
-$\Delta A = 8\pi G\hbar\omega$ and a spatial bit --- 
-a classical record that encodes not a polarization state 
-but a location in space. Space, in this construction, 
-is a consequence of helicity. The construction makes 
-contact with Jacobson's thermodynamic derivation of the 
-Einstein equations, Van Raamsdonk's 
-entanglement-generated geometry, and the BMS 
-supertranslation structure at horizons.}
-
-% \abstract{
-% Thermodynamic approaches to gravity, from Jacobson to Verlinde, 
-% leave unspecified the microscopic carriers of individual entropy 
-% increments.
-% We show that the process of quantum measurement 
-% can naturally result in a gravitational microstate 
-% by developing an information-theoretic language 
-% of \emph{matter-memory}, \emph{handoff events}, 
-% and \emph{spatial bits}, in which matter and 
-% horizon are complementary timelike and spacelike 
-% channels.
-% Eliminating temperature 
-% between Landauer's principle and the Unruh effect yields an
-% acceleration-dependent bound on the energy associated with
-% information.
-% A single construction, a helicity-anticorrelated Bell state in flat
-% Minkowski space, makes contact with Jacobson's thermodynamic
-% derivation of the Einstein equations, Van Raamsdonk's entanglement-generated
-% geometry, the BMS supertranslation structure at horizons.}
-
+information acquisition.
+This allows us to construct
+and study a helicity-anticorrelated Bell 
+state in flat Minkowski space in the causal Rindler
+past which drives the Unruh response in the left and right
+Rindler wedges.
+In our example, proper time emerges as a property of matter,
+and space as a label associated with the
+entangled helicity across the horizon. We
+connect the matter action, event by event, to a 
+Gibbons--Hawking--York boundary term and a horizon area increment.}
 
 % Section 1
 \section{Introduction}
@@ -88,10 +59,9 @@ horizons~\cite{jacobson1995thermodynamics}; Verlinde derives
 gravitational forces from entropy gradients on holographic 
 screens~\cite{entropic}. Both frameworks operate at the level 
 of bulk thermodynamics and leave open a prior question: {\it what physical process underlies each individual entropy increment?}
+We will show how the answer can be quantum measurement by developing an information-theoretic language that connects ``thrust'' microstates, that can drive the Unruh effect \cite{player2025driving}, to current literature.
 
-We will show how the answer can be quantum measurement by developing an information-theoretic language that connects ``thrust'' microstates, that can drive the Unruh effect \cite{player2025driving}, to the general quantum gravity program. We do this philosophically and with an explicit microstate construction which we then connect to current literature.
-
-Before we dig in though, we first briefly outline our high level philosophical argument about how quantum measurement naturally connects to gravity. The general setup is pictured in the commutative\footnote{This refactors the Di\'{o}si--Penrose postulate. } diagram in Figure \ref{fig:diagram}, which we will walk through from the top right clockwise around the bottom to the top left. Quantum state reduction always happens due to an observation. Any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. And then the equivalence principle implies that this impulse is locally indistinguishable from the effect of a gravitational field.
+Before we dig in though, we first briefly outline our high level argument about how quantum measurement naturally connects to gravity. The general setup is pictured in the commutative\footnote{This refactors the Di\'{o}si--Penrose postulate. } diagram in Figure \ref{fig:diagram}, which we will walk through from the top right clockwise around the bottom to the top left. Quantum state reduction always happens due to an observation. Any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. And then the equivalence principle implies that this impulse is locally indistinguishable from the effect of a gravitational field.
 
 \begin{figure}[h]
   \centering
@@ -116,10 +86,10 @@ arrow is the Di\'{o}si--Penrose postulate.}
 
 \subsection{Roadmap}
 
-The paper develops each arrow of Figure~\ref{fig:diagram} 
+The paper develops each solid arrow of Figure~\ref{fig:diagram} 
 in turn, with Section~\ref{sec:substrate} providing the 
 information-theoretic framework that unifies them into a 
-single physical event,  one handoff between matter 
+single physical event, a handoff between matter 
 channels mediated by a massless quantum.
 
 The \textbf{energy--momentum transfer} arrow is developed 
@@ -432,20 +402,6 @@ to the spin-1 electromagnetic field, upgrading from scalar
 to helicity-carrying Bell states and making the single-bit 
 structure of each measurement event explicit.
 
-A \emph{Minkowski microstate} is, in this paper, a single 
-explicit quantum event in flat Minkowski space, a 
-photon pair emitted by a physical source, detected by 
-two accelerated observers, that realises one discrete 
-entropy increment of the kind that Jacobson and Verlinde 
-require at the thermodynamic level. We make no claim that 
-this is the unique such construction; other configurations, 
-with back-reaction, asymmetric detector placement, or 
-different source geometries, would also qualify. The 
-construction below is simply the smallest one we could 
-exhibit that is clean enough to track consistently through 
-the geometric, thermodynamic, information-theoretic, and 
-effective field theory frameworks simultaneously.
-
 \subsection{A Source and Two Observers}
 
 Three massive bodies are placed at spacetime positions 
@@ -649,7 +605,7 @@ mathematical object is being read in two complementary
 languages, field theory and measurement theory, with 
 the Stokes line marking the boundary between them.
 Specifically, the result imported from~\cite{player2025driving} 
-is Proposition~3 of that paper: the overlap between a 
+is that the overlap between a 
 Gaussian-shaped Minkowski source of width $\sigma$ and 
 a Rindler mode at frequency $\omega$ is expressible in 
 terms of parabolic cylinder functions $D_\nu(-\zeta)$, 
@@ -1129,13 +1085,13 @@ distinct pp-waves at the Rindler horizon, both analysed in
 Section~\ref{sec:ppwave}:
 
 \begin{itemize}
-\item \textbf{Delocalized limit} ($\sigma_\perp \to \infty$, 
+\item \textbf{Delocalized limit} ($\sigma \to \infty$, 
 POVM $\to \mathbf{1}$): the stress tensor is uniform across 
 the horizon, producing a \emph{planar impulsive wave} with 
 longitudinal shift $\Delta v \propto -r^2$, which is a 
 supertranslation in the BMS sense.
 
-\item \textbf{Localized limit} ($\sigma_\perp \to 0$, POVM 
+\item \textbf{Localized limit} ($\sigma \to 0$, POVM 
 $\to$ PVM): the stress tensor concentrates near the beam 
 axis, recovering the Aichelburg--Sexl pp-wave with 
 logarithmic shift $\Delta v \propto -\ln r^2$. All BMS 
@@ -1143,7 +1099,7 @@ supertranslation modes are excited.
 \end{itemize}
 
 Both limits produce the same total horizon area increment 
-$\Delta A = 8\pi G\hbar\omega$.
+($\Delta A = 8\pi G\hbar\omega$ equation (\ref{eq:deltaA_result}) upcoming).
 The physical reason is that the Raychaudhuri equation 
 integrates the null energy $T_{uu}$ over the entire 
 transverse horizon cross-section: regardless of how 
@@ -1159,7 +1115,11 @@ the corresponding BMS mode content excited by each profile.
 \section{Matter as a Substrate}
 \label{sec:substrate}
 
-We propose that matter is the fundamental substrate of 
+We develop a language that will provide a way of thinking about our microstate as a building block for emergent spacetime. We discuss matter action $S_{\mathrm{matter}}$ as quantized proper time; $\mathcal{P}$ and $\mathcal{R}$ are massive observers that accumulate this action. Our microstate transfers a portion of this action across the horizon, a handoff, which we
+study as the Gibbons--Hawking--York boundary term in the next Section \ref{sec:microstate_action}. Then we find that a bit of space, $\mathcal{R}$ vs. $\mathcal{L}$, emerges naturally in Section \ref{sec:erepr}. In this way, space and time can be measured as properties of matter and interactions. Our language is going to be that of classic information theory, channels.
+
+
+Specifically, we propose that matter is the fundamental substrate of 
 spacetime information processing by reinterpreting 
 quantum mechanics in an information-theoretic way:
 proper time emerges from discrete action quanta 
@@ -1483,7 +1443,7 @@ PCT-invariant configuration.
 \subsection{Relation to Existing Programs}
 \label{sec:literature}
 
-The matter-substrate framework of this section makes contact 
+The matter-substrate language of this section makes contact 
 with two independent programs in quantum foundations that 
 approach emergent time from complementary directions.
 
