@@ -121,13 +121,13 @@ information.
 
 Section~\ref{sec:substrate} is the conceptual core. 
 It explains why these three arrows are aspects of one 
-physical event: a communication event deposits one quantum 
-of action into matter-memory, records one classical bit, 
-and imprints one Planck-area patch onto the horizon, 
-all simultaneously. The Planck area $\ell_P^2$ is the 
-conversion factor between the geometric and 
-informational descriptions.
-
+physical event: a communication event that transfers one quantum 
+of action between matter-memories. Several of the 
+thermodynamic identities recovered along the way, the area 
+law, the Bekenstein bound, the Unruh spectrum, are well 
+established; what is new is locating them microstate by 
+microstate in a single physical event, rather than 
+recovering them only as a bulk average.
 
 % Section 2
 \section{The Unruh--Landauer Bound and Motivating Heuristics}
@@ -223,7 +223,7 @@ bound is geometrically realized.
 
 For realistic accelerations the saturation wavelength is 
 enormous, at Earth surface gravity $a = 9.8\ 
-\text{m\,s}^{-2}$, $\lambda_{\text{sat}} \approx 8\ 
+\text{m\,s}^{-2}$, $\lambda_{\text{sat}} \approx 55\ 
 \text{light years}$, so the single-bit bound is 
 practically always satisfied for terrestrial observers, 
 and is only approached near astrophysical or Planck-scale 
@@ -853,19 +853,17 @@ Bisognano--Wichmann~\cite{bisognano1975duality}, which maps
 the right wedge algebra to the left wedge algebra and 
 simultaneously flips $\lambda \to -\lambda$.
 
+
 More precisely, the modular conjugation $J$ of 
 Bisognano--Wichmann maps a right-wedge creation operator 
 $a^{R\dagger}_{k,(\lambda)}$ to a left-wedge creation 
 operator $a^{L\dagger}_{-k,(-\lambda)}$, implementing PCT 
 between wedges. The Bell state~\eqref{eq:microstate_vec} is a natural 
 two-photon state at fixed frequency $\omega$ and fixed 
-momentum pair $(k, -k)$, invariant under $J$: within
-this momentum sector, 
-the anticorrelated helicity assignment and the symmetric 
-superposition are not choices but consequences of requiring 
-$J$-invariance, since $J$ flips both helicity and wedge 
-simultaneously, leaving no room for a relative phase or 
-helicity-correlated alternative.
+momentum pair $(k, -k)$: within this momentum sector, the 
+anticorrelated helicity assignment and the symmetric 
+superposition respect the $J$-symmetry between wedges, 
+since $J$ flips both helicity and wedge simultaneously. 
 The bilocal source~\eqref{eq:bilocal_vec} is therefore 
 a natural source, consistent with the algebraic symmetry 
 of the Rindler vacuum, and the simplest one we could 
@@ -875,20 +873,16 @@ The symmetrization is consistent with PCT symmetry and
 angular momentum conservation at the emission vertex. 
 Other source geometries are possible; this one is chosen 
 for its simplicity and the transparency of its connection 
-to the algebraic structure of the Rindler vacuum. The argument 
-has three steps. First, a scalar source carries zero angular 
-momentum, so the emitted pair must satisfy $\lambda_R + 
-\lambda_L = 0$, which forces the two helicities to be 
-anticorrelated: the only possibilities are $(\lambda_R, 
-\lambda_L) = (+1,-1)$ or $(-1,+1)$. Second, the Bisognano--Wichmann 
-modular conjugation $J$ maps the first assignment to the 
-second and vice versa, so the unique $J$-invariant state in 
-this sector is their symmetric superposition with relative 
-phase fixed by $J$-invariance. Third, any other relative 
-phase or asymmetric combination would break the PCT symmetry 
-between wedges, which is a symmetry of the Minkowski vacuum 
-and must therefore be preserved by the source. The total 
-angular momentum vanishes in both terms independently.
+to the algebraic structure of the Rindler vacuum. A scalar 
+source carries zero angular momentum, so the emitted pair 
+must satisfy $\lambda_R + \lambda_L = 0$, which forces the 
+two helicities to be anticorrelated: the only possibilities 
+are $(\lambda_R, \lambda_L) = (+1,-1)$ or $(-1,+1)$. The 
+Bisognano--Wichmann modular conjugation $J$ maps the first 
+assignment to the second and vice versa, and the symmetric 
+superposition of the two is the simplest state respecting 
+this exchange symmetry. The total angular momentum vanishes 
+in both terms independently.
 
 The bilocal source selects a specific microstate from 
 the Minkowski vacuum by a PVM projection onto the $n=1$ 
@@ -1187,10 +1181,11 @@ channel~\cite{millette2011heisenberg}: it would
 require additional energy 
 $\Delta E > mc^2$ to probe the sub-Compton phase.
 
-The matter substrate gives rise to a channel 
-capacity in the Shannon sense: for a system of mass $m$ 
-with internal Hilbert space dimension $d$, the maximum 
-rate of information flow is
+
+We propose that the matter substrate can be assigned a 
+channel capacity in the Shannon sense: for a system of mass $m$ 
+with internal Hilbert space dimension $d$, we define the 
+maximum rate of information flow as
 \begin{equation}
     C = \underbrace{\frac{mc^2}{h}}_{\text{bandwidth}} 
         \times 
@@ -1199,7 +1194,10 @@ rate of information flow is
     \label{eq:channel_capacity}
 \end{equation}
 where the bandwidth is the Bremermann sampling rate and 
-the dynamic range is the information content per sample. 
+the dynamic range is the information content per sample; 
+this is a proposed organizing quantity, not a derived bound 
+on the same footing as equations~\eqref{eq:UL} 
+or~\eqref{eq:deltaA_result}. 
 Both quantities are extensive under composition:
 \begin{equation}
     \frac{mc^2}{\hbar} 
@@ -1228,8 +1226,8 @@ Section~\ref{sec:erepr}, are questions the present
 framework motivates but does not address.}
 of the particle, its spin, helicity, 
 and other quantum numbers, and the dynamic range is 
-$\log_2$ of the dimension of the internal Hilbert space. 
-The channel capacity~\eqref{eq:channel_capacity} sets 
+$\log_2$ of the dimension of the internal Hilbert space.
+The channel capacity~\eqref{eq:channel_capacity} is offered as 
 the rate at which matter can accumulate and process 
 information, under the assumption that each Bremermann 
 sample accesses the full $d$-dimensional internal Hilbert 
