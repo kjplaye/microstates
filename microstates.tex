@@ -7,6 +7,7 @@
 \usepackage{amsthm}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{braket}
 \usepackage{enumerate}
 \usepackage{etoolbox}
@@ -20,6 +21,13 @@
 \newcommand{\dv}[1]{\mathrm{d} #1 \text{ }}
 
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{conjecture}{Conjecture}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}[section] 
+
 
 
 \begin{document}
@@ -1107,37 +1115,28 @@ the corresponding BMS mode content excited by each profile.
 \section{Matter as a Substrate}
 \label{sec:substrate}
 
-We develop a language that will provide a way of thinking about our microstate as a building block for emergent spacetime. We discuss matter action $S_{\mathrm{matter}}$ as a measurement of proper time; $\mathcal{P}$ and $\mathcal{R}$ are massive observers that accumulate this action. Our microstate transfers a portion, $\hbar$, of this action across the horizon, a communication, which we
-study as the Gibbons--Hawking--York boundary term in the next Section \ref{sec:microstate_action}. Then we find that a bit of space, $\mathcal{R}$ vs. $\mathcal{L}$, emerges naturally in Section \ref{sec:erepr}. In this way, space and time can be measured and quantized as properties of matter and interactions. Our unifying language is going to be that of classic information theory, channels.
-
-
-Specifically, we propose that matter is the fundamental substrate of 
-spacetime information processing by reinterpreting 
-quantum mechanics in an information-theoretic way:
-proper time emerges from discrete action quanta 
-accumulated along worldlines, spatial geometry emerges from 
-communications through horizons, and the Planck area $\ell_P^2$ 
-is the conversion factor between the two. Discreteness lives
-in the matter 
-sector via $\hbar$, and geometry inherits it through the 
-covariant Raychaudhuri equation.
-The following subsections develop this in stages:
+We propose a language that realizes our microstate as a building block for emergent spacetime. Specifically, we propose that matter is the fundamental substrate of spacetime information processing by reinterpreting quantum mechanics in terms of communication channels. Section \ref{sec:ppwave} will use this language to connect matter action $S_{\mathrm{matter}}$  to the Gibbons--Hawking--York boundary term $S_{GHY}|_{\mathcal{H}}$ sample by sample. The following subsections develop this idea:
 
 \begin{enumerate}
-    \item \textbf{Matter as a timelike channel} 
-    (Section~\ref{sec:channel}): a massive particle 
-    carries phase at the Compton frequency, setting 
-    its clock rate and maximum information throughput.
-    \item \textbf{The horizon as a spacelike channel} 
-    (Section~\ref{sec:horizon_channel}): the horizon 
-      is a separating surface through which two timelike matter channels
-      communicate with $\ell_P^2$     as the conversion factor.
-    \item \textbf{Communications} 
-      (Section~\ref{sec:communication}): The communication;
-      an elementary massless carrier, transfers action and
-      information between matter-memories.
+    \item \textbf{Matter as a timelike channel} (Section~\ref{sec:channel}):
+      We discuss matter action as a measurement of proper time; discreteness lives in the matter sector via $\hbar$. $\mathcal{P}$ and $\mathcal{R}$ are massive observers that accumulate this action. 
+    \item \textbf{The horizon as a spacelike channel} (Section~\ref{sec:horizon_channel}):
+      Spatial geometry emerges from communications between two masses, $\mathcal{P}$ and $\mathcal{R}$, through a horizon, and the Planck area $\ell_P^2$ is the conversion factor between the them\footnote{
+The three fundamental constants $c$, $\hbar$, and $G$ 
+play various roles in the channel picture. The speed 
+of light $c$ sets the causal propagation speed of 
+signals. The reduced Planck constant $\hbar$ sets the 
+resolution of the timelike channel via the Compton 
+frequency $mc^2/\hbar$. The gravitational constant 
+$G$, through the Schwarzschild radius for instance $r_s = 2Gm/c^2$, 
+sets the maximum energy storable in a spatial region 
+without gravitational collapse. Their combination 
+$\ell_P^2 = \hbar G/c^3$ is the Planck area, the 
+minimal spatial region per independent quantum of 
+action.
+}.
 \end{enumerate}
-We then discuss particle types and types of interactions (Section~\ref{sec:types}), and finish up with a way to understand Dirac's electron as a Compton clock (Section~\ref{sec:zigzag}) connecting our framework to the Standard Model via Penrose's zig-zag.
+In this way, space and time can be measured and quantized as properties of matter and interactions.
 
 Our approach sidesteps a prior question about quantum 
 gravity: {\it how can one quantize gravity without directly 
@@ -1149,13 +1148,12 @@ is recovered only statistically in such constructions
 rather than at the level of individual 
 configurations~\cite{brown_mathpages_unruh}. We instead 
 recover discreteness from matter: space and time are 
-properties of matter itself, defined only up to the 
+properties of matter itself and are defined only up to the 
 resolution set by the action $S/\hbar$, which is Lorentz 
 invariant by construction.
 
 \subsection{Matter as a Timelike Channel}
 \label{sec:channel}
-
 
 A massive particle carries phase along its worldline 
 at a rate set by its rest energy.
@@ -1166,6 +1164,8 @@ This is the content of Bremermann's computational
 limit~\cite{bremermann1962optimization} which describes
 the maximum clock rate of 
 any physical system with bounded energy.
+
+
 We associate a discrete event with one 
 zero crossing of the phase $e^{iS/\hbar}$ in the path 
 integral and we use the information-theoretic term \emph{sample} 
@@ -1176,37 +1176,6 @@ plays the role of the Nyquist limit for the matter
 channel~\cite{millette2011heisenberg}: it would
 require additional energy 
 $\Delta E > mc^2$ to probe the sub-Compton phase.
-
-
-We propose that the matter substrate can be assigned a 
-channel capacity in the Shannon sense: for a system of mass $m$ 
-with internal Hilbert space dimension $d$, we define the 
-maximum rate of information flow as
-\begin{equation}
-    C = \underbrace{\frac{mc^2}{h}}_{\text{bandwidth}} 
-        \times 
-        \underbrace{\log_2(d)}_{\text{dynamic range}}
-        \quad \text{(bits per second),}
-    \label{eq:channel_capacity}
-\end{equation}
-where the bandwidth is the Bremermann sampling rate and 
-the dynamic range is the information content per sample; 
-this is a proposed organizing quantity, not a derived bound 
-on the same footing as equations~\eqref{eq:UL} 
-or~\eqref{eq:deltaA_result}. 
-Both quantities are extensive under composition:
-\begin{equation}
-    \frac{mc^2}{\hbar} 
-    = \frac{(m_1+m_2)c^2}{\hbar} 
-    = \frac{m_1 c^2}{\hbar} + \frac{m_2 c^2}{\hbar},
-\end{equation}
-\begin{equation}
-    \log_2(d) 
-    = \log_2(d_1 d_2) 
-    = \log_2(d_1) + \log_2(d_2),
-\end{equation}
-consistent with their interpretation as properties of 
-matter that compose naturally under union.
 
 The signal 
 being sampled at the Bremermann rate is the internal 
@@ -1222,28 +1191,51 @@ Section~\ref{sec:erepr}, are questions the present
 framework motivates but does not address.}
 of the particle, its spin, helicity, 
 and other quantum numbers, and the dynamic range is 
-$\log_2$ of the dimension of the internal Hilbert space.
-The channel capacity~\eqref{eq:channel_capacity} is offered as 
+$\log_2$ of the dimension of the internal Hilbert space which motivates:
+
+\begin{definition}
+The channel capacity is 
 the rate at which matter can accumulate and process 
 information, under the assumption that each Bremermann 
 sample accesses the full $d$-dimensional internal Hilbert 
-space.
+space. For a system of mass $m$ 
+with internal Hilbert space dimension $d$, we define the 
+maximum rate of information flow as
+\begin{equation}
+    C = \underbrace{\frac{mc^2}{h}}_{\text{bandwidth}} 
+        \times 
+        \underbrace{\log_2(d)}_{\text{dynamic range}}
+        \quad \text{(bits per second),}
+    \label{eq:channel_capacity}
+\end{equation}
+where the bandwidth is the Bremermann sampling rate and 
+the dynamic range is the information content per sample
+\end{definition}
+Note that both quantities are extensive under composition:
+\begin{equation}
+    \frac{mc^2}{\hbar} 
+    = \frac{(m_1+m_2)c^2}{\hbar} 
+    = \frac{m_1 c^2}{\hbar} + \frac{m_2 c^2}{\hbar},
+\end{equation}
+\begin{equation}
+    \log_2(d) 
+    = \log_2(d_1 d_2) 
+    = \log_2(d_1) + \log_2(d_2),
+\end{equation}
+consistent with their interpretation as properties of 
+matter that compose naturally under union. 
+
+\begin{conjecture}
+      $C$ is saturated at the event horizon of a black hole.
+\end{conjecture}
+
+In bridging the macroscopic precision of the Compton clock with the rapid microscopic dynamics of Schrödinger’s Zitterbewegung motion \cite{schrodinger1930kraftefreie}, modern physics continues to validate De Broglie’s foundational insight \cite{de1924recherches} that a particle's rest mass is, at its core, an intrinsic quantum clock.
+Recent experimental demonstrations of the Compton
+clock \cite{lan2013clock} ground some of these speculations.
+
 
 \subsection{The Horizon as a Spacelike Channel}
 \label{sec:horizon_channel}
-
-The three fundamental constants $c$, $\hbar$, and $G$ 
-play various roles in the channel picture. The speed 
-of light $c$ sets the causal propagation speed of 
-signals. The reduced Planck constant $\hbar$ sets the 
-resolution of the timelike channel via the Compton 
-frequency $mc^2/\hbar$. The gravitational constant 
-$G$, through the Schwarzschild radius $r_s = 2Gm/c^2$, 
-sets the maximum energy storable in a spatial region 
-without gravitational collapse. Their combination 
-$\ell_P^2 = \hbar G/c^3$ is the Planck area, the 
-minimal spatial region per independent quantum of 
-action.
 
 The horizon enters the channel picture in a double role. 
 As a \emph{channel}, it is the surface through which 
@@ -1262,20 +1254,15 @@ $\mathcal{L}$ is inaccessible to $\mathcal{R}$ precisely
 because the entanglement has been consumed in producing 
 the classical record.
 
-\subsection{Communications}
-\label{sec:communication}
-
-The photon crossing the horizon is a communication between 
-the timelike matter channels of $\mathcal{R}$ and 
+The photon crossing the horizon is a transfer of information and
+action between the timelike matter channels of $\mathcal{R}$ and 
 $\mathcal{L}$, mediated by the spacelike horizon channel.
 To that end we define:
 
-\begin{quote}
-\textbf{Definition (Communication).}\ 
-A \emph{communication} is a horizon-crossing 
-interaction that transfers action and information
-between matter-memories.
-\end{quote}
+\begin{definition}[Communication]
+A communication is a horizon-crossing particle\footnote{For our microstate this is a photon, however, it could be more general.}
+that transfers action and information between matter-memories.
+\end{definition}
 In the explicit bilocal construction of 
 Section~\ref{sec:microstates}, this takes the 
 following specific form:
@@ -1321,58 +1308,11 @@ sums $\hbar\omega$ over communications because that
 is what the term geometrically records, one 
 contribution per event.
 
-
-\subsection{Types of Particles and Interactions}
-\label{sec:types}
-
-The distinction between massless and massive degrees 
-of freedom is operational in the channel picture: 
-massless quanta transmit information between matter 
-substrates as communications, while massive systems 
-retain it as matter-memory. A massless particle has 
-no rest frame, no proper time, and carries a single 
-quantum of action between emission and absorption; 
-it does not sample and therefore carries no persistent 
-memory. Its role is precisely that of a pure 
-information carrier effecting a communication between the 
-timelike channel of one massive body and that of 
-another.
-
-From a given observer's perspective, interactions 
-fall into three classes. \textbf{Absorption} produces 
-a persistent classical record: a quantum of action is 
-deposited and information is written. 
-\textbf{Emission} is the reverse: stored information 
-is released and the record is lost.
-\textbf{Reflection} is absorption followed by 
-emission; whether it constitutes an 
-information-bearing interaction depends on whether 
-a persistent record survives. The ideal mirror
-is a limiting 
-case of reflection with no persistent record: it 
-absorbs the photon, temporarily stores the helicity 
-outcome, and re-emits without retaining a copy, 
-making the interaction thermodynamically reversible 
-at the cost of paying the Landauer erasure price 
-at re-emission.
-
-These categories are observer-relative in the same 
-sense as quantum state reduction: just as state 
-reduction is a Bayesian update for a given observer 
-grounded in their causal access to the measurement 
-outcome, the classification of an interaction as 
-absorption, emission, or reflection depends on 
-whether the observer in question retains a persistent 
-record of the outcome. The same physical process may 
-be information-bearing for one observer and purely 
-external for another, depending on whether a record 
-is written into their matter-memory.
-
 \subsection{The Tick-Tock Mechanism}
 \label{sec:zigzag}
 
-The communications of Section~\ref{sec:communication} has a 
-natural analogue along a timelike worldline. Penrose's 
+The communications interactions of Section~\ref{sec:horizon_channel}
+has a natural analogue along a timelike worldline. Penrose's 
 zig-zag construction~\cite{penrose2006road} represents 
 a massive fermion as two massless Weyl spinors of 
 opposite helicity, coupled at each vertex by the Higgs 
@@ -1435,7 +1375,7 @@ both select anticorrelated helicities as the unique
 PCT-invariant configuration.
 
 
-\subsection{Relation to Existing Programs}
+\subsection{Relation to Existing Literature}
 \label{sec:literature}
 
 The matter-substrate language of this section makes contact 
@@ -1505,6 +1445,7 @@ vocabulary introduced here, spatial bits, PVM
 projections, communication units, matter-memory, is the 
 natural language in which that problem must be posed when 
 the observers are causally separated by a horizon.
+
 
 % Section 5
 \section{pp-Wave Geometry and Action}
@@ -1620,7 +1561,7 @@ Substituting into equation~\eqref{eq:deltaA} gives
 The horizon area grows by one discrete, calculable increment 
 per photon absorbed, microstate by microstate, without 
 reference to bulk thermodynamic averages. This is property~(iv) 
-of the communication definition of Section~\ref{sec:communication} 
+of the communication definition of Section~\ref{sec:horizon_channel} 
 verified geometrically: the area increment $\Delta A = 
 8\pi G\hbar\omega$ is the geometric expression of one 
 quantum of action $\hbar$ deposited into matter-memory 
@@ -1753,7 +1694,7 @@ at the level of thermodynamic averages. The present result realises
 the same identity at the level of individual microstates: each 
 contribution to $S_{GHY}$ corresponds to one quantum of action 
 deposited into matter-memory by one measurement event, precisely 
-the communications of Section~\ref{sec:communication}. The Raychaudhuri 
+the communications of Section~\ref{sec:horizon_channel}. The Raychaudhuri 
 equation and the communication definition count the same events 
 in two languages, and they agree.
 
