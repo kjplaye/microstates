@@ -436,7 +436,7 @@ accelerations of $\mathcal{R}$ and $\mathcal{L}$ (see
 Figure~\ref{paz}). $\mathcal{P}$ emits an entangled pair of 
 spin-1 massless photons with momenta $\pm k$ and Rindler 
 frequency $\omega = \omega_k$.
-The momenta are perfectly balanced by construction: the two photons 
+The source exhibits no net back-reaction in either linear or angular momentum\footnote{The momenta are perfectly balanced by construction: the two photons 
 carry spatial momenta $+k\hat{z}$ and $-k\hat{z}$ respectively, so 
 the total linear momentum vanishes, $k + (-k) = 0$. The angular 
 momentum vanishes term by term: in each helicity assignment 
@@ -444,8 +444,7 @@ $(\lambda_R, \lambda_L) = (+1,-1)$ and $(-1,+1)$, the total
 helicity is $\lambda_R + \lambda_L = (+1) + (-1) = 0$ and 
 $(-1) + (+1) = 0$ respectively, and the symmetric Bell state 
 superposition~\eqref{eq:microstate_vec} preserves this since 
-both terms contribute zero independently. The source therefore 
-exhibits no net back-reaction in either linear or angular momentum.
+both terms contribute zero independently}.
 The two photons propagate into the left and right Rindler wedges, 
 where $\mathcal{L}$ and $\mathcal{R}$ detect them respectively 
 via absorption, the momentum impulse of which accelerates each 
@@ -457,12 +456,8 @@ null coordinates $u = t - z + 1$ and $v = t + z + 1$,
 centered so that $\mathcal{P}$ lies at $u = v = 0$, 
 the right-moving photon propagates along $u = 0$, 
 and the left-moving photon propagates along $v = 0$.
-
-
 The three-party structure $\mathcal{P}$--$\mathcal{R}$--$\mathcal{L}$ 
-realises a form of tripartite entanglement with a natural 
-interior reconstruction interpretation. 
-Neither $\mathcal{R}$ nor $\mathcal{L}$ alone can distinguish 
+realises a form of tripartite entanglement\footnote{Neither $\mathcal{R}$ nor $\mathcal{L}$ alone can distinguish 
 a correlated Bell-state emission at $\mathcal{P}$ from an 
 uncorrelated thermal source: each observer's reduced 
 density matrix is thermal, exactly as in the standard Unruh 
@@ -470,10 +465,11 @@ effect. Together, their two anticorrelated bits reveal the
 correlation structure of the emission event, identifying it 
 as a specific Bell state at a specific frequency, and 
 providing a microstate-level analogue of black hole 
-interior reconstruction~\cite{penington2020entanglement, 
-almheiri2021entropy}, where the interior is recovered 
+interior reconstruction, where the interior is recovered 
 as classical correlations in the joint record of 
-complementary exterior observers.
+complementary exterior observers.} with a natural 
+interior reconstruction interpretation~\cite{penington2020entanglement, 
+almheiri2021entropy}. 
 
 \subsection{PVM Localization and the Elimination of Coarse-Graining}
 \label{sec:pvm_localization}
@@ -483,7 +479,7 @@ construction. As a QFT object it is a coefficient in a mode expansion,
 a solution to the wave equation analytically continued 
 from the Rindler wedge into all of Minkowski space. 
 But once $\mathcal{P}$ is specified as a real physical 
-source via the squeezing interaction~\eqref{eq:bilocal_lag}, 
+source via the squeezing interaction (equation\eqref{eq:bilocal_lag} upcoming), 
 the mode function acquires a second interpretation: 
 it is a probability amplitude in the Born rule sense, 
 encoding where $\mathcal{R}$ is likely to detect the 
@@ -494,19 +490,6 @@ distribution by averaging over all Rindler frequencies,
 we front-load the logic at $\mathcal{P}$: the source 
 fixes the frequency $\omega_k$ and the mode function 
 then specifies the probability amplitude for detection. 
-
-Thermality, in this picture, is not a primitive 
-property of the vacuum seen by an accelerating observer 
-but a consequence of residual ignorance, about the 
-precise location of $\mathcal{R}$ within the wedge, 
-and about the spatial origin of the detected excitation, 
-that the present construction resolves by specifying 
-the common causal ancestry of $\mathcal{P}$, 
-$\mathcal{R}$, and $\mathcal{L}$ explicitly. The 
-ignorance is epistemic, not ontic: the global Minkowski 
-state remains pure throughout, and thermality is what 
-a single-wedge observer sees when causal access to 
-$\mathcal{P}$'s emission event is unavailable.
 
 \begin{figure}[h]
 \centering
@@ -522,28 +505,6 @@ microstate of equation~\eqref{eq:microstate_vec}.}
 \label{paz_freq}
 \end{figure}
 
-This inversion has a geometric consequence that 
-runs through the entire paper: it is precisely what 
-allows the construction to live in flat Minkowski 
-space rather than requiring an AdS/CFT dual. In the 
-standard holographic picture, geometry is primary 
-and entanglement is read off it, Van 
-Raamsdonk's argument~\cite{van2010building} proceeds 
-from the entanglement entropy of a boundary state to 
-the geometry of the bulk ER bridge.
-
-
-Here the direction of explanation is reversed: the 
-emission event at $\mathcal{P}$ is primary, and the 
-geometry, the AS pp-wave, the horizon area increment, 
-the BMS supertranslation, is the \emph{ontic} output 
-of the subsequent measurement events at $\mathcal{R}$ 
-and $\mathcal{L}$. The geometry is a real physical 
-change; what is epistemic is the assignment of that 
-change to a particular observer's microstate record. 
-These are distinct, and keeping them distinct is what 
-allows the construction to live in flat Minkowski space 
-without a holographic dual.
 
 \paragraph{Longitudinal localization.}
 The primary localization is in the longitudinal $(t,z)$ 
@@ -591,17 +552,7 @@ $K_\sigma^\dagger K_\sigma +
 by construction, defines a one-parameter POVM family;
 the Stokes transition between its two asymptotic 
 regimes is illustrated in Figure~\ref{stokes_kraus}.
-Specifying $\mathcal{R} = (0,1)$ 
-and $\mathcal{P} = (-1,0)$ is precisely the $\sigma \to 0$ 
-limit: the Kraus operator sharpens to a PVM projector 
-onto the unique null geodesic connecting them, selecting 
-a single definite frequency $\omega_k$ from what would 
-otherwise be a thermal superposition over all Rindler 
-frequencies. This is visible directly in 
-Figure~\ref{paz_freq}: the rainbow phase structure of 
-the Unruh mode concentrates onto the null line between 
-$\mathcal{P}$ and $\mathcal{R}$, and the PVM projection 
-selects that line.
+
 
 The Stokes transition 
 of~\cite{player2025driving} is therefore a 
@@ -659,6 +610,33 @@ longitudinal localization. Figure
 from~\cite{player2025driving}.}
 \label{stokes_kraus}
 \end{figure}
+
+Thermality is not a primitive property of the vacuum but a consequence 
+of epistemic coarse-graining: the global Minkowski state $|0\rangle_M$ 
+is pure and fixed throughout, and what changes as the source-detector 
+pair $(\mathcal{P}, \mathcal{R})$ is specified is the resolution of the 
+observer's ignorance about which null geodesic carried the quantum. 
+This distinction is operationally sharp~\cite{spekkens2005contextuality, 
+harrigan2010einstein}: \textit{mode shaping} is a preparation that 
+modifies the physical field; \textit{PVM projection} is a measurement 
+that conditions the observer's description on causal data without 
+touching the ontic state. The Gaussian width $\sigma$ of the Kraus 
+family~\eqref{eq:kraus_longitudinal} admits both readings 
+simultaneously,  as a source localization parameter in the 
+preparation sense of~\cite{player2025driving}, and as an epistemic 
+resolution parameter in the measurement sense here,  with the Stokes 
+line marking the boundary at which the two readings give qualitatively 
+different physics. Specifying $\mathcal{R} = (0,1)$ and 
+$\mathcal{P} = (-1,0)$ is therefore the epistemic $\sigma \to 0$ 
+limit: the Kraus operator sharpens to a PVM projector onto the unique 
+null geodesic connecting them, selecting a definite frequency $\omega_k$ 
+and resolving both coarse-grainings responsible for thermality. 
+The direction of explanation is thereby reversed relative to standard 
+holographic arguments: the emission event at $\mathcal{P}$ is primary, 
+and the geometry,  the AS pp-wave, the horizon area increment, the 
+BMS supertranslation,  is the ontic output of the subsequent 
+measurement events, while the assignment of that output to a particular 
+observer's microstate record remains epistemic.
 
 \paragraph{Transverse localization.}
 The transverse $(x,y)$ directions require a separate 
