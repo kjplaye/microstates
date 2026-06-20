@@ -47,7 +47,7 @@ Eliminating temperature between Landauer's principle and
 the Unruh effect yields a purely kinematic 
 acceleration-dependent bound on the energy cost of 
 information transfer.
-Motivated by this, we construct a helicity-anticorrelated Bell state, emitted from a common causal past, that drives the Unruh response in both Rindler wedges of flat Minkowski space.
+Motivated by this, we construct a helicity-anticorrelated Bell state in flat Minkowski space, emitted from a common causal past, that drives the Unruh response in both Rindler wedges.
 We briefly discuss how 
 proper time can be measured as a property of matter,
 and then connect the matter action, event by event, to a 
@@ -140,17 +140,7 @@ recovering them only as a bulk average.
 \section{The Unruh--Landauer Bound and Motivating Heuristics}
 \label{sec:heuristics}
 
-The elimination of
-temperature in this section conceptually and physically leads the way to the
-next Section \ref{sec:microstates}, where we construct concrete
-non-thermal microstates that
-drive the Unruh response, and the later sections that study our microstate
-with an information theoretic langauge
-and connect it to literature.
-It allows us to work in the non-thermal 
-global Minkowski description, where thermality is a derived consequence 
-of restricting to one wedge~\cite{fulling1973nonuniqueness, bisognano1975duality}
-rather than a primitive.
+The elimination of temperature in this section conceptually and physically leads the way to the next Section \ref{sec:microstates}, where we construct concrete non-thermal microstates that drive the Unruh response, and the later sections that study our microstate with an information theoretic language and connect it to literature. It allows us to work in the non-thermal global Minkowski description, where thermality is a derived consequence of restricting to one wedge~\cite{fulling1973nonuniqueness, bisognano1975duality} rather than a primitive.
 
 This section has two distinct parts
 \begin{enumerate}
@@ -168,10 +158,7 @@ Where Verlinde deploys the thermal Rindler frame as the
 mechanism connecting entropy to force, the Unruh--Landauer 
 relation eliminates temperature entirely, and Newton's laws 
 then recover standard black hole thermodynamics directly 
-from the resulting kinematic bound. Thermality is a 
-consequence of restricted causal access to one Rindler 
-wedge~\cite{fulling1973nonuniqueness,bisognano1975duality}, 
-not a primitive.
+from the resulting kinematic bound. 
 \end{enumerate}
 
 \subsection{The Unruh--Landauer Relation}
@@ -398,7 +385,7 @@ otherwise specified; factors of $\hbar$ and $c$ are restored
 where they aid physical interpretation.
 
 The arguments of Section~\ref{sec:heuristics} motivate a 
-heuristic relationship between information acquisition, 
+relationship between information acquisition, 
 acceleration, and gravitational effects, but leave open the 
 question of what a single microstate looks like concretely. 
 In standard treatments, the Unruh effect is derived by 
@@ -593,7 +580,7 @@ sector: because the wave equation in double-null
 coordinates separates, the longitudinal Stokes analysis 
 is unaffected by the transverse directions, which are 
 handled separately by the transverse Kraus 
-family equation~\eqref{eq:kraus} upcoming.
+family equation~\eqref{eq:kraus}.
 
 \begin{figure}[h]
 \centering
@@ -639,7 +626,6 @@ BMS supertranslation,  is the ontic output of the subsequent
 measurement events, while the assignment of that output to a particular 
 observer's microstate record remains epistemic.
 
-
 \paragraph{Transverse localization.}
 The transverse $(x,y)$ directions require a separate 
 and independent localization.
@@ -652,27 +638,34 @@ because the wave equation in double-null coordinates
 separates: the $u$-dependence and the $(x,y)$-dependence 
 of the mode function enter independently, so the two 
 Kraus projections can be applied in either order without 
-interference.
-Specifying 
+interference. Specifying 
 $\mathcal{P} = (-1,0)$ and $\mathcal{R} = (0,1)$ 
 performs a second PVM projection, now in the transverse 
 directions, selecting the unique null geodesic and 
 resolving the remaining coarse-graining over transverse 
 position. The transverse shaping is controlled by an 
-independent width $\sigma_\perp$, which we treat as a 
-free parameter in Section~\ref{sec:two_regimes} and 
-whose physical consequences are developed in 
-Section~\ref{sec:ppwave}.
+independent Kraus family
+\begin{equation}
+  K_{\sigma_\perp} = \int e^{-r^2/2\sigma_\perp^2}\;
+  |\mathbf{x}_\perp\rangle\langle \mathbf{x}_\perp|\; 
+  d^2x_\perp,
+\label{eq:kraus}
+\end{equation}
+the direct transverse analogue 
+of~\eqref{eq:kraus_longitudinal}. The total horizon area 
+increment $\Delta A = 8\pi G\hbar\omega$ is independent 
+of $\sigma_\perp$ by energy conservation, as the 
+Raychaudhuri calculation of Section~\ref{sec:ppwave} 
+shows: only the total null energy 
+$\int T_{uu}\,du\,d^2x_\perp = \hbar\omega$ enters, not 
+the transverse distribution. We work in the localized 
+limit $\sigma_\perp \to 0$, which recovers the 
+Aichelburg--Sexl pp-wave developed in 
+Section~\ref{sec:ppwave}. The BMS mode content excited 
+by different transverse profiles, and the physical 
+selection principle for $\sigma_\perp$, are left to 
+future work.
 
-Since the two widths $\sigma$ and $\sigma_\perp$ control 
-physically distinct aspects of the construction they 
-need not be sent to zero together. The longitudinal 
-$\sigma$ governs the POVM-to-PVM transition and the 
-thermal-to-non-thermal transition analyzed via the 
-Stokes phenomenon; Section~\ref{sec:microstates} 
-works entirely in the $\sigma \to 0$ PVM limit.
-The BMS mode content excited by each transverse profile 
-is left to future work.
 The area increment $\Delta A = 8\pi G\hbar\omega$ and the event-by-event equality 
 $S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$
 in Section \ref{sec:ppwave},
@@ -1017,49 +1010,12 @@ The anticorrelation between wedges is preserved at every
 level of the construction, since the helicity label passes 
 through the Bogoliubov transformation unchanged.
 
-\subsection{Two Geometric Regimes}
-\label{sec:two_regimes}
-
-The microstate~\eqref{eq:microstate_vec} admits two 
-complementary geometric descriptions depending on the 
-transverse localisation of the photon mode, controlled 
-by the transverse Kraus family
-\begin{equation}
-  K_{\sigma_\perp} = \int e^{-r^2/2\sigma_\perp^2}\;
-  |\mathbf{x}_\perp\rangle\langle \mathbf{x}_\perp|\; 
-  d^2x_\perp,
-\label{eq:kraus}
-\end{equation}
-the direct transverse analogue of~\eqref{eq:kraus_longitudinal}.
-
-\begin{itemize}
-\item \textbf{Delocalized limit} ($\sigma_\perp \to \infty$, 
-POVM $\to \mathbf{1}$): the stress tensor is uniform across 
-the horizon, producing a \emph{planar impulsive wave} with 
-longitudinal shift $\Delta v \propto -r^2$, which is a 
-supertranslation in the BMS sense.
-
-\item \textbf{Localized limit} ($\sigma_\perp \to 0$, POVM 
-$\to$ PVM): the stress tensor concentrates near the beam 
-axis, recovering the Aichelburg--Sexl pp-wave with 
-logarithmic shift $\Delta v \propto -\ln r^2$.
-\end{itemize}
-
-Both limits produce the same total horizon area increment 
-$\Delta A = 8\pi G\hbar\omega$ (equation~\eqref{eq:deltaA_result}), 
-since the Raychaudhuri equation depends only on the total 
-null energy $\int T_{uu}\,du\,d^2x_\perp = \hbar\omega$, 
-fixed by energy conservation independently of the 
-transverse profile. The difference between the limits 
-lies in the spatial distribution of that increment and 
-the BMS mode content excited by each profile.
-
 
 % Section 4
 \section{Matter as a Substrate}
 \label{sec:substrate}
 
-We propose a language that realizes our microstate as a building block for emergent spacetime. Specifically, we propose that matter is the fundamental substrate of spacetime information processing by reinterpreting quantum mechanics in terms of communication channels. The following subsections develop the idea:
+We explore a language that realizes our microstate as a building block for emergent spacetime. Specifically, we propose that matter is the fundamental substrate of spacetime information processing by reinterpreting quantum mechanics in terms of communication channels. The following subsections develop the idea:
 
 \begin{enumerate}
     \item \textbf{Matter as a timelike channel} (Section~\ref{sec:channel}):
@@ -1198,7 +1154,7 @@ $\mathcal{L}$, mediated by the spacelike horizon channel.
 To that end we define:
 
 \begin{definition}[Communication]
-A communication is a horizon-crossing particle\footnote{For our microstate this is a photon, however, it could be more general.}
+A communication is a horizon-crossing particle\footnote{For our microstate this is a photon, however, it could be more general, see Appendix \ref{sec:zigzag} for a natural way of decomposing massive particles.}
 that transfers action and information between matter-memories.
 \end{definition}
 In the explicit bilocal construction of 
@@ -1331,35 +1287,49 @@ Rindler horizon, pushing the left wedge away from its horizon.
 The two wedges are therefore displaced away from their respective 
 horizons in opposite null directions.
 
+The geometry of this space creation has a clean local 
+picture. The photon travels along a null line, and the 
+AS pp-wave it sources is supported in a cylinder around 
+that trajectory, with cross-sectional radius set by the 
+transverse profile $\sigma_\perp$ and shrinking to the 
+photon wavelength $\sim c/\omega$ in the localized limit. 
+The cut-and-paste surgery of the pp-wave is performed 
+along this null cylinder: the geometry inside is 
+displaced in the $+v$ direction relative to the geometry 
+outside, and it is this relative displacement that 
+constitutes the creation of new coordinate space. The 
+horizon area increment $\Delta A = 8\pi G\hbar\omega$ 
+is the integrated effect of this surgery over the 
+cross-section of the cylinder --- not a global 
+rearrangement of the geometry but a local increment, 
+patch by patch, concentrated around the photon 
+trajectory. In the localized limit the patch shrinks 
+to a Planck-scale tube and the surgery is maximally 
+local; in the delocalized limit it spreads uniformly 
+across the horizon. Either way the total new space 
+created is the same, fixed by the photon energy alone.
+
 \subsection{Transverse Focusing Increments Horizon Area}
 \label{sec:deltaA}
 
-The area increment $\Delta$ is 
-independent of the transverse localization of the photon. 
-In the delocalized limit the stress tensor is uniform 
-across the horizon and produces a planar shift 
-$\Delta v \propto -r^2$; in the localized limit it 
-concentrates near the beam axis and produces the AS 
-logarithmic shift $\Delta v \propto -\ln r^2$. Both 
-are supertranslations in the BMS sense and both give 
-the same area increment, as the Raychaudhuri 
-calculation below shows. The one-parameter family of 
-Gaussian transverse profiles interpolating between 
-these two limits, parametrized by width $\sigma$, is 
-the geometric counterpart of the POVM-to-PVM transition 
-of Section~\ref{sec:pvm_localization}: the spatial 
-distribution of the area increment sharpens from 
-uniform to concentrated as $\sigma \to 0$, while 
-the total $\Delta A$ remains fixed by energy 
-conservation throughout.
+The area increment $\Delta A$ is independent of the transverse 
+localization of the photon: the Raychaudhuri equation depends 
+only on the total null energy $\int T_{uu}\,du\,d^2x_\perp = 
+\hbar\omega$, fixed by energy conservation independently of 
+the transverse profile $\sigma_\perp$. We work in the localized 
+limit $\sigma_\perp \to 0$, which recovers the AS pp-wave; the 
+electromagnetic stress-energy $T_{uu}$ is well-defined 
+throughout, integrates to $\hbar\omega$ over the transverse 
+plane, and recovers the strict AS limit as $\omega \to \infty$ 
+with the logarithmic divergence regulated at the scale $c/\omega$.
 
 We derive the area increment using the Raychaudhuri 
 equation on the null congruence generating the Rindler 
 horizon, following Jacobson~\cite{jacobson1995thermodynamics} 
 and consistent with the generalized second law for 
 Rindler horizons proved by Wall~\cite{wall2010proof}, 
-but applied here to a single microstate rather than 
-a thermodynamic or ensemble average.
+applied here to a single microstate rather than a 
+thermodynamic or ensemble average.
 
 For a null congruence with generators $k^\mu$ and expansion 
 $\theta$, the Raychaudhuri equation gives
@@ -1548,21 +1518,20 @@ decomposition~\eqref{eq:vacuum_vec} is precisely this
 thermofield double state, now in flat Minkowski space 
 with helicity labels carried through. The bilocal 
 construction realises Van~Raamsdonk's argument event by 
-event: in the delocalized limit the photon produces a planar 
-supertranslation displacing both wedges uniformly, while 
-in the localized limit each individual measurement event 
-produces a single AS longitudinal shift concentrated near the photon 
+event: each individual measurement event produces a 
+single AS longitudinal shift concentrated near the photon 
 trajectory, displacing the two wedges apart in opposite 
 null directions and creating new coordinate space between 
 them; in the AdS setting this is the ER=EPR 
 correspondence~\cite{maldacena2013cool}.
 
-In the present flat-space construction the ER bridge is replaced by 
-the AS longitudinal shift: each measurement event displaces the two 
-wedges apart in opposite null directions, creating the coordinate 
-space between them that the ER bridge represents in the AdS setting. 
-The entanglement is not a property of the geometry; it is the 
-\textit{cause} of it, event by event.
+In the present flat-space construction the ER bridge is 
+replaced by the AS longitudinal shift: each measurement 
+event displaces the two wedges apart in opposite null 
+directions, creating the coordinate space between them 
+that the ER bridge represents in the AdS setting. The 
+entanglement is not a property of the geometry; it is 
+the \textit{cause} of it, event by event.
 
 The bilocal source prepares an anticorrelated Bell 
 state~\eqref{eq:microstate_vec}. Both $\mathcal{R}$ and 
@@ -1576,7 +1545,7 @@ independently of which basis is chosen. The question
 \end{center}
 has a binary answer: $\mathcal{L}$ (left wedge) or 
 $\mathcal{R}$ (right wedge). This is a \emph{spatial bit}:
-a bit that now converts a polarization
+a bit that converts a polarization
 state to a location in space, a measurement in
 both geometric and informational contexts simultaneously.
 
@@ -1632,8 +1601,7 @@ Planck area as conversion factor, is the same
 vocabulary in which the answer, when it comes, will 
 have to be written. Space, in this construction, is indexed by helicity, 
 and that indexing, event by event, is what the geometry 
-records. The construction does not derive spatial emergence 
-in full generality; what it shows is that the vocabulary 
+records. The construction shows the vocabulary 
 needed to pose that problem precisely is already the 
 vocabulary of quantum measurement.
 
@@ -1656,22 +1624,34 @@ acknowledge it plainly.
 \label{sec:zigzag}
 
 The communication interactions from Section~\ref{sec:horizon_channel}
-have a natural analogue along a timelike worldline. Penrose's 
-zig-zag construction~\cite{penrose2006road} represents 
-a massive fermion as two massless Weyl spinors of 
-opposite helicity, coupled at each vertex by the Higgs 
-field and alternating in a zig-zag pattern; we term 
-this the tick-tock mechanism to emphasise the 
-alternating rhythm of communications rather than the 
-geometry of the path. The parallel with the bilocal 
-construction is structural: the Higgs field plays the 
-role of $\mathcal{P}$, the two Weyl spinors play the 
-role of the two photons propagating to $\mathcal{R}$ 
-and $\mathcal{L}$, and each vertex is a communication unit
-depositing one quantum of action and producing one 
-sample of proper time rather than one increment of 
-horizon area. We present this as a suggestive analogy 
-rather than a derived result.
+have a natural analogue along a timelike worldline. Dirac's 
+two-component formulation of the electron~\cite{dirac1928quantum} 
+represents a massive fermion as two coupled Weyl spinors of opposite 
+helicity; Penrose~\cite{penrose2006road} recast this geometrically 
+as a zig-zag of massless segments alternating in helicity, coupled 
+at each vertex by the Higgs field at the Compton scale 
+$\lambda_C = \hbar/mc$. We term this the tick-tock mechanism to 
+emphasise the alternating rhythm of communications rather than the 
+geometry of the path.
+
+For the Dirac field, the tick-tock structure is not an analogy 
+but a consequence of the two-component formalism: the Higgs 
+coupling of opposite-helicity Weyl spinors at the Compton scale 
+$\lambda_C = \hbar/mc$ is the timelike counterpart of the bilocal 
+construction, with the Higgs vertex playing the role of 
+$\mathcal{P}$, the two Weyl spinors playing the role of the two 
+photons propagating to $\mathcal{R}$ and $\mathcal{L}$, and each 
+vertex depositing one quantum of action and producing one sample 
+of proper time rather than one increment of horizon area. The 
+Compton scale connection is not incidental: the Bremermann 
+sampling rate $f = mc^2/h$ of Section~\ref{sec:channel} and the 
+Compton wavelength satisfy $\lambda_C \cdot f = c$, linking the 
+timelike sampling rate directly to the scale of the zig-zag 
+vertices. Whether this correspondence extends beyond the Dirac 
+field, in particular, whether the Higgs coupling vertex and 
+the photon emission vertex of Section~\ref{sec:microstates} are 
+instances of the same communication unit in the sense of 
+Section~\ref{sec:horizon_channel}, is left to future work.
 
 \begin{figure}[h]
 \centering
