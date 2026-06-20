@@ -148,10 +148,9 @@ drive the Unruh response, and the later sections that study our microstate
 with an information theoretic langauge
 and connect it to literature.
 It allows us to work in the non-thermal 
-global Minkowski description rather than the thermal Rindler description: 
-thermality is a derived consequence of restricting to one 
-wedge~\cite{fulling1973nonuniqueness, bisognano1975duality}, not a primitive, 
-and individual microstates are non-thermal. 
+global Minkowski description, where thermality is a derived consequence 
+of restricting to one wedge~\cite{fulling1973nonuniqueness, bisognano1975duality}
+rather than a primitive.
 
 This section has two distinct parts
 \begin{enumerate}
@@ -374,26 +373,21 @@ are therefore the same inequality: the former is its
 acceleration-frame expression, the latter its 
 position-space expression, and the Rindler horizon is 
 the surface at which the two descriptions coincide.
-The covariant generalisation of the Bekenstein bound to arbitrary null 
-hypersurfaces is the Bousso bound~\cite{bousso1999covariant}, which 
-bounds entropy on any non-expanding null congruence by the area of its 
-generating surface. The Raychaudhuri derivation of 
-Section~\ref{sec:ppwave} operates precisely on such a congruence; the 
-present construction can be read as a microstate-level realisation of the Bousso bound, with each communication contributing one Planck-area patch to the light-sheet.
-
+\footnote{The Bousso bound~\cite{bousso1999covariant} generalises 
+the Bekenstein bound to arbitrary null congruences; the present 
+construction can be read as a microstate-level realisation, 
+with each communication contributing one Planck-area patch 
+to the light-sheet.}
 
 Pesci~\cite{pesci2007unruh} derived the covariant entropy bound from the 
-Unruh temperature by applying the second law of thermodynamics across 
-local Rindler horizons, the closest precursor to the present argument. 
-The present bound equation~\eqref{eq:UL} differs in two respects: temperature is 
-eliminated entirely by substituting the Unruh relation into Landauer's 
-principle rather than retained as an input to the second law, yielding a 
-purely kinematic bound depending only on acceleration; and the bound is 
-applied to individual carrier quanta rather than to a bulk thermodynamic 
-flux. The identification of equation~\eqref{eq:UL} with the Bekenstein 
-bound~\cite{bekenstein1981universal} at the horizon condition $a = c^2/R$, 
-and the reading of both as the same inequality in different frames, 
-appears to be new in this form.
+Unruh temperature via the second law, the closest precursor to the present 
+argument. The present bound~\eqref{eq:UL} differs in that temperature is 
+eliminated entirely and the bound is applied to individual carrier quanta 
+rather than a bulk thermodynamic flux. The identification of 
+equation~\eqref{eq:UL} with the Bekenstein 
+bound~\cite{bekenstein1981universal} at the horizon condition $a = c^2/R$ 
+as the same inequality in different frames appears to be new in this form.
+
 
 % Section 3
 \section{Bilocal Microstate Construction}
@@ -623,11 +617,6 @@ from~\cite{player2025driving}.}
 \label{stokes_kraus}
 \end{figure}
 
-Thermality is not a primitive property of the vacuum but a consequence 
-of epistemic coarse-graining: the global Minkowski state $|0\rangle_M$ 
-is pure and fixed throughout, and what changes as the source-detector 
-pair $(\mathcal{P}, \mathcal{R})$ is specified is the resolution of the 
-observer's ignorance about which null geodesic carried the quantum. 
 This distinction is operationally sharp~\cite{spekkens2005contextuality, 
 harrigan2010einstein}: \textit{mode shaping} is a preparation that 
 modifies the physical field; \textit{PVM projection} is a measurement 
@@ -709,29 +698,16 @@ selects; the thermal ensemble is what remains when
 neither coarse-graining is resolved and $\mathcal{L}$ 
 is traced out.
 
-A note on the $\sigma \to 0$ idealization: throughout 
-this paper the PVM limit is understood as the 
-idealization of a physical construction that lives 
-at small but finite $\sigma$. At exactly $\sigma = 0$ 
-the Kraus operator~\eqref{eq:kraus_longitudinal} 
-becomes a projector onto a set of measure zero in 
-the continuum $|u\rangle$ basis and is no longer 
-normalizable in the strict sense; similarly, the 
-AS longitudinal shift $\Delta v \propto -\ln r^2$ 
-diverges on axis at $r = 0$ in the strict localized 
-limit. Both divergences are regularized by keeping 
-$\sigma > 0$. The 
-parameter $\sigma$ therefore plays a unified role: 
-it is simultaneously the width of the Kraus operator 
-in the longitudinal direction, the transverse profile 
-width of the photon mode, and the regularization 
-scale of the AS singularity, all controlled by the 
-same physical quantity, the photon wavelength 
-$\sigma \sim c/\omega$. All sharp statements about 
-individual microstates should be understood as 
-holding in the limit $\sigma \to 0^+$ rather than 
-at exactly $\sigma = 0$.
-
+Throughout this paper the PVM limit is understood as 
+$\sigma \to 0^+$: the Kraus 
+operator~\eqref{eq:kraus_longitudinal} is not 
+normalizable at exactly $\sigma = 0$, and the AS 
+shift $\Delta v \propto -\ln r^2$ diverges on axis, 
+both regularized by the photon wavelength 
+$\sigma \sim c/\omega$. The parameter $\sigma$ is 
+simultaneously the longitudinal Kraus width, the 
+transverse profile width, and the AS regularization 
+scale.
 
 
 \subsection{Helicity Structure and PCT Symmetry}
@@ -1036,37 +1012,24 @@ The key structural result is that the helicity label $\lambda$
 is conserved under the Bogoliubov transformation: it enters 
 equation~\eqref{eq:bogoliubov} as a spectator index and exits 
 unchanged on the Unruh operators $c_{\omega,\lambda}$. 
-Thermality, when it arises from coarse-graining over the 
-ensemble of microstates~\eqref{eq:microstate_vec}, is 
-therefore helicity-resolved: each helicity sector thermalises 
-independently, and the anticorrelation between wedges is 
-preserved at every level of the construction.
+The anticorrelation between wedges is preserved at every 
+level of the construction, since the helicity label passes 
+through the Bogoliubov transformation unchanged.
 
 \subsection{Two Geometric Regimes}
 \label{sec:two_regimes}
 
 The microstate~\eqref{eq:microstate_vec} admits two 
 complementary geometric descriptions depending on the 
-transverse localisation of the photon mode, corresponding 
-to the two limits of the transverse Kraus family
+transverse localisation of the photon mode, controlled 
+by the transverse Kraus family
 \begin{equation}
   K_{\sigma_\perp} = \int e^{-r^2/2\sigma_\perp^2}\;
   |\mathbf{x}_\perp\rangle\langle \mathbf{x}_\perp|\; 
   d^2x_\perp,
 \label{eq:kraus}
 \end{equation}
-parametrized by $\sigma_\perp$, the direct transverse 
-analogue of the longitudinal Kraus 
-family~\eqref{eq:kraus_longitudinal} with the null 
-coordinate $u$ replaced by the transverse radial 
-coordinate $r = |\mathbf{x}_\perp|$.
-The bilocal source fixes a definite Rindler frequency 
-$\omega$ but imposes no constraint on transverse momentum. 
-A mode with zero transverse momentum is uniform across the 
-horizon cross-section; a wave packet of characteristic width 
-$\sigma_\perp \sim c/\omega$ is localised within one wavelength of 
-the photon axis. These two limits correspond to geometrically 
-distinct pp-waves at the Rindler horizon.
+the direct transverse analogue of~\eqref{eq:kraus_longitudinal}.
 
 \begin{itemize}
 \item \textbf{Delocalized limit} ($\sigma_\perp \to \infty$, 
@@ -1082,17 +1045,14 @@ logarithmic shift $\Delta v \propto -\ln r^2$.
 \end{itemize}
 
 Both limits produce the same total horizon area increment 
-($\Delta A = 8\pi G\hbar\omega$ equation (\ref{eq:deltaA_result}) upcoming).
-The physical reason is that the Raychaudhuri equation 
-integrates the null energy $T_{uu}$ over the entire 
-transverse horizon cross-section: regardless of how 
-that energy is distributed transversely, the integral 
-$\int T_{uu}\, du\, d^2x_\perp = \hbar\omega$ is fixed 
-by energy conservation alone, so the total area increment 
-is insensitive to the transverse profile. The difference 
-between the two limits lies entirely in the spatial 
-distribution of that increment across the horizon and 
-the corresponding BMS mode content excited by each profile.
+$\Delta A = 8\pi G\hbar\omega$ (equation~\eqref{eq:deltaA_result}), 
+since the Raychaudhuri equation depends only on the total 
+null energy $\int T_{uu}\,du\,d^2x_\perp = \hbar\omega$, 
+fixed by energy conservation independently of the 
+transverse profile. The difference between the limits 
+lies in the spatial distribution of that increment and 
+the BMS mode content excited by each profile.
+
 
 % Section 4
 \section{Matter as a Substrate}
@@ -1289,79 +1249,35 @@ contribution per event.
 \subsection{Relation to Existing Literature}
 \label{sec:literature}
 
-The matter-substrate language of this section makes contact 
-with two independent programs in quantum foundations that 
-approach emergent time from complementary directions.
+The Page--Wootters mechanism~\cite{page1983evolution,
+giovannetti2015quantum} derives time evolution relationally:
+a global static state satisfying a Wheeler--DeWitt-like
+constraint yields emergent dynamics when conditioned on
+clock eigenstates $|t\rangle$, but leaves the physical
+identity of the clock unspecified. The present framework
+supplies that identity: the matter substrate is the clock,
+with phase $e^{iS/\hbar}$ advancing at the Bremermann rate
+$mc^2/h$, and each communication unit acting as a PVM
+conditioning step that advances the Bremermann count by
+one quantum of action.
 
-The Page--Wootters mechanism~\cite{page1983evolution, 
-giovannetti2015quantum} derives time evolution relationally: 
-a global static state $|\Psi\rangle \in 
-\mathcal{H}_{\mathrm{clock}} \otimes \mathcal{H}_{\mathrm{sys}}$ 
-satisfying a Wheeler--DeWitt-like constraint yields emergent 
-dynamics when conditioned on clock eigenstates $|t\rangle$. 
-The mechanism is exact but leaves the physical identity of 
-the clock system unspecified. The present framework 
-supplies that identity: the matter substrate is the clock, 
-with phase $e^{iS/\hbar}$ advancing at the Bremermann rate 
-$mc^2/h$. The standard mechanism assumes a continuous clock 
-time $t$; the present construction replaces this with a 
-discrete sequence of communication units, each acting as a PVM 
-conditioning step that advances the Bremermann count by one 
-quantum of action. Proper time is relational in exactly the 
-Page--Wootters sense, but the clock states are physical 
-rather than abstract.
+The modular flow perspective of Connes and
+Rovelli~\cite{connes1994neumann} identifies the modular
+flow $\sigma_t^\omega$ generated by a state $\omega$ on a
+von Neumann algebra as a canonical thermodynamic time. The
+Bisognano--Wichmann theorem identifies this flow concretely
+with Rindler time evolution restricted to one wedge. The
+present framework adds a discrete substrate beneath that
+flow: the continuous modular parameter is the thermodynamic
+limit of discrete Bremermann samples, with the horizon
+$\mathcal{H}$ as the algebraic cutoff that generates the
+modular flow as a consequence.
 
-The modular flow perspective of Connes and 
-Rovelli~\cite{connes1994neumann} approaches the same 
-problem algebraically. In a generally covariant quantum 
-theory the Hamiltonian vanishes on physical states and no 
-preferred time exists; Connes and Rovelli show that a state 
-$\omega$ on a von Neumann algebra $\mathcal{M}$ nonetheless 
-generates a canonical one-parameter automorphism group, the 
-modular flow $\sigma_t^\omega$, via Tomita--Takesaki theory. 
-This flow satisfies the KMS condition and is 
-thermodynamically indistinguishable from thermal time 
-evolution. The Bisognano--Wichmann 
-theorem~\cite{bisognano1975duality}, already central to 
-the PCT structure of Section~\ref{sec:microstates}, 
-identifies this modular flow concretely with Rindler time 
-evolution for the vacuum restricted to one wedge. The 
-connection to the present framework is therefore already 
-implicit in the construction: the horizon $\mathcal{H}$ is 
-precisely the algebraic cutoff that Connes and Rovelli 
-require, restricting the observable algebra to the right 
-wedge and generating the modular flow as a consequence. 
-What the present framework adds is a discrete substrate 
-beneath that flow: the continuous modular parameter is the 
-thermodynamic limit of discrete Bremermann samples.
-
-The two programs are thus not independent supports for 
-emergent time but complementary descriptions of the same 
-structure at different levels: Page--Wootters gives the 
-kinematic conditioning on individual clock states, 
-Connes--Rovelli gives the thermodynamic flow that emerges 
-when those states are coarse-grained across a horizon. The 
-matter substrate and the communication units are the microscopic 
-objects that both programs require but neither specifies.
-
-Verlinde's entropic gravity~\cite{entropic} operates at the 
-thermodynamic level of the same horizon structure; the 
-present framework supplies the microstate layer beneath it, 
-with each communication realising one entropy increment of 
-the kind Verlinde's screens accumulate in bulk. The 
-Wigner's friend problem~\cite{brukner2018no} and the 
-Frauchiger--Renner theorem~\cite{frauchiger2018quantum} 
-identify the multi-observer problem as formally sharp; the 
-vocabulary introduced here, spatial bits, PVM 
-projections, communication units, matter-memory, is the 
-natural language in which that problem must be posed when 
-the observers are causally separated by a horizon.
-
-Finally, we mention that recent experimental demonstrations
-of the Compton clock~\cite{lan2013clock} 
-ground the matter-as-clock picture in laboratory physics.
-
-
+Verlinde's entropic gravity~\cite{entropic} operates at the
+thermodynamic level of the same horizon structure; the
+present framework supplies the microstate layer beneath it,
+with each communication realising one entropy increment of
+the kind Verlinde's screens accumulate in bulk.
 % Section 5
 \section{pp-Wave Geometry and Action}
 \label{sec:ppwave}
