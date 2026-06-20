@@ -1064,19 +1064,18 @@ The bilocal source fixes a definite Rindler frequency
 $\omega$ but imposes no constraint on transverse momentum. 
 A mode with zero transverse momentum is uniform across the 
 horizon cross-section; a wave packet of characteristic width 
-$\sigma \sim c/\omega$ is localised within one wavelength of 
+$\sigma_\perp \sim c/\omega$ is localised within one wavelength of 
 the photon axis. These two limits correspond to geometrically 
-distinct pp-waves at the Rindler horizon, both analysed in 
-Section~\ref{sec:ppwave}:
+distinct pp-waves at the Rindler horizon.
 
 \begin{itemize}
-\item \textbf{Delocalized limit} ($\sigma \to \infty$, 
+\item \textbf{Delocalized limit} ($\sigma_\perp \to \infty$, 
 POVM $\to \mathbf{1}$): the stress tensor is uniform across 
 the horizon, producing a \emph{planar impulsive wave} with 
 longitudinal shift $\Delta v \propto -r^2$, which is a 
 supertranslation in the BMS sense.
 
-\item \textbf{Localized limit} ($\sigma \to 0$, POVM 
+\item \textbf{Localized limit} ($\sigma_\perp \to 0$, POVM 
 $\to$ PVM): the stress tensor concentrates near the beam 
 axis, recovering the Aichelburg--Sexl pp-wave with 
 logarithmic shift $\Delta v \propto -\ln r^2$.
@@ -1099,7 +1098,7 @@ the corresponding BMS mode content excited by each profile.
 \section{Matter as a Substrate}
 \label{sec:substrate}
 
-We propose a language that realizes our microstate as a building block for emergent spacetime. Specifically, we propose that matter is the fundamental substrate of spacetime information processing by reinterpreting quantum mechanics in terms of communication channels. Section \ref{sec:ppwave} will use this language to connect matter action $S_{\mathrm{matter}}$  to the Gibbons--Hawking--York boundary term $S_{GHY}|_{\mathcal{H}}$ sample by sample. The following subsections develop this idea:
+We propose a language that realizes our microstate as a building block for emergent spacetime. Specifically, we propose that matter is the fundamental substrate of spacetime information processing by reinterpreting quantum mechanics in terms of communication channels. The following subsections develop the idea:
 
 \begin{enumerate}
     \item \textbf{Matter as a timelike channel} (Section~\ref{sec:channel}):
@@ -1120,7 +1119,7 @@ minimal spatial region per independent quantum of
 action.
 }.
 \end{enumerate}
-In this way, space and time can be measured and quantized as properties of matter and interactions.
+In this way, space and time can be measured and quantized as properties of matter and interactions. Section \ref{sec:ppwave} will use this language to connect matter action $S_{\mathrm{matter}}$  to the Gibbons--Hawking--York boundary term $S_{GHY}|_{\mathcal{H}}$ sample by sample.
 
 Our approach sidesteps a prior question about quantum 
 gravity: {\it how can one quantize gravity without directly 
@@ -1178,8 +1177,10 @@ and other quantum numbers, and the dynamic range is
 $\log_2$ of the dimension of the internal Hilbert space which motivates:
 
 \begin{definition}
-The channel capacity is 
-the rate at which matter can accumulate and process 
+The channel capacity\footnote{Whether $C$ is saturated at the event horizon of a black 
+hole, where the Landauer and Bremermann limits are expected 
+to coincide, is left to future work.
+} is the rate at which matter can accumulate and process 
 information, under the assumption that each Bremermann 
 sample accesses the full $d$-dimensional internal Hilbert 
 space. For a system of mass $m$ 
@@ -1208,13 +1209,6 @@ Note that both bandwidth and dynamic range are extensive under composition:
 \end{equation}
 consistent with their interpretation as properties of 
 matter that compose naturally under union.
-
-Whether $C$ is saturated at the event horizon of a black 
-hole, where the Landauer and Bremermann limits are expected 
-to coincide, is left to future work.
-
-Recent experimental demonstrations of the Compton clock~\cite{lan2013clock} 
-ground the matter-as-clock picture in laboratory physics.
 
 
 \subsection{The Horizon as a Spacelike Channel}
@@ -1362,6 +1356,10 @@ vocabulary introduced here, spatial bits, PVM
 projections, communication units, matter-memory, is the 
 natural language in which that problem must be posed when 
 the observers are causally separated by a horizon.
+
+Finally, we mention that recent experimental demonstrations
+of the Compton clock~\cite{lan2013clock} 
+ground the matter-as-clock picture in laboratory physics.
 
 
 % Section 5
@@ -1661,8 +1659,9 @@ independently of which basis is chosen. The question
 \end{center}
 has a binary answer: $\mathcal{L}$ (left wedge) or 
 $\mathcal{R}$ (right wedge). This is a \emph{spatial bit}:
-a bit that now encodes converts a polarization
-state to a location in space.
+a bit that now converts a polarization
+state to a location in space, a measurement in
+both geometric and informational contexts simultaneously.
 
 % Section 7
 \section{Conclusion}
