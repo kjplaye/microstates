@@ -1057,64 +1057,64 @@ invariant by construction.
 \label{sec:channel}
 
 A massive particle carries phase along its worldline 
-at a rate set by its rest energy.
-The Compton frequency $f = mc^2/h$ is the natural 
-clock rate of a mass $m$: it is the rate at which 
-the phase $e^{iS/\hbar}$ completes one cycle.
-This is the content of Bremermann's computational 
-limit~\cite{bremermann1962optimization} which describes
-the maximum clock rate of 
-any physical system with bounded energy.
+at a rate set by its rest energy. The Compton frequency 
+$f = mc^2/h$ is the natural clock rate of a mass $m$: 
+it is the rate at which the phase $e^{iS/\hbar}$ 
+completes one cycle. This is the content of 
+Bremermann's computational 
+limit~\cite{bremermann1962optimization}: the maximum 
+clock rate of any physical system with bounded energy.
 
+We associate a discrete event with one zero crossing 
+of the phase $e^{iS/\hbar}$ in the path integral and 
+use the information-theoretic term \emph{sample} 
+throughout. The sampling resolution is limited by the 
+Heisenberg uncertainty $\Delta E \Delta t \sim \hbar$, 
+which plays the role of the Nyquist limit for the 
+matter channel~\cite{millette2011heisenberg}: it would 
+require additional energy $\Delta E > mc^2$ to probe 
+the sub-Compton phase.
 
-We associate a discrete event with one 
-zero crossing of the phase $e^{iS/\hbar}$ in the path 
-integral and we use the information-theoretic term \emph{sample} 
-throughout.
-The sampling resolution is limited by the Heisenberg 
-uncertainty $\Delta E \Delta t \sim \hbar$, which 
-plays the role of the Nyquist limit for the matter 
-channel~\cite{millette2011heisenberg}: it would
-require additional energy 
-$\Delta E > mc^2$ to probe the sub-Compton phase.
-
-The signal 
-being sampled at the Bremermann rate is the internal 
-quantum state\footnote{For composite systems the internal Hilbert 
-space includes additional degrees of freedom beyond 
-spin and helicity: relative positions and momenta of 
-constituents, vibrational modes, and entanglement 
-between subsystems. How these contribute to the 
-accessible dimension per Bremermann sample, and 
-whether they generate additional spatial structure 
-analogous to the spatial bit of 
-Section~\ref{sec:erepr}, are questions the present 
-framework motivates but does not address.}
-of the particle, its spin, helicity, 
-and other quantum numbers, and the dynamic range is 
-$\log_2$ of the dimension of the internal Hilbert space which motivates:
+The signal being sampled at the Bremermann rate is 
+the internal quantum state of the particle, its 
+spin, helicity, and other quantum numbers, and the 
+dynamic range is $\log_2$ of the dimension of the 
+internal Hilbert space. Any signal written into the 
+matter channel must have energy exceeding the ambient 
+thermal noise floor to constitute a distinguishable 
+record: this is Landauer's 
+argument~\cite{landauer1961irreversibility}, applied 
+here not to erasure but to registration. In the 
+Rindler frame the noise floor is set by the Unruh 
+temperature $k_BT = \hbar a/2\pi c$, so the minimum 
+energy per registered nat is precisely the 
+Unruh--Landauer bound~\eqref{eq:UL}. The matter 
+channel capacity in an environment with acceleration 
+$a$ is therefore:
 
 \begin{definition}
-The channel capacity\footnote{Whether $C$ is saturated at the event horizon of a black 
-hole, where the Landauer and Bremermann limits are expected 
-to coincide, is left to future work.
-} is the rate at which matter can accumulate and process 
-information, under the assumption that each Bremermann 
-sample accesses the full $d$-dimensional internal Hilbert 
-space. For a system of mass $m$ 
-with internal Hilbert space dimension $d$, we define the 
-maximum rate of information flow as
+For a system of mass $m$ with internal Hilbert space 
+dimension $d$ and ambient acceleration $a$, the 
+matter channel capacity is
 \begin{equation}
-    C = \underbrace{\frac{mc^2}{h}}_{\text{bandwidth}} 
+    C(a) = \underbrace{\frac{mc^2}{h}}_{\text{bandwidth}} 
         \times 
         \underbrace{\log_2(d)}_{\text{dynamic range}}
         \quad \text{(bits per second),}
     \label{eq:channel_capacity}
 \end{equation}
-where the bandwidth is the Bremermann sampling rate and 
-the dynamic range is the information content per sample
+where the bandwidth is the Bremermann sampling rate, 
+the dynamic range is the information content per 
+sample, and each sample is distinguishable from the 
+Unruh noise floor provided the signal energy satisfies 
+the Unruh--Landauer bound~\eqref{eq:UL}. At $a = 0$ 
+the noise floor is the ambient temperature $k_BT$ 
+and the bound reduces to the standard Landauer 
+condition.
 \end{definition}
-Note that both bandwidth and dynamic range are extensive under composition:
+
+Both bandwidth and dynamic range are extensive 
+under composition:
 \begin{equation}
     \frac{mc^2}{\hbar} 
     = \frac{(m_1+m_2)c^2}{\hbar} 
@@ -1126,7 +1126,59 @@ Note that both bandwidth and dynamic range are extensive under composition:
     = \log_2(d_1) + \log_2(d_2),
 \end{equation}
 consistent with their interpretation as properties of 
-matter that compose naturally under union.
+matter that compose naturally under union. This 
+extensivity is independent of the noise floor and 
+holds for any value of $a$.
+
+\paragraph{Saturation at the horizon.}
+The Unruh--Landauer bound~\eqref{eq:UL} is saturated 
+when the photon energy equals the minimum cost of 
+registering one bit against the Unruh noise floor. 
+Setting $\Delta H = \ln 2$ (one bit) and saturating 
+the inequality:
+\begin{equation}
+    \hbar\omega_{\mathrm{sat}} 
+    = \frac{\hbar a}{2\pi c} \ln 2,
+    \qquad
+    \omega_{\mathrm{sat}} = \frac{a \ln 2}{2\pi c}.
+\end{equation}
+A photon below $\omega_{\mathrm{sat}}$ cannot 
+constitute a complete one-bit measurement record 
+against the Unruh noise floor; a photon above 
+$\omega_{\mathrm{sat}}$ deposits more than the 
+minimum required. The horizon condition 
+$a = c^2/R$ then gives
+\begin{equation}
+    \lambda_{\mathrm{sat}} 
+    = \frac{2\pi c}{\omega_{\mathrm{sat}}} 
+    = \frac{4\pi^2}{\ln 2} \cdot \frac{c^2}{a}
+    \sim d_{\mathcal{H}},
+\end{equation}
+recovering the saturation wavelength of 
+Section~\ref{sec:UL} directly from the noise-floor 
+condition. The horizon is therefore the unique surface 
+at which the minimum energy cost of information 
+registration (Landauer) and the Bremermann sampling 
+rate coincide in a single-bit event: the matter 
+channel saturates exactly at the Rindler horizon, 
+and the Planck area $\ell_P^2$ is the conversion 
+factor between the geometric and informational 
+descriptions of that saturation.
+For composite systems the internal Hilbert 
+space includes additional degrees of freedom 
+beyond spin and helicity; whether the full 
+$d$-dimensional space is accessed at each 
+Bremermann sample depends on the dynamics, and 
+in general $C(a)$ is an upper bound rather than 
+a guaranteed saturation rate. The zig-zag 
+construction of Appendix~\ref{sec:zigzag} 
+provides a concrete case where saturation is 
+achieved: the Higgs vertex forces a helicity 
+flip at each Compton time, accessing both 
+dimensions of the Weyl spinor Hilbert space 
+at the Bremermann rate. Whether this extends 
+to more complex internal spaces is left to 
+future work.
 
 
 \subsection{The Horizon as a Spacelike Channel}
