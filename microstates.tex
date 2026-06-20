@@ -140,20 +140,28 @@ recovering them only as a bulk average.
 \section{The Unruh--Landauer Bound and Motivating Heuristics}
 \label{sec:heuristics}
 
-A structuring choice runs throughout the paper. We work in the non-thermal 
+The elimination of
+temperature in this section conceptually and physically leads the way to the
+next Section \ref{sec:microstates}, where we construct concrete
+non-thermal microstates that
+drive the Unruh response, and the later sections that study our microstate
+with an information theoretic langauge
+and connect it to literature.
+It allows us to work in the non-thermal 
 global Minkowski description rather than the thermal Rindler description: 
 thermality is a derived consequence of restricting to one 
 wedge~\cite{fulling1973nonuniqueness, bisognano1975duality}, not a primitive, 
-and individual microstates are non-thermal.
+and individual microstates are non-thermal. 
 
-This section has two distinct parts. 
-The Unruh--Landauer relation of 
+This section has two distinct parts
+\begin{enumerate}
+\item The Unruh--Landauer relation of 
 Section~\ref{sec:UL} is an exact result 
 that the construction layer inherits directly.
-substituting the Unruh temperature into Landauer's bound 
+Substituting the Unruh temperature into Landauer's bound 
 eliminates temperature entirely, leaving a purely kinematic 
-inequality depending only on acceleration. The subsequent 
-derivations are explicitly Verlinde-style 
+inequality depending only on acceleration. 
+\item The subsequent derivations are explicitly Verlinde-style 
 heuristics~\cite{entropic}: the same actors 
 appear, acceleration, the Unruh relation, Newton's 
 laws, but thermality is eliminated rather than embraced. 
@@ -165,6 +173,7 @@ from the resulting kinematic bound. Thermality is a
 consequence of restricted causal access to one Rindler 
 wedge~\cite{fulling1973nonuniqueness,bisognano1975duality}, 
 not a primitive.
+\end{enumerate}
 
 \subsection{The Unruh--Landauer Relation}
 \label{sec:UL}
@@ -417,8 +426,8 @@ structure of each measurement event explicit.
 \includegraphics[scale=0.75]{paz.png}
 \captionsetup{width=0.7\textwidth}
 \caption{A source in the past, $\mathcal{P}$, emits an 
-entangled photon pair that accelerates $\mathcal{R}$ into 
-the right Rindler wedge and $\mathcal{L}$ into the left 
+entangled photon pair that accelerates $\mathcal{R}$ in 
+the right Rindler wedge and $\mathcal{L}$ in the left 
 Rindler wedge.
 The two null directions of propagation define 
 the null coordinates $u = t - z + 1$ and $v = t + z + 1$, 
@@ -450,8 +459,8 @@ superposition~\eqref{eq:microstate_vec} preserves this since
 both terms contribute zero independently}.
 The two photons propagate into the left and right Rindler wedges, 
 where $\mathcal{L}$ and $\mathcal{R}$ detect them respectively 
-via absorption, the momentum impulse of which accelerates each 
-detector into its respective Rindler wedge; each observer thereby 
+via absorption. The momentum impulse accelerates each 
+detector in its respective Rindler wedge; each observer thereby 
 registers a helicity eigenvalue and acquires one classical bit 
 of information.
 The emission event at $\mathcal{P}$ naturally defines 
@@ -482,7 +491,7 @@ construction. As a QFT object it is a coefficient in a mode expansion,
 a solution to the wave equation analytically continued 
 from the Rindler wedge into all of Minkowski space. 
 But once $\mathcal{P}$ is specified as a real physical 
-source via the squeezing interaction (equation\eqref{eq:bilocal_lag} upcoming), 
+source via the squeezing interaction (equation \eqref{eq:bilocal_lag} upcoming), 
 the mode function acquires a second interpretation: 
 it is a probability amplitude in the Born rule sense, 
 encoding where $\mathcal{R}$ is likely to detect the 
@@ -590,7 +599,7 @@ sector: because the wave equation in double-null
 coordinates separates, the longitudinal Stokes analysis 
 is unaffected by the transverse directions, which are 
 handled separately by the transverse Kraus 
-family~\eqref{eq:kraus}.
+family equation~\eqref{eq:kraus} upcoming.
 
 \begin{figure}[h]
 \centering
@@ -671,15 +680,10 @@ need not be sent to zero together. The longitudinal
 $\sigma$ governs the POVM-to-PVM transition and the 
 thermal-to-non-thermal transition analyzed via the 
 Stokes phenomenon; Section~\ref{sec:microstates} 
-works entirely in the $\sigma \to 0$ PVM limit. 
-The transverse $\sigma_\perp$ controls the spatial 
-profile of the horizon perturbation and the BMS mode 
-content: $\sigma_\perp \to \infty$ produces a planar 
-impulsive wave exciting a single BMS supertranslation 
-mode, while $\sigma_\perp \to 0$ recovers the 
-Aichelburg--Sexl pp-wave with logarithmic shift 
-$\Delta v \propto -\ln r^2$ exciting the full BMS 
-spectrum. The area increment $\Delta A = 8\pi G\hbar\omega$ and the event-by-event equality 
+works entirely in the $\sigma \to 0$ PVM limit.
+The BMS mode content excited by each transverse profile 
+is left to future work.
+The area increment $\Delta A = 8\pi G\hbar\omega$ and the event-by-event equality 
 $S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$
 in Section \ref{sec:ppwave},
 which serve as the geometric consistency checks of 
@@ -1075,8 +1079,7 @@ supertranslation in the BMS sense.
 \item \textbf{Localized limit} ($\sigma \to 0$, POVM 
 $\to$ PVM): the stress tensor concentrates near the beam 
 axis, recovering the Aichelburg--Sexl pp-wave with 
-logarithmic shift $\Delta v \propto -\ln r^2$. All BMS 
-supertranslation modes are excited.
+logarithmic shift $\Delta v \propto -\ln r^2$.
 \end{itemize}
 
 Both limits produce the same total horizon area increment 
@@ -1630,11 +1633,10 @@ decomposition~\eqref{eq:vacuum_vec} is precisely this
 thermofield double state, now in flat Minkowski space 
 with helicity labels carried through. The bilocal 
 construction realises Van~Raamsdonk's argument event by 
-event: in the delocalized limit the full thermofield 
-double produces a global BMS supertranslation displacing 
-both wedges uniformly, while in the localized limit each 
-individual measurement event produces a single AS 
-longitudinal shift concentrated near the photon 
+event: in the delocalized limit the photon produces a planar 
+supertranslation displacing both wedges uniformly, while 
+in the localized limit each individual measurement event 
+produces a single AS longitudinal shift concentrated near the photon 
 trajectory, displacing the two wedges apart in opposite 
 null directions and creating new coordinate space between 
 them; in the AdS setting this is the ER=EPR 
@@ -1730,7 +1732,7 @@ collaborative drafting throughout. The asymmetries
 of that collaboration --- Claude's lack of persistent 
 memory and inability to take public responsibility 
 for claims --- prevent formal co-authorship, but the 
-intellectual debt is real and the author is glad to 
+intellectual contribution is real and the author is glad to 
 acknowledge it plainly.
 
 % Section 9
