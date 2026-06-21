@@ -787,7 +787,8 @@ Poincar\'{e}-covariant objects independent of how the
 gauge is fixed.
 
 \subsection{The Bilocal Source}
-
+\label{sec:bilocal_source}
+  
 In double-null gauge the electromagnetic field is 
 characterised by its transverse components alone. The bilocal 
 driving source is symmetrized over both helicity assignments,
@@ -883,10 +884,10 @@ bit whose outcome constitutes the classical record acquired by
 each observer upon detection.
 
 The Unruh--Landauer bound is saturated not at the level of an 
-individual photon but at the level of the source rate. The 
+individual photon but at the level of the source rate\footnote{Here we discuss a constant rate with a fixed frequency, but many situations are possible.}. The 
 acceleration $a$ does not fix the frequency $\omega$ of each 
-selected quantum; rather, it determines the rate $\dot{N}$ at 
-which the bilocal source selects entangled pairs in order to 
+selected quantum; rather, it determines the rate
+at which the bilocal source selects entangled pairs in order to 
 implement that acceleration, with the total power 
 $\dot{N}\hbar\omega$ matching the Unruh thermal flux.
 Each individual photon carries exactly one quantum of action 
@@ -897,6 +898,16 @@ Landauer bound then operates as a consistency condition on
 the ensemble: the minimum energy cost per bit acquired, 
 summed over the rate of acquisition, equals the power 
 required to sustain the acceleration.
+
+Newton's second law gives the interaction rate directly:
+\begin{equation}
+    a = \frac{\dot{N}(a)\,\hbar\omega}{m_{\mathcal{R}}c},
+    \qquad
+    \dot{N}(a) = \frac{m_{\mathcal{R}}ca}{\hbar\omega}.
+\label{eq:newton_rate}
+\end{equation}
+This is exact for $\mathcal{R}$ at rest, with no 
+causal diamond heuristics required. 
 
 \subsection{Polarization Bogoliubov Transformation}
 
@@ -1019,7 +1030,7 @@ through the Bogoliubov transformation unchanged.
 We explore a language that realizes our microstate as a building block for emergent spacetime. Specifically, we propose that matter is the fundamental substrate of spacetime information processing by reinterpreting quantum mechanics in terms of communication channels. The following subsections develop the idea:
 
 \begin{enumerate}
-    \item \textbf{Matter as a timelike channel} (Section~\ref{sec:channel}):
+    \item \textbf{Matter as a timelike memory} (Section~\ref{sec:channel}):
       We discuss matter action as a measurement of proper time; discreteness lives in the matter sector via $\hbar$. $\mathcal{P}$ and $\mathcal{R}$ are massive observers that accumulate this action. 
     \item \textbf{The horizon as a spacelike channel} (Section~\ref{sec:horizon_channel}):
       Spatial geometry emerges from communications between two masses, $\mathcal{P}$ and $\mathcal{R}$, through a horizon, and the Planck area $\ell_P^2$ is the conversion factor between the them\footnote{
@@ -1053,7 +1064,7 @@ properties of matter itself and are defined only up to the
 resolution set by the action $S/\hbar$, which is Lorentz 
 invariant by construction.
 
-\subsection{Matter as a Timelike Channel}
+\subsection{Matter as a Timelike Memory}
 \label{sec:channel}
 
 A massive particle carries phase along its worldline 
@@ -1063,122 +1074,52 @@ it is the rate at which the phase $e^{iS/\hbar}$
 completes one cycle. This is the content of 
 Bremermann's computational 
 limit~\cite{bremermann1962optimization}: the maximum 
-clock rate of any physical system with bounded energy.
+sampling rate of any physical system with bounded energy.
 
-We associate a discrete event with one zero crossing 
+We associate a discrete event with each zero crossing 
 of the phase $e^{iS/\hbar}$ in the path integral and 
 use the information-theoretic term \emph{sample} 
 throughout. The sampling resolution is limited by the 
 Heisenberg uncertainty $\Delta E \Delta t \sim \hbar$, 
 which plays the role of the Nyquist limit for the 
-matter channel~\cite{millette2011heisenberg}: it would 
+matter memory~\cite{millette2011heisenberg}: it would 
 require additional energy $\Delta E > mc^2$ to probe 
-the sub-Compton phase.
-
-The signal being sampled at the Bremermann rate is 
-the internal quantum state of the particle, its 
-spin, helicity, and other quantum numbers, and the 
-dynamic range is $\log_2$ of the dimension of the 
-internal Hilbert space. Any signal written into the 
-matter channel must have energy exceeding the ambient 
-thermal noise floor to constitute a distinguishable 
-record: this is Landauer's 
-argument~\cite{landauer1961irreversibility}, applied 
-here not to erasure but to registration. In the 
-Rindler frame the noise floor is set by the Unruh 
-temperature $k_BT = \hbar a/2\pi c$, so the minimum 
-energy per registered nat is precisely the 
-Unruh--Landauer bound~\eqref{eq:UL}. The matter 
-channel capacity in an environment with acceleration 
-$a$ is therefore:
+the sub-Compton phase. The signal being sampled at 
+the Bremermann rate is the internal quantum state of 
+the particle, its spin, helicity, and other quantum 
+numbers, and the dynamic range per sample is 
+$\ln d$ nats, where $d$ is the dimension of the 
+internal Hilbert space.
 
 \begin{definition}
-For a system of mass $m$ with internal Hilbert space 
-dimension $d$ and ambient acceleration $a$, the 
-matter channel capacity is
+The matter processing capacity is the maximum rate 
+at which a massive body can accumulate distinguishable 
+records along its worldline. For a system of mass $m$ 
+with internal Hilbert space dimension $d$:
 \begin{equation}
-    C(a) = \underbrace{\frac{mc^2}{h}}_{\text{bandwidth}} 
+    C = \underbrace{\frac{mc^2}{h}}_{\text{sampling rate}} 
         \times 
-        \underbrace{\log_2(d)}_{\text{dynamic range}}
-        \quad \text{(bits per second),}
+        \underbrace{\ln d}_{\text{dynamic range}}
+        \quad \text{(nats per second).}
     \label{eq:channel_capacity}
 \end{equation}
-where the bandwidth is the Bremermann sampling rate, 
-the dynamic range is the information content per 
-sample, and each sample is distinguishable from the 
-Unruh noise floor provided the signal energy satisfies 
-the Unruh--Landauer bound~\eqref{eq:UL}. At $a = 0$ 
-the noise floor is the ambient temperature $k_BT$ 
-and the bound reduces to the standard Landauer 
-condition.
+This is a property of the receiver alone, independent 
+of acceleration and of the rate at which communications 
+arrive.
 \end{definition}
 
-Both bandwidth and dynamic range are extensive 
+Both sampling rate and dynamic range are extensive 
 under composition:
 \begin{equation}
-    \frac{mc^2}{\hbar} 
-    = \frac{(m_1+m_2)c^2}{\hbar} 
+    \frac{(m_1+m_2)c^2}{\hbar} 
     = \frac{m_1 c^2}{\hbar} + \frac{m_2 c^2}{\hbar},
 \end{equation}
 \begin{equation}
-    \log_2(d) 
-    = \log_2(d_1 d_2) 
-    = \log_2(d_1) + \log_2(d_2),
+    \ln(d_1 d_2) 
+    = \ln(d_1) + \ln(d_2),
 \end{equation}
 consistent with their interpretation as properties of 
-matter that compose naturally under union. This 
-extensivity is independent of the noise floor and 
-holds for any value of $a$.
-
-\paragraph{Saturation at the horizon.}
-The Unruh--Landauer bound~\eqref{eq:UL} is saturated 
-when the photon energy equals the minimum cost of 
-registering one bit against the Unruh noise floor. 
-Setting $\Delta H = \ln 2$ (one bit) and saturating 
-the inequality:
-\begin{equation}
-    \hbar\omega_{\mathrm{sat}} 
-    = \frac{\hbar a}{2\pi c} \ln 2,
-    \qquad
-    \omega_{\mathrm{sat}} = \frac{a \ln 2}{2\pi c}.
-\end{equation}
-A photon below $\omega_{\mathrm{sat}}$ cannot 
-constitute a complete one-bit measurement record 
-against the Unruh noise floor; a photon above 
-$\omega_{\mathrm{sat}}$ deposits more than the 
-minimum required. The horizon condition 
-$a = c^2/R$ then gives
-\begin{equation}
-    \lambda_{\mathrm{sat}} 
-    = \frac{2\pi c}{\omega_{\mathrm{sat}}} 
-    = \frac{4\pi^2}{\ln 2} \cdot \frac{c^2}{a}
-    \sim d_{\mathcal{H}},
-\end{equation}
-recovering the saturation wavelength of 
-Section~\ref{sec:UL} directly from the noise-floor 
-condition. The horizon is therefore the unique surface 
-at which the minimum energy cost of information 
-registration (Landauer) and the Bremermann sampling 
-rate coincide in a single-bit event: the matter 
-channel saturates exactly at the Rindler horizon, 
-and the Planck area $\ell_P^2$ is the conversion 
-factor between the geometric and informational 
-descriptions of that saturation.
-For composite systems the internal Hilbert 
-space includes additional degrees of freedom 
-beyond spin and helicity; whether the full 
-$d$-dimensional space is accessed at each 
-Bremermann sample depends on the dynamics, and 
-in general $C(a)$ is an upper bound rather than 
-a guaranteed saturation rate. The zig-zag 
-construction of Appendix~\ref{sec:zigzag} 
-provides a concrete case where saturation is 
-achieved: the Higgs vertex forces a helicity 
-flip at each Compton time, accessing both 
-dimensions of the Weyl spinor Hilbert space 
-at the Bremermann rate. Whether this extends 
-to more complex internal spaces is left to 
-future work.
+matter that compose naturally under union.
 
 
 \subsection{The Horizon as a Spacelike Channel}
@@ -1256,6 +1197,95 @@ sums $\hbar\omega$ over communications because that
 is what the term geometrically records, one 
 contribution per event.
 
+\subsection{Channel Capacity Saturation}
+\label{sec:sat}
+
+\paragraph{Write operations and the Unruh--Landauer bound.}
+The matter processing capacity $C$ describes the 
+receiver in isolation. Writing into that memory 
+requires a communication: a photon of frequency 
+$\omega$ crosses the horizon and is absorbed by 
+$\mathcal{R}$, depositing one quantum of action 
+$\hbar$ and one helicity outcome into matter-memory. 
+For this write operation to produce a distinguishable 
+record rather than being lost to the Unruh thermal 
+bath, the photon energy must clear the noise floor 
+at acceleration $a$. By the Unruh--Landauer 
+bound~\eqref{eq:UL}, a successful one-nat write 
+requires $\hbar\omega \geq \hbar a/2\pi c$, following 
+Landauer's argument~\cite{landauer1961irreversibility} 
+that any signal must have energy exceeding the thermal 
+noise floor per degree of freedom to constitute a 
+distinguishable record. This condition is naturally 
+expressed as a signal-to-noise ratio, identifying 
+the signal energy as $\hbar\omega$ and the Unruh 
+energy scale $\hbar a/2\pi c$ as the noise floor:
+\begin{equation}
+    \mathrm{SNR} = \frac{\hbar\omega}{\hbar a/2\pi c} 
+    = \frac{2\pi c\,\omega}{a},
+\end{equation}
+so that the UL bound is simply $\mathrm{SNR} \geq 1$ 
+per nat. A write operation succeeds as a 
+distinguishable record if and only if its SNR clears 
+this threshold.
+
+\paragraph{Interaction rate and saturation.}
+Let $\dot{N}$ be the interaction rate in
+equation (\ref{eq:newton_rate}).
+$\mathcal{R}$ is at rest and each absorbed photon 
+imparts momentum $\hbar\omega/c$.
+The saturation 
+frequency $\omega_{\mathrm{sat}}$ is the minimum 
+frequency for a successful $\ln d$-nat write against 
+the Unruh noise floor:
+\begin{equation}
+    \omega_{\mathrm{sat}} = \frac{a\ln d}{2\pi c}.
+\label{eq:omega_sat}
+\end{equation}
+Substituting into equation~\eqref{eq:newton_rate}:
+\begin{equation}
+    \dot{N}_{\mathrm{sat}} 
+    = \frac{m_{\mathcal{R}}ca}{\hbar} 
+      \cdot \frac{2\pi c}{a\ln d} 
+    = \frac{m_{\mathcal{R}}c^2}{h} \cdot \frac{1}{\ln d}
+    = \frac{f_{\mathcal{R}}}{\ln d}.
+\label{eq:Nsat}
+\end{equation}
+The throughput at saturation is therefore
+\begin{equation}
+    \dot{N}_{\mathrm{sat}} \cdot \ln d 
+    = f_{\mathcal{R}} = C,
+\label{eq:saturation}
+\end{equation}
+and the SNR at saturation is
+\begin{equation}
+    \mathrm{SNR}_{\mathrm{sat}} 
+    = \frac{2\pi c\,\omega_{\mathrm{sat}}}{a} 
+    = \ln d,
+\end{equation}
+exactly the dynamic range of the internal Hilbert 
+space. Saturation therefore has a precise 
+information-theoretic meaning: every Bremermann 
+sample receives exactly one write operation carrying 
+$\ln d$ nats, the SNR equals the dynamic range, and 
+the matter processing capacity $C$ is exactly 
+utilized sample by sample. The horizon is the unique 
+surface at which the UL noise-floor condition, the 
+Newtonian interaction rate, and the matter processing 
+capacity coincide in a single-nat write event.
+
+For composite systems the internal Hilbert space 
+includes additional degrees of freedom beyond spin 
+and helicity; in general $C$ is an upper bound on 
+the processing rate rather than a guaranteed 
+saturation rate. The zig-zag construction of 
+Appendix~\ref{sec:zigzag} provides a concrete case 
+where each Bremermann sample accesses the full 
+two-dimensional Weyl spinor space via the Higgs 
+vertex, saturating the dynamic range at $d=2$. 
+Whether this extends to more complex internal spaces 
+is left to future work.
+
 
 \subsection{Relation to Existing Literature}
 \label{sec:literature}
@@ -1284,21 +1314,32 @@ limit of discrete Bremermann samples, with the horizon
 $\mathcal{H}$ as the algebraic cutoff that generates the
 modular flow as a consequence.
 
+Verlinde's entropic gravity~\cite{entropic} operates 
+at the thermodynamic level of the same horizon 
+structure; the present framework supplies the 
+microstate layer beneath it, with each communication 
+realising one write operation into matter-memory 
+carrying $\ln d$ nats, incrementing the horizon 
+area by $\Delta A = 8\pi G\hbar\omega$, and with 
+the interaction rate $\dot{N}(a)$ recovering the 
+Unruh thermal flux in bulk at saturation.
 Verlinde's entropic gravity~\cite{entropic} operates at the
 thermodynamic level of the same horizon structure; the
 present framework supplies the microstate layer beneath it,
 with each communication realising one entropy increment of
 the kind Verlinde's screens accumulate in bulk.
+
 % Section 5
 \section{pp-Wave Geometry and Action}
 \label{sec:ppwave}
+
 We work in the null coordinates $u, v$ defined 
 in Section~\ref{sec:microstates}, with $\mathcal{P}$ 
 at $(u,v) = (0,0)$, $\mathcal{R}$ at $(0,2)$, and 
 the photon propagating along $u = 0$ and intersecting 
 the past right Rindler horizon at $(0,1)$; 
 the left wedge is symmetric.
-
+ 
 \subsection{The AS pp-Wave and Its Effects}
 
 Test particles at fixed transverse positions $(x,y)$ experience two effects as the shock front crosses $u = 0$:
