@@ -1030,23 +1030,30 @@ through the Bogoliubov transformation unchanged.
 We explore a language that realizes our microstate as a building block for emergent spacetime. Specifically, we propose that matter is the fundamental substrate of spacetime information processing by reinterpreting quantum mechanics in terms of communication channels. The following subsections develop the idea:
 
 \begin{enumerate}
-    \item \textbf{Matter as a timelike memory} (Section~\ref{sec:channel}):
-      We discuss matter action as a measurement of proper time; discreteness lives in the matter sector via $\hbar$. $\mathcal{P}$ and $\mathcal{R}$ are massive observers that accumulate this action. 
-    \item \textbf{The horizon as a spacelike channel} (Section~\ref{sec:horizon_channel}):
-      Spatial geometry emerges from communications between two masses, $\mathcal{P}$ and $\mathcal{R}$, through a horizon, and the Planck area $\ell_P^2$ is the conversion factor between the them\footnote{
-The three fundamental constants $c$, $\hbar$, and $G$ 
-play various roles in the channel picture. The speed 
-of light $c$ sets the causal propagation speed of 
-signals. The reduced Planck constant $\hbar$ sets the 
-resolution of the timelike channel via the Compton 
-frequency $mc^2/\hbar$. The gravitational constant 
-$G$, through the Schwarzschild radius for instance $r_s = 2Gm/c^2$, 
-sets the maximum energy storable in a spatial region 
-without gravitational collapse. Their combination 
-$\ell_P^2 = \hbar G/c^3$ is the Planck area, the 
-minimal spatial region per independent quantum of 
-action.
-}.
+    \item \textbf{Matter as a timelike memory} 
+      (Section~\ref{sec:channel}): Matter accumulates 
+      a record of communications along its worldline 
+      at the Bremermann sampling rate; proper time is 
+      measured as accumulated action $S/\hbar$, with 
+      discreteness living in the matter sector via 
+      $\hbar$. The matter processing capacity $C$ is 
+      a property of the receiver alone, independent 
+      of acceleration.
+    \item \textbf{The horizon as a spacelike channel} 
+      (Section~\ref{sec:horizon_channel}): Spatial 
+      geometry emerges from communications between 
+      $\mathcal{P}$ and $\mathcal{R}$ through a 
+      horizon; the Planck area $\ell_P^2$ is the 
+      conversion factor between matter action and 
+      horizon area.
+    \item \textbf{Channel capacity saturation} 
+      (Section~\ref{sec:sat}): The matter processing 
+      capacity $C$, the Newtonian interaction rate 
+      $\dot{N}(a)$, and the Unruh--Landauer noise 
+      floor coincide at the horizon, where every 
+      Bremermann sample receives exactly one write 
+      operation and $C$ is exactly utilized sample 
+      by sample.
 \end{enumerate}
 In this way, space and time can be measured and quantized as properties of matter and interactions. Section \ref{sec:ppwave} will use this language to connect matter action $S_{\mathrm{matter}}$  to the Gibbons--Hawking--York boundary term $S_{GHY}|_{\mathcal{H}}$ sample by sample.
 
@@ -1230,11 +1237,12 @@ distinguishable record if and only if its SNR clears
 this threshold.
 
 \paragraph{Interaction rate and saturation.}
-Let $\dot{N}$ be the interaction rate in
-equation (\ref{eq:newton_rate}).
-$\mathcal{R}$ is at rest and each absorbed photon 
-imparts momentum $\hbar\omega/c$.
-The saturation 
+The interaction rate $\dot{N}(a)$ of 
+equation~\eqref{eq:newton_rate}, derived from 
+Newton's second law applied to $\mathcal{R}$ at 
+rest in Section~\ref{sec:microstates}, connects 
+the acceleration $a$ to the matter processing 
+capacity $C$ as follows. The saturation 
 frequency $\omega_{\mathrm{sat}}$ is the minimum 
 frequency for a successful $\ln d$-nat write against 
 the Unruh noise floor:
