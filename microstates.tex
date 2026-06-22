@@ -79,7 +79,7 @@ acceleration and observation, grounding each step independently.} diagram in Fig
     & \text{Quantum State Reduction} \\
 \text{Acceleration} 
 \arrow[u, "\scalebox{0.7}{\shortstack{local equivalence\\\S\ref{sec:ppwave}}}"']
-\arrow[r, "\scalebox{0.7}{\shortstack{energy--momentum\\transfer\\\S\ref{sec:heuristics}}}"']
+\arrow[r, "\scalebox{0.7}{\shortstack{energy--momentum\\transfer\\\S\ref{sec:obs_accel}}}"']
     & \text{Observation} 
 \arrow[u, "\scalebox{0.7}{\shortstack{Bayesian\\update\\\S\ref{sec:microstates},\S\ref{sec:erepr}}}"']
 \arrow[ul, phantom, pos=0.5, "{\ \scalebox{3}{$\circlearrowright$}}" {xshift=2pt}, "\scalebox{0.7}{\S\ref{sec:substrate}}" {xshift=2pt, yshift=-1pt}]
@@ -100,13 +100,13 @@ information-theoretic framework that unifies them into a
 single physical unit, a communication channel between massive
 observers mediated by a massless quantum.
 
-The \textbf{energy--momentum transfer} arrow is developed 
-in Section~\ref{sec:heuristics}: substituting the Unruh 
+\item The \textbf{energy--momentum transfer} arrow is developed 
+in Section~\ref{sec:obs_accel}: substituting the Unruh 
 temperature into Landauer's principle eliminates 
 temperature entirely, yielding a purely kinematic bound 
 on the energy cost of information acquisition under 
-acceleration. The thrust quantum,  the photon carrying 
-the impulse,  is the physical carrier of this bound.
+acceleration. The thrust quantum, in our case a photon carrying 
+the impulse, is the physical carrier of this bound. 
 
 The \textbf{Bayesian update} arrow is developed in 
 Sections~\ref{sec:microstates} and~\ref{sec:erepr}: 
@@ -138,29 +138,33 @@ microstate in a single physical event, rather than
 recovering them only as a bulk average.
 
 % Section 2
-\section{The Unruh--Landauer Bound and Motivating Heuristics}
-\label{sec:heuristics}
+\section{Observation and Acceleration}
+\label{sec:obs_accel}
 
-The elimination of temperature in this section conceptually and physically leads the way to the next Section \ref{sec:microstates}, where we construct concrete non-thermal microstates that drive the Unruh response, and the later sections that study our microstate with an information theoretic language and connect it to literature. It allows us to work in the non-thermal global Minkowski description, where thermality is a derived consequence of restricting to one wedge~\cite{fulling1973nonuniqueness, bisognano1975duality} rather than a primitive.
+The elimination of temperature in this section 
+conceptually and physically leads the way to 
+Section~\ref{sec:microstates}, where we construct 
+concrete non-thermal microstates that drive the Unruh 
+response, and the later sections that connect our 
+microstate to the broader literature. It allows us to 
+work in the non-thermal global Minkowski description, 
+where thermality is a derived consequence of restricting 
+to one wedge~\cite{fulling1973nonuniqueness, 
+bisognano1975duality} rather than a primitive.
 
-This section has two distinct parts
-\begin{enumerate}
-\item The Unruh--Landauer relation of 
-Section~\ref{sec:UL} is an exact result 
-that the construction layer inherits directly.
-Substituting the Unruh temperature into Landauer's bound 
-eliminates temperature entirely, leaving a purely kinematic 
-inequality depending only on acceleration. 
-\item The subsequent derivations are explicitly Verlinde-style 
-heuristics~\cite{entropic}: the same actors 
-appear, acceleration, the Unruh relation, Newton's 
-laws, but thermality is eliminated rather than embraced. 
-Where Verlinde deploys the thermal Rindler frame as the 
-mechanism connecting entropy to force, the Unruh--Landauer 
-relation eliminates temperature entirely, and Newton's laws 
-then recover standard black hole thermodynamics directly 
-from the resulting kinematic bound. 
-\end{enumerate}
+Section~\ref{sec:UL} derives the Unruh--Landauer bound 
+as an exact kinematic result: substituting the Unruh 
+temperature into Landauer's principle eliminates 
+temperature entirely, leaving a purely kinematic 
+inequality depending only on acceleration, which the 
+construction of Sections~\ref{sec:microstates}--\ref{sec:ppwave} 
+inherits directly. Section~\ref{sec:momentum} identifies 
+the physical carrier of this bound as a thrust quantum 
+and connects the resulting momentum transfer to 
+Verlinde's entropic gravity program. Verlinde-style 
+heuristics recovering standard black hole thermodynamics 
+from this bound are collected in 
+Appendix~\ref{sec:heuristics_appendix}.
 
 \subsection{The Unruh--Landauer Relation}
 \label{sec:UL}
@@ -204,11 +208,14 @@ Related bounds on the energy cost of information
 acquisition in curved spacetime have been derived using 
 the second law of thermodynamics applied to relativistic 
 communication channels~\cite{alvim2024landauer}.
-The present bound ~\eqref{eq:UL} differs in two respects: 
+The present bound~\eqref{eq:UL} differs in three respects: 
 temperature is eliminated entirely by substituting the 
 Unruh relation, yielding a purely kinematic bound depending 
-only on acceleration, and the bound is applied to 
-individual carrier quanta rather than to bulk evaporation. 
+only on acceleration; the bound is applied to individual 
+carrier quanta rather than to bulk evaporation; and the 
+microstates are constructed explicitly in 
+Sections~\ref{sec:microstates}--\ref{sec:ppwave} rather 
+than recovered as bulk averages.
 
 This Unruh--Landauer bound is saturated for a photon at one bit
 when the wavelength equals the horizon distance up to a factor 
@@ -235,147 +242,68 @@ accelerations.
 \subsection{Momentum Transfer and Acceleration}
 \label{sec:momentum}
 
-\noindent\textbf{Note on method.}\; 
-Sections~\ref{sec:momentum}--\ref{sec:bekenstein} 
-are Verlinde-style dimensional analysis. They use 
-Newtonian gravity and recover correct results at the 
-Schwarzschild scale by the same coincidence exploited 
-by Verlinde~\cite{entropic} and 
-Bekenstein~\cite{bekenstein}: the Newtonian 
-inverse-square law with a point mass reproduces the 
-Schwarzschild geometry at the horizon scale, even 
-though it formally breaks down there. This coincidence 
-is specific to the spherically symmetric case; other 
-matter distributions, including the bilocal source of 
-Section~\ref{sec:microstates}, or the full Einstein 
-equations, will in general give different results. 
-The construction layer of 
-Sections~\ref{sec:microstates}--\ref{sec:ppwave} 
-makes no use of these heuristics. We make no attempt 
-to disguise any of this.
-
-\medskip
-
-In what follows, standard results are 
-\emph{reproduced as heuristic consequences} 
-of the Unruh--Landauer relation and Newton's laws.
-The energy transfer $\Delta E$ implied by the relation is carried by a physical quantum, matter or radiation,  mediating the measurement interaction as a \emph{thrust quantum}. For a relativistic carrier, the associated momentum transfer is
+The energy transfer $\Delta E$ implied by the 
+Unruh--Landauer relation is carried by a physical 
+quantum, matter or radiation, mediating the measurement 
+interaction as a \emph{thrust quantum}. For a 
+relativistic carrier, the associated momentum transfer is
+%
 \begin{equation}
 \Delta p = \frac{\Delta E}{c}.
 \end{equation}
-A measurement event localized to a spatial scale $r$ 
-is bounded by a causal diamond with temporal extent 
-$\Delta t = 2r/c$. This identification is the 
-heuristic input from which the subsequent results 
-follow, then
-
-\begin{equation}
-a = \frac{\Delta p}{m_d \Delta t} = \frac{\Delta E}{2 m_d r}.
-\label{eq:accel}
-\end{equation}
-
+%
 This is closely related to Verlinde's entropic 
 gravity~\cite{entropic}: Verlinde identifies holographic 
 thrust on information screens with the origin of inertia 
 itself, and Newton's laws are a common ingredient in both 
 constructions. The present approach differs in grounding 
-each entropy increment in a discrete measurement event, the 
-measurement impulse playing the role of Verlinde's 
+each entropy increment in a discrete measurement event, 
+the measurement impulse playing the role of Verlinde's 
 holographic thrust, rather than in a coarse-grained 
 thermodynamic gradient.
 
+The Unruh--Landauer bound is saturated not at the level 
+of an individual photon but at the level of the source 
+rate\footnote{Here we discuss a constant rate with a 
+fixed frequency, but many situations are possible.}. 
+The acceleration $a$ does not fix the frequency $\omega$ 
+of each selected quantum; rather, it determines the rate 
+at which the source selects entangled pairs in order to 
+implement that acceleration, with the total power 
+$\dot{N}\hbar\omega$ matching the Unruh thermal flux. 
+Each individual photon carries exactly one quantum of 
+action $\hbar$ and one binary helicity outcome, one bit 
+in the sense of one binary alternative carrying 
+$\ln 2$ nats, and these are paired by the construction 
+independently of $a$. The Landauer bound then operates 
+as a consistency condition on the ensemble: the minimum 
+energy cost per bit acquired, summed over the rate of 
+acquisition, equals the power required to sustain the 
+acceleration.
 
-\subsection{The Schwarzschild Radius}
-
-We match the kinematic acceleration of the detector to the 
-gravitational field of the thrust quantum using Newton's laws. 
-By $E = mc^2$, the energy quantum $\Delta E$ gravitates with 
-effective mass $\Delta E / c^2$, producing a Newtonian 
-gravitational acceleration
+Newton's second law gives the interaction rate directly 
+for a detector of mass $m$ at rest:
+%
 \begin{equation}
-a = \frac{G \Delta E}{c^2 r^2}
+    a = \frac{\dot{N}(a)\,\hbar\omega}{mc},
+    \qquad
+    \dot{N}(a) = \frac{mca}{\hbar\omega}.
+\label{eq:newton_rate}
 \end{equation}
-at distance $r$ from the detector. Equating this with the 
-measurement-induced acceleration from equation~\eqref{eq:accel},
-\begin{equation}
-\frac{\Delta E}{2 m_d r} = \frac{G \Delta E}{c^2 r^2}.
-\end{equation}
-The energy $\Delta E$ of the thrust quantum cancels entirely: 
-the Schwarzschild radius is independent of the energy of the 
-carrier. Solving for $r$:
-\begin{equation}
-r = \frac{2 G m_d}{c^2} \equiv r_s,
-\end{equation}
-which is precisely the Schwarzschild radius of the detector 
-mass $m_d$. The cancellation of $\Delta E$ is the physical 
-content of the result: whatever energy the thrust quantum 
-carries, the self-consistent horizon scale is set by the 
-detector alone.
-
-\subsection{Surface Gravity}
-Evaluating the acceleration at $r = r_s$ gives the surface gravity of the detector:
-\begin{equation}
-\kappa = \frac{G m_d}{r_s^2} = \frac{c^4}{4 G m_d},
-\end{equation}
-in agreement with the standard Schwarzschild result, 
-as expected from the Verlinde coincidence. This 
-reproduces the acceleration appearing in the Unruh 
-temperature $T = \hbar \kappa / 2\pi k_B c$, 
-providing an internal consistency check on the 
-heuristics.
-
-\subsection{Bekenstein--Hawking Entropy}
-\label{sec:bekenstein}
-
-Returning to the Unruh-Landauer relation~\eqref{eq:UL} and 
-substituting the surface gravity $\kappa$ for $a$, justified 
-by the equivalence principle: the local quantum field theory at 
-the black hole horizon is the same as in the Rindler 
-frame~\cite{unruh1976notes, hawking1975particle}, the entropy 
-increment associated with an energy increment 
-$\Delta E = c^2 \Delta m_d$ is
-
-\begin{equation}
-\Delta H \leq \frac{2\pi c}{\hbar \kappa} \Delta E = \frac{8\pi G m_d}{\hbar c^3} \cdot \Delta m_d c^2.
-\end{equation}
-Expressing this in terms of the change in Schwarzschild area $\Delta A = 32\pi G^2 m_d \Delta m_d / c^4$:
-\begin{equation}
-\Delta H \le \frac{\Delta A}{4 \ell_P^2}, \qquad \ell_P^2 = \frac{\hbar G}{c^3},
-\end{equation}
-which is the Bekenstein-Hawking area law. Each measurement event contributes a discrete entropy increment proportional to the area imprinted on the horizon by the associated energy-momentum transfer.
-
-This derivation parallels Jacob Bekenstein’s original argument \cite{bekenstein}, in which the entropy increase of a black hole is inferred from the minimal energy required to localize and drop a system across the horizon; here, the same structure emerges from the minimal energy cost of registering information at the horizon scale.
-
-The two bounds are saturated simultaneously when $a = c^2/R$,  which is exactly the condition for being {\it at a horizon}. The horizon is therefore not just where thermodynamics happens to work out, it is the unique locus where the minimum cost of information acquisition equals the maximum information content of the region.
-
-Substituting the horizon condition $a = c^2/R$ directly 
-into the Unruh--Landauer bound~\eqref{eq:UL} yields
-\begin{equation}
-    \Delta H \leq \frac{2\pi R\,\Delta E}{\hbar c},
-\end{equation}
-which is precisely the Bekenstein universal entropy 
-bound~\cite{bekenstein1981universal} on the 
-entropy-to-energy ratio for a system of size $R$. 
-The Unruh--Landauer relation and the Bekenstein bound 
-are therefore the same inequality: the former is its 
-acceleration-frame expression, the latter its 
-position-space expression, and the Rindler horizon is 
-the surface at which the two descriptions coincide.
-\footnote{The Bousso bound~\cite{bousso1999covariant} generalises 
-the Bekenstein bound to arbitrary null congruences; the present 
-construction can be read as a microstate-level realisation, 
-with each communication contributing one Planck-area patch 
-to the light-sheet.}
-
-Pesci~\cite{pesci2007unruh} derived the covariant entropy bound from the 
-Unruh temperature via the second law, the closest precursor to the present 
-argument. The present bound~\eqref{eq:UL} differs in that temperature is 
-eliminated entirely and the bound is applied to individual carrier quanta 
-rather than a bulk thermodynamic flux. The identification of 
-equation~\eqref{eq:UL} with the Bekenstein 
-bound~\cite{bekenstein1981universal} at the horizon condition $a = c^2/R$ 
-as the same inequality in different frames appears to be new in this form.
-
+%
+Two consequences of this rate and the 
+bound~\eqref{eq:UL} are developed later: the ensemble 
+of individual non-thermal microstates selected at rate 
+$\dot{N}(a)$ is shown in Section~\ref{sec:sat} to 
+saturate the matter processing capacity exactly, 
+providing a dynamical account of how thermality emerges 
+from coarse-graining over individual measurement events; 
+and the bound~\eqref{eq:UL} is shown in 
+Appendix~\ref{sec:bekenstein} to coincide with the 
+Bekenstein universal entropy bound at the horizon 
+condition $a = c^2/R$, identifying the two as the same 
+inequality in acceleration-frame and position-space 
+descriptions respectively.
 
 % Section 3
 \section{Bilocal Microstate Construction}
@@ -385,7 +313,7 @@ From now on we use natural units $\hbar = c = 1$ unless
 otherwise specified; factors of $\hbar$ and $c$ are restored 
 where they aid physical interpretation.
 
-The arguments of Section~\ref{sec:heuristics} motivate a 
+The arguments of Section~\ref{sec:obs_accel} motivate a 
 relationship between information acquisition, 
 acceleration, and gravitational effects, but leave open the 
 question of what a single microstate looks like concretely. 
@@ -715,7 +643,7 @@ helicity outcome, undetermined until measured,  which is
 the single bit responsible for the remaining thermality in 
 the ensemble. The photon carries one quantum of action $\hbar$ 
 and energy $E = \hbar\omega$, identifying the thrust quantum 
-of Section~\ref{sec:heuristics} with a single photon whose 
+of Section~\ref{sec:obs_accel} with a single photon whose 
 polarization outcome, upon detection, is the classical bit 
 acquired by each observer. The Bell state is the natural 
 completion of the PCT symmetry between wedges, which by the 
@@ -724,7 +652,6 @@ implemented by the modular conjugation operator $J$ mapping
 the right wedge algebra to the left wedge algebra, and as we 
 discuss in Section~\ref{sec:ppwave}, the photons imprint a 
 definite geometric signature onto the horizon.
-
 
 The anticorrelated helicity assignment traces to the PCT 
 symmetry implemented by the Bisognano--Wichmann modular 
@@ -877,37 +804,23 @@ rather than perturbative.
 
 Each photon carries energy $E = \hbar\omega$ and one quantum 
 of action $\hbar$, identifying the thrust quantum of 
-Section~\ref{sec:heuristics} with a concrete physical object: 
+Section~\ref{sec:obs_accel} with a concrete physical object: 
 the minimum actionable event is precisely a single photon. 
 Its polarization, undetermined until measured, is the quantum 
 bit whose outcome constitutes the classical record acquired by 
 each observer upon detection.
 
-The Unruh--Landauer bound is saturated not at the level of an 
-individual photon but at the level of the source rate\footnote{Here we discuss a constant rate with a fixed frequency, but many situations are possible.}. The 
-acceleration $a$ does not fix the frequency $\omega$ of each 
-selected quantum; rather, it determines the rate
-at which the bilocal source selects entangled pairs in order to 
-implement that acceleration, with the total power 
-$\dot{N}\hbar\omega$ matching the Unruh thermal flux.
-Each individual photon carries exactly one quantum of action 
-$\hbar$ and one binary helicity outcome, one bit in the sense 
-of one binary alternative carrying $\ln 2$ nats, and these 
-are paired by the construction independently of $a$. The 
-Landauer bound then operates as a consistency condition on 
-the ensemble: the minimum energy cost per bit acquired, 
-summed over the rate of acquisition, equals the power 
-required to sustain the acceleration.
 
-Newton's second law gives the interaction rate directly:
-\begin{equation}
-    a = \frac{\dot{N}(a)\,\hbar\omega}{m_{\mathcal{R}}c},
-    \qquad
-    \dot{N}(a) = \frac{m_{\mathcal{R}}ca}{\hbar\omega}.
-\label{eq:newton_rate}
-\end{equation}
-This is exact for $\mathcal{R}$ at rest, with no 
-causal diamond heuristics required. 
+The Unruh--Landauer bound and the interaction rate of 
+Section~\ref{sec:momentum} apply directly to the 
+bilocal construction, with $m = m_{\mathcal{R}}$ and 
+the source selecting helicity-anticorrelated photon 
+pairs at rate $\dot{N}(a)$. Each photon carries exactly 
+one quantum of action $\hbar$ and one binary helicity 
+outcome; the anticorrelation between wedges is enforced 
+by the Bell state structure~\eqref{eq:microstate_vec}. 
+The saturation condition of 
+Section~\ref{sec:sat} then follows directly.
 
 \subsection{Polarization Bogoliubov Transformation}
 
@@ -1737,8 +1650,10 @@ for claims --- prevent formal co-authorship, but the
 intellectual contribution is real and the author is glad to 
 acknowledge it plainly.
 
-% Section 9
-\section{Appendix: The Tick-Tock Mechanism}
+\appendix
+
+% Appendix A
+\section{The Tick-Tock Mechanism}
 \label{sec:zigzag}
 
 The communication interactions from Section~\ref{sec:horizon_channel}
@@ -1817,6 +1732,125 @@ $\mathfrak{so}(3,1) \cong \mathfrak{su}(2) \times
 on different Hilbert spaces; what they share is that 
 both select anticorrelated helicities as the unique 
 PCT-invariant configuration.
+
+% Appendix B
+\section{Verlinde-style Heuristics}
+\label{sec:heuristics_appendix}
+
+The Unruh--Landauer bound of Section~\ref{sec:UL} 
+and the momentum transfer of Section~\ref{sec:momentum} 
+motivate a set of Newtonian heuristics that recover 
+standard black hole thermodynamics without invoking 
+temperature. The heuristic input is the identification 
+of a measurement event localized to spatial scale $r$ 
+with a causal diamond of temporal extent $\Delta t = 
+2r/c$, giving
+\begin{equation}
+a = \frac{\Delta p}{m_d \Delta t} = \frac{\Delta E}{2 m_d r}.
+\label{eq:accel_app}
+\end{equation}
+From this single identification, combined with 
+Newton's laws and $E = mc^2$, standard results follow 
+as heuristic consequences. These derivations follow 
+Verlinde~\cite{entropic} in using dimensional analysis 
+at the Schwarzschild scale; the coincidence exploited 
+is that the Newtonian inverse-square law reproduces 
+the Schwarzschild geometry at the horizon scale in the 
+spherically symmetric case. The construction of 
+Sections~\ref{sec:microstates}--\ref{sec:ppwave} 
+makes no use of these results.
+
+
+\subsection{The Schwarzschild Radius}
+
+We match the kinematic acceleration of the detector to the 
+gravitational field of the thrust quantum using Newton's laws. 
+By $E = mc^2$, the energy quantum $\Delta E$ gravitates with 
+effective mass $\Delta E / c^2$, producing a Newtonian 
+gravitational acceleration
+\begin{equation}
+a = \frac{G \Delta E}{c^2 r^2}
+\end{equation}
+at distance $r$ from the detector. Equating this with the 
+measurement-induced acceleration from equation~\eqref{eq:accel_app},
+\begin{equation}
+\frac{\Delta E}{2 m_d r} = \frac{G \Delta E}{c^2 r^2}.
+\end{equation}
+The energy $\Delta E$ of the thrust quantum cancels entirely: 
+the Schwarzschild radius is independent of the energy of the 
+carrier. Solving for $r$:
+\begin{equation}
+r = \frac{2 G m_d}{c^2} \equiv r_s,
+\end{equation}
+which is precisely the Schwarzschild radius of the detector 
+mass $m_d$. The cancellation of $\Delta E$ is the physical 
+content of the result: whatever energy the thrust quantum 
+carries, the self-consistent horizon scale is set by the 
+detector alone.
+
+\subsection{Surface Gravity}
+Evaluating the acceleration at $r = r_s$ gives the surface gravity of the detector:
+\begin{equation}
+\kappa = \frac{G m_d}{r_s^2} = \frac{c^4}{4 G m_d},
+\end{equation}
+in agreement with the standard Schwarzschild result, 
+as expected from the Verlinde coincidence. This 
+reproduces the acceleration appearing in the Unruh 
+temperature $T = \hbar \kappa / 2\pi k_B c$, 
+providing an internal consistency check on the 
+heuristics.
+
+\subsection{Bekenstein--Hawking Entropy}
+\label{sec:bekenstein}
+
+Returning to the Unruh-Landauer relation~\eqref{eq:UL} and 
+substituting the surface gravity $\kappa$ for $a$, justified 
+by the equivalence principle: the local quantum field theory at 
+the black hole horizon is the same as in the Rindler 
+frame~\cite{unruh1976notes, hawking1975particle}, the entropy 
+increment associated with an energy increment 
+$\Delta E = c^2 \Delta m_d$ is
+
+\begin{equation}
+\Delta H \leq \frac{2\pi c}{\hbar \kappa} \Delta E = \frac{8\pi G m_d}{\hbar c^3} \cdot \Delta m_d c^2.
+\end{equation}
+Expressing this in terms of the change in Schwarzschild area $\Delta A = 32\pi G^2 m_d \Delta m_d / c^4$:
+\begin{equation}
+\Delta H \le \frac{\Delta A}{4 \ell_P^2}, \qquad \ell_P^2 = \frac{\hbar G}{c^3},
+\end{equation}
+which is the Bekenstein-Hawking area law. Each measurement event contributes a discrete entropy increment proportional to the area imprinted on the horizon by the associated energy-momentum transfer.
+
+This derivation parallels Jacob Bekenstein’s original argument \cite{bekenstein}, in which the entropy increase of a black hole is inferred from the minimal energy required to localize and drop a system across the horizon; here, the same structure emerges from the minimal energy cost of registering information at the horizon scale.
+
+The two bounds are saturated simultaneously when $a = c^2/R$,  which is exactly the condition for being {\it at a horizon}. The horizon is therefore not just where thermodynamics happens to work out, it is the unique locus where the minimum cost of information acquisition equals the maximum information content of the region.
+
+Substituting the horizon condition $a = c^2/R$ directly 
+into the Unruh--Landauer bound~\eqref{eq:UL} yields
+\begin{equation}
+    \Delta H \leq \frac{2\pi R\,\Delta E}{\hbar c},
+\end{equation}
+which is precisely the Bekenstein universal entropy 
+bound~\cite{bekenstein1981universal} on the 
+entropy-to-energy ratio for a system of size $R$. 
+The Unruh--Landauer relation and the Bekenstein bound 
+are therefore the same inequality: the former is its 
+acceleration-frame expression, the latter its 
+position-space expression, and the Rindler horizon is 
+the surface at which the two descriptions coincide.
+\footnote{The Bousso bound~\cite{bousso1999covariant} generalises 
+the Bekenstein bound to arbitrary null congruences; the present 
+construction can be read as a microstate-level realisation, 
+with each communication contributing one Planck-area patch 
+to the light-sheet.}
+
+Pesci~\cite{pesci2007unruh} derived the covariant entropy bound from the 
+Unruh temperature via the second law, the closest precursor to the present 
+argument. The present bound~\eqref{eq:UL} differs in that temperature is 
+eliminated entirely and the bound is applied to individual carrier quanta 
+rather than a bulk thermodynamic flux. The identification of 
+equation~\eqref{eq:UL} with the Bekenstein 
+bound~\cite{bekenstein1981universal} at the horizon condition $a = c^2/R$ 
+as the same inequality in different frames appears to be new in this form.
 
 
 
