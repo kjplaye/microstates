@@ -1032,7 +1032,12 @@ sampling rate of any physical system with bounded energy.
 We associate a discrete event with each zero crossing 
 of the phase $e^{iS/\hbar}$ in the path integral and 
 use the information-theoretic term \emph{sample} 
-throughout. The sampling resolution is limited by the 
+throughout. This association is a definition: it 
+identifies the natural discreteness of the matter 
+action with the sampling resolution of the Bremermann 
+limit, and makes no additional physical postulate 
+beyond the path integral itself.
+The sampling resolution is limited by the 
 Heisenberg uncertainty $\Delta E \Delta t \sim \hbar$, 
 which plays the role of the Nyquist limit for the 
 matter memory~\cite{millette2011heisenberg}: it would 
@@ -1125,11 +1130,16 @@ Property~(iv) follows from the Raychaudhuri equation
 applied to the null congruence at $\mathcal{H}$ and 
 is derived in Section~\ref{sec:ppwave}; it is listed 
 here to make the geometric content of the communication 
-explicit. Whether properties~(i)--(iii) generalize 
-beyond the photon case, to massive carriers, 
-higher-spin fields, or POVM rather than PVM 
-projections, is a question the construction 
-motivates but does not answer.
+explicit.
+The restriction to photon carriers and PVM projections 
+is a deliberate scope limitation rather than a 
+fundamental one: the four properties~(i)--(iv) define 
+the minimal communication unit for the explicit 
+bilocal construction of 
+Section~\ref{sec:microstates}, and whether they 
+extend to massive carriers or POVM measurements 
+is a question the construction motivates but 
+does not address.
 
 Each communication has exactly two irreducible 
 constituents: a transfer of energy $\hbar\omega$ 
@@ -1209,7 +1219,17 @@ The throughput at saturation is therefore
     = f_{\mathcal{R}} = C,
 \label{eq:saturation}
 \end{equation}
-and the SNR at saturation from equation~\eqref{eq:omega_sat} is
+The ledger closes exactly: the Bremermann channel 
+capacity $C$ is utilized sample by sample, with no 
+free parameters and no remainder. This is not a 
+dimensional coincidence but a consequence of 
+Newton's second law, the Landauer--Unruh bound, 
+and the Bremermann limit converging to the same 
+condition at the horizon, three independently 
+motivated constraints that turn out to be the same 
+constraint written in three different languages.
+
+The SNR at saturation from equation~\eqref{eq:omega_sat} is
 \begin{equation}
     \mathrm{SNR}_{\mathrm{sat}} 
     = \frac{2\pi c\,\omega_{\mathrm{sat}}}{a} 
