@@ -66,39 +66,43 @@ screens~\cite{entropic}. Both frameworks operate at the level
 of bulk thermodynamics and leave open a prior question: {\it what physical process underlies each individual entropy increment?}
 We will show how the answer can be quantum measurement by developing an information-theoretic language that connects ``thrust'' microstates, that can drive the Unruh effect \cite{player2025driving}, to current literature.
 
-Before we dig in though, we first briefly outline our high level argument about how quantum measurement naturally connects to gravity. The general setup is pictured in the commutative\footnote{This refactors the Di\'{o}si--Penrose postulate in the categorical sense: the dashed arrow is not assumed but derived as the composite of the three solid arrows. 
-Diósi--Penrose postulates a direct link from gravitational effects 
-to state reduction; the present diagram factors that link through 
-acceleration and observation, grounding each step independently.} diagram in Figure \ref{fig:diagram}, which we will walk through from the top right clockwise around the bottom to the top left. Quantum state reduction always happens due to an observation. Any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. And then the equivalence principle implies that this impulse is locally indistinguishable from the effect of a gravitational field.
+Before we dig in though, we first briefly outline our high level argument about how quantum measurement naturally connects to gravity. The general setup is pictured in the diagram in Figure \ref{fig:diagram}, which we will walk through from the top right clockwise around the bottom to the top left. Quantum state reduction always happens due to an observation. Any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. And then the equivalence principle implies that this impulse is locally indistinguishable from the effect of a gravitational field.
 
 \begin{figure}[h]
   \centering
   \begin{tikzcd}[row sep=4em, column sep=7em]
-\text{Local Gravitational Effects} 
-\arrow[r, dashed, "\scalebox{0.7}{\shortstack{Di\'osi--Penrose}}"]
-    & \text{Quantum State Reduction} \\
+\text{Gravitation and Local Geometry} 
+\arrow[r, "\scalebox{0.7}{\shortstack{spatial bit\\\S\ref{sec:erepr}}}"]    
+    & \text{Quantum State Reduction} 
+\arrow[d, "\scalebox{0.7}{\shortstack{Bayesian\\update\\\S\ref{sec:microstates}}}"]
+\\
 \text{Acceleration} 
 \arrow[u, "\scalebox{0.7}{\shortstack{local equivalence\\\S\ref{sec:ppwave}}}"']
-\arrow[r, "\scalebox{0.7}{\shortstack{energy--momentum\\transfer\\\S\ref{sec:obs_accel}}}"']
     & \text{Observation} 
-\arrow[u, "\scalebox{0.7}{\shortstack{Bayesian\\update\\\S\ref{sec:microstates}}}"']
+\arrow[l, "\scalebox{0.7}{\shortstack{energy--momentum\\transfer\\\S\ref{sec:obs_accel}}}"'{yshift=-30pt}]
+% \arrow[l, "\scalebox{0.7}{\shortstack{energy--momentum\\transfer\\\S\ref{sec:obs_accel}}}"']
 \arrow[ul, phantom, pos=0.5, "{\ \scalebox{3}{$\circlearrowright$}}" {xshift=2pt}, "\scalebox{0.7}{\S\ref{sec:substrate}}" {xshift=2pt, yshift=-1pt}]
-\end{tikzcd}
-\caption{Solid arrows denote subjective grounding relations 
-for a given observer: $A \to B$ means every instance of $B$ 
-is physically realized by an instance of $A$. This paper 
-explores the solid arrows. The dashed 
-arrow is the Di\'{o}si--Penrose postulate.}
+  \end{tikzcd}
+  \caption{Arrows denote subjective grounding relations 
+for a given observer: $A \to B$ means every instance of $A$ 
+is physically realized by an instance of $B$. This paper 
+explores the arrows. The 
+Di\'{o}si--Penrose postulate says that gravitation triggers 
+state reduction, while this paper constructs the converse
+for a specific example, 
+that state reduction physically realizes local geometry.}
 \label{fig:diagram}
 \end{figure}
 
+
 \subsection{Roadmap}
 
-The paper develops each solid arrow of Figure~\ref{fig:diagram} 
+The paper develops each arrow of Figure~\ref{fig:diagram} 
 in turn, with Section~\ref{sec:substrate} providing the 
 information-theoretic framework that unifies them into a 
 single physical unit, a communication channel between massive
-observers mediated by a massless quantum.
+observers mediated by a massless quantum. Section~\ref{sec:erepr} uses this language to show how 
+entangled helicity is simultaneously geometric and informational.
 
 \item The \textbf{energy--momentum transfer} arrow is developed 
 in Section~\ref{sec:obs_accel}: substituting the Unruh 
@@ -111,9 +115,10 @@ the impulse, is the physical carrier of this bound.
 The \textbf{Bayesian update} arrow is developed in 
 Sections~\ref{sec:microstates}: 
 the POVM-to-PVM transition selects a single non-thermal 
-microstate from the Minkowski vacuum,  
-the anti-correlation between right and 
-left Rindler wedges is enforced by their common causal 
+microstate from the Minkowski vacuum,
+a helicity-anticorrelated Bell state
+between right and left Rindler wedges,
+enforced by their common causal 
 ancestry in the past wedge.
 
 The \textbf{local equivalence} arrow is developed in 
@@ -136,8 +141,11 @@ established; what is new is locating them microstate by
 microstate in a single physical event, rather than 
 recovering them only as a bulk average.
 
-Finnaly, Section $\S\ref{sec:erepr}$ shows how the entangled helicity  
-results in a measurement of space in geometric and informational terms simultaneously.
+Finally, Section~\ref{sec:erepr} shows how the entangled 
+helicity results in a spatial bit, a measurement of space 
+in geometric and informational terms simultaneously, 
+grounding the top arrow of Figure~\ref{fig:diagram} 
+in a concrete construction.
 
 % Section 2
 \section{Observation and Acceleration}
