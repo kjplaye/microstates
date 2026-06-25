@@ -66,31 +66,34 @@ screens~\cite{entropic}. Both frameworks operate at the level
 of bulk thermodynamics and leave open a prior question: {\it what physical process underlies each individual entropy increment?}
 We will show how the answer can be quantum measurement by developing an information-theoretic language that connects ``thrust'' microstates, that can drive the Unruh effect \cite{player2025driving}, to current literature.
 
-Before we dig in though, we first briefly outline our high level argument about how quantum measurement naturally connects to gravity. The general setup is pictured in the diagram in Figure \ref{fig:diagram}, which we will walk through from the top right clockwise around the bottom to the top left. Quantum state reduction always happens due to an observation. Any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. And then the equivalence principle implies that this impulse is locally indistinguishable from the effect of a gravitational field.
+Before we dig in though, we first briefly outline our high level argument about how quantum measurement naturally connects to gravity. The general setup is pictured in the diagram in Figure \ref{fig:diagram}, which we will walk through from the top right clockwise around the bottom to the top left. Quantum state reduction always happens due to an observation. Any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. And then the equivalence principle identifies this impulse 
+with a local spacetime geometry.\footnote{The dashed arrow in the
+  Figure \ref{fig:diagram} connects
+  to the Di\'{o}si--Penrose postulate~\cite{diosi1987universal,penrose1996gravity}, which proposes that 
+gravitational effects cause state reduction; the present 
+paper approaches the relationship from the other direction, 
+asking what spacetime geometry a measurement event produces.}
 
 \begin{figure}[h]
   \centering
   \begin{tikzcd}[row sep=4em, column sep=7em]
-\text{Gravitation and Local Geometry} 
+\text{Spacetime Geometry} 
 \arrow[r, dashed, "\scalebox{0.7}{\shortstack{spatial bit\\\S\ref{sec:erepr}}}"]    
     & \text{Quantum State Reduction} 
 \arrow[d, "\scalebox{0.7}{\shortstack{Bayesian\\update\\\S\ref{sec:microstates}}}"]
 \\
 \text{Acceleration} 
-\arrow[u, "\scalebox{0.7}{\shortstack{local equivalence\\\S\ref{sec:ppwave}}}"']
+\arrow[u, "\scalebox{0.7}{\shortstack{equivalence principle\\\S\ref{sec:ppwave}}}"']
     & \text{Observation} 
 \arrow[l, "\scalebox{0.7}{\shortstack{energy--momentum\\transfer\\\S\ref{sec:obs_accel}}}"'{yshift=-30pt}]
 % \arrow[l, "\scalebox{0.7}{\shortstack{energy--momentum\\transfer\\\S\ref{sec:obs_accel}}}"']
 \arrow[ul, phantom, pos=0.5, "{\ \scalebox{3}{$\circlearrowright$}}" {xshift=2pt}, "\scalebox{0.7}{\S\ref{sec:substrate}}" {xshift=2pt, yshift=-1pt}]
   \end{tikzcd}
-  \caption{Solid arrows denote subjective grounding relations 
-for a given observer: $A \to B$ means every instance of $A$ 
-is physically realized by an instance of $B$. This paper 
-explores the arrows. The 
-Di\'{o}si--Penrose postulate says that gravitation triggers 
-state reduction, while this paper establishes
-for a specific example, 
-that state reduction physically realizes local geometry.}
+  \caption{$A \xrightarrow{x} B$ means $B$ always implies 
+$A$ via $x$. Solid arrows are established in this paper. 
+The dashed arrow holds for the specific example 
+constructed in Section~\ref{sec:erepr}: state reduction 
+physically realizes spacetime geometry via the spatial bit.}
 \label{fig:diagram}
 \end{figure}
 
