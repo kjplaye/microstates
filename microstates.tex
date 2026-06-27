@@ -356,7 +356,10 @@ descriptions respectively.
 
 From now on we use natural units $\hbar = c = 1$ unless 
 otherwise specified; factors of $\hbar$ and $c$ are restored 
-where they aid physical interpretation.
+where they aid physical interpretation. $G$ is retained 
+explicitly throughout, so that the Planck area 
+$\ell_P^2 = \hbar G/c^3$ remains a visible conversion factor 
+between matter and geometric descriptions.
 
 The arguments of Section~\ref{sec:obs_accel} motivate a 
 relationship between information acquisition, 
@@ -365,16 +368,17 @@ question of what a single microstate looks like concretely.
 In standard treatments, the Unruh effect is derived by 
 coupling a detector to a pre-existing acceleration and reading 
 off a thermal response from the vacuum. 
-
 In~\cite{player2025driving} this logic was inverted for a 
 scalar field: a source placed in the past injects non-thermal 
 entangled excitations into the field, and the observer's 
 accelerated response was shown to be driveable by these 
 source-induced excitations, with the thermal/non-thermal 
 transition governed by the Stokes phenomenon in the asymptotics 
-of parabolic cylinder functions $D_\nu(-\zeta)$ and the 
-non-thermal limit recovered via a PVM projection onto a
-specific frequency $\omega$. 
+of parabolic cylinder functions $D_\nu(-\zeta)$
+and the non-thermal limit recovered by projecting onto a 
+specific frequency $\omega$, a projective measurement (PVM) 
+whose operator structure is further developed in
+Section~\ref{sec:pvm_localization}.
 We extend that construction here to the spin-1 electromagnetic 
 field, upgrading from scalar to helicity-carrying Bell states 
 and making the single-bit structure of each measurement event 
@@ -406,9 +410,11 @@ $(t,z) = (0,1)$, $(0,-1)$, and $(-1,0)$, named
 \emph{$\mathcal{P}$}~--~\textit{Past} respectively. 
 $\mathcal{P}$ serves as the common causal ancestor of the 
 accelerations of $\mathcal{R}$ and $\mathcal{L}$ (see 
-Figure~\ref{paz}). $\mathcal{P}$ emits an entangled pair of 
-spin-1 massless photons with momenta $\pm k$ and Rindler 
-frequency $\omega = \omega_k$.
+Figure~\ref{paz}).
+$\mathcal{P}$ emits an entangled pair of spin-1 massless photons 
+with momenta $\pm k$ and Rindler frequency $\omega = \omega_k 
+\equiv |k|$, the frequency associated to momentum $k$ for a 
+massless particle in natural units.
 The source exhibits no net back-reaction in either linear or angular momentum\footnote{The momenta are perfectly balanced by construction: the two photons 
 carry spatial momenta $+k\hat{z}$ and $-k\hat{z}$ respectively, so 
 the total linear momentum vanishes, $k + (-k) = 0$. The angular 
@@ -429,20 +435,19 @@ null coordinates $u = t - z + 1$ and $v = t + z + 1$,
 centered so that $\mathcal{P}$ lies at $u = v = 0$, 
 the right-moving photon propagates along $u = 0$, 
 and the left-moving photon propagates along $v = 0$.
+
 The three-party structure $\mathcal{P}$--$\mathcal{R}$--$\mathcal{L}$ 
-realises a form of tripartite entanglement\footnote{Neither $\mathcal{R}$ nor $\mathcal{L}$ alone can distinguish 
-a correlated Bell-state emission at $\mathcal{P}$ from an 
-uncorrelated thermal source: each observer's reduced 
-density matrix is thermal, exactly as in the standard Unruh 
-effect. Together, their two anticorrelated bits reveal the 
-correlation structure of the emission event, identifying it 
-as a specific Bell state at a specific frequency, and 
-providing a microstate-level analogue of black hole 
-interior reconstruction, where the interior is recovered 
-as classical correlations in the joint record of 
-complementary exterior observers.} with a natural 
-interior reconstruction interpretation~\cite{penington2020entanglement, 
-almheiri2021entropy}. 
+realises the thermofield double in flat Minkowski space: 
+$\mathcal{R}$ sees a thermal state because $\mathcal{L}$ exists 
+and is causally inaccessible, with the correlations carried by 
+the off-diagonal entries of the Bell state rather than by any 
+exotic quantum gravity effect. The classical bit recorded by 
+$\mathcal{R}$ must be anticorrelated with that recorded by 
+$\mathcal{L}$ in the same basis; a future observer $\mathcal{F}$ 
+with access to both records recovers the full Bell state, 
+realising interior reconstruction~\cite[{\S}4.5]{penington2020entanglement} 
+in its most elementary form: two regions of flat space, no island 
+formula required.
 
 \subsection{PVM Localization and the Elimination of Coarse-Graining}
 \label{sec:pvm_localization}
