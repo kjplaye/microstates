@@ -1,3 +1,6 @@
+% Landauer aquisition cost
+
+
 \documentclass[12pt,a4paper]{article}
 \usepackage[width=.75\textwidth]{caption}
 \usepackage{graphicx}
@@ -47,7 +50,7 @@ Eliminating temperature between Landauer's principle and
 the Unruh effect yields a purely kinematic 
 acceleration-dependent bound on the energy cost of 
 information transfer.
-Motivated by this, we construct a helicity-anticorrelated Bell state in flat Minkowski space, emitted from a common causal past, that drives the Unruh response in both Rindler wedges.
+Motivated by this, we construct a helicity-anticorrelated Bell state propagating in flat Minkowski space, emitted from a common causal past, that drives the Unruh response in both Rindler wedges.
 We briefly discuss how 
 proper time can be measured as a property of matter,
 and then connect the matter action, event by event, to a 
@@ -63,8 +66,8 @@ equations from entropy and temperature on local Rindler
 horizons~\cite{jacobson1995thermodynamics}; Verlinde derives 
 gravitational forces from entropy gradients on holographic 
 screens~\cite{entropic}. Both frameworks operate at the level 
-of bulk thermodynamics and leave open a prior question: {\it what physical process underlies each individual entropy increment?}
-We will show how the answer can be quantum measurement by developing an information-theoretic language that connects ``thrust'' microstates, that can drive the Unruh effect \cite{player2025driving}, to current literature.
+of bulk thermodynamics and leave open a fundamental question: {\it what physical process underlies each individual entropy increment?}
+We will show how the answer can be quantum measurement by developing an information-theoretic language that connects the non-thermal microstates of~\cite{player2025driving}, which can drive the Unruh effect, to current literature.
 
 Before we dig in though, we first briefly outline our high level argument about how quantum measurement naturally connects to gravity. The general setup is pictured in the diagram in Figure \ref{fig:diagram}, starting from Quantum State Reduction and following the solid arrows. Quantum state reduction always happens due to an observation. Any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. And then the equivalence principle identifies this impulse 
 with a local spacetime geometry.\footnote{The dashed arrow in the
@@ -102,7 +105,7 @@ physically realizes spacetime geometry via the spatial bit.}
 
 The paper develops each arrow of Figure~\ref{fig:diagram} 
 in turn, unified by a single physical unit: a communication 
-channel between massive observers mediated by a massless 
+channel between massive observers, mediated by a massless 
 quantum, developed in Section~\ref{sec:substrate}.
 
 Section~\ref{sec:obs_accel} develops the 
@@ -187,7 +190,11 @@ Appendix~\ref{sec:heuristics_appendix}.
 \label{sec:UL}
 
 
-Landauer's principle~\cite{landauer1961irreversibility} 
+Landauer's principle~\cite{landauer1961irreversibility} \footnote{Landauer's original argument~\cite{landauer1961irreversibility} is 
+broader than the erasure bound it is commonly reduced to: his 
+introductory framing explicitly identifies $k_BT$ as the minimum 
+signal energy required to override thermal noise, which is the 
+sense in which we invoke the principle here.}
 establishes $k_BT$ as the natural energy scale of one 
 distinguishable degree of freedom in a thermal environment 
 at temperature $T$: any physical carrier representing 
@@ -1000,7 +1007,7 @@ action} $\ell_P^2$ is the
 \end{enumerate}
 In this way, space and time can be measured and quantized as properties of matter and interactions. Section \ref{sec:ppwave} will use this language to connect matter action $S_{\mathrm{matter}}$  to the Gibbons--Hawking--York boundary term $S_{GHY}|_{\mathcal{H}}$ sample by sample.
 
-Our approach sidesteps a prior question about quantum 
+Our approach sidesteps a fundamental question about quantum 
 gravity: {\it how can one quantize gravity without directly 
 quantizing spacetime or its curvature degrees of freedom?} 
 Common approaches posit Planck-scale 
@@ -1738,7 +1745,7 @@ collaborative drafting throughout.
 \label{sec:zigzag}
 
 The communication interactions from Section~\ref{sec:horizon_channel}
-have a natural analogue along a timelike worldline that occurs inevetibly for massive particles in QFT. Dirac's 
+have a natural analogue along a timelike worldline that occurs inevitably for massive particles in QFT. Dirac's 
 two-component formulation of the electron~\cite{dirac1928quantum} 
 represents a massive fermion as two coupled Weyl spinors of opposite 
 helicity; Penrose~\cite{penrose2006road} recast this geometrically 
