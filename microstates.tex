@@ -805,7 +805,7 @@ versions and are used throughout the remainder of the paper.
 Working in this frame we impose the symmetric double-null 
 gauge condition
 \begin{equation}
-    A_+(z) = 0, \qquad A_-(z) = 0,
+    A_+(z) = 0, \qquad A_-(z) = 0
 \label{eq:doublenull}
 \end{equation}
 so that the gauge field is supported entirely on the 
@@ -832,18 +832,18 @@ independent of how the gauge is fixed.
 
 \subsection{The Bilocal Source}
 \label{sec:bilocal_source}
-  
-In double-null gauge the electromagnetic field is 
-characterised by its transverse components alone. The bilocal 
-driving source is symmetrized over both helicity assignments,
+
+In double-null gauge the electromagnetic field is characterized 
+by its transverse components alone. The bilocal driving source 
+is symmetrized over both helicity assignments,
 \begin{equation}
-    J^{ij}(x,y) = g\left( \epsilon^{i*}_{(-1)}\, 
+    \mathcal{J}^{ij}(x,y) = \left( \epsilon^{i*}_{(-1)}\, 
     \epsilon^{j}_{(+1)} 
     + \epsilon^{i*}_{(+1)}\, \epsilon^{j}_{(-1)}\right) 
     f_L(x)\, f_R(y),
 \label{eq:bilocal_vec}
 \end{equation}
-where $f_L$ and $f_R$ are normalised mode profiles 
+where $f_L$ and $f_R$ are normalized mode profiles 
 supported on the left and right wedges respectively, 
 and $\epsilon^i_{(\lambda)}$ are the circular 
 polarization vectors
@@ -853,54 +853,15 @@ polarization vectors
     \epsilon^i_{(-1)} = \frac{1}{\sqrt{2}}
     \begin{pmatrix}1\\-i\end{pmatrix}.
 \end{equation}
-The two terms in~\eqref{eq:bilocal_vec} are related by the 
-PCT transformation in the sense of 
-Bisognano--Wichmann~\cite{bisognano1975duality}, which maps 
-the right wedge algebra to the left wedge algebra and 
-simultaneously flips $\lambda \to -\lambda$.
+The two terms in~\eqref{eq:bilocal_vec} are the two 
+PCT-related helicity assignments established in 
+Section~\ref{sec:doublenull}: the modular conjugation 
+$J$ maps the first to the second and vice versa, and 
+the symmetric superposition is the simplest state 
+respecting this exchange symmetry with total angular 
+momentum zero in each term independently.
 
-
-More precisely, the modular conjugation $J$ of 
-Bisognano--Wichmann maps a right-wedge creation operator 
-$a^{R\dagger}_{k,(\lambda)}$ to a left-wedge creation 
-operator $a^{L\dagger}_{-k,(-\lambda)}$, implementing PCT 
-between wedges. The Bell state~\eqref{eq:microstate_vec} is a natural 
-two-photon state at fixed frequency $\omega$ and fixed 
-momentum pair $(k, -k)$: within this momentum sector, the 
-anticorrelated helicity assignment and the symmetric 
-superposition respect the $J$-symmetry between wedges, 
-since $J$ flips both helicity and wedge simultaneously. 
-The bilocal source~\eqref{eq:bilocal_vec} is therefore 
-a natural source, consistent with the algebraic symmetry 
-of the Rindler vacuum, and the simplest one we could 
-construct with the required properties.
-
-The symmetrization is consistent with PCT symmetry and 
-angular momentum conservation at the emission vertex. 
-Other source geometries are possible; this one is chosen 
-for its simplicity and the transparency of its connection 
-to the algebraic structure of the Rindler vacuum. A scalar 
-source carries zero angular momentum, so the emitted pair 
-must satisfy $\lambda_R + \lambda_L = 0$, which forces the 
-two helicities to be anticorrelated: the only possibilities 
-are $(\lambda_R, \lambda_L) = (+1,-1)$ or $(-1,+1)$. The 
-Bisognano--Wichmann modular conjugation $J$ maps the first 
-assignment to the second and vice versa, and the symmetric 
-superposition of the two is the simplest state respecting 
-this exchange symmetry. The total angular momentum vanishes 
-in both terms independently.
-
-The bilocal source selects a specific microstate from 
-the Minkowski vacuum by a PVM projection onto the $n=1$ 
-sector at fixed $\omega$ and fixed helicity pair 
-$(\lambda, -\lambda)$, in exact analogy with the scalar 
-construction of~\cite{player2025driving}. No perturbative 
-expansion in a coupling constant is required: the 
-helicity-anticorrelated photon pair is already present 
-in the vacuum decomposition~\eqref{eq:vacuum_vec}, and 
-the bilocal source selects it via the PVM projection of 
-Section~\ref{sec:pvm_localization}. The operator content 
-of this selection is
+The operator content of this selection is
 \begin{equation}
         a^{L\dagger}_{-k,(-1)}\, a^{R\dagger}_{k,(+1)}
           \;+\;
@@ -909,35 +870,20 @@ of this selection is
           \text{h.c.},
 \label{eq:bilocal_lag}
 \end{equation}
-where the two creation operator pairs correspond to the 
-two PCT-related helicity assignments, each carrying total 
-angular momentum zero, consistent with emission from a 
-scalar source at $\mathcal{P}$. This is the vector-field 
-analogue of the scalar squeezing 
+which is the vector-field analogue of the scalar squeezing 
 interaction~\cite{gerry2023introductory}, with the PCT 
-symmetry between wedges made explicit; the connection to 
-the quantum optics squeezing literature is structural 
-rather than perturbative.
+symmetry between wedges made explicit. The bilocal source 
+selects the $n=1$ term in the vacuum 
+decomposition~\eqref{eq:vacuum_vec} at fixed $\omega$ and 
+fixed helicity pair $(\lambda, -\lambda)$ via the PVM 
+projection of Section~\ref{sec:pvm_localization}: no 
+perturbative expansion is required, and the selection is 
+prescriptive rather than perturbative. Each photon carries 
+energy $E = \hbar\omega$ and one quantum of action $\hbar$; 
+its polarization, undetermined until measured, is the quantum 
+bit whose outcome constitutes the classical record acquired 
+by each observer upon detection.
 
-Each photon carries energy $E = \hbar\omega$ and one quantum 
-of action $\hbar$, identifying the thrust quantum of 
-Section~\ref{sec:obs_accel} with a concrete physical object: 
-the minimum actionable event is precisely a single photon. 
-Its polarization, undetermined until measured, is the quantum 
-bit whose outcome constitutes the classical record acquired by 
-each observer upon detection.
-
-
-The Landauer--Unruh bound and the interaction rate of 
-Section~\ref{sec:momentum} apply directly to the 
-bilocal construction, with $m = m_{\mathcal{R}}$ and 
-the source selecting helicity-anticorrelated photon 
-pairs at rate $\dot{N}(a)$. Each photon carries exactly 
-one quantum of action $\hbar$ and one binary helicity 
-outcome; the anticorrelation between wedges is enforced 
-by the Bell state structure~\eqref{eq:microstate_vec}. 
-The saturation condition of 
-Section~\ref{sec:sat} then follows directly.
 
 \subsection{Polarization Bogoliubov Transformation}
 
