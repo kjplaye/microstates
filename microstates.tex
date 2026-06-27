@@ -672,42 +672,24 @@ between thermal and non-thermal regimes. The present paper
 provides the physical interpretation: the Gaussian-times-mode 
 object is a POVM family parameterized by $\sigma$, acting on 
 the quantum state, and the POVM/PVM transition is the 
-physical content\footnote{The helicity label $\lambda$ enters the longitudinal 
-mode function as a spectator index and does not affect 
-the $u$-dependence of the Kraus 
-operator~\eqref{eq:kraus_longitudinal}; the Stokes 
-transition analysis of~\cite{player2025driving}, which 
-is carried out in 1+1 dimensions, therefore 
-applies independently to each helicity sector without 
-modification. The extension to 3+1 dimensions introduces 
-the transverse coordinates $(x,y)$ as an independent 
-sector: because the wave equation in double-null 
-coordinates separates, the longitudinal Stokes analysis 
-is unaffected by the transverse directions, which are 
-handled separately by the transverse Kraus 
-family equation~\eqref{eq:kraus}.}.
+physical content.
 The measurement language is what makes the Stokes transition physically meaningful.
-
-
 
 \paragraph{Transverse localization.}
 The transverse $(x,y)$ directions require a separate 
-and independent localization.
-A Rindler plane wave at frequency $\omega$ is a coherent 
-superposition over all possible source-detector pairs 
-$(\mathcal{P}', \mathcal{R}')$ connected by null geodesics 
-at that frequency, uniform in the transverse plane. 
+and independent localization: a Rindler plane wave at 
+frequency $\omega$ is a coherent superposition over all 
+possible source-detector pairs $(\mathcal{P}', \mathcal{R}')$ 
+connected by null geodesics at that frequency, uniform 
+in the transverse plane, so specifying $\mathcal{P}$ and 
+$\mathcal{R}$ performs a PVM projection in the transverse 
+directions as well.
 The longitudinal and transverse localizations decouple 
 because the wave equation in double-null coordinates 
 separates: the $u$-dependence and the $(x,y)$-dependence 
 of the mode function enter independently, so the two 
-Kraus projections can be applied in either order without 
-interference. Specifying 
-$\mathcal{P} = (-1,0)$ and $\mathcal{R} = (0,1)$ 
-performs a second PVM projection, now in the transverse 
-directions, selecting the unique null geodesic and 
-resolving the remaining coarse-graining over transverse 
-position. The transverse shaping is controlled by an 
+Kraus projections can be applied in either order.
+The transverse shaping is controlled by an 
 independent Kraus family
 \begin{equation}
   K_{\sigma_\perp} = \int e^{-r^2/2\sigma_\perp^2}\;
@@ -747,14 +729,7 @@ any single microstate but of the ensemble; it
 emerges when one models the detector response 
 within a wedge as a sum over all Rindler modes, 
 as in the standard Unruh--DeWitt 
-treatment, 
-and is a consequence of that mode-averaging rather 
-than a premise of the construction. The individual 
-non-thermal microstate is what the PVM projection 
-onto the $\mathcal{P}$--$\mathcal{R}$ null geodesic 
-selects; the thermal ensemble is what remains when 
-neither coarse-graining is resolved and $\mathcal{L}$ 
-is traced out.
+treatment~\cite{unruh1976notes,einstein1979general}.
 
 Throughout this paper the PVM limit is understood as 
 $\sigma \to 0^+$: the Kraus 
@@ -767,37 +742,46 @@ simultaneously the longitudinal Kraus width, the
 transverse profile width, and the AS regularization 
 scale.
 
-
 \subsection{Helicity Structure and PCT Symmetry}
 
 We now upgrade this construction from a spin-0 scalar field 
 in~\cite{player2025driving} to the spin-1 electromagnetic 
 field with a superposition of helicity pairs in a Bell state, 
-introducing one unknown binary degree of freedom,  the 
-helicity outcome, undetermined until measured,  which is 
+introducing one unknown binary degree of freedom, the 
+helicity outcome, undetermined until measured, which is 
 the single bit responsible for the remaining thermality in 
 the ensemble. The photon carries one quantum of action $\hbar$ 
 and energy $E = \hbar\omega$, identifying the thrust quantum 
 of Section~\ref{sec:obs_accel} with a single photon whose 
 polarization outcome, upon detection, is the classical bit 
-acquired by each observer. The Bell state is the natural 
-completion of the PCT symmetry between wedges, which by the 
-Bisognano--Wichmann theorem~\cite{bisognano1975duality} is 
-implemented by the modular conjugation operator $J$ mapping 
-the right wedge algebra to the left wedge algebra, and as we 
-discuss in Section~\ref{sec:ppwave}, the photons imprint a 
-definite geometric signature onto the horizon.
+acquired by each observer.
 
-The anticorrelated helicity assignment traces to the PCT 
-symmetry implemented by the Bisognano--Wichmann modular 
-conjugation $J$, which maps the right-wedge algebra to the 
-left-wedge algebra and simultaneously flips $\lambda \to 
--\lambda$; the Bell state~\eqref{eq:microstate_vec} is the 
-natural state in this momentum sector invariant under that 
-operation. The common algebraic origin of this anticorrelation 
-in the Lorentz algebra decomposition $\mathfrak{so}(3,1) \cong 
-\mathfrak{su}(2) \times \mathfrak{su}(2)$, developed in 
-Appendix~\ref{sec:zigzag}.
+The Bell state is the natural state in this momentum sector 
+invariant under the PCT symmetry between wedges, implemented 
+by the Bisognano--Wichmann modular conjugation $J$, which maps 
+the right-wedge algebra to the left-wedge algebra and 
+simultaneously flips $\lambda \to -\lambda$; the anticorrelated 
+helicity assignment is the direct consequence. The common 
+algebraic origin of this anticorrelation in the Lorentz algebra 
+decomposition $\mathfrak{so}(3,1) \cong \mathfrak{su}(2) \times 
+\mathfrak{su}(2)$ is developed in Appendix~\ref{sec:zigzag}, 
+and the geometric signature the photons imprint on the horizon 
+is developed in Section~\ref{sec:ppwave}.\footnote{The 
+helicity label $\lambda$ enters the longitudinal 
+mode function as a spectator index and does not affect 
+the $u$-dependence of the Kraus 
+operator~\eqref{eq:kraus_longitudinal}; the Stokes 
+transition analysis of~\cite{player2025driving}, which 
+is carried out in 1+1 dimensions, therefore 
+applies independently to each helicity sector without 
+modification. The extension to 3+1 dimensions introduces 
+the transverse coordinates $(x,y)$ as an independent 
+sector: because the wave equation in double-null 
+coordinates separates, the longitudinal Stokes analysis 
+is unaffected by the transverse directions, which are 
+handled separately by the transverse Kraus 
+family equation~\eqref{eq:kraus}.}
+
 
 \subsection{Double-Null Gauge}
 \label{sec:doublenull}
