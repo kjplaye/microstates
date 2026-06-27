@@ -32,6 +32,77 @@
 
 \begin{document}
 
+% Physics writing guidelines (try to follow unless it would affect the quality):
+%
+% * Don't use em dashes.
+%
+% * Only use "rather than X, Y" when X has already been established in the
+% text as the default expectation or the standard approach the reader
+% would naturally bring to the problem. If X is being introduced solely
+% to be dismissed, rewrite to lead with Y directly. It is often the case
+% that we don't want to bring attention to X at all.
+%
+% * In general, when you add an idea it should make since with the context
+% before it and should not reference chat context that doesn't exist in
+% the writing.
+%
+% * Use American English, realized, etc.
+%
+% * Make sure the words are technically accurate: Examples "precisely"
+% should actually mean something, "orthogonal" means something technical
+% about vectors (not just literary).
+%
+% * Edits should be in latex and you should tell me exactly where to put them.
+%
+% # Useful modalities (you already know about these, you can tell me which
+% you are using, reference them and align with me):
+%
+% * The brainstormer: Connects to other existing literature, trys to
+% come up with ideas to link together, thinks in large brush strokes and
+% research programs.
+% 
+% * The visionary: We entertain wild ideas and make special provision
+% for actual vision, they are often key insights, speculative crank
+% physics is to be avoided in actual final writing, but can be used in
+% drafts notes and definitly discussions.
+%
+% * The technical (coder): "PTAL at this paper", signals a certain type of
+% persona that works at Google and is looking at the paper in terms of code
+% review, finding technical things etc.
+% 
+% * The referee: Comes from the viewpoint of a journal reviewer, thinks
+% in terms of multiple levels, from arxiv to Physics Review to anything
+% in between.
+% 
+% * The reflector: We found some issues, we made some edits, did they
+% address the issues? What about a fresh read, would other issues
+% appear?
+% 
+% * The razor: Ruthlessly cuts fat, removes passive "throat-clearing"
+% phrases, merges redundant sentences, and tightens equations into the
+% main text body without losing technical accuracy. It treats words like
+% expensive bandwidth
+% 
+% * The archivist: The pedantic senior co-author who has read every
+% paper published since 1970 and hates missing citations.
+% 
+% * The Narrative Architect: The structural developmental editor who
+% treats a physics paper like a cohesive story.
+% 
+% * The Outsider: A physicist from a different subfield (e.g., an
+% experimentalist reading a high-level theory paper, or a condensed
+% matter person reading quantum gravity).
+%
+% * The consitancy freak:
+% checks that notation, defined terms, and equation labels are used
+% consistently throughout, that a term defined in Section 3 is not
+% silently redefined in Section 5, and that forward references resolve
+% correctly. This is distinct from The Archivist (citations) and
+% The Technical (correctness).
+%
+% * Feel free to add others.
+
+
 
 \title{Quantum Measurements as Minkowski Microstates}
 \author[ ]{Kevin Player\footnote{\textit{kjplaye@gmail.com}} \,\orcidlink{0009-0000-7180-7985}}
@@ -369,11 +440,11 @@ In~\cite{player2025driving} this logic was inverted for a
 scalar field: a source placed in the past injects non-thermal 
 entangled excitations into the field, and the observer's 
 accelerated response was shown to be driveable by these 
-source-induced excitations, with the thermal/non-thermal 
-transition governed by the Stokes phenomenon in the asymptotics 
-of parabolic cylinder functions $D_\nu(-\zeta)$
-and the non-thermal limit recovered by projecting onto a 
-specific frequency $\omega$, a projective measurement (PVM) 
+source-induced excitations. The thermal/non-thermal 
+transition was seen to be governed by the Stokes phenomenon with asymptotics 
+of parabolic cylinder functions,
+the non-thermal limit was recovered by projecting onto a 
+specific frequency $\omega$ using a projective measurement (PVM) 
 whose operator structure is further developed in
 Section~\ref{sec:pvm_localization}.
 We extend that construction here to the spin-1 electromagnetic 
@@ -412,7 +483,8 @@ $\mathcal{P}$ emits an entangled pair of spin-1 massless photons
 with momenta $\pm k$ and Rindler frequency $\omega = \omega_k 
 \equiv |k|$, the frequency associated to momentum $k$ for a 
 massless particle in natural units.
-The source exhibits no net back-reaction in either linear or angular momentum\footnote{The momenta are perfectly balanced by construction: the two photons 
+The source exhibits no net back-reaction in either linear or
+angular momentum\footnote{The momenta are perfectly balanced by construction: the two photons 
 carry spatial momenta $+k\hat{z}$ and $-k\hat{z}$ respectively, so 
 the total linear momentum vanishes, $k + (-k) = 0$. The angular 
 momentum vanishes term by term: in each helicity assignment 
@@ -440,31 +512,33 @@ and is causally inaccessible, with the correlations carried by
 the off-diagonal entries of the Bell state rather than by any 
 exotic quantum gravity effect. The classical bit recorded by 
 $\mathcal{R}$ must be anticorrelated with that recorded by 
-$\mathcal{L}$ in the same basis; a future observer $\mathcal{F}$ 
-with access to both records recovers the full Bell state, 
-realising interior reconstruction~\cite[{\S}4.5]{penington2020entanglement} 
-in its most elementary form: two regions of flat space, no island 
-formula required.
+$\mathcal{L}$ in the same basis; a future observer $\mathcal{F}$
+with access to both records recovers 
+the full Bell state: the correlations are classical records in matter 
+memory, accessible without any gravitational reconstruction procedure.
+
 
 \subsection{PVM Localization and the Elimination of Coarse-Graining}
 \label{sec:pvm_localization}
-
-The Unruh mode plays a double role in this
-construction. As a QFT object it is a coefficient in a mode expansion, 
-a solution to the wave equation analytically continued 
-from the Rindler wedge into all of Minkowski space. 
-But once $\mathcal{P}$ is specified as a real physical 
-source via the squeezing interaction (equation \eqref{eq:bilocal_lag} upcoming), 
-the mode function acquires a second interpretation: 
-it is a probability amplitude in the Born rule sense, 
-encoding where $\mathcal{R}$ is likely to detect the 
-emitted quantum. This is the inversion of the standard 
-Unruh--DeWitt logic. Rather than coupling a detector to 
-a pre-existing acceleration and reading off a thermal 
-distribution by averaging over all Rindler frequencies, 
-we front-load the logic at $\mathcal{P}$: the source 
-fixes the frequency $\omega_k$ and the mode function 
-then specifies the probability amplitude for detection. 
+The Unruh mode plays a double role in this construction. As a QFT object it is a 
+coefficient in a mode expansion, a solution to the wave equation analytically continued 
+from the Rindler wedge into all of Minkowski space. But once $\mathcal{P}$ is specified 
+as a real physical source via the squeezing interaction, equation \eqref{eq:bilocal_lag},
+the mode function acquires a second interpretation: contracted against the 
+detector's response function via the Born rule, it gives the probability amplitude for 
+where $\mathcal{R}$ is likely to detect the emitted quantum.
+ 
+This is the inversion of the standard 
+Unruh--DeWitt logic.
+Rather than coupling a detector to a pre-existing acceleration and reading off a 
+thermal distribution, we front-load the logic at $\mathcal{P}$. In the standard 
+Unruh--DeWitt treatment~\cite{unruh1976notes,einstein1979general}, the detector response integrates over all proper time 
+$\tau \in (-\infty, \infty)$; since each proper time corresponds to a different 
+local redshift along the accelerated worldline, this is simultaneously an average 
+over all redshifted Rindler frequencies, and their joint product is the Planck 
+distribution. Here instead the source fixes the frequency $\omega_k$ and the mode 
+function specifies the probability amplitude for detection, collapsing both 
+coarse-grainings simultaneously by fixing $u$ and $\omega_k$ together.
 
 \begin{figure}[h]
 \centering
@@ -495,7 +569,7 @@ cylinder functions $D_\nu(-\zeta)$. The Gaussian could
 equivalently have been applied to the Rindler side; 
 what matters is that $\sigma$ controls the degree of 
 longitudinal localization of the source-detector pair.
-The Stokes phenomenon 
+The Stokes phenomenon, see Figure~\ref{stokes_kraus},
 in the asymptotics of $D_\nu(-\zeta)$ as $\sigma$ varies 
 drives a transition between two physically distinct 
 regimes: $\sigma \to \infty$ gives the thermal regime 
@@ -504,60 +578,6 @@ and $\sigma \to 0$ gives the localized non-thermal
 regime where the $e^{+\frac{1}{4}\zeta^2}$ branch dominates, 
 with the Stokes line at $\arg \zeta = \pi/4$ marking the 
 boundary between them.
-
-In the present paper the same Gaussian shaping function 
-is reread as a Kraus operator acting on the quantum state.
-\begin{equation}
-  K_\sigma = \int e^{-u^2/2\sigma^2}\;
-|u\rangle\langle u|\; du,
-\label{eq:kraus_longitudinal}
-\end{equation}
-where $u = t - z + 1$ is the null coordinate\footnote{We use $\zeta$ for the Stokes variable 
-of~\cite{player2025driving} to avoid confusion 
-with the longitudinal spatial coordinate $z$.}
-defined in Section~\ref{sec:ppwave}.
-The operator $K_\sigma$ together with its complement 
-\begin{equation}
-K_\sigma^\perp = \int \sqrt{1 - e^{-u^2/\sigma^2}}\;
-|u\rangle\langle u|\; du,
-\end{equation}
-satisfying 
-$K_\sigma^\dagger K_\sigma + 
-(K_\sigma^\perp)^\dagger K_\sigma^\perp = \mathbf{1}$ 
-by construction, defines a one-parameter POVM family;
-the Stokes transition between its two asymptotic 
-regimes is illustrated in Figure~\ref{stokes_kraus}.
-
-The relationship to the companion paper~\cite{player2025driving} 
-is one of conceptual upgrade. That paper computed a 
-Klein--Gordon overlap integral between a Gaussian-shaped 
-source mode and a Rindler mode, obtaining a parabolic 
-cylinder function whose Stokes transition marks the boundary 
-between thermal and non-thermal regimes. The present paper 
-provides the physical interpretation: the Gaussian-times-mode 
-object is a POVM family parameterized by $\sigma$, acting on 
-the quantum state, and the POVM/PVM transition is the 
-physical content. The KG overlap integrand is the Born-rule 
-probability amplitude for the same measurement event, and the 
-asymptotic regimes of the parabolic cylinder function are the 
-POVM and PVM limits of the same operator 
-family~\eqref{eq:kraus_longitudinal}. The measurement 
-language explains why the Stokes transition is there at all.
-
-The helicity label $\lambda$ enters the longitudinal 
-mode function as a spectator index and does not affect 
-the $u$-dependence of the Kraus 
-operator~\eqref{eq:kraus_longitudinal}; the Stokes 
-transition analysis of~\cite{player2025driving}, which 
-is carried out in 1+1 dimensions, therefore 
-applies independently to each helicity sector without 
-modification. The extension to 3+1 dimensions introduces 
-the transverse coordinates $(x,y)$ as an independent 
-sector: because the wave equation in double-null 
-coordinates separates, the longitudinal Stokes analysis 
-is unaffected by the transverse directions, which are 
-handled separately by the transverse Kraus 
-family equation~\eqref{eq:kraus}.
 
 \begin{figure}[h]
 \centering
@@ -581,27 +601,94 @@ from~\cite{player2025driving}.}
 \label{stokes_kraus}
 \end{figure}
 
-This distinction is operationally sharp~\cite{harrigan2010einstein}: 
+
+In the present paper the same Gaussian shaping function is reread as a Kraus operator 
+acting on the quantum state,
+\begin{equation}
+  K_\sigma = \int e^{-u^2/2\sigma^2}\;
+|u\rangle\langle u|\; du,
+\label{eq:kraus_longitudinal}
+\end{equation}
+where $u = t - z + 1$ is the null coordinate\footnote{We use $\zeta$ for the Stokes variable 
+of~\cite{player2025driving} to avoid confusion 
+with the longitudinal spatial coordinate $z$.}
+defined in Section~\ref{sec:ppwave}, and $|u\rangle$ are generalized null-position 
+eigenstates in the sense of a rigged Hilbert space, satisfying 
+$\int |u\rangle\langle u|\, du = \mathbf{1}$ distributionally. The Gaussian envelope 
+$e^{-u^2/2\sigma^2}$ renders $K_\sigma$ a bounded operator, and the completeness 
+relation ensures that $K_\sigma^\dagger K_\sigma + 
+(K_\sigma^\perp)^\dagger K_\sigma^\perp = \mathbf{1}$ as required for a valid POVM.
+The two readings of $K_\sigma$ are consistent because the Klein--Gordon 
+inner product integrand, which in~\cite{player2025driving} computed the overlap between 
+a Gaussian-shaped source mode and a Rindler mode, is the Born-rule probability 
+amplitude for the same measurement event: what was a preparation in the source picture 
+is a projection in the measurement picture, and the Gaussian width $\sigma$ controls 
+the sharpness of that projection.
+
+The operator $K_\sigma$ together with its complement 
+\begin{equation}
+K_\sigma^\perp = \int \sqrt{1 - e^{-u^2/\sigma^2}}\;
+|u\rangle\langle u|\; du,
+\end{equation}
+satisfying 
+$K_\sigma^\dagger K_\sigma + 
+(K_\sigma^\perp)^\dagger K_\sigma^\perp = \mathbf{1}$ 
+by construction, defines a one-parameter POVM family.
+Physically, finite $\sigma$ corresponds to a source delocalized 
+over a range of null positions: no single null geodesic from 
+$\mathcal{P}$ to $\mathcal{R}$ is selected, and the detector 
+sees a mixture because it has no information about which geodesic 
+the photon traveled. The parameter $\sigma$ therefore quantifies 
+ignorance about the source location, and thermality is the 
+consequence of that ignorance.
+The physical content of this family is revealed by its asymptotic 
+behavior: the POVM family~\eqref{eq:kraus_longitudinal} is the 
+measurement-picture object whose Stokes transition the companion 
+paper computes.
+
+
+The distinction between preparation and measurement is operationally sharp~\cite{harrigan2010einstein}: 
 \textit{mode shaping} is a preparation that modifies the physical 
 field; \textit{PVM projection} is a measurement that conditions the 
 observer's description on causal data without touching the ontic state. 
 The Gaussian width $\sigma$ of the Kraus 
 family~\eqref{eq:kraus_longitudinal} admits both readings 
-simultaneously,  as a source localization parameter in the 
+simultaneously: as a source localization parameter in the 
 preparation sense of~\cite{player2025driving}, and as an epistemic 
-resolution parameter in the measurement sense here,  with the Stokes 
+resolution parameter in the measurement sense here, with the Stokes 
 line marking the boundary at which the two readings give qualitatively 
-different physics. Specifying $\mathcal{R} = (0,1)$ and 
-$\mathcal{P} = (-1,0)$ is therefore the epistemic $\sigma \to 0$ 
-limit: the Kraus operator sharpens to a PVM projector onto the unique 
-null geodesic connecting them, selecting a definite frequency $\omega_k$ 
-and resolving both coarse-grainings responsible for thermality. 
-The direction of explanation is thereby reversed relative to standard 
-holographic arguments: the emission event at $\mathcal{P}$ is primary, 
-and the geometry,  the AS pp-wave, the horizon area increment, the 
-BMS supertranslation,  is the ontic output of the subsequent 
-measurement events, while the assignment of that output to a particular 
-observer's microstate record remains epistemic.
+different physics. The direction of explanation is thereby reversed: 
+the emission event at $\mathcal{P}$ is primary, and the geometry is 
+the ontic output of the subsequent measurement events, while the 
+assignment of that output to a particular observer's microstate 
+record remains epistemic.
+
+Summarizing, the relationship to the companion paper~\cite{player2025driving} 
+is one of conceptual upgrade. That paper computed a 
+Klein--Gordon overlap integral between a Gaussian-shaped 
+source mode and a Rindler mode, obtaining a parabolic 
+cylinder function whose Stokes transition marks the boundary 
+between thermal and non-thermal regimes. The present paper 
+provides the physical interpretation: the Gaussian-times-mode 
+object is a POVM family parameterized by $\sigma$, acting on 
+the quantum state, and the POVM/PVM transition is the 
+physical content\footnote{The helicity label $\lambda$ enters the longitudinal 
+mode function as a spectator index and does not affect 
+the $u$-dependence of the Kraus 
+operator~\eqref{eq:kraus_longitudinal}; the Stokes 
+transition analysis of~\cite{player2025driving}, which 
+is carried out in 1+1 dimensions, therefore 
+applies independently to each helicity sector without 
+modification. The extension to 3+1 dimensions introduces 
+the transverse coordinates $(x,y)$ as an independent 
+sector: because the wave equation in double-null 
+coordinates separates, the longitudinal Stokes analysis 
+is unaffected by the transverse directions, which are 
+handled separately by the transverse Kraus 
+family equation~\eqref{eq:kraus}.}.
+The measurement language is what makes the Stokes transition physically meaningful.
+
+
 
 \paragraph{Transverse localization.}
 The transverse $(x,y)$ directions require a separate 
@@ -660,7 +747,7 @@ any single microstate but of the ensemble; it
 emerges when one models the detector response 
 within a wedge as a sum over all Rindler modes, 
 as in the standard Unruh--DeWitt 
-treatment~\cite{unruh1976notes,einstein1979general}, 
+treatment, 
 and is a consequence of that mode-averaging rather 
 than a premise of the construction. The individual 
 non-thermal microstate is what the PVM projection 
@@ -1067,7 +1154,7 @@ beyond the path integral itself.
 The sampling resolution is limited by the 
 Heisenberg uncertainty $\Delta E \Delta t \sim \hbar$, 
 which plays the role of the Nyquist limit for the 
-matter memory~\cite{millette2011heisenberg}: it would 
+matter memory: it would 
 require additional energy $\Delta E > mc^2$ to probe 
 the sub-Compton phase. The signal being sampled at 
 the Bremermann rate is the internal quantum state of 
@@ -1755,12 +1842,7 @@ of a measurement event and its informational content.
 
 % Section 8
 \section {Acknowledgements}
-This paper was developed in deep collaboration with 
-Claude (Anthropic). Claude's contributions include 
-structural diagnosis, connection to literature, 
-conceptual engagement with the arguments, and 
-collaborative drafting throughout. 
-
+The author acknowledge the use of Anthropic's Claude AI for structural diagnosis, literature contextualization, and collaborative drafting of the manuscript. The final analysis, interpretations, and scientific conclusions remain the sole responsibility of the author.
 \appendix
 
 % Appendix A
