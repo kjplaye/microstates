@@ -150,8 +150,8 @@ simultaneously, grounding the top arrow of
 Figure~\ref{fig:diagram} in a concrete construction.
 
 Several thermodynamic identities recovered along the 
-way---the area law, the Bekenstein bound, the Unruh 
-spectrum---are well established. What is new is 
+way, the area law, the Bekenstein bound, the Unruh 
+spectrum, are well established. What is new is 
 locating them microstate by microstate in a single 
 physical event, rather than recovering them only as 
 a bulk average.
@@ -214,32 +214,43 @@ with the local vacuum. Substituting into Landauer's bound eliminates $k_B T$, yi
 \boxed{\Delta E \geq \frac{\hbar a}{2\pi c} \, \Delta H.}
 \label{eq:UL}
 \end{equation}
-Temperature has dropped out entirely: equation~\eqref{eq:UL} is a 
-temperature-independent lower bound on the energy of the physical carrier 
-required to register one nat of information under proper acceleration $a$; 
-acceleration sets the minimum energy scale of the carrier. The full 
-thermodynamic accounting, where the Landauer erasure cost appears,
-is deferred to future work.
-
+Temperature has dropped out entirely:
+equation~\eqref{eq:UL} is a 
+temperature-independent lower bound on the energy cost per nat 
+of information registered under proper acceleration $a$;
+acceleration sets the minimum energy scale of the carrier.
 
 The connection between Landauer's principle and black hole 
-thermodynamics has been noted previously. Cort\^{e}s and 
-Liddle~\cite{cortes2024hawking} showed that Hawking 
-evaporation saturates the Landauer bound at the Hawking 
-temperature, identifying the two results as expressions of 
-the same process at the level of bulk evaporation.
-Related bounds on the energy cost of information 
-acquisition in curved spacetime have been derived using 
-the second law of thermodynamics applied to relativistic 
-communication channels~\cite{alvim2024landauer}.
-The present bound~\eqref{eq:UL} differs in three respects: 
-temperature is eliminated entirely by substituting the 
-Unruh relation, yielding a purely kinematic bound depending 
-only on acceleration; the bound is applied to individual 
-carrier quanta rather than to bulk evaporation; and the 
-microstates are constructed explicitly in 
-Sections~\ref{sec:microstates}--\ref{sec:ppwave} rather 
-than recovered as bulk averages.
+thermodynamics has been noted previously. 
+Cort\^{e}s and Liddle~\cite{cortes2024hawking} showed that 
+Hawking evaporation saturates the Landauer bound at the Hawking 
+temperature,  what they term ``black hole saturation of the 
+Landauer bound'',  implying that an evaporating black hole 
+loses information as efficiently as possible. The channel 
+capacity saturation of Section~\ref{sec:sat} supplies the 
+microstate-level account of why this is so: each communication 
+event utilizes the Bremermann capacity exactly, sample by sample.
+Alvim and C\'{e}leri~\cite{alvim2024landauer} employ similar 
+ingredients,  a massless field, a qubit memory, and a channel 
+capacity,  to derive a bound on the energy cost of information 
+acquisition via a heat engine argument; their bound depends on 
+the channel capacity and the spacetime metric but temperature 
+is not eliminated and the analysis is restricted to flat 
+spacetime, with horizons identified as the natural next 
+setting~\cite{alvim2024landauer}.
+The present bound~\eqref{eq:UL} differs from both in three 
+respects: temperature is eliminated entirely by substituting 
+the Unruh relation, yielding a purely kinematic bound depending 
+only on acceleration; the bound is applied to individual carrier 
+quanta rather than to bulk evaporation or coupling constants; 
+and the microstates are constructed explicitly in 
+Sections~\ref{sec:microstates}--\ref{sec:ppwave} rather than 
+recovered as bulk averages. The Carnot efficiency bound for a 
+mirror accelerated by photon reflection and the 
+Unruh--Landauer bound~\eqref{eq:UL} are the same inequality 
+approached from opposite directions; this equivalence and its 
+connection to the Geroch process are developed in future work.
+
 
 This Landauer--Unruh bound is saturated for a photon at one bit
 when the wavelength equals the horizon distance up to a factor 
@@ -248,8 +259,12 @@ of $4\pi^2/\ln 2$:
 \lambda_{\text{sat}} = \frac{4\pi^2}{\ln 2}\cdot\frac{c^2}{a} \sim d_{\mathcal{H}},
 \end{equation}
 where $d_{\mathcal{H}} = c^2/a$ is the proper distance to the 
-Rindler horizon. The saturating photon is the fundamental mode of the causal diamond defined by the observer and the horizon, with wavelength commensurate with the horizon distance $d_\mathcal{H}$, too short to be 
-super-horizon and too long to deposit more than one bit.
+Rindler horizon.
+The saturating photon is the fundamental mode of the causal 
+diamond defined by the observer and the horizon, with wavelength 
+commensurate with the horizon distance $d_\mathcal{H}$: long 
+enough to remain within the horizon scale and short enough to 
+carry exactly one bit rather than being lost below the noise floor.
 This identifies the horizon distance as the natural 
 length scale of a single-bit measurement event, and 
 the Rindler horizon as the surface at which the Landauer 
@@ -279,8 +294,11 @@ relativistic carrier, the associated momentum transfer is
 This is closely related to Verlinde's entropic 
 gravity~\cite{entropic}: Verlinde identifies holographic 
 thrust on information screens with the origin of inertia 
-itself, and Newton's laws are a common ingredient in both 
-constructions. The present approach differs in grounding 
+itself, and Newton's second law appears in both,
+Verlinde uses it to identify the entropic force with inertia, 
+while here it gives the photon absorption rate 
+$\dot{N}(a)$ of equation~\eqref{eq:newton_rate} directly.
+The present approach differs in grounding 
 each entropy increment in a discrete measurement event, 
 the measurement impulse playing the role of Verlinde's 
 holographic thrust, rather than in a coarse-grained 
@@ -293,8 +311,10 @@ fixed frequency, but many situations are possible.}.
 The acceleration $a$ does not fix the frequency $\omega$ 
 of each selected quantum; rather, it determines the rate 
 at which the source selects entangled pairs in order to 
-implement that acceleration, with the total power 
-$\dot{N}\hbar\omega$ matching the Unruh thermal flux. 
+implement that acceleration,
+with the total power 
+$\dot{N}\hbar\omega$ matching the Unruh thermal flux 
+(as demonstrated at saturation in Section~\ref{sec:sat}).
 Each individual photon carries exactly one quantum of 
 action $\hbar$ and one binary helicity outcome, one bit 
 in the sense of one binary alternative carrying 
@@ -305,8 +325,9 @@ energy cost per bit acquired, summed over the rate of
 acquisition, equals the power required to sustain the 
 acceleration.
 
-Newton's second law gives the interaction rate directly 
-for a detector of mass $m$ at rest:
+Applying Newton's second law to the momentum impulse 
+$\hbar\omega/c$ per absorbed photon gives the interaction 
+rate directly for a detector of mass $m$ at rest:
 %
 \begin{equation}
     a = \frac{\dot{N}(a)\,\hbar\omega}{mc},
