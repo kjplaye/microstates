@@ -840,10 +840,10 @@ is symmetrized over both helicity assignments,
     \mathcal{J}^{ij}(x,y) = \left( \epsilon^{i*}_{(-1)}\, 
     \epsilon^{j}_{(+1)} 
     + \epsilon^{i*}_{(+1)}\, \epsilon^{j}_{(-1)}\right) 
-    f_L(x)\, f_R(y),
+    \mu_L(x)\, \mu_R(y),
 \label{eq:bilocal_vec}
 \end{equation}
-where $f_L$ and $f_R$ are normalized mode profiles 
+where $\mu_L$ and $\mu_R$ are normalized Unurh mode profiles 
 supported on the left and right wedges respectively, 
 and $\epsilon^i_{(\lambda)}$ are the circular 
 polarization vectors
@@ -863,9 +863,9 @@ momentum zero in each term independently.
 
 The operator content of this selection is
 \begin{equation}
-        a^{L\dagger}_{-k,(-1)}\, a^{R\dagger}_{k,(+1)}
+        c^{L\dagger}_{-k,(-1)}\, c^{R\dagger}_{k,(+1)}
           \;+\;
-          a^{L\dagger}_{-k,(+1)}\, a^{R\dagger}_{k,(-1)}
+          c^{L\dagger}_{-k,(+1)}\, c^{R\dagger}_{k,(-1)}
           \;+\;
           \text{h.c.},
 \label{eq:bilocal_lag}
@@ -885,67 +885,10 @@ bit whose outcome constitutes the classical record acquired
 by each observer upon detection.
 
 
-\subsection{Polarization Bogoliubov Transformation}
+\subsection{Vacuum Decomposition and Microstate}
 
-We now show that the polarization labels survive the 
-Rindler--Unruh mode decomposition, so that the thermal 
-ensemble retains its helicity structure and the 
-anticorrelation of the emitted pair descends unambiguously 
-to the level of individual Rindler microstates.
-
-In the transverse plane, the electromagnetic field in 
-double-null gauge decomposes into two independent 
-scalar-like sectors labelled by helicity $\lambda = \pm 1$. 
-For each sector, the right-wedge field expands as
-\begin{equation}
-    A^i_\lambda(z) = \int_0^\infty \frac{d\omega}{2\pi}\,
-        \frac{1}{\sqrt{2\omega}}\,\epsilon^i_{(\lambda)}
-        \left[
-            b^R_{\omega,\lambda}\, u^R_\omega(z)
-            + b^{R\dagger}_{\omega,\lambda}\, u^{R*}_\omega(z)
-        \right],
-\end{equation}
-where $u^R_\omega(z)$ are the right-wedge Rindler modes at 
-Rindler frequency $\omega$, and $b^R_{\omega,\lambda}$, 
-$b^{R\dagger}_{\omega,\lambda}$ are the corresponding 
-annihilation and creation operators satisfying
-\begin{equation}
-    \left[b^R_{\omega,\lambda},\, 
-    b^{R\dagger}_{\omega',\lambda'}\right]
-    = \delta(\omega - \omega')\,\delta_{\lambda\lambda'}.
-\end{equation}
-An identical expansion holds in the left wedge with 
-$R \to L$ and $\lambda \to -\lambda$, reflecting the 
-anticorrelated helicity assignment. Because each helicity 
-sector is independently a scalar-like sector, the Bogoliubov 
-transformation relating Minkowski and Rindler modes takes the 
-same form in each sector.
-For helicity $\lambda$ at Rindler 
-frequency $\omega$, the Unruh modes are
-\begin{equation}
-    c_{\omega,\lambda} = \cosh\theta_\omega\; 
-    b^R_{\omega,\lambda}
-                       - \sinh\theta_\omega\; 
-                       b^{L\dagger}_{\omega,-\lambda},
-\label{eq:bogoliubov}
-\end{equation}
-where $\tanh\theta_\omega = e^{-\pi\omega c/a}$ encodes the 
-Unruh distribution at acceleration $a$. The helicity flip 
-$\lambda \to -\lambda$ on the left-wedge operator is not 
-an independent assumption but a direct consequence of the 
-Bisognano--Wichmann modular conjugation $J$, which acts as
-$J\, b^{R\dagger}_{\omega,\lambda}\, J^{-1} = 
-b^{L\dagger}_{-\omega,-\lambda}$ and therefore requires the 
-left-wedge partner of a right-wedge mode of helicity 
-$\lambda$ to carry helicity $-\lambda$; the PCT symmetry 
-between wedges is thereby reflected in the superposition 
-over both helicity assignments in the Bell state. The 
-transformation~\eqref{eq:bogoliubov} is the standard 
-Bogoliubov relation for a massless 
-field~\cite{unruh1976notes, birrell1984quantum}, now carrying 
-a helicity label throughout. The Minkowski vacuum thermofield 
-double state, in the Rindler basis reads, for each helicity 
-sector,
+The Minkowski vacuum thermofield double state in the Rindler 
+basis reads, for each helicity sector,
 \begin{equation}
     |0\rangle_M^{(\lambda)}
     = \frac{1}{\cosh\theta_\omega}
@@ -954,49 +897,36 @@ sector,
       |n_{\omega,-\lambda}\rangle_L,
 \label{eq:vacuum_vec}
 \end{equation}
-and the full vacuum is the product over all $\omega$ and both 
-helicities:
+where $\tanh\theta_\omega = e^{-\pi\omega c/a}$ encodes the 
+Unruh distribution at acceleration $a$, and the full vacuum 
+is the product over all $\omega$ and both helicities:
 \begin{equation}
     |0\rangle_M = \prod_{\omega,\lambda} 
     |0\rangle_M^{(\lambda)}.
 \end{equation}
+The helicity label $\lambda$ enters as a spectator index 
+throughout: the anticorrelation $\lambda \to -\lambda$ between 
+wedges is preserved at every level of the construction, 
+a direct consequence of the Bisognano--Wichmann modular 
+conjugation established in Section~\ref{sec:microstates}.
 
-Equation~\eqref{eq:vacuum_vec} makes explicit that the 
-Minkowski vacuum is a sum over entangled 
-helicity-anticorrelated pairs at each Rindler frequency.
-The bilocal source specifies a physical emission event: 
-exactly one pair, at fixed $\omega$, with fixed helicity 
-assignment. The PVM projection of 
-Section~\ref{sec:pvm_localization} identifies this event 
-with the $n=1$ term in the vacuum 
-decomposition~\eqref{eq:vacuum_vec} at that $\omega$ and 
-helicity pair. The higher $n$ terms are not suppressed by 
-any weak-coupling assumption; they correspond to different 
-physical events,  two-pair emissions, three-pair 
-emissions, and so on,  that this source simply does not 
-describe. The selection is prescriptive, not perturbative. 
+The bilocal source of Section~\ref{sec:bilocal_source} 
+selects the $n=1$ term in~\eqref{eq:vacuum_vec} at fixed 
+$\omega$ and fixed helicity pair $(\lambda, -\lambda)$ via 
+the PVM projection of Section~\ref{sec:pvm_localization}. 
 The resulting single microstate is
 \begin{equation}
     |\Psi_{\omega}\rangle_M
     = \frac{1}{\sqrt{2}}\left(
         |1_{\omega,+1}\rangle_R\,|1_{\omega,-1}\rangle_L 
         + |1_{\omega,-1}\rangle_R\,|1_{\omega,+1}\rangle_L
-      \right).
+      \right),
 \label{eq:microstate_vec}
 \end{equation}
-$\mathcal{R}$'s and $\mathcal{L}$'s helicity outcomes are 
+with $\mathcal{R}$'s and $\mathcal{L}$'s helicity outcomes 
 undetermined until measurement, at which point they are 
-perfectly anticorrelated by the Bell state structure: each 
-observer acquires one classical bit, and the two bits are 
-complements of one another.
-
-The key structural result is that the helicity label $\lambda$ 
-is conserved under the Bogoliubov transformation: it enters 
-equation~\eqref{eq:bogoliubov} as a spectator index and exits 
-unchanged on the Unruh operators $c_{\omega,\lambda}$. 
-The anticorrelation between wedges is preserved at every 
-level of the construction, since the helicity label passes 
-through the Bogoliubov transformation unchanged.
+perfectly anticorrelated: each observer acquires one 
+classical bit, and the two bits are complements of one another.
 
 
 % Section 4
