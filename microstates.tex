@@ -53,54 +53,6 @@
 % about vectors (not just literary).
 %
 % * Edits should be in latex and you should tell me exactly where to put them.
-%
-% # Useful modalities (you already know about these, you can tell me which
-% you are using, reference them and align with me):
-%
-% * The brainstormer: Connects to other existing literature, trys to
-% come up with ideas to link together, thinks in large brush strokes and
-% research programs.
-% 
-% * The visionary: We entertain wild ideas and make special provision
-% for actual vision, they are often key insights, speculative crank
-% physics is to be avoided in actual final writing, but can be used in
-% drafts notes and definitly discussions.
-%
-% * The technical (coder): "PTAL at this paper", signals a certain type of
-% persona that works at Google and is looking at the paper in terms of code
-% review, finding technical things etc.
-% 
-% * The referee: Comes from the viewpoint of a journal reviewer, thinks
-% in terms of multiple levels, from arxiv to Physics Review to anything
-% in between.
-% 
-% * The reflector: We found some issues, we made some edits, did they
-% address the issues? What about a fresh read, would other issues
-% appear?
-% 
-% * The razor: Ruthlessly cuts fat, removes passive "throat-clearing"
-% phrases, merges redundant sentences, and tightens equations into the
-% main text body without losing technical accuracy. It treats words like
-% expensive bandwidth
-% 
-% * The archivist: The pedantic senior co-author who has read every
-% paper published since 1970 and hates missing citations.
-% 
-% * The Narrative Architect: The structural developmental editor who
-% treats a physics paper like a cohesive story.
-% 
-% * The Outsider: A physicist from a different subfield (e.g., an
-% experimentalist reading a high-level theory paper, or a condensed
-% matter person reading quantum gravity).
-%
-% * The consitancy freak:
-% checks that notation, defined terms, and equation labels are used
-% consistently throughout, that a term defined in Section 3 is not
-% silently redefined in Section 5, and that forward references resolve
-% correctly. This is distinct from The Archivist (citations) and
-% The Technical (correctness).
-%
-% * Feel free to add others.
 
 
 
@@ -1541,8 +1493,11 @@ S_{\text{matter}}
 \;=\; \sum_i \hbar\omega_i,
 \end{equation}
 %
-where the second equality follows from energy conservation 
-applied to each photon. This is the null-surface analog of 
+where the second equality follows from the bilocal 
+Lagrangian of Section~\ref{sec:bilocal_source}, whose 
+Unruh mode projection ensures the full energy $\hbar\omega_i$ 
+of each photon is deposited at the horizon.
+This is the null-surface analog of 
 the worldline action $\int E\,d\tau$: on a null surface the 
 affine parameter $u$ plays the role that proper time plays 
 on a timelike worldline, and the integral $\int T_{uu}\,du$ 
@@ -1575,10 +1530,17 @@ S_{\text{matter}}.
 \end{equation}
 %
 This geometric sum has a precise identification in the 
-gravitational action. On a stationary Rindler horizon the 
-unperturbed expansion of the null generators vanishes, $\theta = 
-0$, so the Gibbons--Hawking--York boundary 
-term~\cite{gibbons1977action} is sourced entirely by the AS 
+gravitational action.
+On a stationary Rindler horizon the null generators are 
+affinely parametrized, which sets the non-affinity 
+coefficient $\kappa = 0$ in the null boundary term 
+$\frac{1}{8\pi G}\int(\theta + \kappa)\,d^2x_\perp\,du$ 
+of Parattu, Chakraborty, and 
+Padmanabhan~\cite{parattu2016boundary, 
+chakraborty2020boundary}, reducing it to 
+$\frac{1}{8\pi G}\int\theta\,d^2x_\perp\,du$. 
+The unperturbed expansion also vanishes, $\theta = 0$, 
+so the boundary term is sourced entirely by the AS 
 pp-wave perturbations:
 %
 \begin{equation}
@@ -1591,7 +1553,7 @@ S_{GHY}\big|_{\mathcal{H}}
 \label{eq:GHY_micro}
 \end{equation}
 
-The ledger closes without remainder, as consistency requires. 
+The ledger closes without remainder. 
 Chakraborty and Padmanabhan~\cite{chakraborty2020boundary} 
 established $S_{GHY}|_{\mathcal{H}} = \text{heat content}$ 
 at the level of thermodynamic averages; the present calculation 
@@ -1718,25 +1680,42 @@ ensemble resolves into individual non-thermal microstates,
 each a single measurement event, each contributing one 
 Planck-area patch to the horizon.
 
-The deepest consequence is the spatial bit. The same 
-event that records \emph{what} was observed also 
+The spatial bit closes the loop\footnote{
+  Our traversal of Figure~\ref{fig:diagram} 
+  begins with $\mathcal{P}$'s emission (Section~\ref{sec:microstates}), 
+  proceeds through $\mathcal{R}$'s absorption and acceleration 
+  (Section~\ref{sec:obs_accel}), generates new coordinate space 
+  via the AS pp-wave (Section~\ref{sec:ppwave}), and closes 
+  with the spatial bit labeling that geometry 
+  (Section~\ref{sec:erepr}). The output of one traversal 
+  is the context for the next emission.}
+of Figure~\ref{fig:diagram}. 
+The same event that records \emph{what} was observed also 
 determines \emph{where}: the two wedges carry opposite 
 helicities by construction, so the polarization outcome 
 and the location are the same classical fact written into 
-matter memory. What the construction shows is that the 
-vocabulary needed to pose these questions, spatial bits, 
-communications, matter memory, PVM projections, the 
-Planck area as conversion factor, is the same 
-vocabulary in which the answer, when it comes, will 
-have to be written. Space, in this construction, is 
-indexed by helicity, and that indexing, event by event, 
-is what the geometry records. This construction provides 
-an operational definition of a region of space in terms 
-of a measurement event and its informational content.
+matter memory. This is the concrete realization of the 
+dashed arrow in Figure~\ref{fig:diagram}, from Spacetime 
+Geometry back to Quantum State Reduction: the geometry 
+is not an input to the measurement but its output, 
+labeled event by event by the entangled helicity and 
+recorded in matter memory at each horizon crossing. 
+Space, in this construction, is indexed by helicity, 
+and that indexing is what the geometry records. 
+This construction provides an operational definition 
+of a region of space in terms of a measurement event 
+and its informational content.
 
 % Section 8
 \section {Acknowledgements}
-The author acknowledges the use of Anthropic's Claude AI for structural diagnosis, literature contextualization, and collaborative drafting of the manuscript. The final analysis, interpretations, and scientific conclusions remain the sole responsibility of the author.
+% If other models are subtantially used, then add them here.
+The author acknowledges the use of Anthropic's Claude AI 
+(Sonnet 4.6) for structural diagnosis, literature 
+contextualization, technical review, and collaborative 
+drafting of the manuscript. The final analysis, 
+interpretations, and scientific conclusions remain the 
+sole responsibility of the author.
+
 \appendix
 
 % Appendix A
