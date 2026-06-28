@@ -34,7 +34,7 @@
 
 % Physics writing guidelines (try to follow unless it would affect the quality):
 %
-% * Don't use em dashes.
+% * Don't use em dashes. " --- " is an em dash, use ", " instead.
 %
 % * Only use "rather than X, Y" when X has already been established in the
 % text as the default expectation or the standard approach the reader
@@ -115,9 +115,8 @@ a microstate in thermodynamic approaches to gravity
 and develop an information-theoretic language to explore
 the connection with a concrete construction.
 Eliminating temperature between Landauer's principle and 
-the Unruh effect yields a purely kinematic 
-acceleration-dependent bound on the energy cost of 
-information transfer.
+the Unruh effect yields a purely kinematic
+acceleration-dependent bound on the energy of information-carrying quanta.
 Motivated by this, we construct a helicity-anticorrelated Bell state propagating in flat Minkowski space, emitted from a common causal past, that drives the Unruh response in both Rindler wedges.
 We briefly discuss how 
 proper time can be measured as a property of matter,
@@ -179,8 +178,10 @@ Section~\ref{sec:obs_accel} develops the
 \textbf{energy--momentum transfer} arrow: substituting 
 the Unruh temperature into Landauer's principle eliminates 
 temperature entirely, yielding a purely kinematic bound 
-on the energy cost of information acquisition under 
-acceleration. The thrust quantum, in our case a photon 
+on the minimum energy a carrier must have to register information 
+under acceleration, derived from the irreversibility of the 
+PVM projection at the Rindler horizon.
+The thrust quantum, in our case a photon 
 carrying the impulse, is the physical carrier of this bound.
 
 Section~\ref{sec:microstates} develops the 
@@ -256,21 +257,27 @@ Appendix~\ref{sec:heuristics_appendix}.
 \subsection{The Landauer--Unruh Relation}
 \label{sec:UL}
 
-
-Landauer's principle~\cite{landauer1961irreversibility} \footnote{Landauer's original argument~\cite{landauer1961irreversibility} is 
-broader than the erasure bound it is commonly reduced to: his 
-introductory framing explicitly identifies $k_BT$ as the minimum 
-signal energy required to override thermal noise, which is the 
-sense in which we invoke the principle here.}
-establishes $k_BT$ as the natural energy scale of one 
-distinguishable degree of freedom in a thermal environment 
-at temperature $T$: any physical carrier representing 
-$\Delta H$ nats must have at least this energy to be 
-distinguishable from thermal noise,
-
+Landauer's principle~\cite{landauer1961irreversibility} 
+establishes $k_BT\,\Delta H$ as the minimum energy dissipated 
+to the environment when a logically irreversible operation\footnote{
+  The source $\mathcal{P}$, developed in 
+  Section~\ref{sec:microstates}, prepares a Bell state 
+  and emits one photon into each Rindler wedge. The Bell 
+  state itself is pure; thermality enters when $\mathcal{R}$ 
+  traces out the inaccessible partner in the left wedge, 
+  reducing the global pure state to a mixed state over 
+  helicities. It is this tracing out, the irreversible 
+  loss of the which-wedge information to the environment, 
+  that constitutes the logically irreversible operation 
+  to which Landauer's principle applies.}
+reduces the state space by entropy $\Delta H$ nats: the 
+operation cannot be undone without this dissipation, 
+independently of how slowly or carefully it is performed:
+%
 \begin{equation}
   \Delta E \geq k_B T \, \Delta H.
 \end{equation}
+
 
 For an observer undergoing proper acceleration $a$, the Unruh effect associates a temperature
 \begin{equation}
@@ -282,9 +289,9 @@ with the local vacuum. Substituting into Landauer's bound eliminates $k_B T$, yi
 \label{eq:UL}
 \end{equation}
 Temperature has dropped out entirely:
-equation~\eqref{eq:UL} is a 
-temperature-independent lower bound on the energy cost per nat 
-of information registered under proper acceleration $a$;
+equation~\eqref{eq:UL} is a temperature-independent lower bound 
+on the carrier energy per nat of information irreversibly 
+registered under proper acceleration $a$;
 acceleration sets the minimum energy scale of the carrier.
 
 The connection between Landauer's principle and black hole 
@@ -387,10 +394,10 @@ action $\hbar$ and one binary helicity outcome, one bit
 in the sense of one binary alternative carrying 
 $\ln 2$ nats, and these are paired by the construction 
 independently of $a$. The Landauer bound then operates 
-as a consistency condition on the ensemble: the minimum 
-energy cost per bit acquired, summed over the rate of 
-acquisition, equals the power required to sustain the 
-acceleration.
+as a consistency condition on the ensemble:
+the minimum carrier energy per bit that clears the Unruh 
+noise floor, summed over the acquisition rate,
+equals the power required to sustain the acceleration.
 
 Applying Newton's second law to the momentum impulse 
 $\hbar\omega/c$ per absorbed photon gives the interaction 
@@ -505,7 +512,7 @@ the right-moving photon propagates along $u = 0$,
 and the left-moving photon propagates along $v = 0$.
 
 The three-party structure $\mathcal{P}$--$\mathcal{R}$--$\mathcal{L}$ 
-realises the thermofield double in flat Minkowski space: 
+realizes the thermofield double in flat Minkowski space: 
 $\mathcal{R}$ sees a thermal state because $\mathcal{L}$ exists 
 and is causally inaccessible, with the correlations carried by 
 the off-diagonal entries of the Bell state rather than by any 
@@ -706,10 +713,7 @@ $\int T_{uu}\,du\,d^2x_\perp = \hbar\omega$ enters, not
 the transverse distribution. We work in the localized 
 limit $\sigma_\perp \to 0$, which recovers the 
 Aichelburg--Sexl pp-wave developed in 
-Section~\ref{sec:ppwave}. The BMS mode content excited 
-by different transverse profiles, and the physical 
-selection principle for $\sigma_\perp$, are left to 
-future work.
+Section~\ref{sec:ppwave}. 
 
 The area increment $\Delta A = 8\pi G\hbar\omega$ and the event-by-event equality 
 $S_{GHY}|_{\mathcal{H}} = S_{\mathrm{matter}}$
@@ -842,7 +846,7 @@ is symmetrized over both helicity assignments,
     \mu_L(x)\, \mu_R(y),
 \label{eq:bilocal_vec}
 \end{equation}
-where $\mu_L$ and $\mu_R$ are normalized Unurh mode profiles 
+where $\mu_L$ and $\mu_R$ are normalized Unruh mode profiles 
 supported on the left and right wedges respectively, 
 and $\epsilon^i_{(\lambda)}$ are the circular 
 polarization vectors
@@ -1220,7 +1224,7 @@ Bekenstein universal entropy bound as the same inequality
 in different frames. The framework therefore touches ground 
 in two independent places: the Dirac field in flat spacetime 
 and black hole thermodynamics in the curved setting.
-@@@@
+
 The SNR at saturation from equation~\eqref{eq:omega_sat} is
 \begin{equation}
     \mathrm{SNR}_{\mathrm{sat}} 
@@ -1320,7 +1324,7 @@ Test particles at fixed transverse positions $(x,y)$ experience two effects as t
     \begin{equation}
     \Delta \mathbf{v}_\perp \propto \nabla \ln r \propto \frac{1}{r},
     \end{equation}
-    directed toward the axis. Test particles are pulled toward the centre of the 
+    directed toward the axis. Test particles are pulled toward the center of the 
 wave, with the kick strength growing as $1/r$ toward the axis.
 \end{enumerate}
 
@@ -1358,7 +1362,7 @@ along this null cylinder: the geometry inside is
 displaced in the $+v$ direction relative to the geometry 
 outside, and it is this relative displacement that 
 constitutes the expansion of new coordinate space. The 
-horizon area increment $\Delta A = 8\pi G\hbar\omega$ 
+horizon area increment, equation (\ref{eq:deltaA_result}),
 is the integrated effect of this surgery over the 
 cross-section of the cylinder, not a global 
 rearrangement of the geometry but a local increment, 
@@ -1367,7 +1371,14 @@ trajectory. In the localized limit the patch shrinks
 to a Planck-scale tube and the surgery is maximally 
 local; in the delocalized limit it spreads uniformly 
 across the horizon. Either way the total expanded space 
-is the same, fixed by the photon energy alone.
+is the same, fixed by the photon energy alone. \footnote{The physical picture is that Bremermann samples 
+accumulated along the worldline of $\mathcal{P}$ are 
+timelike; the null propagation and AS shift convert them 
+into spacelike separation between the wedges, stretching 
+proper time at $\mathcal{P}$ into new coordinate space 
+along the null lines. The spatial bit of 
+Section~\ref{sec:erepr} is the informational record of 
+this conversion.}
 
 \subsection{Transverse Focusing Increments Horizon Area}
 \label{sec:deltaA}
@@ -1443,7 +1454,11 @@ is the Killing energy.
 
 The longitudinal shift $\Delta v \propto -\ln r^2$ produced 
 by each  pp-wave at the Rindler horizon is a supertranslation 
-in the sense of Bondi--Metzner--Sachs (BMS) symmetry. 
+in the sense of Bondi--Metzner--Sachs (BMS) symmetry\footnote{
+The BMS mode content excited 
+by different transverse profiles for our microstate, and the physical 
+selection principle for $\sigma_\perp$, are left to 
+future work.}. 
 Hawking, Perry, and Strominger~\cite{hawking2016soft} showed 
 explicitly that a black hole is supertranslated by the passage 
 of an asymmetric shockwave, and the AS longitudinal shift is 
@@ -1451,7 +1466,7 @@ precisely the linearised supertranslation field on the horizon.
 Carlip~\cite{carlip2018black} demonstrated that the near-horizon 
 diffeomorphisms of a generic black hole are enhanced to a 
 $\mathrm{BMS}_3$ algebra whose central charge determines the 
-Bekenstein--Hawking entropy, but his program identifies the 
+Bekenstein--Hawking entropy, but Carlip's program identifies the 
 symmetry without specifying the physical process that excites 
 individual modes. The bilocal construction supplies that process: 
 each measurement event produces one AS pp-wave and deposits 
@@ -1459,7 +1474,7 @@ one supertranslation at the Rindler horizon. The shockwave
 S-matrix program of 't~Hooft~\cite{hooft1996scattering} 
 established that the longitudinal AS shift is the fundamental 
 dynamical ingredient for horizon information exchange at the 
-level of the full S-matrix; the present construction realises 
+level of the full S-matrix; the present construction realizes 
 the same shift at the level of a single microstate.
 
 
@@ -1584,7 +1599,7 @@ in flat Minkowski space with helicity labels carried
 through. Van~Raamsdonk~\cite{van2010building} showed 
 that entanglement entropy between two halves of a 
 thermofield double controls the geometry connecting 
-them; the bilocal construction realises this at the 
+them; the bilocal construction realizes this at the 
 microstate level: each measurement event produces a 
 single AS longitudinal shift displacing the two wedges 
 apart in opposite null directions, expanding coordinate 
@@ -1593,7 +1608,7 @@ of the geometry; it is the \textit{cause} of it, event
 by event.\footnote{In the AdS setting this is the 
 ER=EPR correspondence~\cite{maldacena2013cool}, with 
 the ER bridge playing the role of the AS longitudinal 
-shift. The present construction realises the same 
+shift. The present construction realizes the same 
 identification in flat Minkowski space without 
 holographic prerequisites; the precise relationship 
 between the AS shift and the ER bridge is left to 
@@ -1629,7 +1644,7 @@ the reduced state $\rho_{\mathcal{R}} =
 maximally mixed over helicities, exactly thermal, 
 with no preferred outcome and no spatial information, 
 precisely as in the vacuum decomposition~\eqref{eq:vacuum_vec} 
-and Bogoliubov transformation~\eqref{eq:bogoliubov}. 
+and Bogoliubov transformation. 
 The spatial bit is the off-diagonal correlator that this 
 trace destroys, invisible from within either wedge alone 
 and exactly recoverable by a future observer $\mathcal{F}$ 
@@ -1694,7 +1709,7 @@ of a measurement event and its informational content.
 
 % Section 8
 \section {Acknowledgements}
-The author acknowledge the use of Anthropic's Claude AI for structural diagnosis, literature contextualization, and collaborative drafting of the manuscript. The final analysis, interpretations, and scientific conclusions remain the sole responsibility of the author.
+The author acknowledges the use of Anthropic's Claude AI for structural diagnosis, literature contextualization, and collaborative drafting of the manuscript. The final analysis, interpretations, and scientific conclusions remain the sole responsibility of the author.
 \appendix
 
 % Appendix A
@@ -1708,7 +1723,7 @@ represents a massive fermion as two coupled Weyl spinors of opposite
 helicity; Penrose~\cite{penrose2006road} recast this geometrically 
 as a zig-zag of massless segments alternating in helicity, coupled 
 at each vertex by the Higgs field at the Compton scale 
-$\lambda_C = \hbar/mc$. The construction is is a direct consequence
+$\lambda_C = \hbar/mc$. The construction is a direct consequence
 of the two-component formalism for massive fermions.
 We term this the tick-tock mechanism to 
 emphasise the alternating rhythm of communications rather than the 
@@ -1865,9 +1880,13 @@ Expressing this in terms of the change in Schwarzschild area $\Delta A = 32\pi G
 \end{equation}
 which is the Bekenstein-Hawking area law. Each measurement event contributes a discrete entropy increment proportional to the area imprinted on the horizon by the associated energy-momentum transfer.
 
-This derivation parallels Jacob Bekenstein’s original argument \cite{bekenstein}, in which the entropy increase of a black hole is inferred from the minimal energy required to localize and drop a system across the horizon; here, the same structure emerges from the minimal energy cost of registering information at the horizon scale.
+This derivation parallels Jacob Bekenstein’s original argument \cite{bekenstein}, in which the entropy increase of a black hole is inferred from the minimal energy required to localize and drop a system across the horizon; here, the same structure emerges from the
+the minimal carrier energy required to register one 
+distinguishable event at the horizon scale.
 
-The two bounds are saturated simultaneously when $a = c^2/R$,  which is exactly the condition for being {\it at a horizon}. The horizon is therefore not just where thermodynamics happens to work out, it is the unique locus where the minimum cost of information acquisition equals the maximum information content of the region.
+The two bounds are saturated simultaneously when $a = c^2/R$,  which is exactly the condition for being {\it at a horizon}. The horizon is therefore not just where thermodynamics happens to work out, it is
+the unique locus where the Landauer dissipation bound and 
+the Bekenstein entropy bound coincide.
 
 Substituting the horizon condition $a = c^2/R$ directly 
 into the Landauer--Unruh bound~\eqref{eq:UL} yields
@@ -1882,7 +1901,7 @@ are therefore the same inequality: the former is its
 acceleration-frame expression, the latter its 
 position-space expression, and the Rindler horizon is 
 the surface at which the two descriptions coincide.
-\footnote{The Bousso bound~\cite{bousso1999covariant} generalises 
+\footnote{The Bousso bound~\cite{bousso1999covariant} generalizes 
 the Bekenstein bound to arbitrary null congruences; the present 
 construction can be read as a microstate-level realisation, 
 with each communication contributing one Planck-area patch 
