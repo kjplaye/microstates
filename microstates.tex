@@ -739,11 +739,12 @@ $\sigma \to 0^+$: the Kraus
 operator~\eqref{eq:kraus_longitudinal} is not 
 normalizable at exactly $\sigma = 0$, and the AS 
 shift $\Delta v \propto -\ln r^2$ diverges on axis, 
-both regularized by the photon wavelength 
-$\sigma \sim c/\omega$. The parameter $\sigma$ is 
-simultaneously the longitudinal Kraus width, the 
-transverse profile width, and the AS regularization 
-scale.
+both regularized by any $\sigma > 0$. The area 
+increment $\Delta A = 8\pi G\hbar\omega$ is 
+independent of $\sigma$ by energy conservation. 
+The parameter $\sigma$ is simultaneously the 
+longitudinal Kraus width and the transverse 
+profile width.
 
 \subsection{Helicity Structure and PCT Symmetry}
 
@@ -843,10 +844,10 @@ is symmetrized over both helicity assignments,
     \mathcal{J}^{ij}(x,y) = \left( \epsilon^{i*}_{(-1)}\, 
     \epsilon^{j}_{(+1)} 
     + \epsilon^{i*}_{(+1)}\, \epsilon^{j}_{(-1)}\right) 
-    \mu_L(x)\, \mu_R(y),
+    f_L(x)\, f_R(y),
 \label{eq:bilocal_vec}
 \end{equation}
-where $\mu_L$ and $\mu_R$ are normalized Unruh mode profiles 
+where $f_L$ and $f_R$ are normalized Rindler mode profiles 
 supported on the left and right wedges respectively, 
 and $\epsilon^i_{(\lambda)}$ are the circular 
 polarization vectors
@@ -864,19 +865,37 @@ the symmetric superposition is the simplest state
 respecting this exchange symmetry with total angular 
 momentum zero in each term independently.
 
+The bilocal driving Lagrangian is
+%
+\begin{equation}
+\mathscr{L}_{\text{sourced}} = \mathscr{L}_{\text{free}} 
++ \frac{1}{2} \int \mathcal{J}^{ij}(x,y)\, 
+A_i^+(x)\, A_j^+(y)\, d^4x\, d^4y 
++ \text{h.c.},
+\end{equation}
+%
+where $A_i^+$ denotes the positive-frequency part of the 
+transverse gauge field. Smearing $f_L$ and $f_R$ with 
+$A_i^+$ projects them onto their positive-frequency parts, 
+which are the Unruh mode profiles $\mu_L$ and $\mu_R$ 
+respectively. The creation operators $c^{L\dagger}_{-k,(\lambda)}$ 
+and $c^{R\dagger}_{k,(\lambda)}$ are the ladder operators 
+associated with these Unruh modes: the right-moving photon 
+of energy $\hbar\omega$ is deposited in the right wedge and 
+the left-moving photon in the left wedge as a consequence of 
+this projection, not as an additional assumption about the 
+source support.
+%
 The operator content of this selection is
 \begin{equation}
-        c^{L\dagger}_{-k,(-1)}\, c^{R\dagger}_{k,(+1)}
-          \;+\;
-          c^{L\dagger}_{-k,(+1)}\, c^{R\dagger}_{k,(-1)}
-          \;+\;
-          \text{h.c.},
+c^{L\dagger}_{-k,(-1)}\, c^{R\dagger}_{k,(+1)}
+  \;+\;
+  c^{L\dagger}_{-k,(+1)}\, c^{R\dagger}_{k,(-1)}
+  \;+\;
+  \text{h.c.}
 \label{eq:bilocal_lag}
 \end{equation}
-which is the vector-field analogue of the scalar squeezing 
-interaction~\cite{gerry2023introductory}, with the PCT 
-symmetry between wedges made explicit. The bilocal source 
-selects the $n=1$ term in the vacuum 
+The bilocal source selects the $n=1$ term in the vacuum 
 decomposition~\eqref{eq:vacuum_vec} at fixed $\omega$ and 
 fixed helicity pair $(\lambda, -\lambda)$ via the PVM 
 projection of Section~\ref{sec:pvm_localization}: no 
@@ -1419,12 +1438,19 @@ The present construction provides a natural regularization
 of the strict AS point-source limit: the photon is a 
 normalizable mode of the electromagnetic field in 
 double-null gauge, with a smooth transverse profile set 
-by the wavelength $\sim c/\omega$. The electromagnetic 
-stress-energy $T_{uu}$ is well-defined throughout, 
-integrates to $\hbar\omega$ over the transverse plane 
-by energy conservation, and recovers the strict AS limit 
-as $\omega \to \infty$ with the logarithmic divergence 
-regulated at the scale $c/\omega$.
+by the wavelength $\sim c/\omega$.
+
+
+The electromagnetic stress-energy $T_{uu}$ is well-defined 
+throughout and integrates to $\hbar\omega$ over the transverse 
+plane: this follows from the bilocal Lagrangian of 
+Section~\ref{sec:bilocal_source}, where smearing $f_R$ with 
+$A_i^+$ projects onto the Unruh mode $\mu_R$, encoding the 
+deposition of the full photon energy $\hbar\omega$ in the 
+right wedge as a consequence of the projection structure 
+rather than an assumption about absorption. The strict AS 
+limit is recovered as $\omega \to \infty$ with the 
+logarithmic divergence regulated at scale $\sigma > 0$.
 
 Substituting into equation~\eqref{eq:deltaA} gives
 \begin{equation}
